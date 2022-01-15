@@ -27,8 +27,8 @@ Futures trading is currently under development and is scheduled to be available 
 
 ## Crypto
 
-Coming soon in 2022. Contact [support@traderspost.io](mailto:support@traderspost.io) if you would like to join the beta waitlist.
+Coming soon in Q4 2022. Contact [support@traderspost.io](mailto:support@traderspost.io) if you would like to join the beta waitlist.
 
 ## Forex
 
-Coming soon in 2022. Contact [support@traderspost.io](mailto:support@traderspost.io) if you would like to join the beta waitlist.
+Coming soon in Q4 2022. Contact [support@traderspost.io](mailto:support@traderspost.io) if you would like to join the beta waitlist.
