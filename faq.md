@@ -8,11 +8,11 @@ description: Get answers to the most frequently asked questions about TradersPos
 
 Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](paper-trading.md).
 
-### Can I paper trade with my TD Ameritrade account?
+### Can I paper trade with TD Ameritrade?
 
 TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](paper-trading.md#alpaca) or [TradeStation](paper-trading.md#tradestation) or use the [TradersPost Paper Trading](paper-trading.md#traderspost-paper) functionality.
 
-### Do I need a TradingView account?
+### Do I need TradingView?
 
 No. You can subscribe to existing strategies that have been published on TradersPost. An account on TradingView is only required if you want to connect your own custom strategies to TradersPost.
 
@@ -20,7 +20,7 @@ No. You can subscribe to existing strategies that have been published on Traders
 
 No. TradersPost does not require coding. You can easily connect strategies to TradersPost that other traders have created and published on TradingView.
 
-### Can I trade both the long and short side?
+### Can I trade both long and short?
 
 Yes, TradersPost supports trading both the long and short sides of a strategy.
 
@@ -36,13 +36,13 @@ Yes, please email support@traderspost.io if you wish to have options enabled on 
 
 Yes, please email support@traderspost.io if you wish to have futures enabled on your account.
 
-### What brokers does TradersPost support?
+### What brokers do you support?
 
 TradersPost currently integrates with TD Ameritrade, Alpaca, TradeStation and Robinhood.
 
-### Can I trade my IRA (retirement), business and other specialty account types on TradersPost?
+### Can I trade my IRA?
 
-Yes, TD Ameritrade and TradeStation both support these specialty account types.
+Yes, TD Ameritrade and TradeStation both support specialty account types like IRA (retirement), business and other specialty account types.
 
 ### What happens to existing positions when I connect my broker?
 
