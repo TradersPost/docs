@@ -6,8 +6,8 @@ description: >-
 
 # Introduction
 
-{% embed url="https://www.youtube.com/watch?v=WucPurodgk8" %}
-TradersPost explainer video
+{% embed url="https://www.youtube.com/watch?v=AWSImgUtw98" %}
+Watch this video for a full demo of the platform and how to get started!
 {% endembed %}
 
 ## What is TradersPost?
