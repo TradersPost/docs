@@ -4,7 +4,7 @@ description: Get answers to the most frequently asked questions about TradersPos
 
 # Frequently Asked Questions
 
-### Do you support paper trading?
+#### Do you support paper trading?
 
 Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](../paper-trading.md).
 
@@ -63,3 +63,5 @@ TradersPost comes with an unlimited amount of free paper accounts that lets you 
 ### Does TradersPost support ThinkOrSwim?
 
 Yes, we support TD Ameritrade accounts with ThinkOrSwim advanced features disabled. If you have ThinkOrSwim advanced features enabled, you may experience unexpected behavior and you will not have the ability to use OCO take profit and stop loss orders. It is recommended to use TradersPost with accounts that have ThinkOrSwim advanced features disabled.
+
+### Do you have an API?
