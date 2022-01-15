@@ -129,10 +129,10 @@ As a strategy manager, if you don't want to publish your strategy for the public
 
 TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
 
-* [Alpaca](https://alpaca.markets) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
-* [TD Ameritrade](https://www.tdameritrade.com) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
-* [TradeStation](https://tradestation.com) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
-* [Robinhood](https://robinhood.com) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
+* [Alpaca](brokers.md#alpaca) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
+* [TD Ameritrade](brokers.md#tdameritrade) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
+* [TradeStation](brokers.md#tradestation) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
+* [Robinhood](brokers.md#robinhood) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
 
 Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
 
