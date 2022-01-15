@@ -10,6 +10,14 @@ description: >-
 
 TrendSpider can send alerts as webhooks just like TradingView can. You can read more about TrendSpider webhooks [here](https://help.trendspider.com/kb/alerts/webhooks).
 
+## Configure Webhook URL
+
+TrendSpider only allows one webhook URL to be configured. You can set this URL by clicking your profile icon at the top right and then enter a Webhook URL.
+
+![Configure TrendSpider Webhook URL](<.gitbook/assets/TrendSpider Webhook URL>)
+
+## Alert Variables
+
 You have access to the following variables to use in TrendSpider alert webhooks.&#x20;
 
 * **%alert\_name%** - returns the name of the alert.
@@ -40,5 +48,17 @@ You can include additional information in the webhook payload if you want, it wo
     "priceActionEvent": "%price_action_event%"
 }
 ```
+
+## Creating Alerts
+
+Now when you create a Multi-Factor alert, you can configure the note field to contain a body like this.
+
+```json
+{"ticker": "%alert_symbol%", "action": "buy", "price": "%last_price%"}
+```
+
+Here is a screenshot of editing a Multi-Factor alert.
+
+![Edit Multi-Factor TrendSpider alert.](<.gitbook/assets/Screen Shot 2022-01-15 at 5.53.42 PM.png>)
 
 If you are interested automating your TrendSpider strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
