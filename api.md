@@ -10,9 +10,3 @@ description: >-
 ## Coming Soon
 
 If you are interested in using the TradersPost developer API and want to join our beta program, please email [support@traderspost.io](mailto:support@traderspost.io).
-
-{% swagger method="get" path="/v1/positions" baseUrl="" summary="Get open positions for a broker account." %}
-{% swagger-description %}
-
-{% endswagger-description %}
-{% endswagger %}
