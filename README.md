@@ -2,6 +2,8 @@
 description: >-
   Welcome to TradersPost! Get started with TradersPost by familiarizing yourself
   with how the platform works.
+cover: .gitbook/assets/TradersPost Banner
+coverY: 0
 ---
 
 # Introduction
