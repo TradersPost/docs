@@ -10,6 +10,7 @@
 * [TradingView](tradingview.md)
 * [TrendSpider](trend-spider.md)
 * [Bot Examples](bot-examples.md)
+* [Brokers](brokers.md)
 * [Asset Classes](assets.md)
 
 ## Additional Information
