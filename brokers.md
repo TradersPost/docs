@@ -58,9 +58,9 @@ TradeStation offers state-of-the-art trading technology and online electronic br
 
 We plan to continually add more broker integrations to our system over time. Here are the brokers most immediately on our roadmap.
 
-* Interactive Brokers
-* Coinbase Pro
-* Fidelity
-* E-Trade
+* [Interactive Brokers](https://www.interactivebrokers.com)
+* [Coinbase Pro](https://pro.coinbase.com)
+* [Fidelity](https://www.fidelity.com)
+* [E-Trade](https://etrade.com)
 
 If you would like to see your broker supported within TradersPost, please email us at [support@traderspost.io](mailto:support@traderspost.io) and let us know what you use.
