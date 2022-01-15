@@ -8,6 +8,8 @@ description: >-
 
 ## Alpaca
 
+![](.gitbook/assets/Alpaca-Full.png)
+
 API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API.
 
 #### Supported Asset Classes
