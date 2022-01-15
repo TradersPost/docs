@@ -7,13 +7,10 @@ description: >-
 
 # Order Queuing
 
-## Both Sides
+TradersPost will queue strategy signal trades for the next market open in the following scenarios.
 
-If the trade plan has both an exit and entry order. We do this because we have to wait for the exit order to fill before being able to submit the entry order. If we submit the market exit order when the market is closed, the order will never fill or may be rejected by the broker.
-
-## Regular Orders in Extended Hours
-
-If the trade plan has an exit or entry order, they are regular non extended hours orders and the broker does not support sending regular orders in extended hours. These are the brokers which do not support sending non extended hours orders after close.
+* If the trade plan has both an exit and entry order. This is necessary because we have to wait for the exit order to fill before being able to submit the entry order. If we submit the market exit order when the market is closed, the order will never fill or may be rejected by the broker.
+* If the trade plan has an exit or entry order, they are non-extended hours orders and the broker is a broker that reject non-extended hours orders instead of queueing them for the next market open.
 
 ### Alpaca
 
