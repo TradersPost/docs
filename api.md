@@ -1,7 +1,8 @@
 ---
 description: >-
-  TradersPost developer API is currently under development and is planned to be
-  available some time in 2022.
+  TradersPost developer API allows developers to build applications on top of
+  the TradersPost system and gain access to manage positions and orders for
+  broker accounts across multiple brokers.
 ---
 
 # API
@@ -9,3 +10,9 @@ description: >-
 ## Coming Soon
 
 If you are interested in using the TradersPost developer API and want to join our beta program, please email [support@traderspost.io](mailto:support@traderspost.io).
+
+{% swagger method="get" path="/v1/positions" baseUrl="" summary="Get open positions for a broker account." %}
+{% swagger-description %}
+
+{% endswagger-description %}
+{% endswagger %}
