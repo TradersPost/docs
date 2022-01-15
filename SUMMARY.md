@@ -7,6 +7,6 @@
 * [Order Queuing](order-queuing.md)
 * [Paper Trading](paper-trading.md)
 * [Fractional Shares](fractional-shares.md)
-* [Trading View](trading-view.md)
+* [TradingView](tradingview.md)
 * [Trend Spider](trend-spider.md)
 * [Bot Examples](bot-examples.md)
