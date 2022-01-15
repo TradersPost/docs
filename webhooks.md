@@ -14,7 +14,7 @@ In the context of automated trading, the webhook message contains all the inform
 
 ## Required Fields
 
-TradersPost requires a minimum required amount of fields in a webhook in order to function. Here is an example where we buy **** AMD.
+TradersPost requires a minimum required amount of fields in a webhook in order to function. You are required to send at a minimum the **ticker** and an **action**. Here is an example where we send a signal to buy AMD.
 
 ```json
 {
