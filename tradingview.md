@@ -101,6 +101,8 @@ alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"tick
 
 There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that are back testable.
 
+### Custom Strategies
+
 Here is an example where the JSON for the alert message is defined in the Pinescript strategy itself and passed to the `alert_message` parameter in functions like `strategy.entry()`.
 
 ```javascript
