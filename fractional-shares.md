@@ -6,6 +6,8 @@ description: >-
 
 # Fractional Shares
 
+## Support Brokers
+
 * **Alpaca** - supports 6 decimal places. You can read more about Alpaca fractional trading [here](https://alpaca.markets/docs/trading-on-alpaca/fractional-trading/).
 * **Robinhood** - supports 9 decimal places. You can read more about Robinhood fractional trading [here](https://robinhood.com/us/en/support/articles/fractional-shares/).
 * **TradersPost Paper** - supports 9 decimal places
@@ -23,4 +25,6 @@ Here are some notes on fractional trading behavior to consider when trading frac
 
 ## Strategy Subscriptions
 
-If you want to use fractional shares in your automated strategy subscriptions, you just need to enable the "Use fractional quantity" checkbox in your strategy subscription.
+If you want to use fractional shares in your automated strategy subscriptions, you just need to check the `Use fractional quantity` checkbox in your strategy subscription.
+
+![Use fractional quantities in your strategy subscriptions.](<.gitbook/assets/Use Fractional Quantity Checkbox>)
