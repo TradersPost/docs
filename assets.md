@@ -15,7 +15,7 @@ Stocks trading is available for paper and live trading with the following broker
 * [TDAmeritrade](https://tdameritrade.com) (live only)
 * [TradeStation](https://getstarted2.tradestation.com/intro?offer=0147AFWX\&sales\_rep=AHayes) (paper & live)
 * [Robinhood](https://https/robinhood.com) (live only)
-* [TradersPost Paper](paper-trading.md#traderspost-paper) (paper only)
+* [TradersPost](https://traderspost.io) (paper only)
 
 ## Options
 

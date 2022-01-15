@@ -76,19 +76,13 @@ Or if you are a user of TradingView, you can configure an alert to send a webhoo
 {
     "ticker": "{{ticker}}",
     "action": "buy",
-    "price": "{{close}}",
-    "time": "{{timenow}}",
-    "interval": "{{interval}}",
-    "open": "{{open}}",
-    "high": "{{high}}",
-    "low": "{{low}}",
-    "close": "{{close}}"
+    "price": "{{close}}"
 }
 ```
 
 The values wrapped in **{{** and **}}** will be replaced dynamically by TradingView when the alert is sent to the webhook URL. With this, you can use something like the [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/?offer\_id=10\&aff\_id=26514) strategy by Matt DeLong and place the MOMO trades directly in your broker!
 
-**Custom Code**
+### **Custom Code**
 
 You can send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). Here is an example using [PHP](https://php.net) and the [Symfony HTTP Client](https://symfony.com/doc/current/http\_client.html).
 
@@ -140,16 +134,19 @@ TradersPost has a "bring your own broker" architecture. We are not a broker or a
 
 Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
 
-## Subscriptions
+## Strategy Subscriptions
 
-A subscription is how a user connects a strategy to a broker. Any signal associated with a strategy will create a new trade for the subscription and allow you to either auto submit the trade to your broker or get an email to review the trade before approving or rejecting.
+A strategy subscription is how a user connects a strategy to a broker. Any signal associated with a strategy will create a new trade for the strategy subscription and allow you to either auto submit the trade to your broker or get an email to review the trade before approving or rejecting.
 
 Before the trade is placed in the connected broker, it is passed through the TradersPost order and risk management system which gives you the ability to fine tune your entry, position size, take profit and stop loss.
 
 #### What happens when you get a subscription trade?
 
-1. **Cancel Open Orders** - Any open orders for the ticker in the signal will be canceled.
-2. **Exit Current Position** - Any open position for the ticker in the signal will be exited based on the configuration details in your subscription. For example, if you have a long position open for AMD and you get a sell signal, the long position will be closed with a sell order.
-3. **Enter New Position** - The new position will be entered with a order based on the configuration details in your subscription.
+1. **Cancel Open Orders** - Open orders for the ticker will be canceled if one of the following is true
+   * There is no open position for the ticker.
+   * There is an open position and it is on the opposite side of the signal. For example you have an open long stocks position and you receive an `action=sell` signal. Any take profit or stop loss sell orders will be canceled before exiting the long stocks position.
+   * The signal is an explicit cancel signal where `action=cancel`.
+2. **Exit Current Position** - Any open position for the ticker in the signal will be exited based on the configuration details in your subscription. For example, if you have a long stocks position open for AMD and you get an `action=sell` signal, the long position will be closed with a sell order.
+3. **Enter New Position** - A new position will be entered with an order based on the configuration details in your subscription.
 
 **Ready to get started?** [Register](https://traderspost.io/register) your free account today!

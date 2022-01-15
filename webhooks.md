@@ -20,7 +20,7 @@ TradersPost requires a minimum amount of information in a webhook. Here is an ex
 ```
 
 * **ticker** - The ticker symbol name. Example **AMD** (required)
-* **action** - The signal action. Supported values are **buy** and **sell** (required)
+* **action** - The signal action. Supported values are **buy,** **sell, exit, cancel or add** (required)
 * **price** - The price of the buy or sell action. If you omit this value, the signal defaults to a market order (optional)
 * **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. This only works with entry orders and not exit orders. (optional)
 
