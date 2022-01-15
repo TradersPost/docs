@@ -1,18 +1,29 @@
+---
+description: >-
+  TradingView is a tool that lets you perform technical analysis on charts in
+  addition to building and backtesting strategies in their custom scripting
+  language PineScript.
+---
+
 # TradingView
 
 The TradersPost webhook system lets you easily integrate alerts from platforms like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) with TradersPost. Webhooks can receive JSON like the following:
 
 ```json
 {
+    "ticker": "TSLA",
+    "action": "buy",
+    "price": "420.69"
+}
+```
+
+You can dynamically send the values in the above JSON using TradingView variables. You can read more about this [here](https://www.tradingview.com/support/solutions/43000531021-how-to-use-a-variable-value-in-alert/?offer\_id=10\&aff\_id=26514).
+
+```json
+{
     "ticker": "{{ticker}}",
     "action": "buy",
-    "price": "{{close}}",
-    "time": "{{timenow}}",
-    "interval": "{{interval}}",
-    "open": "{{open}}",
-    "high": "{{high}}",
-    "low": "{{low}}",
-    "close": "{{close}}"
+    "price": "{{close}}"
 }
 ```
 
