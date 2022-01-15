@@ -2,8 +2,9 @@
 description: >-
   Welcome to TradersPost! Get started with TradersPost by familiarizing yourself
   with how the platform works.
-cover: .gitbook/assets/TradersPost Banner
-coverY: -76.23762376237624
+cover: >-
+  https://images.unsplash.com/photo-1560221328-12fe60f83ab8?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwzfHxjYW5kbGVzdGljayUyMGNoYXJ0fGVufDB8fHx8MTY0MjI3ODcxMA&ixlib=rb-1.2.1&q=85
+coverY: 0
 ---
 
 # Introduction
