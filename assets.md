@@ -9,13 +9,13 @@ description: >-
 
 ## Stocks
 
-Stocks trading is available for both paper and live trading with the following brokers.
+Stocks trading is available for paper and live trading with the following brokers.
 
-* Alpaca
-* TDAmeritrade
-* TradeStation
-* Robinhood
-* TradersPost Paper
+* [Alpaca](https://https/alpaca.markets) (paper & live)
+* [TDAmeritrade](https://tdameritrade.com) (live only)
+* [TradeStation](https://getstarted2.tradestation.com/intro?offer=0147AFWX\&sales\_rep=AHayes) (paper & live)
+* [Robinhood](https://https/robinhood.com) (live only)
+* [TradersPost](https://traderspost.io) (paper only)
 
 ## Options
 
