@@ -6,11 +6,11 @@ description: Get answers to the most frequently asked questions about TradersPos
 
 ### Do you support paper trading?
 
-Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](paper-trading.md).
+Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](../paper-trading.md).
 
 ### Can I paper trade with TD Ameritrade?
 
-TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](paper-trading.md#alpaca) or [TradeStation](paper-trading.md#tradestation) or use the [TradersPost Paper Trading](paper-trading.md#traderspost-paper) functionality.
+TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](../paper-trading.md#alpaca) or [TradeStation](../paper-trading.md#tradestation) or use the [TradersPost Paper Trading](../paper-trading.md#traderspost-paper) functionality.
 
 ### Do I need TradingView?
 

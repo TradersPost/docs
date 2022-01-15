@@ -11,5 +11,8 @@
 * [TrendSpider](trend-spider.md)
 * [Bot Examples](bot-examples.md)
 * [Asset Classes](assets.md)
-* [Frequently Asked Questions](faq.md)
-* [Known Limitations](known-limitations.md)
+
+## Additional Information
+
+* [Frequently Asked Questions](additional-information/faq.md)
+* [Known Limitations](additional-information/known-limitations.md)
