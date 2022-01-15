@@ -17,3 +17,9 @@
 
 * [Frequently Asked Questions](additional-information/faq.md)
 * [Known Limitations](additional-information/known-limitations.md)
+
+## Links
+
+* [Register](https://traderspost.io/register)
+* [Login](https://traderspost.io/login)
+* [Pricing](https://traderspost.io/pricing/)
