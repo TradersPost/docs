@@ -1,8 +1,8 @@
 ---
 description: >-
-  TradingView is a tool that lets you perform technical analysis on charts in
-  addition to building and backtesting strategies in their custom scripting
-  language PineScript.
+  TradingView is a social network of 30 million traders and investors using the
+  world's best charts and tools to spot trading opportunities across global
+  markets.
 ---
 
 # TradingView

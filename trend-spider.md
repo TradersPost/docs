@@ -1,8 +1,14 @@
-# Trend Spider
+---
+description: >-
+  TrendSpider provides technical analysis software for retail traders and
+  investors focused on the US equity and foreign exchange markets.
+---
 
-TrendSpider is an automated technical analysis software for day and swing traders. It is similar to [TradingView](https://traderspost.io/docs/trading-view) and integrates with TradersPost in the same way. Just with a few small differences in how you send data to TradersPost in the webhook.
+# TrendSpider
 
-TrendSpider webhook alerts can utilize the following variables in alert descriptions.
+TrendSpider can send alerts as webhooks just like TradingView can. You can read more about TrendSpider webhooks [here](https://help.trendspider.com/kb/alerts/webhooks).
+
+You have access to the following variables to use in TrendSpider alert webhooks.&#x20;
 
 * **%alert\_name%** - returns the name of the alert.
 * **%alert\_symbol%** - returns the symbol.
@@ -19,8 +25,6 @@ Now when you setup an alert in TrendSpider, you can configure the alert in Trend
     "price": "%last_price%"
 }
 ```
-
-This is the minimum amount of information you need to send TradersPost in a signal. If you omit the **price** variable, then the signal will only be able to create market orders.
 
 You can include additional information in the webhook payload if you want, it won't affect the signal and it will just be stored and displayed in TradersPost. This can be useful for troubleshooting where a webhook came from.
 
