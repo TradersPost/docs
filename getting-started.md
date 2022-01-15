@@ -8,7 +8,7 @@ description: >-
 # Getting Started
 
 {% embed url="https://www.youtube.com/watch?v=Xo-GiAszd3I" %}
-Prefer a video? Watch this quick video to see how to connect your broker to TradersPost
+Prefer a video? Watch this quick video to see how to connect your broker to TradersPost.
 {% endembed %}
 
 ## Connect a Broker
