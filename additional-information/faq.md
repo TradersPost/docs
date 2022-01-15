@@ -70,7 +70,7 @@ No, but it is on our 2022 roadmap. The only way currently to integrate strategie
 
 ### Are trades executed on my own dedicated server?
 
-No, TradersPost is a software as a service and is hosted in a cloud environment. If you'd like to discuss dedicated automated trading systems, please email support@traderspost.io.
+No, TradersPost is a software as a service and is hosted in a cloud environment. If you'd like to discuss dedicated automated trading systems, please email [support@traderspost.io](mailto:support@traderspost.io).
 
 ### What happens if a signal is received when the market is closed?
 
