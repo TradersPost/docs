@@ -43,6 +43,8 @@ This is a simple example to demonstrate the basics of how you can integrate Trad
 
 Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
 
+The `message` parameter of the `alertcondition()` function is pre-populated with the JSON alert message required by TradersPost.
+
 ```javascript
 //@version=4
 //author = https://www.tradingview.com/u/MattDeLong/
@@ -66,13 +68,13 @@ aa = plot(ema8, linewidth=3, color=color.green, editable=true, title="ema8")
 bb = plot(ema21,linewidth=3, color=color.red, editable=true, title="ema21")
 fill(aa, bb, color=isUptrend ? color.green : color.red)
 
-alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"time\": \"{{timenow}}\", \"interval\": \"{{interval}}\", \"ticker\": \"{{ticker}}\", \"action\": \"buy\", \"open\": {{open}}, \"high\": {{high}}, \"low\": {{low}}, \"close\": {{close}}}")
-alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"time\": \"{{timenow}}\", \"interval\": \"{{interval}}\", \"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"open\": {{open}}, \"high\": {{high}}, \"low\": {{low}}, \"close\": {{close}}}")
+alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"buy\", \"price\": {{close}}}")
+alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
 
 Once you have the **Trend Following MOMO** indicator in your TradingView you can add it to your charts and it will look like the following with visual buy and sell indicators overlayed on top of your chart.
 
-![](https://traderspost.io/images/docs/trading-view/momo-home-depot.png)
+![MOMO Trend Following Indicator](https://traderspost.io/images/docs/trading-view/momo-home-depot.png)
 
 Next, you can create alerts for the buy and sell signals and send them to TradersPost via webhooks. Follow these steps to setup the alerts as webhooks.
 
@@ -86,18 +88,20 @@ Next, you can create alerts for the buy and sell signals and send them to Trader
 
 Here is what your alert should look like.
 
-![](https://traderspost.io/images/docs/trading-view/momo-home-depot-alert.png)
+![MOMO Trend Following Indicator Alert Webhook](https://traderspost.io/images/docs/trading-view/momo-home-depot-alert.png)
 
 Notice how the **Message** field in the alert was automatically filled in with the JSON that is required for TradersPost? This is made available to us by these two lines of code in the Pinescript.
 
 ```javascript
-alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"time\": \"{{timenow}}\", \"interval\": \"{{interval}}\", \"ticker\": \"{{ticker}}\", \"action\": \"buy\", \"open\": {{open}}, \"high\": {{high}}, \"low\": {{low}}, \"close\": {{close}}}")
-alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"time\": \"{{timenow}}\", \"interval\": \"{{interval}}\", \"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"open\": {{open}}, \"high\": {{high}}, \"low\": {{low}}, \"close\": {{close}}}")
+alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"buy\", \"price\": {{close}}}")
+alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
 
-## Pinescript Strategy Alert Message
+## Pinescript Strategy alert\_message
 
-There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that are back testable. Here is an example where the JSON for the alert message is defined in the Pinescript strategy itself and passed to the `alert_message` parameter in functions like `strategy.entry()`.
+There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that are back testable.
+
+Here is an example where the JSON for the alert message is defined in the Pinescript strategy itself and passed to the `alert_message` parameter in functions like `strategy.entry()`.
 
 ```javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -131,7 +135,5 @@ Then when you are setting up the alert for your strategy you can put the followi
 ```
 {{strategy.order.alert_message}} 
 ```
-
-&#x20;
 
 If you are interested automating your TradingView strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
