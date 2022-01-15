@@ -26,6 +26,15 @@ Options trading is currently in beta testing and are only available for paper tr
 
 Futures trading is currently under development and is scheduled to be available for paper trading with TradeStation in Q1 2022. Contact [support@traderspost.io](mailto:support@traderspost.io) if you would like to join the beta waitlist.
 
+We plan to initially launch futures trading with a limited selection of tickers.
+
+* **NQ** - E-Mini Nasdaq 100 Future
+* **MNQ** - Micro E-Mini Nasdaq-100 Futures
+* **ES** - E-Mini S\&P 500 Futures
+* **MES** - Micro E-Mini S\&P 500 Futures
+
+If you would like to see other futures tickers supported, please email [support@traderspost.io](mailto:support@traderspost.io).
+
 ## Crypto
 
 Coming soon in Q4 2022. Contact [support@traderspost.io](mailto:support@traderspost.io) if you would like to join the beta waitlist.
