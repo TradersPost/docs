@@ -6,7 +6,11 @@ description: >-
 
 # Brokers
 
-## Alpaca
+## Supported Brokers
+
+Here is a list of brokers that TradersPost currently integrates with and supports.
+
+### Alpaca
 
 ![](.gitbook/assets/Alpaca-Full.png)
 
@@ -16,7 +20,9 @@ API for Stock Trading - Trade with algorithms, connect with apps, build services
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
-## Robinhood
+### Robinhood
+
+![](.gitbook/assets/Robinhood-Full.png)
 
 Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
 
@@ -24,7 +30,9 @@ Robinhood is a free-trading app that lets investors trade stocks, options, excha
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
-## TDAmeritrade
+### TDAmeritrade
+
+![](.gitbook/assets/TDAmeritrade-Full.png)
 
 TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
 
@@ -32,8 +40,17 @@ TD Ameritrade is a broker that offers an electronic trading platform for the tra
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>true</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
-## TradeStation
+### TradeStation
+
+![](.gitbook/assets/TradeStation-Full.png)
 
 TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>true</td></tr><tr><td>Futures</td><td>true</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
+
+### Broker Roadmap
+
+* Interactive Brokers
+* Coinbase Pro
+* Fidelity
+* E-Trade
