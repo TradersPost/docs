@@ -1,7 +1,7 @@
 ---
 description: >-
   TradersPost allows third party applications like TradingView and TrendSpider
-  to integrate with your connected brokers via webhooks. What are webhooks?
+  to integrate with your connected brokers via webhooks.
 ---
 
 # Webhooks
@@ -10,7 +10,7 @@ description: >-
 
 Webhooks are automated messages sent from applications when something happens. They have a message that can contain a payload of data and are sent to a unique URL.
 
-In the context of automated trading, the webhook message contains all the information about the signal like what ticker to buy and at what price.
+In the context of automated trading, the webhook message contains all the information about the trade signal like what ticker to buy and at what price.
 
 ## Required Fields
 
@@ -34,7 +34,12 @@ You can send webhooks to TradersPost in a few different ways.
 
 ## Third Parties
 
-You can send webhooks to TradersPost from third party tools like [TradingView](https://tradingview.com/?offer\_id=10\&aff\_id=26514) and [TrendSpider](https://trendspider.com/?\_go=traderspost). Read more about how to do this with TradingView [here](tradingview.md) or TrendSpider [here](trend-spider.md).
+Because TradersPost works using standard webhooks, this enables users to integrate with third party platforms that support sending alerts as webhooks.
+
+Here are some popular platforms that enable you to build strategies and send alerts as webhooks.
+
+* [TradingView](tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
+* [TrendSpider](trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
 
 ## Custom Code
 
