@@ -1,8 +1,7 @@
 ---
 description: >-
-  This page documents the buy and sell behavior when TradersPost receives
-  strategy signals. TradersPost has the ability take either the long or short
-  side of a strategy.
+  This page documents the behavior of TradersPost when receiving different types
+  of strategy signals.
 ---
 
 # Order Behavior
@@ -17,8 +16,8 @@ description: >-
 ```
 
 * If there are open orders for TSLA, they will be canceled.
-* If a short position is open for TSLA, then the open position will be exited with a **Buy To Cover** order and TradersPost will wait for the exit order to fill.
-* If no long position is open for TSLA, then a **Buy** order will be sent.
+* If a short position is open for TSLA, then the open position will be exited with a Buy To Cover order and TradersPost will wait for the exit order to fill.
+* If no long position is open for TSLA, then a Buy order will be sent.
 * If there is no exit order, no entry order and no orders to cancel then the signal will be rejected.
 
 ## Sell TSLA
@@ -31,31 +30,33 @@ description: >-
 ```
 
 * If there are open orders for TSLA, they will be canceled.
-* If a long position is open for TSLA, then the open position will be exited with a **Sell** order and TradersPost will wait for the exit order to fill.
-* If no short position is open for TSLA, then a **Sell Short** order will be sent.
+* If a long position is open for TSLA, then the open position will be exited with a Sell order and TradersPost will wait for the exit order to fill.
+* If no short position is open for TSLA, then a Sell Short order will be sent.
 * If there is no exit order, no entry order and no orders to cancel then the signal will be rejected.
 
 ## Price
 
-If you send a value in the **price** field then a **limit** order will be sent unless configured to be a market order in the strategy subscription configuration.
+If you send a value in the price field then a limit order will be sent unless configured to be a market order in the strategy subscription configuration.
 
 ```json
 {
     "ticker": "TSLA",
     "action": "buy",
-    "price": 600.00
+    "price": 420.69
 }
 ```
 
-If you omit the **price** field in the JSON, then the resulting order will be a market order.
+If you omit the price field in the JSON, then the resulting order will be limit order with the last quoted price if it exists or the ask for a buy and the bid for a sell.
 
 ## Quantity
 
 Sending a quantity with your signal will work for both entries and exits. The quantity will only be used if you check the **Use signal quantity** checkbox in your strategy subscription.
 
+![Use signal quantity checkbox.](<.gitbook/assets/Use Signal Quantity Checkbox>)
+
 ### Entries
 
-For entries, if you send a signal quantity and enable using signal quantity strategy subscription, then the quantity from the signal will be used for your entry order.
+For entries, if you send a signal quantity and enable **Use signal quantity** in your strategy subscription, then the quantity from the signal will be used for your entry order.
 
 ```json
 {
@@ -70,7 +71,10 @@ If you omit the quantity field in the JSON, then the quantity will be dynamicall
 
 ### Exits
 
-Sending a quantity with your signal for exits looks the same. If you send a quantity that is less than the total quantity of your open position, then a partial exit order will be submitted. If you send a quantity that is greater than or equal to the total quantity available, or you omit the quantity, then the full position will be exited.
+Sending a quantity with your signal for exits looks the same and has the following behavior.
+
+* If you send a quantity that is less than the total quantity of your open position, then a partial exit order will be submitted.
+* If you send a quantity that is greater than or equal to the total quantity available, or you omit the quantity, then the full position will be exited.
 
 ```json
 {
