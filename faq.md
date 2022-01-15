@@ -4,9 +4,13 @@ description: Get answers to the most frequently asked questions about TradersPos
 
 # Frequently Asked Questions
 
+### Do you support paper trading?
+
+Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](paper-trading.md).
+
 ### Can I paper trade with my TD Ameritrade account?
 
-TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](https://alpaca.markets).
+TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](paper-trading.md#alpaca) or [TradeStation](paper-trading.md#tradestation) or use the [TradersPost Paper Trading](paper-trading.md#traderspost-paper) functionality.
 
 ### Do I need a TradingView account?
 
@@ -16,17 +20,21 @@ No. You can subscribe to existing strategies that have been published on Traders
 
 No. TradersPost does not require coding. You can easily connect strategies to TradersPost that other traders have created and published on TradingView.
 
-### Can I trade both the long and short side of a strategy?
+### Can I trade both the long and short side?
 
-Currently taking both sides of a strategy is a feature that is currently in beta and is only available for paper trading.
+Yes, TradersPost supports trading both the long and short sides of a strategy.
 
-### Does TradersPost support crypto?
+### Do you support crypto?
 
-Not yet, but it is on the roadmap.
+Not yet, but it is on the roadmap for Q4 2022.
 
-### Does TradersPost support options?
+### Do you support options?
 
 Yes, please email support@traderspost.io if you wish to have options enabled on your account.
+
+### Do you support futures?
+
+Yes, please email support@traderspost.io if you wish to have futures enabled on your account.
 
 ### What brokers does TradersPost support?
 
