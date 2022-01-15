@@ -48,9 +48,13 @@ TradeStation offers state-of-the-art trading technology and online electronic br
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>true</td></tr><tr><td>Futures</td><td>true</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
-### Broker Roadmap
+## Broker Roadmap
+
+We plan to continually add more broker integrations to our system over time. Here are the brokers most immediately on our roadmap.
 
 * Interactive Brokers
 * Coinbase Pro
 * Fidelity
 * E-Trade
+
+If you would like to see your broker supported within TradersPost, please email us at [support@traderspost.io](mailto:support@traderspost.io) and let us know what you use.
