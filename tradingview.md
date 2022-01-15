@@ -1,4 +1,4 @@
-# Trading View
+# TradingView
 
 The TradersPost webhook system lets you easily integrate alerts from platforms like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) with TradersPost. Webhooks can receive JSON like the following:
 
@@ -24,7 +24,7 @@ When you create an alert in TradingView, you only need to enter the above JSON i
 
 This is a simple example to demonstrate the basics of how you can integrate TradingView alerts with TradersPost but the same principals apply if you are doing something more advanced with a Pinescript indicator. Continue reading to learn how you can integrate your Pinescript indicators and alerts with TradersPost.
 
-### Pinescript
+## Pinescript
 
 Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
 

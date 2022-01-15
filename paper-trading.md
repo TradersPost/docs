@@ -6,7 +6,7 @@ Paper trading is a useful tool for being able to forward test your automated tra
 
 Below you will find information about the brokers that do provide paper trading in addition to the paper trading functionality provided by TradersPost.
 
-### Alpaca
+## Alpaca
 
 Alpaca offers paper trading for free to all Alpaca users.
 
@@ -14,7 +14,7 @@ Alpaca offers paper trading for free to all Alpaca users.
 
 You can read more about Alpaca paper trading [here](https://alpaca.markets/docs/trading-on-alpaca/paper-trading/). If you have questions about Alpaca paper trading, you can email [support@alpaca.markets](mailto:support@alpaca.markets).
 
-### TradeStation
+## TradeStation
 
 TradeStation offers paper trading for free to all TradeStation users.
 
@@ -22,7 +22,7 @@ TradeStation offers paper trading for free to all TradeStation users.
 
 You can read more about TradeStation paper trading [here](https://www.tradestation.com/platforms-and-tools/simulated-trading/). If you have questions about TradeStation paper trading, you can email [ClientService@tradestation.com](mailto:ClientService@tradestation.com).
 
-### TradersPost
+## TradersPost Paper
 
 TradersPost offers a very basic paper trading functionality for testing your webhooks and strategies. Please note the following about TradersPost paper accounts:
 
@@ -34,7 +34,7 @@ It is recommended that you use one of the above simulated paper trading environm
 
 If you have any other questions about paper trading on TradersPost, you can email [support@traderspost.io](mailto:support@traderspost.io).
 
-### Other Brokers
+## Other Brokers
 
 Unfortunately, not all brokers support simulated paper trading environments. The following brokers that TradersPost supports do not offer paper trading functionality:
 

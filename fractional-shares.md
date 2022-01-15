@@ -12,7 +12,7 @@ description: >-
 
 You can trade fractional shares by entering a fractional quantity with a decimal or by entering a dollar amount to buy and the fractional quantity will be calculated for you.
 
-### Behavior
+## Behavior
 
 Here are some notes on fractional trading behavior to consider when trading fractional shares:
 
@@ -21,6 +21,6 @@ Here are some notes on fractional trading behavior to consider when trading frac
 * Fractional orders cannot be short.
 * Fractional quantities will be rounded down to the number of decimal places the broker supports.
 
-### Strategy Subscriptions
+## Strategy Subscriptions
 
 If you want to use fractional shares in your automated strategy subscriptions, you just need to enable the "Use fractional quantity" checkbox in your strategy subscription.

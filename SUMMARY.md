@@ -8,5 +8,6 @@
 * [Paper Trading](paper-trading.md)
 * [Fractional Shares](fractional-shares.md)
 * [TradingView](tradingview.md)
-* [Trend Spider](trend-spider.md)
+* [TrendSpider](trend-spider.md)
 * [Bot Examples](bot-examples.md)
+* [Asset Classes](assets.md)

@@ -7,7 +7,7 @@ description: >-
 
 # Bot Examples
 
-### Trade from Discord
+## Trade from Discord
 
 This example allows you to setup a Discord bot that will respond to messages and send trade signals to TradersPost when messages that match a specific pattern are sent to a channel.
 

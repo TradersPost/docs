@@ -26,11 +26,11 @@ TradersPost requires a minimum amount of information in a webhook. Here is an ex
 
 You can send webhooks to TradersPost in a few different ways.
 
-### Third Parties
+## Third Parties
 
 You can send webhooks to TradersPost from third party tools like [TradingView](https://tradingview.com/?offer\_id=10\&aff\_id=26514) and [TrendSpider](https://trendspider.com/?\_go=traderspost). Read more about how to do this with TradingView [here](https://traderspost.io/docs/trading-view).
 
-### Custom Code
+## Custom Code
 
 In addition to sending webhooks from third parties, you can send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). Here is an example using [PHP](https://php.net) and the [Symfony HTTP Client](https://symfony.com/doc/current/http\_client.html).
 

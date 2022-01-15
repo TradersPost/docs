@@ -6,16 +6,16 @@ description: >-
 
 # Introduction
 
-### What is TradersPost?
+## What is TradersPost?
 
 TradersPost is a trading tool that can automate your TrendSpider or TradingView strategies in stock brokers like TD Ameritrade, TradeStation and Alpaca.
 
-### Who is TradersPost for?
+## Who is TradersPost for?
 
 * **Strategy Managers** - a person that is interested in creating automated trading strategies and connecting them to their broker.
 * **Traders and Investors** - a person that is interested in connecting automated trading strategies to their broker without any coding knowledge.
 
-### How does it work?
+## How does it work?
 
 TradersPost is made of the following concepts. You can use them together to create automated trading strategies in your broker and allow other people to subscribe to your strategies.
 
@@ -24,7 +24,7 @@ TradersPost is made of the following concepts. You can use them together to crea
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
 * [Subscriptions](./#subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
 
-### Signals
+## Signals
 
 Signals are buy or sell instructions that can be produced by an automated algorithm or even a manual human trader. They require the following minimum information.
 
@@ -34,7 +34,7 @@ Signals are buy or sell instructions that can be produced by an automated algori
 
 Signals can be sent to TradersPost via [Webhooks](https://traderspost.io/docs#webhooks). A webhook is a signal sent from custom code or a 3rd party system like [TradingView.com](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514).
 
-#### Supported Actions
+### Supported Actions
 
 * **buy** - open a new long position and/or exit a short position
 * **sell** - exit a long position and/or open a new short position
@@ -44,7 +44,7 @@ Signals can be sent to TradersPost via [Webhooks](https://traderspost.io/docs#we
 
 The **buy** and **sell** actions will only open a position on the opposite side after exiting the open position if the strategy subscription has BOTH sides enabled.
 
-#### Webhooks
+### Webhooks
 
 > A webhook in web development is a method of augmenting or altering the behavior of a web page or web application with custom callbacks. These callbacks may be maintained, modified, and managed by third-party users and developers who may not necessarily be affiliated with the originating website or application.
 
@@ -119,13 +119,13 @@ echo $response->getContent();
 $ php traderspost-test.php
 ```
 
-### Strategies
+## Strategies
 
 Strategies define a group of signals. Strategies are private by default. Strategy managers can publish their strategies and allow other users to subscribe to them. When a user subscribes to a strategy, the trades will be placed automatically in the broker linked to the subscription.
 
 As a strategy manager, if you don't want to publish your strategy for the public to use, you can keep it as a private subscription.
 
-### Brokers
+## Brokers
 
 TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
 
@@ -136,7 +136,7 @@ TradersPost has a "bring your own broker" architecture. We are not a broker or a
 
 Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
 
-### Subscriptions
+## Subscriptions
 
 A subscription is how a user connects a strategy to a broker. Any signal associated with a strategy will create a new trade for the subscription and allow you to either auto submit the trade to your broker or get an email to review the trade before approving or rejecting.
 

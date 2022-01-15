@@ -7,7 +7,7 @@ description: >-
 
 # Getting Started
 
-### Connect a Broker
+## Connect a Broker
 
 Hover over **Brokers** in the main navigation menu and click **Connected Brokers**.
 
