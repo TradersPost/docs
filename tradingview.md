@@ -35,11 +35,11 @@ The values inside of the **{{** and **}}** will be dynamically replaced by Tradi
 
 When you create an alert in TradingView, you only need to enter the above JSON in the **Message** field and the URL of your webhook in the **Webhook URL** field. Here is a screenshot of a simple example that would send a signal to buy **SQ** when the price crosses above **241.94**.
 
-![](https://traderspost.io/images/docs/trading-view/alert-window.png)
+![TradingView plain manually configured alert webhook.](https://traderspost.io/images/docs/trading-view/alert-window.png)
 
 This is a simple example to demonstrate the basics of how you can integrate TradingView alerts with TradersPost but the same principals apply if you are doing something more advanced with a Pinescript indicator. Continue reading to learn how you can integrate your Pinescript indicators and alerts with TradersPost.
 
-## Pinescript Study
+## Pinescript Studies
 
 Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
 
@@ -97,7 +97,7 @@ alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker
 alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
 
-## Pinescript Strategy
+## Pinescript Strategies
 
 There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that are back testable.
 
