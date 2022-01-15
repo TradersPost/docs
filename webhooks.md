@@ -10,7 +10,9 @@ description: >-
 
 Webhooks are automated messages sent from applications when something happens. They have a message that can contain a payload of data and are sent to a unique URL.
 
-### Required Fields
+In the context of automated trading, the webhook message contains all the information about the signal like what ticker to buy and at what price.
+
+## Required Fields
 
 TradersPost requires a minimum required amount of fields in a webhook in order to function. Here is an example where we buy **** AMD.
 
@@ -21,7 +23,7 @@ TradersPost requires a minimum required amount of fields in a webhook in order t
 }
 ```
 
-### Supported Fields
+## Supported Fields
 
 * **ticker** - The ticker symbol name. Example **AMD** (required)
 * **action** - The signal action. Supported values are **buy,** **sell, exit, cancel or add** (required)
