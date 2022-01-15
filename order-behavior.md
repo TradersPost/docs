@@ -87,9 +87,15 @@ Sending a quantity with your signal for exits looks the same and has the followi
 
 ## Add to Position
 
-You can add to existing open positions by enabling the "Allow add to position" checkbox in your strategy subscription. Normally, if you for example have an existing open long position and you send another buy signal, the trade would be rejected. However, if you enable "Allow add to position", then the signal won't be rejected and an order will be created to add to your existing position.
+You can add to existing open positions by enabling the **Allow add to position** checkbox in your strategy subscription.
 
-Additionally, you can explicitly add to an existing position by using the **add** action. Here is an example where we add a quantity of 5 to the existing position. If no position is open then no order will be submitted.
+![Allow add to position checkbox.](<.gitbook/assets/Allow Add To Position Checkbox>)
+
+Normally, if you for example have an existing open long position and you send another **buy** signal, the trade would be rejected. However, if you enable **Allow add to position**, then the signal won't be rejected and an order will be created to add to your existing position.
+
+### Add Signal
+
+Additionally, you can explicitly add to an existing position by using the **add** action. Here is an example where we add a quantity of 5 to the existing position. If no position is open then the trade will be rejected and no order will be sent to the broker.
 
 ```json
 {
@@ -102,7 +108,7 @@ Additionally, you can explicitly add to an existing position by using the **add*
 
 ## Both Sides
 
-The ability to take both the long and short side of a strategy in one strategy subscription is only available in paper accounts at the moment. We hope to be able to make both sides available for live accounts sometime in Q3 or Q4 of 2021. We are accepting beta testers on live accounts for this functionality. If you would like to participate in this beta, email [support@traderspost.io](mailto:support@traderspost.io).
+The ability to take both the **long** and **short** side of a strategy in one strategy subscription is only available in paper accounts at the moment. If you would like to have both sides enabled in live accounts, please email [support@traderspost.io](mailto:support@traderspost.io).
 
 When you receive a **buy** signal and you are trading both sides of a strategy, the following will happen:
 
@@ -130,7 +136,7 @@ If you have both sides enabled in your strategy subscription and you want to exi
 }
 ```
 
-**When trading both sides of a strategy, TradersPost requires that the exit be a market order. We will wait for 2 minutes for the market exit order to fill before submitting the entry order. If the exit order takes longer than 2 minutes to fill, the trade will be failed and you will be notified via email and you will need to take manual action.**
+**When trading both sides of a strategy, TradersPost requires that the exit be a market order. We will wait for 2 minutes for the market exit order to fill before submitting the entry order. If the exit order takes longer than 2 minutes to fill, the trade will fail and you will be notified via email and you will need to take manual action.**
 
 ### Manually Manage Both Sides
 
@@ -138,10 +144,40 @@ You can accomplish the both sides functionality by manually managing the entries
 
 #### **LONG**
 
-* To open a long position, send a **buy** action to the webhook.
-* To exit a long position, send an **exit** action to the webhook.
+To open a long position, send a **buy** action to the webhook.
+
+```
+{
+    "ticker": "TSLA",
+    "action": "buy"
+}
+```
+
+To exit a long position, send an **exit** action to the webhook.
+
+```
+{
+    "ticker": "TSLA",
+    "action": "exit"
+}
+```
 
 #### **SHORT**
 
-* To open a short position, send a **sell** action to the webhook.
-* To exit a short position, send an **exit** action to the webhook.
+To open a short position, send a **sell** action to the webhook.
+
+```
+{
+    "ticker": "TSLA",
+    "action": "sell"
+}
+```
+
+To exit a short position, send an **exit** action to the webhook.
+
+```
+{
+    "ticker": "TSLA",
+    "action": "exit"
+}
+```
