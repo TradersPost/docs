@@ -11,3 +11,4 @@
 * [TrendSpider](trend-spider.md)
 * [Bot Examples](bot-examples.md)
 * [Asset Classes](assets.md)
+* [Frequently Asked Questions](faq.md)
