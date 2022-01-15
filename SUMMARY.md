@@ -23,3 +23,4 @@
 * [Register](https://traderspost.io/register)
 * [Login](https://traderspost.io/login)
 * [Pricing](https://traderspost.io/pricing/)
+* [Community](https://traderspost.io/community/)
