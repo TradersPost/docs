@@ -39,7 +39,7 @@ When you create an alert in TradingView, you only need to enter the above JSON i
 
 This is a simple example to demonstrate the basics of how you can integrate TradingView alerts with TradersPost but the same principals apply if you are doing something more advanced with a Pinescript indicator. Continue reading to learn how you can integrate your Pinescript indicators and alerts with TradersPost.
 
-## Pinescript Study alertcondition()
+## Pinescript Study
 
 Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
 
@@ -97,7 +97,7 @@ alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker
 alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
 
-## Pinescript Strategy alert\_message
+## Pinescript Strategy
 
 There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that are back testable.
 
@@ -135,5 +135,21 @@ Then when you are setting up the alert for your strategy you can put the followi
 ```
 {{strategy.order.alert_message}} 
 ```
+
+### Shared Strategies
+
+Sometimes you may want to hook up a strategy to TradersPost that was built by someone else and you do not have the ability to modify the Pinescript. You can easily send alerts from existing strategies and send the alerts as webhooks to TradersPost.
+
+Just send the following JSON in the alert message to TradersPost.
+
+```json
+{
+    "ticker": "{{ticker}}",
+    "action": "{{strategy.order.action}}",
+    "price": "{{close}}"
+}
+```
+
+The `{{strategy.order.action}}` code will be dynamically replaced with a value of `buy` or `sell` when the strategy triggers an order.
 
 If you are interested automating your TradingView strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
