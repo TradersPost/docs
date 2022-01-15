@@ -10,7 +10,7 @@ coverY: 0
 
 ## Stocks
 
-Stocks trading is available for paper and live trading with the following brokers.
+Stocks trading is available for US Equities only in paper and live trading accounts with the following brokers.
 
 * [Alpaca](https://https/alpaca.markets) (paper & live)
 * [TDAmeritrade](https://tdameritrade.com) (live only)
