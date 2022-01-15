@@ -35,7 +35,7 @@ Now you have your **Alpaca** account connected to TradersPost.
 
 ![Edit your connected broker.](https://traderspost.io/images/docs/getting-started/edit-broker-screen.png)
 
-## Create a Subscription
+## Create a Strategy Subscription
 
 Hover over **Strategies** and click **Subscriptions**.
 
