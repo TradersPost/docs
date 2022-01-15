@@ -6,6 +6,8 @@ description: >-
 
 # TrendSpider
 
+![](.gitbook/assets/TrendSpider.png)
+
 TrendSpider can send alerts as webhooks just like TradingView can. You can read more about TrendSpider webhooks [here](https://help.trendspider.com/kb/alerts/webhooks).
 
 You have access to the following variables to use in TrendSpider alert webhooks.&#x20;
