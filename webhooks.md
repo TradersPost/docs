@@ -6,18 +6,22 @@ description: >-
 
 # Webhooks
 
-> Webhooks are automated messages sent from applications when something happens. They have a message that can contain a payload of data and are sent to a unique URL.
+## What is a webhook?
 
-TradersPost requires a minimum amount of information in a webhook. Here is an example where we **buy** AMD at **85.50**.
+Webhooks are automated messages sent from applications when something happens. They have a message that can contain a payload of data and are sent to a unique URL.
+
+### Required Fields
+
+TradersPost requires a minimum required amount of fields in a webhook in order to function. Here is an example where we buy **** AMD.
 
 ```json
 {
     "ticker": "AMD",
-    "action": "buy",
-    "price": "85.50",
-    "quantity": 5
+    "action": "buy"
 }
 ```
+
+### Supported Fields
 
 * **ticker** - The ticker symbol name. Example **AMD** (required)
 * **action** - The signal action. Supported values are **buy,** **sell, exit, cancel or add** (required)
