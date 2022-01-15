@@ -21,22 +21,33 @@ TradersPost requires a minimum amount of information in a webhook. Here is an ex
 
 * **ticker** - The ticker symbol name. Example **AMD** (required)
 * **action** - The signal action. Supported values are **buy,** **sell, exit, cancel or add** (required)
-* **price** - The price of the buy or sell action. If you omit this value, the signal defaults to a market order (optional)
-* **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. This only works with entry orders and not exit orders. (optional)
+* **price** - The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is processed (optional)
+* **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. (optional)
 
 You can send webhooks to TradersPost in a few different ways.
 
 ## Third Parties
 
-You can send webhooks to TradersPost from third party tools like [TradingView](https://tradingview.com/?offer\_id=10\&aff\_id=26514) and [TrendSpider](https://trendspider.com/?\_go=traderspost). Read more about how to do this with TradingView [here](https://traderspost.io/docs/trading-view).
+You can send webhooks to TradersPost from third party tools like [TradingView](https://tradingview.com/?offer\_id=10\&aff\_id=26514) and [TrendSpider](https://trendspider.com/?\_go=traderspost). Read more about how to do this with TradingView [here](tradingview.md) or TrendSpider [here](trend-spider.md).
 
 ## Custom Code
 
 In addition to sending webhooks from third parties, you can send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). Here is an example using [PHP](https://php.net) and the [Symfony HTTP Client](https://symfony.com/doc/current/http\_client.html).
 
+This example uses [PHP](https://www.php.net) and the [Composer](https://getcomposer.org) package manager. First create a new directory to work inside of.
+
+```bash
+mkdir traderspost
+cd traderspost
 ```
-$ composer require symfony/http-client
+
+Now require the `symfony/http-client` package using composer.
+
 ```
+composer require symfony/http-client
+```
+
+Now you are ready to create a file named `traderspost-test.php` and paste the following code inside of the file.
 
 ```php
 <?php
@@ -61,8 +72,10 @@ $response = $client->request('POST', $webhookUrl, [
 echo $response->getContent();
 ```
 
-```
-$ php traderspost-test.php
+Now you are ready to send the webhook to TradersPost!
+
+```bash
+php traderspost-test.php
 {"success":true,"id":"cd481b19-9bb7-4845-8227-523203971d47","payload":{"ticker":"AMD","action":"buy","price":85.50}}
 ```
 
