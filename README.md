@@ -6,6 +6,10 @@ description: >-
 
 # Introduction
 
+{% embed url="https://www.youtube.com/watch?v=WucPurodgk8" %}
+TradersPost explainer video
+{% endembed %}
+
 ## What is TradersPost?
 
 TradersPost is a trading tool that can automate your TrendSpider or TradingView strategies in stock brokers like TD Ameritrade, TradeStation and Alpaca.
