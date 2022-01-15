@@ -6,7 +6,7 @@ description: >-
 
 # Order Behavior
 
-## Buy TSLA
+## Buy
 
 ```json
 {
@@ -20,7 +20,7 @@ description: >-
 * If no long position is open for TSLA, then a Buy order will be sent.
 * If there is no exit order, no entry order and no orders to cancel then the signal will be rejected.
 
-## Sell TSLA
+## Sell
 
 ```json
 {
