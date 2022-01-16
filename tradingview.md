@@ -220,14 +220,17 @@ stopLossShort = percentOrPipsInput == 'Pips' ? stopLossAShort : stopLossBShort
 buyAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "buy", "price": ' + str.tostring(close) + '}'
 sellAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "sell", "price": ' + str.tostring(close) + '}'
 
+exitLongAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close) + '}'
+exitShortAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close) + '}'
+
 if (sides != "None")
     if tradersPostBuy
         strategy.entry('Long', strategy.long, when = sides != 'Short', alert_message = buyAlertMessage)
-        strategy.close('Short', when = sides == "Short" and timeCondition, alert_message = buyAlertMessage)
+        strategy.close('Short', when = sides == "Short" and timeCondition, alert_message = exitShortAlertMessage)
 
     if tradersPostSell
         strategy.entry('Short', strategy.short, when = sides != 'Long', alert_message = sellAlertMessage)
-        strategy.close('Long', when = sides == 'Long', alert_message = sellAlertMessage)
+        strategy.close('Long', when = sides == 'Long', alert_message = exitLongAlertMessage)
 
 longTakeProfitExitAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close + (takeProfitLong / 100)) + '}'
 longStopLossExitAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close - (stopLossLong / 100)) + '}'
