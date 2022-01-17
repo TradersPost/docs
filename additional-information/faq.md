@@ -74,7 +74,7 @@ No, TradersPost is a software as a service and is hosted in a cloud environment.
 
 ### What happens if a signal is received when the market is closed?
 
-The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../order-queuing.md) here.
+The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../order-queueing.md) here.
 
 ### Why was my order rejected by my broker?
 
