@@ -28,7 +28,7 @@ TradersPost is made of the following concepts. You can use them together to crea
 * [Signals](./#signals) - Signals are buy or sell signal that can be produced by an automated algorithm or even a manual human trader.
 * [Strategies](./#strategies) - Strategies define a group of signals. Users can subscribe to strategies and have the signals place trades directly in their broker.
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
-* [Subscriptions](./#subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
+* [Subscriptions](./#strategy-subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
 
 ## Signals
 
