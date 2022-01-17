@@ -4,7 +4,7 @@
 * [Getting Started](getting-started.md)
 * [Webhooks](webhooks.md)
 * [Order Behavior](order-behavior.md)
-* [Order Queuing](order-queuing.md)
+* [Order Queueing](order-queuing.md)
 * [Paper Trading](paper-trading.md)
 * [Fractional Shares](fractional-shares.md)
 * [TradingView](tradingview.md)
