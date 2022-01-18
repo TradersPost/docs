@@ -2,7 +2,7 @@
 description: >-
   Welcome to TradersPost! Get started with TradersPost by familiarizing yourself
   with how the platform works.
-cover: .gitbook/assets/header.jpeg
+cover: .gitbook/assets/Documentation Cover.jpeg
 coverY: 0
 ---
 
