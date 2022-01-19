@@ -23,6 +23,7 @@
 
 * [Frequently Asked Questions](additional-information/faq.md)
 * [Known Limitations](additional-information/known-limitations.md)
+* [Trading Communities](additional-information/trading-communities.md)
 
 ## Links
 
