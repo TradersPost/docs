@@ -14,6 +14,11 @@
 * [Asset Classes](assets.md)
 * [API](api.md)
 
+## Strategies & Indicators
+
+* [Premium](strategies-and-indicators/premium.md)
+* [Free](strategies-and-indicators/free.md)
+
 ## Additional Information
 
 * [Frequently Asked Questions](additional-information/faq.md)
