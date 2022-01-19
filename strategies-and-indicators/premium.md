@@ -23,5 +23,6 @@ description: >-
 * [Boost Algo](https://boost-algo.com)
 * [Zeiierman Trading](https://zeiiermantrading.com)
 * [Pro Indicators](https://pro-indicators.com)
+* [BB™ Bot V.1](https://www.tradingview.com/script/D528godu-BB-Bot-V-1/)
 
 If you would like to see your premium subscription service listed here, please contact us at [support@traderspost.io](mailto:support@traderspost.io).
