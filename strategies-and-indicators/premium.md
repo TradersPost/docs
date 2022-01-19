@@ -9,7 +9,7 @@ description: >-
 
 * [LuxAlgo](https://www.luxalgo.com)
 * [TrendMaster](https://www.trendmaster.com)
-* [Presum Solutions](https://prosum-solutions.store)
+* [Prosum Solutions](https://prosum-solutions.store)
 * [Bitpool](https://www.hiubris-indicators.com)
 * [Pivot Points Algo](https://algo.win)
 * [Hiubris Indicators](https://www.hiubris-indicators.com)
