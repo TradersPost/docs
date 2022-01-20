@@ -8,6 +8,7 @@ description: >-
 # Trading Communities
 
 * [RealLifeTrading](https://lddy.no/u5jf)
+* [SepiaGroup](https://sepiagroup.com) #TheStrat
 * [OnlySans](https://www.myonlysans.com)
 * [TradeAtEase](https://www.tradeatease.llc)
 * [T3Live](https://www.t3live.com)
