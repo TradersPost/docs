@@ -10,7 +10,7 @@ description: >-
 ![](.gitbook/assets/TradingView.png)
 
 {% hint style="info" %}
-Want TradersPost to build a custom developed Pine Script strategy for you? [Learn more](strategies-and-indicators/custom.md).
+Want TradersPost to build a custom developed Pine Script strategy for you? [Learn more](strategies-and-indicators/custom.md)
 {% endhint %}
 
 ## Alert Message JSON
