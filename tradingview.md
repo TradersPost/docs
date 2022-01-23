@@ -253,6 +253,8 @@ strategy.exit('Short Stop Loss', from_entry = "Short", loss = stopLossShort, ale
 strategy.close_all(when = timeConditionEnd)
 ```
 
+If you have an idea for a strategy and you need help with implementing the strategy in Pine Script, TradersPost can help you! [Learn more](strategies-and-indicators/custom.md) about our custom strategy development team.
+
 ### Shared Strategies
 
 Sometimes you may want to hook up a strategy to TradersPost that was built by someone else and you do not have the ability to modify the Pinescript. You can easily send alerts from existing strategies and send the alerts as webhooks to TradersPost.
