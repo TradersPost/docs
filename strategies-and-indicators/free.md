@@ -7,6 +7,7 @@ description: >-
 
 # Free
 
+* [Ultimate Strategy Template](https://www.tradingview.com/script/2lGyzYkC-Ultimate-Strategy-Template/)
 * [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/)
 * [dman103](https://www.tradingview.com/u/dman103/#published-scripts)
 * [3commas](https://www.tradingview.com/scripts/3commas/)
