@@ -2,6 +2,8 @@
 description: >-
   Want to custom build your own strategy in Pine Script? TradersPost can take
   your idea and make it a reality!
+cover: ../.gitbook/assets/photo-1571171637578-41bc2dd41cd2.jpeg
+coverY: 0
 ---
 
 # Custom
