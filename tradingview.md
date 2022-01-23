@@ -13,6 +13,8 @@ description: >-
 Want TradersPost to build a custom developed Pine Script strategy for you? [Learn more](strategies-and-indicators/custom.md)
 {% endhint %}
 
+![TradingView chart with Trend Following MOMO strategy on the chart.](.gitbook/assets/TSLA\_2022-01-22\_23-00-14.png)
+
 ## Alert Message JSON
 
 The TradersPost webhook system lets you easily integrate alerts from platforms like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) with TradersPost. Webhooks can receive [JSON](https://en.wikipedia.org/wiki/JSON) like the following.
