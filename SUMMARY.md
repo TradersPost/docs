@@ -1,17 +1,17 @@
 # Table of contents
 
-* [Introduction](README.md)
-* [Getting Started](getting-started.md)
+* [What is TradersPost?](README.md)
+* [Supported Brokers](supported-brokers.md)
+* [Asset Classes](assets.md)
+* [Connect Your Broker](connecting-your-broker.md)
 * [Webhooks](webhooks.md)
+* [TradingView](tradingview.md)
+* [TrendSpider](trend-spider.md)
 * [Order Behavior](order-behavior.md)
 * [Order Queueing](order-queueing.md)
 * [Paper Trading](paper-trading.md)
 * [Fractional Shares](fractional-shares.md)
-* [TradingView](tradingview.md)
-* [TrendSpider](trend-spider.md)
 * [Bot Examples](bot-examples.md)
-* [Brokers](brokers.md)
-* [Asset Classes](assets.md)
 * [API](api.md)
 
 ## Strategies & Indicators

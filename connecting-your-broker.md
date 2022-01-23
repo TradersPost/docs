@@ -1,11 +1,11 @@
 ---
 description: >-
-  This document aims to help you get started with your TradersPost account. It
-  will teach you to connect a broker and create a subscription for the MOMO
-  trading strategy.
+  This page aims to help you get started with your TradersPost account. It will
+  teach you to connect a broker and create a subscription to the MOMO trading
+  strategy.
 ---
 
-# Getting Started
+# Connect Your Broker
 
 {% embed url="https://www.youtube.com/watch?v=Xo-GiAszd3I" %}
 Prefer a video? Watch this quick video to see how to connect your broker to TradersPost.

@@ -1,20 +1,17 @@
 ---
 description: >-
-  Welcome to TradersPost! Get started with TradersPost by familiarizing yourself
-  with how the platform works.
+  TradersPost is a trading tool that can automate your TradingView or
+  TrendSpider strategies in stock brokers like TD Ameritrade, TradeStation and
+  Alpaca.
 cover: .gitbook/assets/Documentation Cover.jpeg
 coverY: 0
 ---
 
-# Introduction
+# What is TradersPost?
 
-{% embed url="https://www.youtube.com/watch?v=AWSImgUtw98" %}
-Watch this video for a full demo of the platform and how to get started!
+{% embed url="https://www.youtube.com/watch?v=WucPurodgk8" %}
+TradersPost Explainer Video
 {% endembed %}
-
-## What is TradersPost?
-
-TradersPost is a trading tool that can automate your TrendSpider or TradingView strategies in stock brokers like TD Ameritrade, TradeStation and Alpaca.
 
 ## Who is TradersPost for?
 
@@ -29,6 +26,12 @@ TradersPost is made of the following concepts. You can use them together to crea
 * [Strategies](./#strategies) - Strategies define a group of signals. Users can subscribe to strategies and have the signals place trades directly in their broker.
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
 * [Subscriptions](./#strategy-subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
+
+If you prefer to watch a video demo of TradersPost to get a high level overview, this video is for you. If not, feel free to continue reading to get a high level overview.
+
+{% embed url="https://www.youtube.com/watch?v=AWSImgUtw98" %}
+Watch a demo of TradersPost if you prefer a video.
+{% endembed %}
 
 ## Signals
 
@@ -129,10 +132,10 @@ As a strategy manager, if you don't want to publish your strategy for the public
 
 TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
 
-* [Alpaca](brokers.md#alpaca) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
-* [TD Ameritrade](brokers.md#tdameritrade) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
-* [TradeStation](brokers.md#tradestation) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
-* [Robinhood](brokers.md#robinhood) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
+* [Alpaca](supported-brokers.md#alpaca) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
+* [TD Ameritrade](supported-brokers.md#tdameritrade) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
+* [TradeStation](supported-brokers.md#tradestation) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
+* [Robinhood](supported-brokers.md#robinhood) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
 
 Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
 
