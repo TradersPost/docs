@@ -15,7 +15,7 @@ TradersPost Explainer Video
 
 ## Who is TradersPost for?
 
-* **Strategy Managers** - a person that is interested in creating automated trading strategies and connecting them to their broker.
+* **Strategy Developers** - a person that is interested in creating automated trading strategies and connecting them to their broker.
 * **Traders and Investors** - a person that is interested in connecting automated trading strategies to their broker without any coding knowledge.
 
 ## How does it work?
