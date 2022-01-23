@@ -27,6 +27,10 @@ TradersPost is made of the following concepts. You can use them together to crea
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
 * [Subscriptions](./#strategy-subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
 
+{% hint style="info" %}
+Want TradersPost to build a custom developed Pine Script strategy for you? [Learn more](strategies-and-indicators/custom.md)
+{% endhint %}
+
 If you prefer to watch a video demo of TradersPost to get a high level overview, this video is for you. If not, feel free to continue reading to get a high level overview.
 
 {% embed url="https://www.youtube.com/watch?v=AWSImgUtw98" %}
