@@ -21,3 +21,14 @@ Currently we support stock options trading through the following brokers.
 | ------------- | ---- | ----- |
 | TD Ameritrade | Yes  | No    |
 | TradeStation  | Yes  | Yes   |
+
+## Supported Option Types
+
+When setting up a strategy within TradersPost you will have the ability to choose what kind of option to buy or sell when signals are received.
+
+* Both - Buy calls when bullish and buy puts when bearish.
+* Call - Buy calls when bullish and sell calls when bearish.
+* Put - Buy puts when bullish and sell calls when bearish.
+
+
+
