@@ -2,7 +2,12 @@
 
 * [What is TradersPost?](README.md)
 * [Supported Brokers](supported-brokers.md)
-* [Asset Classes](assets.md)
+* [Asset Classes](assets/README.md)
+  * [Stocks](assets/stocks.md)
+  * [Options](assets/options.md)
+  * [Futures](assets/futures.md)
+  * [Crypto](assets/crypto.md)
+  * [Forex](assets/forex.md)
 * [Connect Your Broker](connecting-your-broker.md)
 * [Webhooks](webhooks.md)
 * [TradingView](tradingview.md)
