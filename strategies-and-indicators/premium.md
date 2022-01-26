@@ -11,6 +11,7 @@ description: >-
 * [TrendMaster](https://www.trendmaster.com)
 * [Prosum Solutions](https://prosum-solutions.store)
 * [Bitpool](https://bitpool.gumroad.com)
+* [TradingStrategyCheck](https://www.tradingview.com/u/TradingStrategyCheck)
 * [Pivot Points Algo](https://algo.win)
 * [Hiubris Indicators](https://www.hiubris-indicators.com)
 * [TradeAtEase](https://www.tradeatease.llc/algo)
