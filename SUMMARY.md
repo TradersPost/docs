@@ -12,6 +12,7 @@
 * [Webhooks](webhooks.md)
 * [TradingView](tradingview.md)
 * [TrendSpider](trend-spider.md)
+* [Backtesting](backtesting.md)
 * [Order Behavior](order-behavior.md)
 * [Order Queueing](order-queueing.md)
 * [Paper Trading](paper-trading.md)

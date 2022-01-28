@@ -1,7 +1,7 @@
 ---
 description: >-
-  Start your journey of learning TradingView Pine Script by exploring all the
-  great free and paid resources available on the internet.
+  Start your journey of learning automated trading strategy development by
+  exploring these free and paid resources.
 ---
 
 # Build Your Own
@@ -10,10 +10,10 @@ description: >-
 
 TradingView has a variety of different resources and documentation for learning Pine Script.
 
+* [Pine Script Chat](https://www.tradingview.com/chat/#BfmVowG1TZkKO235) - Sometimes you just need to chat with someone and get help.
 * [Pine Script Reference Manual](https://www.tradingview.com/pine-script-reference/v5/) - complete reference guide to the Pine Script programming language.
 * [Pine Script User Manual](https://www.tradingview.com/pine-script-docs/en/v5/index.html) - user manual for the Pine Script programming language.
 * [TradingView Pine Script Blog Posts](https://www.tradingview.com/blog/en/category/market-analysis/pine/) - Pine Script blog posts written by TradingView.
-* [Pine Script Chat](https://www.tradingview.com/chat/#BfmVowG1TZkKO235) - Sometimes you just need to chat with someone and get help.
 
 ## **Free Resources**
 
@@ -22,7 +22,7 @@ There are a number of free resources out on the internet for learning how to dev
 ### Tutorials & Articles
 
 * [PineScripters](https://www.pinescripters.com) - community of Pine Script developers with a free [Discord chat.](https://discord.gg/pq8A48cPua)
-* [Kodify](https://kodify.net/tradingview-programming-articles/) - Pine Script TradingView programming articles.
+* [Kodify](https://kodify.net/tradingview-programming-articles/) - TradingView Pine Script programming articles.
 * [How To Create A Simple Trading Strategy With TradingView](https://medium.com/@quansium/how-to-create-a-simple-trading-strategy-with-tradingview-7a9fea3cffc1) - great article by [Quansium](https://www.tradingview.com/u/Quansium/) that takes you step by step on how to create a TradingView strategy.
 * [Backtest Rookies](https://backtest-rookies.com/category/tradingview/) - Back testing tutorials and algorithmic trading for the complete beginner.&#x20;
 * [pAulseperformance](https://github.com/pAulseperformance/awesome-pinescript) - git repository with a bunch of good Pine Script content.
