@@ -31,6 +31,18 @@ You can find an example MOMO strategy backtester [here](tradingview.md#complex-s
 TradingView Strategy Tester Video
 {% endembed %}
 
+### Strategy Optimizers
+
+There are tools that exist to roll through all the possible strategy input settings to automatically see which settings have the best performance for a strategy on a specific ticker and timeframe.
+
+#### The Optimiser
+
+The [TradingView Optimiser](https://chrome.google.com/webstore/detail/the-optimiser/emcpjechgmpcnjphefjekmdlaljbiegp) is a tool that will run through the values in a TradingView Strategy and change each value. It will then download the backtest results. It uses a Machine Learning technique to choose the best settings.
+
+#### TradingView Strategy Finder
+
+The [TradingView Strategy Finder](https://chrome.google.com/webstore/detail/tradingview-strategy-find/jdepgjdjpmpjljfdcmnbjmafkbckkhko?hl=en) is able to automatically backtest your TradingView strategies. This tool is highly customizable and you are able to test as much input values as you like. Start to find the best settings for you strategy to be even more profitable in your trading.
+
 ## TrendSpider Backtesting
 
 Refine your automated trading performance by backtesting your strategies using TrendSpider's chart-based backtesting tool. Create technical buy and sell rules without knowing how to write code. [Learn more](https://trendspider.com/product/backtesting/).
