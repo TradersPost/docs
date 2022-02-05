@@ -1,7 +1,8 @@
 ---
 description: >-
   TradersPost hosts monthly webinars where we review upcoming changes to the
-  TradersPost software and answer questions from the commuity.
+  TradersPost software and answer questions from the community. They are hosted
+  on the
 ---
 
 # Webinars
