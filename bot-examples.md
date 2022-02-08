@@ -74,4 +74,6 @@ response = http.request(request)
 puts response.body
 ```
 
+Take these examples and combine them with a service like [Polygon](https://polygon.io) or [Alpaca](https://alpaca.markets/data) to get live market data to build your own custom strategies and use TradersPost to manage the integration with your broker.
+
 If you are interested building your own custom automated trading strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
