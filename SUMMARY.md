@@ -17,7 +17,7 @@
 * [Order Queueing](order-queueing.md)
 * [Paper Trading](paper-trading.md)
 * [Fractional Shares](fractional-shares.md)
-* [Bot Examples](bot-examples.md)
+* [Custom Code Examples](bot-examples.md)
 * [API](api.md)
 
 ## Strategies & Indicators
