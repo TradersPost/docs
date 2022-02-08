@@ -39,15 +39,15 @@ You can dynamically send the values in the above JSON using TradingView variable
 }
 ```
 
-The values inside of the **{{** and **}}** will be dynamically replaced by TradingView when the alert triggers.
+The values inside of the **\{{** and **\}}** will be dynamically replaced by TradingView when the alert triggers.
 
 When you create an alert in TradingView, you only need to enter the above JSON in the **Message** field and the URL of your webhook in the **Webhook URL** field. Here is a screenshot of a simple example that would send a signal to buy **SQ** when the price crosses above **241.94**.
 
 ![TradingView plain manually configured alert webhook.](https://traderspost.io/images/docs/trading-view/alert-window.png)
 
-This is a simple example to demonstrate the basics of how you can integrate TradingView alerts with TradersPost but the same principals apply if you are doing something more advanced with a Pinescript indicator. Continue reading to learn how you can integrate your Pinescript indicators and alerts with TradersPost.
+This is a simple example to demonstrate the basics of how you can integrate TradingView alerts with TradersPost but the same principals apply if you are doing something more advanced with a Pine Script indicator. Continue reading to learn how you can integrate your Pine Script indicators and alerts with TradersPost.
 
-## Pinescript Studies
+## Pine Script Studies
 
 Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
 
@@ -98,20 +98,20 @@ Here is what your alert should look like.
 
 ![MOMO Trend Following Indicator Alert Webhook](https://traderspost.io/images/docs/trading-view/momo-home-depot-alert.png)
 
-Notice how the **Message** field in the alert was automatically filled in with the JSON that is required for TradersPost? This is made available to us by these two lines of code in the Pinescript.
+Notice how the **Message** field in the alert was automatically filled in with the JSON that is required for TradersPost? This is made available to us by these two lines of code in the Pine Script.
 
 ```javascript
 alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"buy\", \"price\": {{close}}}")
 alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
 
-## Pinescript Strategies
+## Pine Script Strategies
 
 There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that are back testable.
 
 ### Custom Strategies
 
-Here is an example where the JSON for the alert message is defined in the Pinescript strategy itself and passed to the `alert_message` parameter in functions like `strategy.entry()`.
+Here is an example where the JSON for the alert message is defined in the Pine Script strategy itself and passed to the `alert_message` parameter in functions like `strategy.entry()`.
 
 ```javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -257,7 +257,7 @@ If you have an idea for a strategy and you need help with implementing the strat
 
 ### Shared Strategies
 
-Sometimes you may want to hook up a strategy to TradersPost that was built by someone else and you do not have the ability to modify the Pinescript. You can easily send alerts from existing strategies and send the alerts as webhooks to TradersPost.
+Sometimes you may want to hook up a strategy to TradersPost that was built by someone else and you do not have the ability to modify the Pine Script. You can easily send alerts from existing strategies and send the alerts as webhooks to TradersPost.
 
 Just send the following JSON in the alert message to TradersPost.
 
@@ -272,3 +272,19 @@ Just send the following JSON in the alert message to TradersPost.
 The `{{strategy.order.action}}` code will be dynamically replaced with a value of `buy` or `sell` when the strategy triggers an order.
 
 If you are interested automating your TradingView strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
+
+## Pine Script Repainting
+
+{% hint style="warning" %}
+When writing Pine Script strategies and indicators it is important to ensure your code does not suffer from repainting. Read the notes in this section to learn about repainting and how to avoid it.
+{% endhint %}
+
+> **From PineCoders:**
+>
+> What do we mean by repainting? Repainting is used to describe three different things, in what we’ve seen in TV members comments on indicators:
+>
+> * An indicator showing results that change during the realtime bar, whether the script is using the security() function or not, e.g., a Buy signal that goes on and then off, or a plot that changes values.
+> * An indicator that uses future data not yet available on historical bars.
+> * An indicator that uses a negative offset= parameter when plotting in order to plot information on past bars. The repainting types we will be discussing here are the first two types, as the third one is intentional—sometimes even intentionally misleading when unscrupulous script writers want their strategy to look better than it is.
+
+[Read more](https://www.tradingview.com/script/cyPWY96u-How-to-avoid-repainting-when-using-security-PineCoders-FAQ/) about repainting on the PineCoders TradingView profile.
