@@ -55,7 +55,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-uri = URI.parse("paste your webhook url")
+uri = URI.parse('paste your webhook url')
 
 header = {'Content-Type': 'text/json'}
 
