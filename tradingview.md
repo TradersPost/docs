@@ -281,7 +281,9 @@ When writing Pine Script strategies and indicators it is important to ensure you
 
 > **From PineCoders:**
 >
-> What do we mean by repainting? Repainting is used to describe three different things, in what we’ve seen in TV members comments on indicators:
+> **What do we mean by repainting?**
+>
+> Repainting is used to describe three different things, in what we’ve seen in TV members comments on indicators:
 >
 > * An indicator showing results that change during the realtime bar, whether the script is using the security() function or not, e.g., a Buy signal that goes on and then off, or a plot that changes values.
 > * An indicator that uses future data not yet available on historical bars.
