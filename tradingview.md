@@ -303,8 +303,6 @@ Just send the following JSON in the alert message to TradersPost.
 
 The `{{strategy.order.action}}` code will be dynamically replaced with a value of `buy` or `sell` when the strategy triggers an order.
 
-If you are interested automating your TradingView strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
-
 ## Pine Script Repainting
 
 {% hint style="warning" %}
@@ -331,4 +329,6 @@ When writing Pine Script strategies and indicators it is important to ensure you
 * [https://medium.com/@robswc/how-to-tell-if-a-trading-indicator-or-strategy-is-fake-or-repainting-41d4c85ca745](https://medium.com/@robswc/how-to-tell-if-a-trading-indicator-or-strategy-is-fake-or-repainting-41d4c85ca745)
 
 {% embed url="https://www.youtube.com/watch?v=dAzhR0Ve3PI" %}
+
+If you are interested automating your TradingView strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
 
