@@ -31,10 +31,42 @@ This JSON data structure is very important and it must be 100% correct otherwise
 
 You can dynamically send the values in the above JSON using TradingView variables. You can read more about TradingView variables [here](https://www.tradingview.com/support/solutions/43000531021-how-to-use-a-variable-value-in-alert/?offer\_id=10\&aff\_id=26514).
 
+#### Enter Long
+
 ```json
 {
     "ticker": "{{ticker}}",
     "action": "buy",
+    "price": "{{close}}"
+}
+```
+
+#### Exit Long
+
+```json
+{
+    "ticker": "{{ticker}}",
+    "action": "exit",
+    "price": "{{close}}"
+}
+```
+
+#### Enter Short
+
+```json
+{
+    "ticker": "{{ticker}}",
+    "action": "sell",
+    "price": "{{close}}"
+}
+```
+
+#### Exit Short
+
+```json
+{
+    "ticker": "{{ticker}}",
+    "action": "exit",
     "price": "{{close}}"
 }
 ```
