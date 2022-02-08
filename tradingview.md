@@ -290,3 +290,13 @@ When writing Pine Script strategies and indicators it is important to ensure you
 > * An indicator that uses a negative offset= parameter when plotting in order to plot information on past bars. The repainting types we will be discussing here are the first two types, as the third one is intentional—sometimes even intentionally misleading when unscrupulous script writers want their strategy to look better than it is.
 
 [Read more](https://www.tradingview.com/script/cyPWY96u-How-to-avoid-repainting-when-using-security-PineCoders-FAQ/) about repainting on the PineCoders TradingView profile.
+
+### Other Resources
+
+* [https://www.tradingview.com/script/s8kWs84i-How-to-avoid-repainting-when-NOT-using-security/](https://www.tradingview.com/script/s8kWs84i-How-to-avoid-repainting-when-NOT-using-security/)
+* [https://www.tradingview.com/pine-script-docs/en/v4/essential/Indicator\_repainting.html](https://www.tradingview.com/pine-script-docs/en/v4/essential/Indicator\_repainting.html)
+* [https://zenandtheartoftrading.com/pinescript/how-to-eliminate-repainting/](https://zenandtheartoftrading.com/pinescript/how-to-eliminate-repainting/)
+* [https://medium.com/@robswc/how-to-tell-if-a-trading-indicator-or-strategy-is-fake-or-repainting-41d4c85ca745](https://medium.com/@robswc/how-to-tell-if-a-trading-indicator-or-strategy-is-fake-or-repainting-41d4c85ca745)
+
+{% embed url="https://www.youtube.com/watch?v=dAzhR0Ve3PI" %}
+
