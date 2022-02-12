@@ -54,3 +54,11 @@ Now you will see a form to create a **New Subscription**.
 ![Configure your strategy subscription.](https://traderspost.io/images/docs/getting-started/new-subscription.png)
 
 Enter the details of your **MOMO** subscription in this form.
+
+## Max Strategy Positions
+
+On each connected broker you can configure a **Max Strategy Positions** value and TradersPost will not allow any more positions to be opened than you have configured.
+
+![Max Strategy Positions](<.gitbook/assets/Screen Shot 2022-02-11 at 10.03.05 PM.png>)
+
+In this example if you have 5 open positions and you get a signal from a strategy subscription that would result in a 6th open position, then the trade signal will be rejected.
