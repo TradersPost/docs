@@ -43,3 +43,45 @@ TradersPost understands many different futures symbol formats. Since every broke
 {% hint style="info" %}
 While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.html) platform, they unfortunately do not allow futures trading through their API. If you would like to see TD Ameritrade support futures trading through their api, please email their support team at [api@tdameritrade.com](<mailto:api@tdameritrade.com >).
 {% endhint %}
+
+
+
+## Signals
+
+It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from platforms like [TradingView](../tradingview.md) or [TrendSpider](../trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+
+### Enter Bullish
+
+```json
+{
+    "ticker": "NQH2022",
+    "action": "buy"
+}
+```
+
+### Exit Bullish
+
+```json
+{
+    "ticker": "NQH2022",
+    "action": "exit"
+}
+```
+
+### Enter Bearish
+
+```json
+{
+    "ticker": "NQH2022",
+    "action": "sell"
+}
+```
+
+### Exit Bearish
+
+```json
+{
+    "ticker": "NQH2022",
+    "action": "exit"
+}
+```
