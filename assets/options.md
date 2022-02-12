@@ -34,6 +34,21 @@ When setting up a strategy within TradersPost you will have the ability to choos
 It can be a little confusing that when you configure a strategy to use puts, an action of **sell** will actually buy puts and an action of **buy** will sell puts. Essentially, a **buy** action indicates a bullish sentiment and a **sell** signal indicates a bearish sentiment.
 {% endhint %}
 
+## Option Chain Scanning
+
+TradersPost offers a variety of different methods for scanning the option chain automatically to find contracts that fit your criteria.
+
+In this example we have configured our strategy subscription to do the following:
+
+* **Asset class = Options** will buy and sell options contracts.
+* **Option Type = Both** will buy calls when bullish and buy puts when bearish.
+* **Intrinsic value = In The Money** will filter out any Out Of The money contracts.
+* **Expiration = +3 months** will filter out any contracts that expire before 3 months out.
+* **Strike Count** limits how many strikes to analyze per expiration date when we're scanning the option chain.
+* **Strikes Away = 3** will select the 3rd contract away from At The Money.
+
+![Options Asset Configuration Example](<../.gitbook/assets/Screen Shot 2022-02-11 at 10.06.21 PM.png>)
+
 ## Signals
 
 It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from platforms like [TradingView](../tradingview.md) or [TrendSpider](../trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
