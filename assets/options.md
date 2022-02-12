@@ -42,7 +42,7 @@ Inside of TradersPost when setting up a strategy you can configure what kind of 
 
 ### Enter Bullish
 
-The **buy** action is a bullish signal. When you receive a buy signal, TradersPost will exit any bearish position for the ticker whether that is short calls or long puts and enter bullish with long calls or short puts.
+The **buy** action is a bullish signal. When TradersPost receives a buy signal, TradersPost will **Buy To Close** or **Sell To Close** any bearish position for the ticker whether that is short calls or long puts and enter bullish with **Buy To Open** long calls or **Sell To Open** short puts.
 
 ```json
 {
@@ -64,7 +64,7 @@ The **exit** action will exit any open position. So for example if you have a lo
 
 ### Enter Bearish
 
-The **sell** action is a bearish signal. When you receive a sell signal, TradersPost will exit any bullish position for the ticker whether that is long calls or short puts and enter a bearish position whether that is long puts or short calls.
+The **sell** action is a bearish signal. When TradersPost receives a sell signal, TradersPost will **Sell To Close** or **Buy To Close** any bullish position for the ticker whether that is long calls or short puts and enter bearish position with **Buy To Open** long puts or **Sell To Open** short calls.
 
 ```json
 {

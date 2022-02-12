@@ -22,6 +22,8 @@ It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from p
 
 ### Enter Bullish
 
+The **buy** action is a bullish signal. When TradersPost receives a buy signal, we will **Buy To Cover** any bearish (short) position for the ticker and **Buy To Open** a bullish (long).
+
 ```json
 {
     "ticker": "SQ",
@@ -30,6 +32,8 @@ It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from p
 ```
 
 ### Exit Bullish
+
+The **exit** action will exit any open position. So for example if you have a long shares position open, then TradersPost will **Sell To Close** those long shares.
 
 ```json
 {
@@ -40,6 +44,8 @@ It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from p
 
 ### Enter Bearish
 
+The **sell** action is a bearish signal. When TradersPost receives a sell signal, we will **Sell To Close** any bullish (long) position for the ticker and **Sell To Open** a bearish (short) position.
+
 ```json
 {
     "ticker": "SQ",
@@ -48,6 +54,8 @@ It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from p
 ```
 
 ### Exit Bearish
+
+The **exit** action will exit any open position. So for example if you have a short shares position open, then TradersPost will **Buy to Cover** those short shares.
 
 ```json
 {
