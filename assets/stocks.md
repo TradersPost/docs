@@ -6,16 +6,6 @@ description: >-
 
 # Stocks
 
-## Supported Brokers
-
-| Broker        | Live | Paper | Fractional | Shorting |
-| ------------- | ---- | ----- | ---------- | -------- |
-| Alpaca        | Yes  | Yes   | Yes        | Yes      |
-| TD Ameritrade | Yes  | No    | No         | Yes      |
-| TradeStation  | Yes  | Yes   | No         | Yes      |
-| Robinhood     | Yes  | No    | Yes        | No       |
-| TradersPost   | No   | Yes   | Yes        | Yes      |
-
 ## Signals
 
 It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from platforms like [TradingView](../tradingview.md) or [TrendSpider](../trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
@@ -63,3 +53,28 @@ The **exit** action will exit any open position. So for example if you have a sh
     "action": "exit"
 }
 ```
+
+### Full Signal Example
+
+You can optionally include a **price** and **quantity** in the signal that can then be used in the calculated orders that we send to your broker. Here is a full example signal.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "price": 108.88,
+    "quantity": 100
+}
+```
+
+If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy Limit** order for **100** shares at a price of **$108.88**.
+
+## Supported Brokers
+
+| Broker        | Live | Paper | Fractional | Shorting |
+| ------------- | ---- | ----- | ---------- | -------- |
+| Alpaca        | Yes  | Yes   | Yes        | Yes      |
+| TD Ameritrade | Yes  | No    | No         | Yes      |
+| TradeStation  | Yes  | Yes   | No         | Yes      |
+| Robinhood     | Yes  | No    | Yes        | No       |
+| TradersPost   | No   | Yes   | Yes        | Yes      |

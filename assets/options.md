@@ -13,15 +13,6 @@ TradersPost understands many different stock options symbol formats. Since every
 | TSLA 210121C325  | TradeStation, TradersPost |
 | TSLA\_210121C325 | TD Ameritrade             |
 
-## Supported Brokers
-
-Currently we support stock options trading through the following brokers.
-
-| Broker        | Live | Paper |
-| ------------- | ---- | ----- |
-| TD Ameritrade | Yes  | No    |
-| TradeStation  | Yes  | Yes   |
-
 ## Supported Option Types
 
 When setting up a strategy within TradersPost you will have the ability to choose what kind of option to buy or sell when signals are received.
@@ -98,3 +89,30 @@ The **exit** action will exit any open position. So if you have a long puts posi
     "action": "exit"
 }
 ```
+
+### Full Signal Example
+
+You can optionally include a **quantity** in the signal that can then be used in the calculated orders that we send to your broker. Here is a full example signal.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "quantity": 5
+}
+```
+
+If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy To Open Limit** order for **5** contracts.
+
+{% hint style="warning" %}
+TradersPost does not currently support sending prices in signals for options. If you send a price in the signal, the value will not be used. If your strategy subscription is configured to send limit orders, then we will calculate the midpoint price between the bid and ask and use that price for the limit order.
+{% endhint %}
+
+## Supported Brokers
+
+Currently we support stock options trading through the following brokers.
+
+| Broker        | Live | Paper |
+| ------------- | ---- | ----- |
+| TD Ameritrade | Yes  | No    |
+| TradeStation  | Yes  | Yes   |

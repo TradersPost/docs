@@ -1,12 +1,18 @@
+---
+description: >-
+  TradersPost supports buying, selling and shorting futures contracts for the
+  NQ, MNQ, ES and MES tickers in TradeStation.
+---
+
 # Futures
 
 {% hint style="info" %}
-**Coming Soon!** Futures is currently under development and will be available for paper trading in 2022. If you would like to join the beta, email us at [support@traderspost.io](mailto:support@traderspost.io).
+**Coming Soon!** Futures trading is currently only available for paper trading. If you would like to apply to be a part of the futures beta, email [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
 
 ## Supported Symbols
 
-Initially TradersPost will launch with a limited list of support symbols.
+TradersPost currently only supports trading with the following tickers. We plan to continually add more support for other tickers in the future.
 
 | Symbol | Description                     | Exchange |
 | ------ | ------------------------------- | -------- |
@@ -33,16 +39,6 @@ TradersPost understands many different futures symbol formats. Since every broke
 | NQ2!    | TradingView next contract    |
 | NQ\*0   | TrendSpider current contract |
 | NQ\*1   | TrendSpider next contract    |
-
-## Supported Brokers
-
-| Broker       | Live | Paper |
-| ------------ | ---- | ----- |
-| TradeStation | Yes  | Yes   |
-
-{% hint style="info" %}
-While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.html) platform, they unfortunately do not allow futures trading through their API. If you would like to see TD Ameritrade support futures trading through their api, please email their support team at [api@tdameritrade.com](<mailto:api@tdameritrade.com >).
-{% endhint %}
 
 ## Signals
 
@@ -91,3 +87,28 @@ The **exit** action will exit any open position. So for example if you have a sh
     "action": "exit"
 }
 ```
+
+### Full Signal Example
+
+You can optionally include a **price** and **quantity** in the signal that can then be used in the calculated orders that we send to your broker. Here is a full example signal.
+
+```json
+{
+    "ticker": "NQH2022",
+    "action": "buy",
+    "price": 1420.50,
+    "quantity": 2
+}
+```
+
+If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy Limit** order for 2 contracts at a price of **$1420.50**.
+
+## Supported Brokers
+
+| Broker       | Live | Paper |
+| ------------ | ---- | ----- |
+| TradeStation | Yes  | Yes   |
+
+{% hint style="info" %}
+While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.html) platform, they unfortunately do not allow futures trading through their API. If you would like to see TD Ameritrade support futures trading through their api, please email their support team at [api@tdameritrade.com](<mailto:api@tdameritrade.com >).
+{% endhint %}
