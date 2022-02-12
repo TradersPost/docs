@@ -4,7 +4,7 @@ description: >-
   more in the future.
 ---
 
-# Brokers
+# Supported Brokers
 
 ## Supported Brokers
 
@@ -20,6 +20,12 @@ API for Stock Trading - Trade with algorithms, connect with apps, build services
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
+#### Crypto Support
+
+{% hint style="info" %}
+While the Alpaca does support crypto, TradersPost has not integrated it with our platform yet but we plan to in the future.
+{% endhint %}
+
 ### Robinhood
 
 ![](.gitbook/assets/Robinhood-Full.png)
@@ -29,6 +35,12 @@ Robinhood is a free-trading app that lets investors trade stocks, options, excha
 #### Supported Asset Classes
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
+
+#### Crypto & Options Support
+
+{% hint style="info" %}
+While Robinhood does support crypto and options, TradersPost has not integrated it with our platform yet but we plan to in the future.
+{% endhint %}
 
 ### TDAmeritrade
 
@@ -42,9 +54,17 @@ TD Ameritrade is a broker that offers an electronic trading platform for the tra
 
 #### Wash Sale Rule
 
+{% hint style="info" %}
 TDAmeritrade will automatically adjust the cost basis of your positions if a previous loss on the same security has occurred in the last 30 days. This adjustment happens the night after you enter a position. The wash rule will run and the next day, the cost basis of your position will be adjusted and your avgerage entry price will not match the average fill price of the order that entered you in the position.
 
 You can read more about how TDAmeritrade applies the wash sale rule [here](https://www.tdameritrade.com/investment-guidance/investment-management-services/tax-loss-harvesting/tax-loss-harvesting-wash-sales.html).
+{% endhint %}
+
+#### Futures Support
+
+{% hint style="info" %}
+While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.html) platform, they unfortunately do not allow futures trading through their API. If you would like to see TD Ameritrade support futures trading through their api, please email their support team at [api@tdameritrade.com](<mailto:api@tdameritrade.com >).
+{% endhint %}
 
 ### TradeStation
 
@@ -53,6 +73,10 @@ You can read more about how TDAmeritrade applies the wash sale rule [here](https
 TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>true</td></tr><tr><td>Futures</td><td>true</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
+
+{% hint style="info" %}
+While TradeStation does support crypto and fotex, TradersPost has not integrated it with our platform yet but we plan to in the future.
+{% endhint %}
 
 ## Broker Roadmap
 

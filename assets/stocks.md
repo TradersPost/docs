@@ -68,13 +68,3 @@ You can optionally include a **price** and **quantity** in the signal that can t
 ```
 
 If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy Limit** order for **100** shares at a price of **$108.88**.
-
-## Supported Brokers
-
-| Broker        | Live | Paper | Fractional | Shorting |
-| ------------- | ---- | ----- | ---------- | -------- |
-| Alpaca        | Yes  | Yes   | Yes        | Yes      |
-| TD Ameritrade | Yes  | No    | No         | Yes      |
-| TradeStation  | Yes  | Yes   | No         | Yes      |
-| Robinhood     | Yes  | No    | Yes        | No       |
-| TradersPost   | No   | Yes   | Yes        | Yes      |

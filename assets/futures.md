@@ -102,13 +102,3 @@ You can optionally include a **price** and **quantity** in the signal that can t
 ```
 
 If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy Limit** order for 2 contracts at a price of **$1420.50**.
-
-## Supported Brokers
-
-| Broker       | Live | Paper |
-| ------------ | ---- | ----- |
-| TradeStation | Yes  | Yes   |
-
-{% hint style="info" %}
-While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.html) platform, they unfortunately do not allow futures trading through their API. If you would like to see TD Ameritrade support futures trading through their api, please email their support team at [api@tdameritrade.com](<mailto:api@tdameritrade.com >).
-{% endhint %}
