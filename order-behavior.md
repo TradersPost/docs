@@ -6,6 +6,10 @@ description: >-
 
 # Order Behavior
 
+{% hint style="info" %}
+The details on this page are written under the context of buying and selling stocks. The behavior for other asset classes can vary depending on how your strategy is configured.
+{% endhint %}
+
 ## Buy
 
 ```json
@@ -146,7 +150,7 @@ You can accomplish the both sides functionality by manually managing the entries
 
 To open a long position, send a **buy** action to the webhook.
 
-```
+```json
 {
     "ticker": "TSLA",
     "action": "buy"
@@ -155,7 +159,7 @@ To open a long position, send a **buy** action to the webhook.
 
 To exit a long position, send an **exit** action to the webhook.
 
-```
+```json
 {
     "ticker": "TSLA",
     "action": "exit"
@@ -166,7 +170,7 @@ To exit a long position, send an **exit** action to the webhook.
 
 To open a short position, send a **sell** action to the webhook.
 
-```
+```json
 {
     "ticker": "TSLA",
     "action": "sell"
@@ -175,7 +179,7 @@ To open a short position, send a **sell** action to the webhook.
 
 To exit a short position, send an **exit** action to the webhook.
 
-```
+```json
 {
     "ticker": "TSLA",
     "action": "exit"
