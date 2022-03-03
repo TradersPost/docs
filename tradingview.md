@@ -201,7 +201,7 @@ timeConditionEnd = timeCondition[1] and not timeCondition
 
 fastEmaLength = input.int(defval = 8, title = 'Fast EMA Length')
 slowEmaLength = input.int(defval = 21, title = 'Slow EMA Length')
-sides = input.string(defval = 'Long', title = 'Sides', options = ['Long', 'Short', 'Both', 'None'])
+sides = input.string(defval = 'Both', title = 'Sides', options = ['Long', 'Short', 'Both', 'None'])
 
 fastEma = ta.ema(close, fastEmaLength)
 slowEma = ta.ema(close, slowEmaLength)
@@ -270,17 +270,10 @@ if (sides != "None")
         strategy.entry('Short', strategy.short, when = sides != 'Long', alert_message = sellAlertMessage)
         strategy.close('Long', when = sides == 'Long', alert_message = exitLongAlertMessage)
 
-longTakeProfitExitAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close + (takeProfitLong / 100)) + '}'
-longStopLossExitAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close - (stopLossLong / 100)) + '}'
+exitAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit"}'
 
-strategy.exit('Long Take Profit', from_entry = "Long", profit = takeProfitLong, alert_message = longTakeProfitExitAlertMessage)
-strategy.exit('Long Stop Loss', from_entry = "Long", loss = stopLossLong, alert_message = longStopLossExitAlertMessage)
-
-shortTakeProfitExitAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close - (takeProfitShort / 100)) + '}'
-shortStopLossExitAlertMessage = '{"ticker": "' + syminfo.ticker + '", "action": "exit", "price": ' + str.tostring(close + (stopLossShort / 100)) + '}'
-
-strategy.exit('Short Take Profit', from_entry = "Short", profit = takeProfitShort, alert_message = shortTakeProfitExitAlertMessage)
-strategy.exit('Short Stop Loss', from_entry = "Short", loss = stopLossShort, alert_message = shortStopLossExitAlertMessage)
+strategy.exit('Exit Long', from_entry = "Long", profit = takeProfitLong, loss = stopLossLong, alert_message = exitAlertMessage)
+strategy.exit('Exit Short', from_entry = "Short", profit = takeProfitShort, loss = stopLossShort, alert_message = exitAlertMessage)
 
 strategy.close_all(when = timeConditionEnd)
 ```
