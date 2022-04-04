@@ -9,6 +9,7 @@ description: >-
 
 * [RealLifeTrading](https://lddy.no/u5jf)
 * [SmarterOptions](https://smarteroptions.com)
+* [Trading Rebels](https://www.tradingrebels.com)
 * [SepiaGroup](https://sepiagroup.com) #TheStrat
 * [OnlySans](https://www.myonlysans.com)
 * [TradeAtEase](https://www.tradeatease.llc)
