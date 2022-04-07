@@ -75,7 +75,7 @@ TradeStation offers state-of-the-art trading technology and online electronic br
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>true</td></tr><tr><td>Futures</td><td>true</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
 {% hint style="info" %}
-While TradeStation does support crypto and fotex, TradersPost has not integrated it with our platform yet but we plan to in the future.
+While TradeStation does support crypto and forex, TradersPost has not integrated it with our platform yet but we plan to in the future.
 {% endhint %}
 
 ## Broker Roadmap
