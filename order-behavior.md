@@ -112,8 +112,6 @@ Additionally, you can explicitly add to an existing position by using the **add*
 
 ## Both Sides
 
-The ability to take both the **long** and **short** side of a strategy in one strategy subscription is only available in paper accounts at the moment. If you would like to have both sides enabled in live accounts, please email [support@traderspost.io](mailto:support@traderspost.io).
-
 When you receive a **buy** signal and you are trading both sides of a strategy, the following will happen:
 
 * If there are open orders for TSLA, they will be canceled.
@@ -145,6 +143,10 @@ If you have both sides enabled in your strategy subscription and you want to exi
 ### Manually Manage Both Sides
 
 You can accomplish the both sides functionality by manually managing the entries and exits on both sides yourself instead of relying on the TradersPost both sides functionality. Keep in mind you are responsible for waiting long enough inbetween exits and entries, otherwise your entry could get rejected due to the exit order not being filled yet.
+
+{% hint style="warning" %}
+It is important that if you setup a strategy in this way, that there is time in-between the exit and entry signals. If you send both the exit and entry signal at the same exact time, you may experience unexpected behavior.
+{% endhint %}
 
 #### **LONG**
 
