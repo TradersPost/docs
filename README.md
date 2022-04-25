@@ -27,10 +27,6 @@ TradersPost is made of the following concepts. You can use them together to crea
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
 * [Subscriptions](./#strategy-subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
 
-{% hint style="info" %}
-Want TradersPost to build a custom developed Pine Script strategy for you? [Learn more](strategies-and-indicators/custom.md)
-{% endhint %}
-
 If you prefer to watch a video demo of TradersPost to get a high level overview, this video is for you. If not, feel free to continue reading to get a high level overview.
 
 {% embed url="https://www.youtube.com/watch?v=AWSImgUtw98" %}
@@ -89,7 +85,7 @@ Or if you are a user of TradingView, you can configure an alert to send a webhoo
 }
 ```
 
-The values wrapped in **{{** and **}}** will be replaced dynamically by TradingView when the alert is sent to the webhook URL. With this, you can use something like the [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/?offer\_id=10\&aff\_id=26514) strategy by Matt DeLong and place the MOMO trades directly in your broker!
+The values wrapped in **\{{** and **\}}** will be replaced dynamically by TradingView when the alert is sent to the webhook URL. With this, you can use something like the [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/?offer\_id=10\&aff\_id=26514) strategy by Matt DeLong and place the MOMO trades directly in your broker!
 
 ### **Custom Code**
 

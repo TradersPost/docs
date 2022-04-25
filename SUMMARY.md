@@ -22,7 +22,6 @@
 
 ## Strategies & Indicators
 
-* [Custom](strategies-and-indicators/custom.md)
 * [Premium](strategies-and-indicators/premium.md)
 * [Free](strategies-and-indicators/free.md)
 * [Build Your Own](strategies-and-indicators/build-your-own.md)

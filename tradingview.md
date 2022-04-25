@@ -9,10 +9,6 @@ description: >-
 
 ![](.gitbook/assets/TradingView.png)
 
-{% hint style="info" %}
-Want TradersPost to build a custom developed Pine Script strategy for you? [Learn more](strategies-and-indicators/custom.md)
-{% endhint %}
-
 ![TradingView chart with Trend Following MOMO strategy on the chart.](.gitbook/assets/TSLA\_2022-01-22\_23-00-14.png)
 
 ## Alert Message JSON
@@ -278,7 +274,7 @@ strategy.exit('Exit Short', from_entry = "Short", profit = takeProfitShort, loss
 strategy.close_all(when = timeConditionEnd)
 ```
 
-If you have an idea for a strategy and you need help with implementing the strategy in Pine Script, TradersPost can help you! [Learn more](strategies-and-indicators/custom.md) about our custom strategy development team.
+If you have an idea for a strategy and you need help with implementing the strategy in Pine Script, TradersPost can help you! [Learn more](broken-reference) about our custom strategy development team.
 
 ### Shared Strategies
 

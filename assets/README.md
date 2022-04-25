@@ -3,7 +3,6 @@ description: >-
   TradersPost supports many different asset classes. You can easily setup
   strategies with tools like TradingView or TrendSpider and execute orders in
   your broker for different asset classes.
-coverY: 0
 ---
 
 # Asset Classes
