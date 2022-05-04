@@ -9,7 +9,7 @@ description: >-
 
 ## 06/07/2022
 
-Next webinar will be on June 6th, 2022 at 4pm eastern time.
+Next webinar will be on June 7th, 2022 at 4pm eastern time.
 
 RSVP here [https://zoom.us/webinar/register/WN\_OTgKg5iTRdSVQu-6K9DS9g](https://zoom.us/webinar/register/WN\_OTgKg5iTRdSVQu-6K9DS9g)
 
