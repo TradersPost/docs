@@ -1,7 +1,7 @@
 # Options
 
 {% hint style="info" %}
-**Coming Soon!** Options trading is currently only available for paper trading. If you would like to apply to be a part of the options beta, email [support@traderspost.io](mailto:support@traderspost.io).
+**Coming Soon!** Options trading is currently only available for paper trading by default. You can join the wait list [here](https://traderspost.io/wait-list/options). If you would like to apply to be a part of the live options beta, email [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=Kbb37xqMwR4" %}

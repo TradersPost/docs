@@ -6,6 +6,12 @@ description: >-
 
 # Supported Brokers
 
+
+
+{% hint style="info" %}
+If you do not see your broker listed here, please visit [this page](https://traderspost.io/brokers) and join the wait list for the broker that you want to use with TradersPost. If you do not see your broker listed, email us at [support@traderspost.io](mailto:support@traderspost.io).
+{% endhint %}
+
 ## Supported Brokers
 
 Here is a list of brokers that TradersPost currently integrates with and supports.

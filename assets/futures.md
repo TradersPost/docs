@@ -7,7 +7,7 @@ description: >-
 # Futures
 
 {% hint style="info" %}
-**Coming Soon!** Futures trading is currently only available for paper trading. If you would like to apply to be a part of the futures beta, email [support@traderspost.io](mailto:support@traderspost.io).
+**Coming Soon!** Futures trading is currently only available for paper trading by default. You can join the wait list [here](https://traderspost.io/wait-list/futures). If you would like to apply to be a part of the live futures beta, email [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=g0dB64iWTpA" %}
