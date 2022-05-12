@@ -10,6 +10,10 @@ description: >-
 **Coming Soon!** Futures trading is currently only available for paper trading. If you would like to apply to be a part of the futures beta, email [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
 
+{% embed url="https://www.youtube.com/watch?v=g0dB64iWTpA" %}
+TradersPost Automated Futures Trading Setup
+{% endembed %}
+
 ## Supported Symbols
 
 TradersPost currently only supports trading with the following tickers. We plan to continually add more support for other tickers in the future.

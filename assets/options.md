@@ -4,6 +4,10 @@
 **Coming Soon!** Options trading is currently only available for paper trading. If you would like to apply to be a part of the options beta, email [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
 
+{% embed url="https://www.youtube.com/watch?v=Kbb37xqMwR4" %}
+TradersPost Automated Options Trading Setup
+{% endembed %}
+
 ## Symbol Format
 
 TradersPost understands many different stock options symbol formats. Since every broker and trading platform has subtle differences in the format we try to be as flexible as possible.

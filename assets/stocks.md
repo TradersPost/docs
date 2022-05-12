@@ -6,6 +6,10 @@ description: >-
 
 # Stocks
 
+{% embed url="https://www.youtube.com/watch?v=tJcY7M_YCmU" %}
+TradersPost Automated Stocks Trading Setup
+{% endembed %}
+
 ## Signals
 
 It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from platforms like [TradingView](../tradingview.md) or [TrendSpider](../trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
