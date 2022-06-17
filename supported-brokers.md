@@ -6,8 +6,6 @@ description: >-
 
 # Supported Brokers
 
-
-
 {% hint style="info" %}
 If you do not see your broker listed here, please visit [this page](https://traderspost.io/brokers) and join the wait list for the broker that you want to use with TradersPost. If you do not see your broker listed, email us at [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
@@ -88,9 +86,11 @@ While TradeStation does support crypto and forex, TradersPost has not integrated
 
 We plan to continually add more broker integrations to our system over time. Here are the brokers most immediately on our roadmap.
 
-* [Interactive Brokers](https://www.interactivebrokers.com)
-* [Coinbase Pro](https://pro.coinbase.com)
-* [Fidelity](https://www.fidelity.com)
-* [E-Trade](https://etrade.com)
+* [Interactive Brokers](https://traderspost.io/broker/ibkr)
+* [Coinbase Pro](https://traderspost.io/broker/coinbasepro)
+* [Fidelity](https://traderspost.io/broker/fidelity)
+* [WeBull](https://traderspost.io/broker/webull)
+
+You can find the full list of supported brokers and broker wait lists [here](https://traderspost.io/brokers).
 
 If you would like to see your broker supported within TradersPost, please email us at [support@traderspost.io](mailto:support@traderspost.io) and let us know what you use.

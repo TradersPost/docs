@@ -27,10 +27,121 @@ TradersPost requires a minimum required amount of fields in a webhook in order t
 
 * **ticker** - The ticker symbol name. Example **AMD** (required)
 * **action** - The signal action. Supported values are **buy,** **sell, exit, cancel or add** (required)
-* **price** - The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is processed (optional)
+  * **buy** - Exit bearish position and optionally open bullish position
+  * **sell** - Exit bullish position and optionally open bearish position
+  * **exit** - Exit open position without entering a new position on the other side.
+  * **cancel** - Cancel open orders
+  * **add** - Add to existing open position
+* **sentiment** - The sentiment of the position you should be in after a trade is executed (optional)
+  * **bullish** - Open position after trade is executed should be bullish or flat.
+  * **bearish** - Open position after trade is executed should be bearish or flat.
+  * **flat** - No position should be open after trade is executed.
+* **price** - The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed (optional)
 * **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. (optional)
 
-You can send webhooks to TradersPost in a few different ways.
+## Examples
+
+#### Enter Bullish
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy"
+}
+```
+
+#### Exit Bullish
+
+```json
+{
+    "ticker": "SQ",
+    "action": "exit"
+}
+```
+
+You can also use the sentiment field to exit a bullish position without entering a bearish position on the other side.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "sell",
+    "sentiment": "flat"
+}
+```
+
+#### Enter Bearish
+
+```json
+{
+    "ticker": "SQ",
+    "action": "sell"
+}
+```
+
+#### Exit Bearish
+
+```json
+{
+    "ticker": "SQ",
+    "action": "exit"
+}
+```
+
+You can also use the sentiment field to exit a bearish position without entering a bullish position on the other side.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "sentiment": "flat"
+}
+```
+
+#### Cancel Open Orders
+
+```json
+{
+    "ticker": "SQ",
+    "action": "cancel"
+}
+```
+
+#### Add to Open Position
+
+```json
+{
+    "ticker": "SQ",
+    "action": "add"
+}
+```
+
+#### Signal Quantity
+
+{% hint style="info" %}
+The signal quantity will only be used if you check **Use signal quantity** in the strategy subscription settings in TradersPost.
+{% endhint %}
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "quantity": 5
+}
+```
+
+#### Signal Price
+
+{% hint style="info" %}
+The signal price is optional. If you omit a price from the signal, the current market price will be used if you have limit orders configured.
+{% endhint %}
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "price": 60.30
+}
+```
 
 ## Third Parties
 
@@ -45,7 +156,7 @@ Here are some popular platforms that enable you to build strategies and send ale
 
 In addition to sending webhooks from third parties, you can send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). Here is an example using [PHP](https://php.net) and the [Symfony HTTP Client](https://symfony.com/doc/current/http\_client.html).
 
-This example uses [PHP](https://www.php.net) and the [Composer](https://getcomposer.org) package manager. First create a new directory to work inside of.
+This example uses [PHP](https://www.php.net/) and the [Composer](https://getcomposer.org/) package manager. First create a new directory to work inside of.
 
 ```bash
 mkdir traderspost

@@ -1,8 +1,8 @@
 ---
 description: >-
-  TradersPost is a trading tool that can automate your TradingView or
-  TrendSpider strategies in stock brokers like TD Ameritrade, TradeStation and
-  Alpaca.
+  TradersPost is an automated trading platform that can automate your
+  TradingView or TrendSpider. strategies in brokers like TD Ameritrade,
+  TradeStation, Robinhood and Alpaca.
 cover: .gitbook/assets/Documentation Cover.jpeg
 coverY: 0
 ---
@@ -35,31 +35,13 @@ Watch a demo of TradersPost if you prefer a video.
 
 ## Signals
 
-Signals are buy or sell instructions that can be produced by an automated algorithm or even a manual human trader. They require the following minimum information.
-
-* **ticker** - The ticker symbol name. Example **AMD** (required)
-* **action** - The signal action. (required)
-* **price** - The price of the buy or sell action. If you omit this value, the signal defaults to a market order (optional)
-
-Signals can be sent to TradersPost via [Webhooks](https://traderspost.io/docs#webhooks). A webhook is a signal sent from custom code or a 3rd party system like [TradingView.com](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514).
-
-### Supported Actions
-
-* **buy** - open a new long position and/or exit a short position
-* **sell** - exit a long position and/or open a new short position
-* **exit** - exit open position if one exists
-* **cancel** - cancel open orders if they exist
-* **add** - add to open position if one exists
-
-The **buy** and **sell** actions will only open a position on the opposite side after exiting the open position if the strategy subscription has BOTH sides enabled.
-
-### Webhooks
+Signals are buy and sell instructions that can be produced by an automated algorithm or even a manual human trader. Signals are sent to TradersPost via webhooks using JSON.
 
 > A webhook in web development is a method of augmenting or altering the behavior of a web page or web application with custom callbacks. These callbacks may be maintained, modified, and managed by third-party users and developers who may not necessarily be affiliated with the originating website or application.
 
 You can use webhooks to send signals to TradersPost from your own custom code, or from a system like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) or [TrendSpider](https://trendspider.com/?\_go=traderspost). A webhook receives data in the JSON format. JSON is an open standard format, and data interchange format, that uses human-readable text to store and transmit data between systems.
 
-Here is an example of what the JSON would look for a webhook signal for **AMD** to **buy** at a price of **$85.50**.
+Here is an example of what the JSON would look like for **AMD** to **buy** at a price of **$85.50**.
 
 ```json
 {
@@ -86,6 +68,8 @@ Or if you are a user of TradingView, you can configure an alert to send a webhoo
 ```
 
 The values wrapped in **\{{** and **\}}** will be replaced dynamically by TradingView when the alert is sent to the webhook URL. With this, you can use something like the [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/?offer\_id=10\&aff\_id=26514) strategy by Matt DeLong and place the MOMO trades directly in your broker!
+
+You can learn more about TradersPost webhooks [here](webhooks.md).
 
 ### **Custom Code**
 
