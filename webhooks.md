@@ -393,3 +393,5 @@ php traderspost-test.php
 ```
 
 This is a simple example, but you can combine this with a service like [Polygon.io](https://polygon.io) to get live real-time market data and build your own completely custom trading strategies and TradersPost can handle the integrations with your broker.
+
+You can read more about [custom code examples here.](custom-code-examples.md)
