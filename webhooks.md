@@ -228,6 +228,20 @@ Quantities must be a valid numeric value. Any other non numeric values will caus
 
 If you send a ticker for an asset class that the webhook does not support, then the webhook request will be rejected.
 {% endswagger-response %}
+
+{% swagger-response status="404: Not Found" description="Webhook not found." %}
+```javascript
+{
+    "success": false,
+    "messageCode": "not-found",
+    "message": "Webhook not found."
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="Something went wrong" %}
+
+{% endswagger-response %}
 {% endswagger %}
 
 ## Examples
