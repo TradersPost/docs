@@ -10,7 +10,11 @@ description: >-
 
 Webhooks are automated messages sent from applications when something happens. They have a message that can contain a payload of data and are sent to a unique URL.
 
-In the context of automated trading, the webhook message contains all the information about the trade signal like what ticker to buy and at what price. Here is an example simple webhook.
+In the context of automated trading, the webhook message contains all the information about the trade signal like what ticker to buy and at what price.
+
+## Required Fields
+
+TradersPost requires a minimum required amount of fields in a webhook in order to function. You are required to send at a minimum the **ticker** and an **action**. Here is an example where we send a signal to buy AMD.
 
 ```json
 {
@@ -19,221 +23,21 @@ In the context of automated trading, the webhook message contains all the inform
 }
 ```
 
-## Webhook API
-
-{% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://traderspost.io" summary="TradersPost Webhook Request API documentation." %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="query" name="uuid" type="String" required="true" %}
-Unique webhook UUID string used to identify a webhook. This never changes.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="query" name="password" type="String" required="true" %}
-Password string used to protect access to your webhook. You can change this by clicking Generate New URL in TradersPost when editing your webhook.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="ticker" type="String" required="true" %}
-The ticker symbol name. Example 
-
-**AMD**
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="action" type="String" required="true" %}
-The signal action. Supported values are **buy,** **sell, exit, cancel or add.**
-
-****
-
-**buy** - Exit bearish position and optionally open bullish position
-
-**sell** - Exit bullish position and optionally open bearish position
-
-**exit** - Exit open position without entering a new position on the other side.
-
-**cancel** - Cancel open orders
-
-**add** - Add to existing open position
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="sentiment" type="String" %}
-**bullish** - Open position after trade is executed should be bullish or flat.
-
-**bearish** - Open position after trade is executed should be bearish or flat.
-
-**flat** - No position should be open after trade is executed.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="price" type="String" required="false" %}
-The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="quantity" type="String" %}
-The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="Successful webhook response." %}
-```javascript
-{
-    "success":true,
-    "id":"47462f2d-378c-4bf5-a016-1c1221aa0e62",
-    "logId":"a036eff1-b7db-4f15-b5b6-f5e51995ad29",
-    "payload": {
-        "ticker":"NQ",
-        "action":"buy",
-        "sentiment": "bullish",
-        "price":12663.5,
-        "quantity": 1
-    }
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="Rejected webhook response." %}
-When a webhook request is sent to TradersPost, we run it through several different validation checks. If any of these validation rules fail, the webhook will respond like the following with a status code of 400.
-
-Here is an example invalid JSON payload.
-
-```json
-{
-    "ticker": "NQ",
-    "action": "bu"
-}
-```
-
-Here is the response you would get for that payload.
-
-```json
-{
-    "success":false,
-    "logId":"bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
-    "messageCode":"invalid-action",
-    "message":"Invalid action provided. Action must be one of: buy, sell, exit, cancel, add."
-}
-```
-
-**post-required** - HTTP POST method is required.
-
-All webhook HTTP requests must be sent with a request method of POST. All other request methods will not be accepted.
-
-**malformed-json** - Could not parse JSON payload.
-
-If you have a parse error in your JSON code, TradersPost will not be able to extract the instructions from the signal. Here are some common mistakes people make.
-
-**No trailing comma**
-
-Notice the trailing comma on line 3, the JSON specification requires that there be no final trailing comma on the last item in a JSON object.
-
-```json
-{
-    "ticker": "TSLA",
-    "action": "buy",
-}
-```
-
-Here is the corrected JSON.
-
-```json
-{
-    "ticker": "TSLA",
-    "action": "buy"
-}
-```
-
-**Invalid double quote character**
-
-Some applications will convert a double quote like `"quote"` to a left and right side double quote like `“quote”`. Notice the difference between `"` and `“` . JSON parsers don't like it when you use the latter. Here is an example invalid signal.
-
-```
-{
-    “ticker”: “TSLA”,
-    “action”: “buy”
-}
-```
-
-Here is the corrected JSON.
-
-```json
-{
-    "ticker": "TSLA",
-    "action": "buy"
-}
-```
-
-**invalid-payload** - Invalid payload. action and ticker is required.
-
-The minimum required fields are an action and ticker. All other fields are optional.
-
-**invalid-action** - Invalid action provided.
-
-Action must be one of: buy, sell, exit, cancel, add. The available actions available for webhooks are buy, sell, exit, cancel and add.
-
-**invalid-sentiment** - Invalid sentiment provided.
-
-Sentiment must be one of: bullish, bearish, flat. The available sentiments are bullish, bearish and flat. You can optionally exchange long for bullish and short for bearish. This is for compatibility with TradingView strategies out of the box.
-
-**invalid-sentiment-action** - Invalid sentiment action provided.
-
-Sentiment can only be used with action buy or sell. You can only pass a sentiment in a webhook request when using action=buy or action=sell.
-
-**not-trading-view** - Request did not come from TradingView.
-
-If you check Limit to TradingView in your webhook configuration, then the only IP addresses that will be allowed to send a request to it will be from TradingView.
-
-**not-trend-spider** - Request did not come from TrendSpider.
-
-If you check Limit to TrendSpider in your webhook configuration, then the only IP addresses that will be allowed to send a request to it will be from TrendSpider.
-
-**invalid-ip-address** - Request did not come from configured IP addresses.
-
-If you enter an ip address in Limit to IP Addresses in your webhook configuration, then the only IP addresses that will be allowed to send a request to it will be from the configure ip addresses.
-
-**ticker-does-not-exist** - Ticker does not exist.
-
-If the passed ticker does not exist in our ticker database then the webhook request will be rejected.
-
-**invalid-password** - Password is invalid.
-
-Every webhook has a password that can be regenerated by clicking the Generate New URL button when viewing a webhook
-
-**empty-ticker-name** - Empty ticker name provided.
-
-Sending an empty ticker name is not allowed.
-
-```json
-{
-    "ticker": "",
-    "action": "buy"
-}
-```
-
-**unsupported-ticker** - Ticker is not allowed on this webhook.
-
-If your webhook is restricted to a specific list of tickers and you send a ticker not in that list, then the webhook request will be rejected.
-
-i**nvalid-quantity** - Invalid quantity.
-
-Quantities must be a valid numeric value. Any other non numeric values will cause the webhook request to be rejected.
-
-**invalid-asset-class** - Invalid asset class.
-
-If you send a ticker for an asset class that the webhook does not support, then the webhook request will be rejected.
-{% endswagger-response %}
-
-{% swagger-response status="404: Not Found" description="Webhook not found." %}
-```javascript
-{
-    "success": false,
-    "messageCode": "not-found",
-    "message": "Webhook not found."
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="500: Internal Server Error" description="Something went wrong" %}
-
-{% endswagger-response %}
-{% endswagger %}
+## Supported Fields
+
+* **ticker** - The ticker symbol name. Example **AMD** (required)
+* **action** - The signal action. Supported values are **buy,** **sell, exit, cancel or add** (required)
+  * **buy** - Exit bearish position and optionally open bullish position
+  * **sell** - Exit bullish position and optionally open bearish position
+  * **exit** - Exit open position without entering a new position on the other side.
+  * **cancel** - Cancel open orders
+  * **add** - Add to existing open position
+* **sentiment** - The sentiment of the position you should be in after a trade is executed (optional)
+  * **bullish** - Open position after trade is executed should be bullish or flat.
+  * **bearish** - Open position after trade is executed should be bearish or flat.
+  * **flat** - No position should be open after trade is executed.
+* **price** - The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed (optional)
+* **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. (optional)
 
 ## Examples
 
@@ -399,4 +203,4 @@ php traderspost-test.php
 
 This is a simple example, but you can combine this with a service like [Polygon.io](https://polygon.io) to get live real-time market data and build your own completely custom trading strategies and TradersPost can handle the integrations with your broker.
 
-You can read more about [custom code examples here.](custom-code-examples.md)
+If you are interested building your own custom automated trading strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
