@@ -19,6 +19,8 @@ In the context of automated trading, the webhook message contains all the inform
 }
 ```
 
+Here is a full reference API documentation for the trading webhoook API end point.
+
 {% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://traderspost.io" summary="TradersPost Webhook Request API documentation." %}
 {% swagger-description %}
 
@@ -253,7 +255,7 @@ If you send a ticker for an asset class that the webhook does not support, then 
 }
 ```
 
-You can also use the sentiment field to exit a bullish position without entering a bearish position on the other side.
+You can also use the sentiment field to exit a bullish position without entering a bearish position on the other side. When you send sentiment=flat, it will always exit the full quantity of the open position.
 
 ```json
 {
@@ -281,7 +283,7 @@ You can also use the sentiment field to exit a bullish position without entering
 }
 ```
 
-You can also use the sentiment field to exit a bearish position without entering a bullish position on the other side.
+You can also use the sentiment field to exit a bearish position without entering a bullish position on the other side. When you send sentiment=flat, it will always exit the full quantity of the open position.
 
 ```json
 {

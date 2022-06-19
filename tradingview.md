@@ -57,7 +57,7 @@ Using Pinescript strategies as opposed to indicators or studies is the best way 
 }
 ```
 
-You can also use the sentiment field to exit a bullish position without entering a bearish position on the other side.
+You can also use the sentiment field to exit a bullish position without entering a bearish position on the other side. When you send sentiment=flat, it will always exit the full quantity of the open position.
 
 ```json
 {
@@ -88,7 +88,7 @@ You can also use the sentiment field to exit a bullish position without entering
 }
 ```
 
-You can also use the sentiment field to exit a bearish position without entering a bullish position on the other side.
+You can also use the sentiment field to exit a bearish position without entering a bullish position on the other side. When you send sentiment=flat, it will always exit the full quantity of the open position.
 
 ```json
 {
