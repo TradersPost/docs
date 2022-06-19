@@ -92,15 +92,6 @@ The quantity to enter. If you omit this value, the quantity will be dynamically 
 {% swagger-response status="400: Bad Request" description="Rejected webhook response." %}
 When a webhook request is sent to TradersPost, we run it through several different validation checks. If any of these validation rules fail, the webhook will respond like the following with a status code of 400.
 
-```json
-{
-    "success":false,
-    "logId":"bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
-    "messageCode":"invalid-action",
-    "message":"Invalid action provided. Action must be one of: buy, sell, exit, cancel, add."
-}
-```
-
 Here is an example invalid JSON payload.
 
 ```json
