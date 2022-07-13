@@ -106,3 +106,18 @@ You can optionally include a **price** and **quantity** in the signal that can t
 ```
 
 If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy Limit** order for 2 contracts at a price of **$1420.50**.
+
+## Market Orders
+
+{% hint style="danger" %}
+While futures trading generally supports market orders, under certain conditions market orders may be <mark style="color:red;">**REJECTED**</mark> by your broker or exchange. For example, during major news announcements like unemployment or inflation numbers, the exchange can go into reserve and during this time market orders are not accepted.
+{% endhint %}
+
+During these market conditions, you may receive rejected orders with a reject reason of the following:
+
+> <mark style="color:red;">Order type not permitted while the market is reserved</mark>
+
+Whenever trading futures and you are facing upcoming volatile market conditions, you have two options:
+
+1. Don't hold positions over upcoming major news announcements.
+2. Watch your positions and be ready to take manual action with limit orders if your market orders are rejected.
