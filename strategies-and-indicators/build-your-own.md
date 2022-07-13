@@ -21,7 +21,7 @@ There are a number of free resources out on the internet for learning how to dev
 
 ### Tutorials & Articles
 
-* [PineScripters](https://www.pinescripters.com) - community of Pine Script developers with a free [Discord chat.](https://discord.gg/pq8A48cPua)
+* [PineScripters](https://www.pinescripters.com/) - community of Pine Script developers with a free [Discord chat.](https://discord.gg/pq8A48cPua)
 * [Kodify](https://kodify.net/tradingview-programming-articles/) - TradingView Pine Script programming articles.
 * [How To Create A Simple Trading Strategy With TradingView](https://medium.com/@quansium/how-to-create-a-simple-trading-strategy-with-tradingview-7a9fea3cffc1) - great article by [Quansium](https://www.tradingview.com/u/Quansium/) that takes you step by step on how to create a TradingView strategy.
 * [Backtest Rookies](https://backtest-rookies.com/category/tradingview/) - Back testing tutorials and algorithmic trading for the complete beginner.&#x20;
@@ -39,12 +39,12 @@ There are a number of free resources out on the internet for learning how to dev
 
 In addition to all the free resources that exist, there are plenty of paid resources that exist as well.
 
-* [TradingControl](https://tradingcontrol.com) - Drag and drop builder that allows you to build strategies and generate Pine Script code.
+* [TradingControl](https://tradingcontrol.com/) - Drag and drop builder that allows you to build strategies and generate Pine Script code.
 * [Kick studios](http://kickstudios.com/retail-trading-dev-services/courses/) - Paid Pine Script indicator development courses.
 * [Paul D. Mendes](https://www.udemy.com/course/learn-tradingview-pine-script-programming-from-scratch/) - Learn TradingView Pine Script Programming From Scratch.
 * [Achal](https://www.udemy.com/course/creating-trade-strategies-backtesting-using-pinescript/) - Creating trade strategies & backtesting using PineScript
 * [QuantNomad](https://courses.quantnomad.com/p/pinescript-programming) - Learn to build your own TradingView Indicators
-* [Zen & The Art of Trading](https://www.pinescriptmastery.com) - Want to master Pine Script? Look no further.
+* [Zen & The Art of Trading](https://www.pinescriptmastery.com/) - Want to master Pine Script? Look no further.
 * [TradingView Pine Script Programming From Scratch: Build indicators, signal generators, backtest and automate trading logic](https://www.amazon.com/Achal/e/B092HFKV6N)
 
 ## TrendSpider

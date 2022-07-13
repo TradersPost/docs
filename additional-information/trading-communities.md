@@ -8,17 +8,17 @@ description: >-
 # Trading Communities
 
 * [RealLifeTrading](https://lddy.no/u5jf)
-* [SmarterOptions](https://smarteroptions.com)
+* [SmarterOptions](https://smarteroptions.com/)
 * [Trading Rebels](https://www.tradingrebels.com)
-* [SepiaGroup](https://sepiagroup.com) #TheStrat
-* [OnlySans](https://www.myonlysans.com)
-* [TradeAtEase](https://www.tradeatease.llc)
-* [T3Live](https://www.t3live.com)
-* [ThetaWarrior Elite](https://thetawarriorpro.com)
-* [BullishBears](https://bullishbears.com)
+* [SepiaGroup](https://sepiagroup.com/) #TheStrat
+* [OnlySans](https://www.myonlysans.com/)
+* [TradeAtEase](https://www.tradeatease.llc/)
+* [T3Live](https://www.t3live.com/)
+* [ThetaWarrior Elite](https://thetawarriorpro.com/)
+* [BullishBears](https://bullishbears.com/)
 * [ArtOfTrading](https://t.co/Dp8OvaAgdi)
-* [PeakCapitalTrading](https://www.peakcapitaltrading.com)
-* [TheRockTrading](https://therocktradingco.com)
-* [Warrior Trading](https://www.warriortrading.com)
+* [PeakCapitalTrading](https://www.peakcapitaltrading.com/)
+* [TheRockTrading](https://therocktradingco.com/)
+* [Warrior Trading](https://www.warriortrading.com/)
 
 If you would like to see your trading community listed here, please contact us at [support@traderspost.io](mailto:support@traderspost.io).

@@ -48,5 +48,5 @@ If you have any other questions about paper trading on TradersPost, you can emai
 
 Unfortunately, not all brokers support simulated paper trading environments. The following brokers that TradersPost supports do not offer paper trading functionality.
 
-* [Robinhood](https://robinhood.com)
-* [TDAmeritrade](https://www.tdameritrade.com)
+* [Robinhood](https://robinhood.com/?utm\_source=traderspost)
+* [TDAmeritrade](https://www.tdameritrade.com/?utm\_source=traderspost)

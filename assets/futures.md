@@ -7,7 +7,7 @@ description: >-
 # Futures
 
 {% hint style="info" %}
-**Futures trading is live!** If you would like to have live futures trading enabled on your account, email us at [support@traderspost.io](mailto:support@traderspost.io).
+****![](<../.gitbook/assets/Screen Shot 2022-07-13 at 9.17.30 AM (1).png>)**Futures trading is live!** If you would like to have live futures trading enabled on your account, email us at [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=g0dB64iWTpA" %}
@@ -115,7 +115,7 @@ While futures trading generally supports market orders, under certain conditions
 
 During these market conditions, you may receive rejected orders with a reject reason of the following:
 
-> <mark style="color:red;">Order type not permitted while the market is reserved</mark>
+![Order type not permitted while the market is reserved](<../.gitbook/assets/Screen Shot 2022-07-13 at 9.17.30 AM.png>)
 
 Whenever trading futures and you are facing upcoming volatile market conditions, you have two options:
 
