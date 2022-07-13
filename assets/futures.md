@@ -121,3 +121,8 @@ Whenever trading futures and you are facing upcoming volatile market conditions,
 
 1. Don't hold positions over upcoming major news announcements (CPI, FOMC announcements, etc)
 2. Watch your positions and be ready to take manual action with limit orders if your market orders are rejected.
+
+To keep track of the different news events that may cause the market to move in one direction or another you can use the following calendars.
+
+* [https://www.federalreserve.gov/newsevents/calendar.htm](https://www.federalreserve.gov/newsevents/calendar.htm)
+* [https://www.marketwatch.com/economy-politics/calendar](https://www.marketwatch.com/economy-politics/calendar)
