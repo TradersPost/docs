@@ -7,7 +7,7 @@ description: >-
 # Futures
 
 {% hint style="info" %}
-****![](<../.gitbook/assets/Screen Shot 2022-07-13 at 9.17.30 AM (1).png>)**Futures trading is live!** If you would like to have live futures trading enabled on your account, email us at [support@traderspost.io](mailto:support@traderspost.io).
+**Futures trading is live!** If you would like to have live futures trading enabled on your account, email us at [support@traderspost.io](mailto:support@traderspost.io).
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=g0dB64iWTpA" %}
