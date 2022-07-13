@@ -15,7 +15,7 @@ While we do not currently rate limit traffic to webhooks, we may decide to disab
 
 ### Order Retrying
 
-Failed orders will never be retried. If communication with a broker fails for any reason, we will never retry a failed operation. We will do our best to detect when something fails or something unexpected happens and notify you via email. However, there are scenarios where an order could be accepted by a broker and then rejected later and in those scenarios, you may not receive a trade failed email notification.
+Failed or rejected orders will never be retried. If communication with a broker fails for any reason, we will never retry a failed operation. We will do our best to detect when something fails or something unexpected happens and notify you via email if you have your notifications enabled on your strategy subscription. However, there are scenarios where an order could be accepted by a broker and then rejected later and in those scenarios, you may not receive a trade failed email notification.
 
 ### Alert Webhook Delays
 
