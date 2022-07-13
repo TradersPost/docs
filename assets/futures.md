@@ -119,5 +119,5 @@ During these market conditions, you may receive rejected orders with a reject re
 
 Whenever trading futures and you are facing upcoming volatile market conditions, you have two options:
 
-1. Don't hold positions over upcoming major news announcements.
+1. Don't hold positions over upcoming major news announcements (CPI, FOMC announcements, etc)
 2. Watch your positions and be ready to take manual action with limit orders if your market orders are rejected.
