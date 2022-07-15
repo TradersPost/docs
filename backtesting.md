@@ -35,6 +35,10 @@ TradingView Strategy Tester Video
 
 There are tools that exist to roll through all the possible strategy input settings to automatically see which settings have the best performance for a strategy on a specific ticker and timeframe.
 
+#### Strategy Helper
+
+The [Strategy Helper](https://chrome.google.com/webstore/detail/strategy-helper/emcpjechgmpcnjphefjekmdlaljbiegp) is an assistant for optimizing & backtesting trading strategies in TradingView.
+
 #### The Optimiser
 
 The [TradingView Optimiser](https://chrome.google.com/webstore/detail/the-optimiser/emcpjechgmpcnjphefjekmdlaljbiegp) is a tool that will run through the values in a TradingView Strategy and change each value. It will then download the backtest results. It uses a Machine Learning technique to choose the best settings.
