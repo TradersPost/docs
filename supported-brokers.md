@@ -21,7 +21,7 @@ API for Stock Trading - Trade with algorithms, connect with apps, build services
 {% hint style="danger" %}
 While Alpaca does support crypto, TradersPost has not integrated it with our platform yet but we plan to in the future.\
 \
-<mark style="color:red;">Be aware that TradersPost will hide crypto orders and positions from the TradersPost UI but the</mark> <mark style="color:red;"></mark><mark style="color:red;">**Close All**</mark> <mark style="color:red;"></mark><mark style="color:red;">positions and</mark> <mark style="color:red;"></mark><mark style="color:red;">**Cancel All Orders**</mark> <mark style="color:red;"></mark><mark style="color:red;">buttons in the TradersPost user interface will still close your crypto positions.</mark>
+<mark style="color:red;">Be aware that TradersPost will hide crypto orders and positions from the TradersPost UI but the</mark> <mark style="color:red;"></mark><mark style="color:red;">**Close All Positions**</mark> <mark style="color:red;"></mark><mark style="color:red;">and</mark> <mark style="color:red;"></mark><mark style="color:red;">**Cancel All Orders**</mark> <mark style="color:red;"></mark><mark style="color:red;">buttons in the TradersPost user interface will still close your crypto positions and cancel your crypto orders even though they are not visible in the TradersPost user interface.</mark>
 
 \
 It is recommended that you use a broker account that does not have other positions in it that were not created by TradersPost.
