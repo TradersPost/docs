@@ -16,23 +16,22 @@ Here is a list of brokers that TradersPost currently integrates with and support
 
 ### Alpaca
 
-![](.gitbook/assets/Alpaca-Full.png)
-
 API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API.
+
+{% hint style="danger" %}
+While Alpaca does support crypto, TradersPost has not integrated it with our platform yet but we plan to in the future.\
+\
+<mark style="color:red;">Be aware that TradersPost will hide crypto orders and positions from the TradersPost UI but the</mark> <mark style="color:red;"></mark><mark style="color:red;">**Close All**</mark> <mark style="color:red;"></mark><mark style="color:red;">positions and</mark> <mark style="color:red;"></mark><mark style="color:red;">**Cancel All Orders**</mark> <mark style="color:red;"></mark><mark style="color:red;">buttons in the TradersPost user interface will still close your crypto positions.</mark>
+
+\
+It is recommended that you use a broker account that does not have other positions in it that were not created by TradersPost.
+{% endhint %}
 
 #### Supported Asset Classes
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
-#### Crypto Support
-
-{% hint style="info" %}
-While the Alpaca does support crypto, TradersPost has not integrated it with our platform yet but we plan to in the future.
-{% endhint %}
-
 ### Robinhood
-
-![](.gitbook/assets/Robinhood-Full.png)
 
 Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
 
@@ -47,8 +46,6 @@ While Robinhood does support crypto and options, TradersPost has not integrated 
 {% endhint %}
 
 ### TDAmeritrade
-
-![](.gitbook/assets/TDAmeritrade-Full.png)
 
 TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
 
@@ -71,8 +68,6 @@ While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritra
 {% endhint %}
 
 ### TradeStation
-
-![](.gitbook/assets/TradeStation-Full.png)
 
 TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
 
