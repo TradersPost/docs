@@ -235,6 +235,8 @@ If you send a ticker for an asset class that the webhook does not support, then 
 {% endswagger-response %}
 {% endswagger %}
 
+Be sure you are aware of webhook rate limiting in TradersPost. You can read more [here](additional-information/known-limitations.md#rate-limiting).
+
 ## Examples
 
 #### Enter Bullish
