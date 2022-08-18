@@ -19,6 +19,12 @@ TradingView has a variety of different resources and documentation for learning 
 
 If you have an idea for a strategy but don't know how to code, you can hire Pine Script developers on gig sites like [Fiverr](https://www.fiverr.com/search/gigs?query=Pine%20Script\&source=top-bar\&search\_in=everywhere\&search-autocomplete-original-term=pine%20script) and [Upwork](https://www.upwork.com/search/profiles/?q=Pine%20Script\&user\_pref=2).
 
+Here are a few profiles of Pine Script developers others customers have worked with in the past.
+
+* [hiubriss](https://www.fiverr.com/freelancers/hiubriss)
+* [kriswaters](https://www.fiverr.com/freelancers/kriswaters)
+* [null\_vector](https://www.fiverr.com/null\_vector)
+
 ### **Free Resources**
 
 There are a number of free resources out on the internet for learning how to develop Pine Script. This section lists some of these resources to help you get started on your journey.
