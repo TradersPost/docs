@@ -30,11 +30,11 @@ Not yet, but it is on the roadmap for Q4 2022.
 
 ### Do you support options?
 
-Yes, options support is currently available. You can paper trade for free. Contact [support@traderspost.io](mailto:support@traderspost.io) to have live options enabled on your account.
+Yes, options support is currently under development and is in beta testing with TradeStation paper accounts only. Please email [support@traderspost.io](mailto:support@traderspost.io) if you would like to participate in the beta.
 
 ### Do you support futures?
 
-Yes, futures support is currently available. You can paper trade for free. Contact [support@traderspost.io](mailto:support@traderspost.io) to have live options enabled on your account.
+Yes, futures support is currently under development and is in beta testing with TradeStation paper accounts only. Please email [support@traderspost.io](mailto:support@traderspost.io) if you would like to participate in the beta.
 
 ### What brokers do you support?
 
