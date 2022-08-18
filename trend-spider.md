@@ -16,6 +16,15 @@ TrendSpider recently released a new trading bots functionality. You can read mor
 TrendSpider Trading Bots
 {% endembed %}
 
+TrendSpider Trading bots do not support variables for the ticker so you have to manually specify the ticker to trade in the JSON.
+
+```
+{
+    "ticker": "SPY",
+    "action": "buy"
+}
+```
+
 ## Configure Webhook URL
 
 TrendSpider only allows one webhook URL to be configured. You can set this URL by clicking your profile icon at the top right and then enter a Webhook URL.
