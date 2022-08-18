@@ -6,6 +6,14 @@ description: >-
 
 # Custom Code Examples
 
+## cURL
+
+```bash
+curl -H 'Content-Type: application/json; charset=utf-8' \
+-d '{"ticker": "UPWK", "action": "buy", "price": 18.65}' \
+-X POST https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74
+```
+
 ## PHP
 
 ```bash
@@ -19,7 +27,7 @@ require 'vendor/autoload.php';
 
 use Symfony\Component\HttpClient\HttpClient;
 
-$webhookUrl = 'paste your webhook url';
+$webhookUrl = 'https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74';
 
 $client = HttpClient::create();
 
@@ -40,7 +48,7 @@ echo $response->getContent();
 import requests
 
 r = requests.post(
-    'paste your webhook url',
+    'https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74',
     json={"ticker": "AMD", "action": "buy", "price": 85.50}
 )
 
@@ -55,7 +63,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-uri = URI.parse('paste your webhook url')
+uri = URI.parse('https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74')
 
 header = {'Content-Type': 'text/json'}
 
