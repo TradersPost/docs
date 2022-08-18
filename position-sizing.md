@@ -6,6 +6,10 @@ description: >-
 
 # Position Sizing
 
+{% hint style="info" %}
+TradersPost does not verify you have the buying power for an order and we depend on the broker accepting or rejecting the order based on your available buying power and the rules each broker implements surrounding buying power.
+{% endhint %}
+
 ## Amount per position
 
 The **Amount per position** field allows you to configure a fixed dollar amount to be used to calculate the quantity for your entry order.
