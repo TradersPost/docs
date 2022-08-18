@@ -31,7 +31,7 @@ quantity = riskPerPosition / difference
 
 ## Percent of portfolio value
 
-The **Percent of portfolio value** allows you to dynamically calculate an amount per position to use based on your portfolio value. This calculation does not use your total buying power/margin. It is only your total portfolio value (cash + unrealized).
+The **Percent of portfolio value** allows you to dynamically calculate an amount per position to use based on your portfolio value. This calculation does not use your total buying power/margin. It is only your total portfolio value minus any unrealized profits or losses.
 
 ```
 portfolioValue = portfolioValue - unrealized
