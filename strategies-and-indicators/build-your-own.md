@@ -15,11 +15,15 @@ TradingView has a variety of different resources and documentation for learning 
 * [Pine Script User Manual](https://www.tradingview.com/pine-script-docs/en/v5/index.html) - user manual for the Pine Script programming language.
 * [TradingView Pine Script Blog Posts](https://www.tradingview.com/blog/en/category/market-analysis/pine/) - Pine Script blog posts written by TradingView.
 
-## **Free Resources**
+### **Pine Script Developers**
+
+If you have an idea for a strategy but don't know how to code, you can hire Pine Script developers on gig sites like [Fiverr](https://www.fiverr.com/search/gigs?query=Pine%20Script\&source=top-bar\&search\_in=everywhere\&search-autocomplete-original-term=pine%20script) and [Upwork](https://www.upwork.com/search/profiles/?q=Pine%20Script\&user\_pref=2).
+
+### **Free Resources**
 
 There are a number of free resources out on the internet for learning how to develop Pine Script. This section lists some of these resources to help you get started on your journey.
 
-### Tutorials & Articles
+#### Tutorials & Articles
 
 * [PineScripters](https://www.pinescripters.com/) - community of Pine Script developers with a free [Discord chat.](https://discord.gg/pq8A48cPua)
 * [Kodify](https://kodify.net/tradingview-programming-articles/) - TradingView Pine Script programming articles.
@@ -27,7 +31,7 @@ There are a number of free resources out on the internet for learning how to dev
 * [Backtest Rookies](https://backtest-rookies.com/category/tradingview/) - Back testing tutorials and algorithmic trading for the complete beginner.&#x20;
 * [pAulseperformance](https://github.com/pAulseperformance/awesome-pinescript) - git repository with a bunch of good Pine Script content.
 
-### **Videos**
+#### **Videos**
 
 * [QuantNomad](https://www.youtube.com/channel/UC57DoaeefbGM9nbcVA3V5mg) - great source of free videos on Pine Script.
 * [BigBits](https://www.youtube.com/user/dpjohnson2009) - high quality Pine Script video tutorials.
@@ -35,7 +39,7 @@ There are a number of free resources out on the internet for learning how to dev
 * [Squiggly Lion](https://www.youtube.com/channel/UC4O-W0DfsAfPYPbxws2dIOw) - Squiggly Lion video tutorials.
 * [Market Calls](https://www.youtube.com/user/marketcalls/featured) - Simply intelligent technical analysis videos.
 
-## **Paid Resources**
+### **Paid Resources**
 
 In addition to all the free resources that exist, there are plenty of paid resources that exist as well.
 
