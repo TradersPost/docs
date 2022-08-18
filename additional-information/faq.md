@@ -30,11 +30,11 @@ Not yet, but it is on the roadmap for Q4 2022.
 
 ### Do you support options?
 
-Yes, options support is currently under development and is in beta testing with TradeStation paper accounts only. Please email [support@traderspost.io](mailto:support@traderspost.io) if you would like to participate in the beta.
+Yes, options support is currently available. You can paper trade for free. Contact [support@traderspost.io](mailto:support@traderspost.io) to have live options enabled on your account.
 
 ### Do you support futures?
 
-Yes, futures support is currently under development and is in beta testing with TradeStation paper accounts only. Please email [support@traderspost.io](mailto:support@traderspost.io) if you would like to participate in the beta.
+Yes, futures support is currently available. You can paper trade for free. Contact [support@traderspost.io](mailto:support@traderspost.io) to have live options enabled on your account.
 
 ### What brokers do you support?
 
@@ -79,3 +79,7 @@ The resulting orders will be either queued for the next market open on the Trade
 ### Why was my order rejected by my broker?
 
 Unfortunately, TradersPost does not have much visibility in to the backend of the brokers we integrate with and they and the parties that execute orders may choose to reject orders for a variety of different reasons. If you are unsure why something was rejected, please contact your brokers support team. If you are still unsure, email us at [support@traderspost.io](mailto:support@traderspost.io).
+
+### Why is my fill price different than my signal price?
+
+When you use market orders, the price you get filled at can be different from the price which the signal generates at because the price can move in between the time the signal is generated and when the market order is filled. Here is some more general information about slippage [https://www.investopedia.com/terms/s/slippage.asp](https://www.investopedia.com/terms/s/slippage.asp)
