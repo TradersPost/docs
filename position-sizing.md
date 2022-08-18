@@ -1,7 +1,7 @@
 ---
 description: >-
-  TradersPost offers several different features for dynamically managing your
-  position size.
+  TradersPost offers several different features for dynamically and manually
+  managing your position size.
 ---
 
 # Position Sizing
@@ -39,7 +39,7 @@ quantity = amountPerPosition / entryPrice
 
 ## Quantity
 
-If you don't want to dynamically calculate a quantity, you can input a hardcoded fixed quantity to buy per signal.
+If you don't want to dynamically calculate a quantity, you can input a hardcoded fixed quantity to buy per signal in the **Quantity** field. TradersPost will pass this quantity directly to your broker.
 
 ## Use signal quantity
 
