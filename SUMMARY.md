@@ -33,6 +33,7 @@
 * [Known Limitations](additional-information/known-limitations.md)
 * [Trading Communities](additional-information/trading-communities.md)
 * [Webinars](additional-information/webinars.md)
+* [Trade Journaling](additional-information/trade-journaling.md)
 
 ## Links
 
