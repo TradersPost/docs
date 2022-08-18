@@ -16,6 +16,7 @@
 * [Order Behavior](order-behavior.md)
 * [Order Queueing](order-queueing.md)
 * [Paper Trading](paper-trading.md)
+* [Position Sizing](position-sizing.md)
 * [Fractional Shares](fractional-shares.md)
 * [Custom Code Examples](custom-code-examples.md)
 * [API](api.md)
