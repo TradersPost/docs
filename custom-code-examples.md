@@ -10,7 +10,7 @@ description: >-
 
 ```bash
 curl -H 'Content-Type: application/json; charset=utf-8' \
--d '{"ticker": "UPWK", "action": "buy", "price": 18.65}' \
+-d '{"ticker": "AMD", "action": "buy", "price": 85.50}' \
 -X POST https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74
 ```
 
