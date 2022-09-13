@@ -21,6 +21,7 @@ If you have an idea for a strategy but don't know how to code, you can hire Pine
 
 Here are a few profiles of Pine Script developers others customers have worked with in the past.
 
+* [Ricardo D.](https://www.upwork.com/freelancers/\~014a4eacc3a1c444df)
 * [hiubriss](https://www.fiverr.com/freelancers/hiubriss)
 * [kriswaters](https://www.fiverr.com/freelancers/kriswaters)
 * [null\_vector](https://www.fiverr.com/null\_vector)
