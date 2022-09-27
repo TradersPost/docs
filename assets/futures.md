@@ -6,10 +6,6 @@ description: >-
 
 # Futures
 
-{% hint style="info" %}
-**Futures trading is live!** If you would like to have live futures trading enabled on your account, email us at [support@traderspost.io](mailto:support@traderspost.io).
-{% endhint %}
-
 {% embed url="https://www.youtube.com/watch?v=g0dB64iWTpA" %}
 TradersPost Automated Futures Trading Setup
 {% endembed %}

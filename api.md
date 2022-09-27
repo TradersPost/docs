@@ -11,4 +11,4 @@ coverY: 0
 
 ## Coming Soon
 
-If you are interested in using the TradersPost developer API and want to join our beta program, please email [support@traderspost.io](mailto:support@traderspost.io).
+If you are interested in using the TradersPost developer API you can join the wait list [here](https://traderspost.io/wait-list/api).

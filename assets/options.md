@@ -1,9 +1,5 @@
 # Options
 
-{% hint style="info" %}
-**Options trading is live!** If you would like to have live options trading enabled on your account, email us at [support@traderspost.io](mailto:support@traderspost.io).
-{% endhint %}
-
 {% embed url="https://www.youtube.com/watch?v=Kbb37xqMwR4" %}
 TradersPost Automated Options Trading Setup
 {% endembed %}
