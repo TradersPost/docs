@@ -36,11 +36,19 @@ You can read more about TradeStation paper trading [here](https://www.tradestati
 
 TradersPost offers a very basic paper trading functionality for testing your strategies. Please note the following about TradersPost paper accounts:
 
-* Market hours are not respected and orders will fill 24/7
-* Limit orders will fill at any price specified
-* Market orders will fill at the last trade price if available or the ask for buy orders and the bid for sell orders.
+* Market hours are not respected and orders will fill 24/7.
+* Limit orders will fill at any price specified.
+* Market orders will fill at the middle point between the bid and the ask.
 
 It is recommended that you use one of the above simulated paper trading environments provided by a broker if you want a more real simulated environment. The TradersPost paper trading functionality is only useful for testing that your strategies are configured correctly but should not be used to measure the performance of your strategy.
+
+### Market Data Source
+
+By default, TradersPost paper data is delayed and only supports stocks and futures. If you want the TradersPost paper broker to support options, you will need to connect a broker that supports  options, like TDAmeritrade or TradeStation.
+
+1. Go to **Brokers** and click **Connect Broker** and connect your TDAmeritrade account.
+2. Once your TDAmeritrade account is connected, go back to **Brokers** and click **Edit** next to your TradersPost paper broker.
+3. Choose your connected TDAmeritrade account in the **Market Data Source** dropdown and click **Save**. Now your TradersPost paper broker will use your TDAmeritrade account for live market data and will support the options asset class.
 
 If you have any other questions about paper trading on TradersPost, you can email [support@traderspost.io](mailto:support@traderspost.io).
 
