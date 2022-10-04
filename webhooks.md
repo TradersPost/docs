@@ -21,7 +21,7 @@ In the context of automated trading, the webhook message contains all the inform
 
 Here is a full reference API documentation for the trading webhoook API end point.
 
-{% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://traderspost.io" summary="TradersPost Webhook Request API documentation." %}
+{% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://webhooks.traderspost.io" summary="TradersPost Webhook Request API documentation." %}
 {% swagger-description %}
 
 {% endswagger-description %}
