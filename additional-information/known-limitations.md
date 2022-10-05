@@ -9,13 +9,7 @@ description: >-
 
 ### Rate Limiting
 
-{% hint style="danger" %}
-Accounts are limited to sending 100 signals per day total across all webhooks and strategies. These limits are not yet technically enforced but are monitored and your account may be disabled temporarily if we determine your account is sending too many signals to TradersPost. If you have any questions, email us at [support@traderspost.io](mailto:support@traderspost.io).
-{% endhint %}
-
-TradersPost is not designed to be a high frequency trading platform and sending multiple signals within less than a minute are not guaranteed to behave correctly.
-
-While we do not currently rate limit traffic to webhooks, we may decide to disable your strategies if we determine that your strategies are sending too many requests.
+TradersPost is **NOT** designed to be a high frequency trading platform. While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategies if we determine that your account is sending too many requests.
 
 ### Order Retrying
 
