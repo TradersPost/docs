@@ -25,6 +25,7 @@ Here are a few profiles of Pine Script developers others customers have worked w
 * [hiubriss](https://www.fiverr.com/freelancers/hiubriss)
 * [kriswaters](https://www.fiverr.com/freelancers/kriswaters)
 * [null\_vector](https://www.fiverr.com/null\_vector)
+* [Kurtis Bulock](https://www.fiverr.com/kurtisbulock)
 
 ### **Free Resources**
 
