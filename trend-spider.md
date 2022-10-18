@@ -8,6 +8,8 @@ description: >-
 
 TrendSpider can send alerts as webhooks just like TradingView can. You can read more about TrendSpider webhooks [here](https://help.trendspider.com/kb/webhooks-56eab0912c4ac1ec/direct-connection-with-traderspost-using-webhook).
 
+{% embed url="https://www.youtube.com/watch?v=lbRGxYUhKWg" %}
+
 ## TrendSpider Trading Bots
 
 TrendSpider recently released a new trading bots functionality. You can read more [here](https://trendspider.com/blog/trendspider-software-update-introducing-trading-bots/) or watch the below video to learn more.
