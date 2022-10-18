@@ -107,11 +107,3 @@ If you configure your strategy subscription to use limit orders and to use the s
 {% hint style="warning" %}
 TradersPost does not currently support sending prices in signals for options. If you send a price in the signal, the value will not be used. If your strategy subscription is configured to send limit orders, then we will calculate the midpoint price between the bid and ask and use that price for the limit order.
 {% endhint %}
-
-## Paper Options Market Data
-
-The TradersPost paper broker does not have options data by default. To get options support in the TradersPost paper broker, you can connect a broker that does have options support (like TD Ameritrade or TradeStation) and then choose that broker as the **Market data source** for the TradersPost paper broker and then you will have options support. Here is a quick video showing you how to do this.
-
-{% embed url="https://www.youtube.com/watch?v=qqw5Olknra4" %}
-How To Enable Options Support In The TradersPost Paper Broker
-{% endembed %}
