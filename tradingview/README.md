@@ -7,6 +7,10 @@ description: >-
 
 # TradingView
 
+{% embed url="https://www.youtube.com/watch?v=uPKd-BJUrMI" %}
+How To Build A Trading Bot From Any TradingView Strategy In Your Broker Using TradersPost
+{% endembed %}
+
 ## Alert Message JSON
 
 The TradersPost webhook system lets you easily integrate alerts from platforms like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) with TradersPost. Webhooks can receive [JSON](https://en.wikipedia.org/wiki/JSON) like the following.
