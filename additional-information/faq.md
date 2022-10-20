@@ -26,15 +26,15 @@ Yes, TradersPost supports trading both the long and short sides of a strategy.
 
 ### Do you support crypto?
 
-Not yet, but it is on the roadmap for Q4 2022.
+Not yet, but it is on the roadmap for 2023.
 
 ### Do you support options?
 
-Yes, options support is currently available. You can paper trade for free. Contact [support@traderspost.io](mailto:support@traderspost.io) to have live options enabled on your account.
+Yes, options support is in beta and available to all customers.
 
 ### Do you support futures?
 
-Yes, futures support is currently available. You can paper trade for free. Contact [support@traderspost.io](mailto:support@traderspost.io) to have live options enabled on your account.
+Yes, futures support is in beta and available to all customers.
 
 ### What brokers do you support?
 
@@ -58,7 +58,7 @@ TradersPost is free to get started. You can paper trade for free for 90 days. On
 
 ### I don't have a supported broker, how can I get started?
 
-TradersPost comes with an unlimited amount of free paper accounts that lets you test strategies and get familiar with the platform.
+TradersPost comes with a free paper account that lets you test strategies and get familiar with the platform.
 
 ### Does TradersPost support ThinkOrSwim?
 
@@ -66,13 +66,13 @@ Yes, we support TD Ameritrade accounts with ThinkOrSwim advanced features disabl
 
 ### Do you have an API?
 
-No, but it is on our 2022 roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../webhooks.md).
+No, but it is on our 2023 roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../webhooks.md).
 
 ### Are trades executed on my own dedicated server?
 
 No, TradersPost is a software as a service and is hosted in a cloud environment. If you'd like to discuss dedicated automated trading systems, please email [support@traderspost.io](mailto:support@traderspost.io).
 
-### What happens if a signal is received when the market is closed?
+### What happens if a signal is received when the market is
 
 The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../order-queueing.md) here.
 
