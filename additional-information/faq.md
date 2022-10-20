@@ -72,7 +72,7 @@ No, but it is on our 2023 roadmap. The only way currently to integrate strategie
 
 No, TradersPost is a software as a service and is hosted in a cloud environment. If you'd like to discuss dedicated automated trading systems, please email [support@traderspost.io](mailto:support@traderspost.io).
 
-### What happens if a signal is received when the market is
+### What happens if a signal is received when the market is closed
 
 The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../order-queueing.md) here.
 
