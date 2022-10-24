@@ -72,6 +72,22 @@ The price of the buy or sell action. If you omit this value, the current market 
 The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="takeProfit" type="Object" %}
+
+
+[Read more](webhooks.md#signal-take-profit)
+
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="stopLoss" type="Object" required="false" %}
+
+
+[Read more](webhooks.md#signal-stop-loss)
+
+
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Successful webhook response." %}
 ```javascript
 {
@@ -241,7 +257,9 @@ Be sure you are aware of webhook rate limiting in TradersPost. You can read more
 
 ## Examples
 
-#### Enter Bullish
+Here are some example webhook JSON payloads to demonstrate the different use cases.
+
+### Enter Bullish
 
 ```json
 {
@@ -250,7 +268,7 @@ Be sure you are aware of webhook rate limiting in TradersPost. You can read more
 }
 ```
 
-#### Exit Bullish
+### Exit Bullish
 
 ```json
 {
@@ -269,7 +287,7 @@ You can also use the sentiment field to exit a bullish position without entering
 }
 ```
 
-#### Enter Bearish
+### Enter Bearish
 
 ```json
 {
@@ -278,7 +296,7 @@ You can also use the sentiment field to exit a bullish position without entering
 }
 ```
 
-#### Exit Bearish
+### Exit Bearish
 
 ```json
 {
@@ -297,7 +315,9 @@ You can also use the sentiment field to exit a bearish position without entering
 }
 ```
 
-#### Cancel Open Orders
+### Cancel Open Orders
+
+Cancel all the open orders for the given ticker.
 
 ```json
 {
@@ -306,7 +326,9 @@ You can also use the sentiment field to exit a bearish position without entering
 }
 ```
 
-#### Add to Open Position
+### Add to Open Position
+
+You can add to an existing open position by using the **add** action. This will add to the existing open position regardless of if **Allow add to position** is checked in your strategy subscription settings.
 
 ```json
 {
@@ -315,11 +337,9 @@ You can also use the sentiment field to exit a bearish position without entering
 }
 ```
 
-#### Signal Quantity
+### Signal Quantity
 
-{% hint style="info" %}
 The signal quantity will only be used if you check **Use signal quantity** in the strategy subscription settings in TradersPost.
-{% endhint %}
 
 ```json
 {
@@ -329,17 +349,119 @@ The signal quantity will only be used if you check **Use signal quantity** in th
 }
 ```
 
-#### Signal Price
+### Signal Price
 
-{% hint style="info" %}
-The signal price is optional. If you omit a price from the signal, the current market price will be used if you have limit orders configured.
-{% endhint %}
+The signal price is optional. If you omit a price from the signal, the mid point between the bid and the ask will be used if you have limit orders configured.
 
 ```json
 {
     "ticker": "SQ",
     "action": "buy",
     "price": 60.30
+}
+```
+
+### Signal Take Profit
+
+You can optionally send take profit information with your entry signals.
+
+{% hint style="info" %}
+The signal take profit will only be used if you check **Use signal take profit** in the strategy subscription settings in TradersPost.
+{% endhint %}
+
+The following fields are allowed on the **takeProfit** object.
+
+* **limitPrice** - Absolute limit price calculated on the webhook sender side.
+* **percent**: Relative percentage take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
+* **amount** - Relative dollar amount take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
+
+#### **Percentage take profit calculated relative to entry price.**
+
+```json
+{
+    "takeProfit": {
+        "percent": 10
+    }
+}
+```
+
+#### **Dollar amount take profit calculated relative to entry price.**
+
+```json
+{
+    "takeProfit": {
+        "amount": 10
+    }
+}
+```
+
+#### **Absolute take profit calculated on the webhook sender side.**
+
+```json
+{
+    "takeProfit": {
+        "limitPrice": 19.99
+    }
+}
+```
+
+### Signal Stop Loss
+
+You can optionally send stop loss information with your entry signals.
+
+{% hint style="info" %}
+The signal take profit will only be used if you check **Use signal stop loss** in the strategy subscription settings in TradersPost.
+{% endhint %}
+
+The following fields are allowed on the **stopLoss** object.
+
+* **type** - Type of stop loss. If a value is provided, it overrides the stop loss type configured in strategy subscription settings. Allowed values are: stop, stop\__limit, trailing\_stop._
+* **percent**: Relative percentage stop loss to calculate relative to entry price.
+* **amount** - Relative dollar amount stop loss to calculate relative to entry price.
+* **stopPrice** - Absolute stop price calculated on the webhook sender side.
+* **limitPrice** - Absolute limit price calculated on the webhook sender side. **type** must be set to **stop\_limit** to use this field.
+* **trailPrice** - A dollar value away from the highest water mark. If you set this to 2.00 for a sell trailing stop, the stop price is always hwm - 2.00. **type** must be set to **trailing\_stop** to use this field.
+* **trailPercent** - A percent value away from the highest water mark. If you set this to 1.0 for a sell trailing stop, the stop price is always hwm \* 0.99. **type** must be set to **trailing\_stop** to use this field.
+
+**Percentage stop loss calculated relative to entry price.**
+
+```json
+{
+    "stopLoss": {
+        "percent": 5
+    }
+}
+```
+
+#### **Dollar amount stop loss calculated relative to entry price.**
+
+```json
+{
+    "stopLoss": {
+        "amount": 5
+    }
+}
+```
+
+#### **Absolute stop price calculated on the webhook sender side.**
+
+```json
+{
+    "stopLoss": {
+        "stopPrice": 10.71
+    }
+}
+```
+
+#### **Or with a stop limit instead of stop market.**
+
+```json
+{
+    "stopLoss": {
+        "type": "stop_limit",
+        "stopPrice": 10.71,
+        "limitPrice": 10.75
+    }
 }
 ```
 
