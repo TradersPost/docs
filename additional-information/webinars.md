@@ -7,11 +7,17 @@ description: >-
 
 # Webinars
 
-## 11/01/2022
+## 12/06/2022
 
-Next webinar will be on November 1st, 2022 at 4pm eastern time.
+Next webinar will be on Tuesday December 6th, 2022 at 4pm eastern time.
 
 RSVP here [https://zoom.us/webinar/register/WN\_OTgKg5iTRdSVQu-6K9DS9g](https://zoom.us/webinar/register/WN\_OTgKg5iTRdSVQu-6K9DS9g)
+
+## 11/01/2022
+
+{% embed url="https://www.youtube.com/watch?v=JzVUvAN0c7M" %}
+11/01/2022 Monthly Webinar
+{% endembed %}
 
 ## 10/04/2022
 
