@@ -28,7 +28,7 @@ RSVP here [https://zoom.us/webinar/register/WN\_OTgKg5iTRdSVQu-6K9DS9g](https://
 ## 08/02/2022
 
 {% embed url="https://www.youtube.com/watch?v=eA-0_BSIkaw" %}
-07/05/2022 Monthly Webinar
+08/02/2022 Monthly Webinar
 {% endembed %}
 
 ## 07/05/2022
