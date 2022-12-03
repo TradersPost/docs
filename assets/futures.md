@@ -1,7 +1,7 @@
 ---
 description: >-
-  TradersPost supports buying, selling and shorting futures contracts for the
-  NQ, MNQ, ES and MES tickers in TradeStation.
+  TradersPost supports buying, selling and shorting futures contracts with
+  support for over 100 symbols.
 ---
 
 # Futures
