@@ -1,7 +1,7 @@
 ---
 description: >-
   TradersPost supports buying, selling and shorting futures contracts with
-  support for over 100 symbols.
+  support for over 100 tickers.
 ---
 
 # Futures
@@ -10,124 +10,124 @@ description: >-
 TradersPost Automated Futures Trading Setup
 {% endembed %}
 
-## Supported Symbols
+## Supported Tickers
 
 TradersPost currently supports trading with the following futures tickers.
 
-| Symbol | Description                                                 |
-| ------ | ----------------------------------------------------------- |
-| 10Y    | MICRO 10-YEAR YIELD FUTURES                                 |
-| 2YY    | MICRO 2-YEAR YIELD FUTURES                                  |
-| 30Y    | MICRO 30-YEAR YIELD FUTURES                                 |
-| 5YY    | MICRO 5-YEAR YIELD FUTURES                                  |
-| AD     | Australian Dollar / US Dollar                               |
-| BO     | Soybean Oil                                                 |
-| BP     | British Pound / US Dollar                                   |
-| BRN    | Brent Crude Oil                                             |
-| BTC    | CME Bitcoin Futures                                         |
-| BTM    | ICE Bitcoin                                                 |
-| C      | Corn                                                        |
-| CB     | Butter Cash Settled (GLOBEX)                                |
-| CC     | Cocoa                                                       |
-| CC3    | London Cocoa Futures                                        |
-| CD     | Canadian Dollar / US Dollar                                 |
-| CL     | Light Sweet Crude Oil                                       |
-| CT     | Cotton No. 2                                                |
-| DA     | Milk Class III (GLOBEX)                                     |
-| DX     | U.S. Dollar Index                                           |
-| E7     | E-Mini Euro Dollar / US Dollar                              |
-| EC     | Euro Dollar / US Dollar                                     |
-| ED     | Euro Dollar (GLOBEX)                                        |
-| EMD    | E-Mini S\&P Mid Cap 400                                     |
-| ES     | E-Mini S\&P 500 Futures                                     |
-| ETH    | CME ETHEREUM FUTURES                                        |
-| FC     | Feeder Cattle (GLOBEX)                                      |
-| FDAX   | DAX Futures                                                 |
-| FDXM   | Mini-DAX                                                    |
-| FDXS   | MICRO-DAX                                                   |
-| FESX   | DJ EURO STOXX 50 Index Futures                              |
-| FGBL   | Euro-Bund Futures                                           |
-| FGBM   | Euro-Bobl Futures                                           |
-| FGBS   | Euro-Schatz Futures                                         |
-| FGBX   | Euro-Buxl Futures                                           |
-| FOAT   | Euro-OAT Futures                                            |
-| FSTB   | DJ STOXX 600 Banks Futures                                  |
-| FSTG   | DJ STOXX 600 Industrial Goods & Services Futures            |
-| FSTU   | DJ STOXX 600 Utilities Futures                              |
-| FSXE   | MICRO-DJ EURO STOXX 50 INDEX FUTURES                        |
-| FV     | 5 Year US Treasury Note                                     |
-| G      | Short Gilt Futures                                          |
-| GC     | Gold (COMEX)                                                |
-| H      | Medium Gilt Futures                                         |
-| HG     | Copper (COMEX)                                              |
-| HO     | Heating Oil                                                 |
-| J7     | E-Mini Japanese Yen / US Dollar                             |
-| JY     | Japanese Yen / US Dollar                                    |
-| KC     | Coffee "C"                                                  |
-| KW     | KC Wheat                                                    |
-| LB     | Random Length Lumber                                        |
-| LC     | Live Cattle (GLOBEX)                                        |
-| LH     | Lean Hogs (GLOBEX)                                          |
-| LJ     | Long Gilt Futures                                           |
-| LL     | Three Month Sterling (Short Sterling) Interest Rate Futures |
-| LT2    | Three Month Euro (EURIBOR) Interest Rate Futures            |
-| LZ     | FTSE 100 Index Futures                                      |
-| M2K    | Micro E-mini Russell 2000 futures                           |
-| M6A    | E-micro AUD/USD                                             |
-| M6B    | E-micro GBP/USD                                             |
-| M6E    | E-micro EUR/USD                                             |
-| MBT    | CME MICRO BITCOIN FUTURES                                   |
-| MCL    | MICRO CRUDE OIL (NYMEX)                                     |
-| MES    | Micro E-mini S\&P 500 futures                               |
-| MET    | CME MICRO ETHEREUM FUTURES                                  |
-| MGC    | E-Micro Gold                                                |
-| MHG    | MICRO COPPER (COMEX)                                        |
-| MHO    | MICRO HEATING OIL                                           |
-| MNQ    | Micro E-mini Nasdaq-100 futures                             |
-| MP1    | Mexican Peso / US Dollar                                    |
-| MRB    | MICRO RBOB GASOLINE                                         |
-| MYM    | Micro E-mini Dow futures                                    |
-| NE1    | New Zealand Dollar / US Dollar                              |
-| NG     | Natural Gas                                                 |
-| NK     | Nikkei 225 (US$)                                            |
-| NQ     | E-Mini Nasdaq 100 Futures                                   |
-| O      | Oats                                                        |
-| OJ     | FCOJ-A                                                      |
-| PA     | Palladium                                                   |
-| PL     | Platinum                                                    |
-| QH     | E-MiNY Heating Oil                                          |
-| QM     | E-MiNY Crude Oil                                            |
-| QN     | E-MiNY Natural Gas                                          |
-| QU     | E-MiNY RBOB Gasoline                                        |
-| RB     | RBOB Gasoline                                               |
-| RC     | London Robusta Coffee Futures                               |
-| RR     | Rough Rice                                                  |
-| RTY    | E-mini Russell 2000 Index futures                           |
-| S      | Soybeans                                                    |
-| SB     | Sugar No. 11                                                |
-| SF     | Swiss Franc / US Dollar                                     |
-| SI     | Silver (COMEX)                                              |
-| SIL    | E-MICRO SILVER (COMEX)                                      |
-| SM     | Soybean Meal                                                |
-| TEN    | Ultra 10-Year U.S. Treasury Note                            |
-| TU     | 2 Year US Treasury Note                                     |
-| TWE    | 20-YR T-BOND                                                |
-| TY     | 10 Year US Treasury Note                                    |
-| UB     | Ultra T-Bond                                                |
-| ULS    | Gasoil                                                      |
-| US     | 30 Year US Treasury Bond                                    |
-| VX     | CBOE Volatility Index (VIX) Futures                         |
-| VXM    | MINI VOLATILITY INDEX                                       |
-| W      | Wheat                                                       |
-| YC     | Mini-Sized Corn                                             |
-| YG     | E-Mini Gold                                                 |
-| YI     | E-Mini Silver                                               |
-| YK     | Mini-Sized Soybeans                                         |
-| YM     | E-Mini DJIA ($5)                                            |
-| YW     | Mini-Sized Wheat                                            |
+| Root Symbol | Description                                                 |
+| ----------- | ----------------------------------------------------------- |
+| 10Y         | MICRO 10-YEAR YIELD FUTURES                                 |
+| 2YY         | MICRO 2-YEAR YIELD FUTURES                                  |
+| 30Y         | MICRO 30-YEAR YIELD FUTURES                                 |
+| 5YY         | MICRO 5-YEAR YIELD FUTURES                                  |
+| AD          | Australian Dollar / US Dollar                               |
+| BO          | Soybean Oil                                                 |
+| BP          | British Pound / US Dollar                                   |
+| BRN         | Brent Crude Oil                                             |
+| BTC         | CME Bitcoin Futures                                         |
+| BTM         | ICE Bitcoin                                                 |
+| C           | Corn                                                        |
+| CB          | Butter Cash Settled (GLOBEX)                                |
+| CC          | Cocoa                                                       |
+| CC3         | London Cocoa Futures                                        |
+| CD          | Canadian Dollar / US Dollar                                 |
+| CL          | Light Sweet Crude Oil                                       |
+| CT          | Cotton No. 2                                                |
+| DA          | Milk Class III (GLOBEX)                                     |
+| DX          | U.S. Dollar Index                                           |
+| E7          | E-Mini Euro Dollar / US Dollar                              |
+| EC          | Euro Dollar / US Dollar                                     |
+| ED          | Euro Dollar (GLOBEX)                                        |
+| EMD         | E-Mini S\&P Mid Cap 400                                     |
+| ES          | E-Mini S\&P 500 Futures                                     |
+| ETH         | CME ETHEREUM FUTURES                                        |
+| FC          | Feeder Cattle (GLOBEX)                                      |
+| FDAX        | DAX Futures                                                 |
+| FDXM        | Mini-DAX                                                    |
+| FDXS        | MICRO-DAX                                                   |
+| FESX        | DJ EURO STOXX 50 Index Futures                              |
+| FGBL        | Euro-Bund Futures                                           |
+| FGBM        | Euro-Bobl Futures                                           |
+| FGBS        | Euro-Schatz Futures                                         |
+| FGBX        | Euro-Buxl Futures                                           |
+| FOAT        | Euro-OAT Futures                                            |
+| FSTB        | DJ STOXX 600 Banks Futures                                  |
+| FSTG        | DJ STOXX 600 Industrial Goods & Services Futures            |
+| FSTU        | DJ STOXX 600 Utilities Futures                              |
+| FSXE        | MICRO-DJ EURO STOXX 50 INDEX FUTURES                        |
+| FV          | 5 Year US Treasury Note                                     |
+| G           | Short Gilt Futures                                          |
+| GC          | Gold (COMEX)                                                |
+| H           | Medium Gilt Futures                                         |
+| HG          | Copper (COMEX)                                              |
+| HO          | Heating Oil                                                 |
+| J7          | E-Mini Japanese Yen / US Dollar                             |
+| JY          | Japanese Yen / US Dollar                                    |
+| KC          | Coffee "C"                                                  |
+| KW          | KC Wheat                                                    |
+| LB          | Random Length Lumber                                        |
+| LC          | Live Cattle (GLOBEX)                                        |
+| LH          | Lean Hogs (GLOBEX)                                          |
+| LJ          | Long Gilt Futures                                           |
+| LL          | Three Month Sterling (Short Sterling) Interest Rate Futures |
+| LT2         | Three Month Euro (EURIBOR) Interest Rate Futures            |
+| LZ          | FTSE 100 Index Futures                                      |
+| M2K         | Micro E-mini Russell 2000 futures                           |
+| M6A         | E-micro AUD/USD                                             |
+| M6B         | E-micro GBP/USD                                             |
+| M6E         | E-micro EUR/USD                                             |
+| MBT         | CME MICRO BITCOIN FUTURES                                   |
+| MCL         | MICRO CRUDE OIL (NYMEX)                                     |
+| MES         | Micro E-mini S\&P 500 futures                               |
+| MET         | CME MICRO ETHEREUM FUTURES                                  |
+| MGC         | E-Micro Gold                                                |
+| MHG         | MICRO COPPER (COMEX)                                        |
+| MHO         | MICRO HEATING OIL                                           |
+| MNQ         | Micro E-mini Nasdaq-100 futures                             |
+| MP1         | Mexican Peso / US Dollar                                    |
+| MRB         | MICRO RBOB GASOLINE                                         |
+| MYM         | Micro E-mini Dow futures                                    |
+| NE1         | New Zealand Dollar / US Dollar                              |
+| NG          | Natural Gas                                                 |
+| NK          | Nikkei 225 (US$)                                            |
+| NQ          | E-Mini Nasdaq 100 Futures                                   |
+| O           | Oats                                                        |
+| OJ          | FCOJ-A                                                      |
+| PA          | Palladium                                                   |
+| PL          | Platinum                                                    |
+| QH          | E-MiNY Heating Oil                                          |
+| QM          | E-MiNY Crude Oil                                            |
+| QN          | E-MiNY Natural Gas                                          |
+| QU          | E-MiNY RBOB Gasoline                                        |
+| RB          | RBOB Gasoline                                               |
+| RC          | London Robusta Coffee Futures                               |
+| RR          | Rough Rice                                                  |
+| RTY         | E-mini Russell 2000 Index futures                           |
+| S           | Soybeans                                                    |
+| SB          | Sugar No. 11                                                |
+| SF          | Swiss Franc / US Dollar                                     |
+| SI          | Silver (COMEX)                                              |
+| SIL         | E-MICRO SILVER (COMEX)                                      |
+| SM          | Soybean Meal                                                |
+| TEN         | Ultra 10-Year U.S. Treasury Note                            |
+| TU          | 2 Year US Treasury Note                                     |
+| TWE         | 20-YR T-BOND                                                |
+| TY          | 10 Year US Treasury Note                                    |
+| UB          | Ultra T-Bond                                                |
+| ULS         | Gasoil                                                      |
+| US          | 30 Year US Treasury Bond                                    |
+| VX          | CBOE Volatility Index (VIX) Futures                         |
+| VXM         | MINI VOLATILITY INDEX                                       |
+| W           | Wheat                                                       |
+| YC          | Mini-Sized Corn                                             |
+| YG          | E-Mini Gold                                                 |
+| YI          | E-Mini Silver                                               |
+| YK          | Mini-Sized Soybeans                                         |
+| YM          | E-Mini DJIA ($5)                                            |
+| YW          | Mini-Sized Wheat                                            |
 
 {% hint style="warning" %}
-You are resposible for ensuring positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything for futures contract positions based on expiration date.
+You are responsible for ensuring futures positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything for futures contract positions based on expiration date.
 {% endhint %}
 
 ## Symbol Format
