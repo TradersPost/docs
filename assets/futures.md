@@ -114,7 +114,7 @@ TradersPost currently supports trading with the following futures tickers.
 | TWE         | 20-YR T-BOND                                                | CBOT:TWE            |
 | TY          | 10 Year US Treasury Note                                    | CBOT:ZN             |
 | UB          | Ultra T-Bond                                                | CBOT:UB             |
-| ULS         | Gasoil                                                      | _N/A_               |
+| ULS         | Low Sulphur Gasoil                                          | ICEEUR:GAS          |
 | US          | 30 Year US Treasury Bond                                    | CBOT:ZB             |
 | VX          | CBOE Volatility Index (VIX) Futures                         | CBOE:VX             |
 | VXM         | MINI VOLATILITY INDEX                                       | _N/A (Use CBOE:VX)_ |
