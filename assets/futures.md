@@ -14,117 +14,132 @@ TradersPost Automated Futures Trading Setup
 
 TradersPost currently supports trading with the following futures tickers.
 
-| Root Symbol | Description                                                 | TradingView Symbol  |
-| ----------- | ----------------------------------------------------------- | ------------------- |
-| 10Y         | MICRO 10-YEAR YIELD FUTURES                                 | CBOT\_MINI:10Y      |
-| 2YY         | MICRO 2-YEAR YIELD FUTURES                                  | CBOT\_MINI:2YY      |
-| 30Y         | MICRO 30-YEAR YIELD FUTURES                                 | CBOT\_MINI:30Y      |
-| 5YY         | MICRO 5-YEAR YIELD FUTURES                                  | CBOT\_MINI:5YY      |
-| AD          | Australian Dollar / US Dollar                               | CME:6A              |
-| BO          | Soybean Oil                                                 | CBOT:ZL             |
-| BP          | British Pound / US Dollar                                   | CME:6B              |
-| BRN         | Brent Crude Oil                                             | ICEEUR:BRN          |
-| BTC         | CME Bitcoin Futures                                         | CME:BTC             |
-| BTM         | ICE Bitcoin                                                 | ICEUS:BTM           |
-| C           | Corn                                                        | CBOT:ZC             |
-| CB          | Butter Cash Settled (GLOBEX)                                | CME:CB              |
-| CC          | Cocoa                                                       | ICEUS:CC            |
-| CC3         | London Cocoa Futures                                        | ICEEUR:C            |
-| CD          | Canadian Dollar / US Dollar                                 | CME:6C              |
-| CL          | Light Sweet Crude Oil                                       | NYMEX:CL            |
-| CT          | Cotton No. 2                                                | ICEUS:CT            |
-| DA          | Milk Class III (GLOBEX)                                     | CME:DC              |
-| DX          | U.S. Dollar Index                                           | ICEUS:DX            |
-| E7          | E-Mini Euro Dollar / US Dollar                              | CME\_MINI:E7        |
-| EC          | Euro Dollar / US Dollar                                     | CME:6E              |
-| ED          | Euro Dollar (GLOBEX)                                        | CME:GE              |
-| EMD         | E-Mini S\&P Mid Cap 400                                     | CME\_MINI:EMD       |
-| ES          | E-Mini S\&P 500 Futures                                     | CME\_MINI:ES        |
-| ETH         | CME ETHEREUM FUTURES                                        | CME:ETH             |
-| FC          | Feeder Cattle (GLOBEX)                                      | CME:GF              |
-| FDAX        | DAX Futures                                                 | EUREX:FDAX          |
-| FDXM        | Mini-DAX                                                    | EUREX:FDXM          |
-| FDXS        | MICRO-DAX                                                   | EUREX:FDXS          |
-| FESX        | DJ EURO STOXX 50 Index Futures                              | EUREX:FESX          |
-| FGBL        | Euro-Bund Futures                                           | EUREX:FGBL          |
-| FGBM        | Euro-Bobl Futures                                           | EUREX:FGBM          |
-| FGBS        | Euro-Schatz Futures                                         | EUREX:FGBS          |
-| FGBX        | Euro-Buxl Futures                                           | EUREX:FGBX          |
-| FOAT        | Euro-OAT Futures                                            | EUREX:FOAT          |
-| FSTB        | DJ STOXX 600 Banks Futures                                  | EUREX:FSTB          |
-| FSTG        | DJ STOXX 600 Industrial Goods & Services Futures            | EUREX:FSTG          |
-| FSTU        | DJ STOXX 600 Utilities Futures                              | EUREX:FSTU          |
-| FSXE        | MICRO-DJ EURO STOXX 50 INDEX FUTURES                        | EUREX:FSXE          |
-| FV          | 5 Year US Treasury Note                                     | CBOT:ZF             |
-| G           | Short Gilt Futures                                          | ICEEUR:G            |
-| GC          | Gold (COMEX)                                                | COMEX:GC            |
-| H           | Medium Gilt Futures                                         | ICEEUR:H            |
-| HG          | Copper (COMEX)                                              | COMEX:HG            |
-| HO          | Heating Oil                                                 | NYMEX:HO            |
-| J7          | E-Mini Japanese Yen / US Dollar                             | CME\_MINI:J7        |
-| JY          | Japanese Yen / US Dollar                                    | CME:6J              |
-| KC          | Coffee "C"                                                  | ICEUS:KC            |
-| KW          | KC Wheat                                                    | CBOT:KE             |
-| LB          | Random Length Lumber                                        | CME:LBS             |
-| LC          | Live Cattle (GLOBEX)                                        | CME:LE              |
-| LH          | Lean Hogs (GLOBEX)                                          | CME:HE              |
-| LJ          | Long Gilt Futures                                           | ICEEUR:R            |
-| LL          | Three Month Sterling (Short Sterling) Interest Rate Futures | ICEEUR:L            |
-| LT2         | Three Month Euro (EURIBOR) Interest Rate Futures            | EUREX:FEU3          |
-| LZ          | FTSE 100 Index Futures                                      | ICEEUR:Z            |
-| M2K         | Micro E-mini Russell 2000 futures                           | CME\_MINI:M2K       |
-| M6A         | E-micro AUD/USD                                             | CME\_MINI:M6A       |
-| M6B         | E-micro GBP/USD                                             | CME\_MINI:M6B       |
-| M6E         | E-micro EUR/USD                                             | CME\_MINI:M6E       |
-| MBT         | CME MICRO BITCOIN FUTURES                                   | CME:MBT             |
-| MCL         | MICRO CRUDE OIL (NYMEX)                                     | NYMEX:MCL           |
-| MES         | Micro E-mini S\&P 500 futures                               | CME\_MINI:MES       |
-| MET         | CME MICRO ETHEREUM FUTURES                                  | CME:MET             |
-| MGC         | E-Micro Gold                                                | COMEX\_MINI:MGC     |
-| MHG         | MICRO COPPER (COMEX)                                        | COMEX\_MINI:MHG     |
-| MHO         | MICRO HEATING OIL                                           | NYMEX\_MINI:MHO     |
-| MNQ         | Micro E-mini Nasdaq-100 futures                             | CME\_MINI:MNQ       |
-| MP1         | Mexican Peso / US Dollar                                    | CME:6M              |
-| MRB         | MICRO RBOB GASOLINE                                         | NYMEX:MRB           |
-| MYM         | Micro E-mini Dow futures                                    | CBOT\_MINI:MYM      |
-| NE1         | New Zealand Dollar / US Dollar                              | CME:6N              |
-| NG          | Natural Gas                                                 | NYMEX:NG            |
-| NK          | Nikkei 225 (US$)                                            | CME:NKD             |
-| NQ          | E-Mini Nasdaq 100 Futures                                   | CME\_MINI:NQ        |
-| O           | Oats                                                        | CBOT:ZO             |
-| OJ          | FCOJ-A                                                      | ICEUS:OJ            |
-| PA          | Palladium                                                   | NYMEX:PA            |
-| PL          | Platinum                                                    | NYMEX:PL            |
-| QH          | E-MiNY Heating Oil                                          | NYMEX\_MINI:QH      |
-| QM          | E-MiNY Crude Oil                                            | NYMEX\_MINI:QM      |
-| QN          | E-MiNY Natural Gas                                          | NYMEX\_MINI:QG      |
-| QU          | E-MiNY RBOB Gasoline                                        | NYMEX\_MINI:QU      |
-| RB          | RBOB Gasoline                                               | NYMEX:RB            |
-| RC          | London Robusta Coffee Futures                               | ICEEUR:RC           |
-| RR          | Rough Rice                                                  | CBOT:ZR             |
-| RTY         | E-mini Russell 2000 Index futures                           | CME\_MINI:RTY       |
-| S           | Soybeans                                                    | CBOT:ZS             |
-| SB          | Sugar No. 11                                                | ICEUS:SB            |
-| SF          | Swiss Franc / US Dollar                                     | CME:6S              |
-| SI          | Silver (COMEX)                                              | COMEX:SI            |
-| SIL         | E-MICRO SILVER (COMEX)                                      | COMEX\_MINI:SIL     |
-| SM          | Soybean Meal                                                | CBOT:ZM             |
-| TEN         | Ultra 10-Year U.S. Treasury Note                            | CBOT:TN             |
-| TU          | 2 Year US Treasury Note                                     | CBOT:ZT             |
-| TWE         | 20-YR T-BOND                                                | CBOT:TWE            |
-| TY          | 10 Year US Treasury Note                                    | CBOT:ZN             |
-| UB          | Ultra T-Bond                                                | CBOT:UB             |
-| ULS         | Low Sulphur Gasoil                                          | ICEEUR:GAS          |
-| US          | 30 Year US Treasury Bond                                    | CBOT:ZB             |
-| VX          | CBOE Volatility Index (VIX) Futures                         | CBOE:VX             |
-| VXM         | MINI VOLATILITY INDEX                                       | _N/A (Use CBOE:VX)_ |
-| W           | Wheat                                                       | CBOT:ZW             |
-| YC          | Mini-Sized Corn                                             | CBOT\_MINI:XC       |
-| YG          | E-Mini Gold                                                 | ICEUS:YG            |
-| YI          | E-Mini Silver                                               | ICEUS:YI            |
-| YK          | Mini-Sized Soybeans                                         | CBOT\_MINI:XK       |
-| YM          | E-Mini DJIA ($5)                                            | CBOT\_MINI:YM       |
-| YW          | Mini-Sized Wheat                                            | CBOT\_MINI:XW       |
+[View our TradingView Watchlist with all available symbols.](https://www.tradingview.com/watchlists/97337195/)
+
+| Description                                                 | TradersPost Symbol Root | TradingView Symbol |
+| ----------------------------------------------------------- | ----------------------- | ------------------ |
+| **INDEXES**                                                 |                         |                    |
+| E-MINI S\&P 500                                             | ES                      | CME\_MINI:ES1!     |
+| E-MINI MIDCAP 400                                           | EMD                     | CME\_MINI:EMD1!    |
+| E-MINI NASDAQ 100                                           | NQ                      | CME\_MINI:NQ1!     |
+| MINI RUSSELL 2000 (CME)                                     | RTY                     | CME\_MINI:RTY1!    |
+| MINI DOW JONES ($5)                                         | YM                      | CBOT\_MINI:YM1!    |
+| MICRO ES                                                    | MES                     | CME\_MINI:MES1!    |
+| MICRO NQ                                                    | MNQ                     | CME\_MINI:MNQ1!    |
+| MICRO RUSSELL                                               | M2K                     | CME\_MINI:M2K1!    |
+| MICRO YM                                                    | MYM                     | CBOT\_MINI:MYM1!   |
+| NIKKEI ($ BASED) (CME)                                      | NK                      | CME:NKD1!          |
+| VIX                                                         | VX                      | CBOE:VX1!          |
+| MINI VOLATILITY INDEX                                       | VXM                     |                    |
+| ICE Bitcoin                                                 | BTM                     | ICEUS:BTM1!        |
+| CME BITCOIN FUTURES                                         | BTC                     | CME:BTC1!          |
+| CME MICRO BITCOIN FUTURES                                   | MBT                     | CME:MBT1!          |
+| CME ETHEREUM FUTURES                                        | ETH                     | CME:ETH1!          |
+| CME MICRO ETHEREUM FUTURES                                  | MET                     | CME:MET1!          |
+| **EUREX**                                                   |                         |                    |
+| DAX                                                         | FDAX                    | EUREX:FDAX1!       |
+| MINI-DAX                                                    | FDXM                    | EUREX:FDXM1!       |
+| MICRO-DAX                                                   | FDXS                    | EUREX:FDXS1!       |
+| DJ STOXX 50 INDEX                                           | FESX                    | EUREX:FESX1!       |
+| MICRO-DJ EURO STOXX 50 INDEX FUTURES                        | FSXE                    | EUREX:FSXE1!       |
+| DJ STOXX 600 BANKS                                          | FSTB                    | EUREX:FSTB1!       |
+| DJ STOXX 600 INDST G\&S                                     | FSTG                    | EUREX:FSTG1!       |
+| EURO-SCHATZ                                                 | FGBS                    | EUREX:FGBS1!       |
+| EURO-BOBL                                                   | FGBM                    | EUREX:FGBM1!       |
+| EURO-BUND                                                   | FGBL                    | EUREX:FGBL1!       |
+| EURO-OAT                                                    | FOAT                    | EUREX:FOAT1!       |
+| EURO-BUXL                                                   | FGBX                    | EUREX:FGBX1!       |
+| DJ STOXX 600 UTILITY                                        | FSTU                    | EUREX:FSTU1!       |
+| **EURONEXT LIFFE**                                          |                         |                    |
+| FTSE 100 INDEX FUTURES                                      | LZ                      | ICEEUR:Z1!         |
+| THREE MONTH EURO (EURIBOR) INTEREST RATE FUTURES            | LT2                     | EUREX:FEU31!       |
+| THREE MONTH STERLING (SHORT STERLING) INTEREST RATE FUTURES | LL                      | ICEEUR:L1!         |
+| THREE MONTH EURO SWISS FRANC INTEREST RATE FUTURES          | LF2                     | ICEEUR:S1!         |
+| LONG GILT FUTURES                                           | LJ                      | ICEEUR:R1!         |
+| MEDIUM GILT FUTURES                                         | H                       | ICEEUR:H1!         |
+| SHORT GILT FUTURES                                          | G                       | ICEEUR:G1!         |
+| LONDON COCOA FUTURES                                        | CC3                     | ICEEUR:C1!         |
+| LONDON ROBUSTA COFFEE FUTURES                               | RC                      | ICEEUR:RC1!        |
+| **CURRENCIES (CME)**                                        |                         |                    |
+| AUSTRALIAN DLR.                                             | AD                      | CME:6A1!           |
+| BRITISH POUND                                               | BP                      | CME:6B1!           |
+| CANADIAN DLR.                                               | CD                      | CME:6C1!           |
+| EURO CURRENCY                                               | EC                      | CME:6E1!           |
+| JAPANESE YEN                                                | JY                      | CME:6J1!           |
+| MEXICAN PESO                                                | MP1                     | CME:6M1!           |
+| NEW ZEALAND DLR.                                            | NE1                     | CME:6N1!           |
+| SWISS FRANC                                                 | SF                      | CME:6S1!           |
+| DOLLAR INDEX (ICE)                                          | DX                      | ICEUS:DX1!         |
+| MINI EURO                                                   | E7                      | CME\_MINI:E71!     |
+| MINI YEN                                                    | J7                      | CME\_MINI:J71!     |
+| E-MICRO AUD/USD                                             | M6A                     | CME\_MINI:M6A1!    |
+| E-MICRO GBP/USD                                             | M6B                     | CME\_MINI:M6B1!    |
+| E-MICRO EUR/USD                                             | M6E                     | CME\_MINI:M6E1!    |
+| **INTEREST RATES (CBOT)**                                   |                         |                    |
+| 30-YR T-BOND                                                | US                      | CBOT:ZB1!          |
+| Ultra 30-YR T-BOND                                          | UB                      | CBOT:UB1!          |
+| 20-YR T-BOND                                                | TWE                     | CBOT:TWE1!         |
+| 10-YR T-NOTE                                                | TY                      | CBOT:ZN1!          |
+| Ultra 10-YR NOTE                                            | TEN                     | CBOT:TN1!          |
+| 5-YR T-NOTE                                                 | FV                      | CBOT:ZF1!          |
+| 2-YR T-NOTE                                                 | TU                      | CBOT:ZT1!          |
+| EURODOLLAR (CME)                                            | ED                      | CME:GE1!           |
+| MICRO 2-YEAR YIELD FUTURES                                  | 2YY                     | CBOT\_MINI:2YY1!   |
+| MICRO 5-YEAR YIELD FUTURES                                  | 5YY                     | CBOT\_MINI:5YY1!   |
+| MICRO 10-YEAR YIELD FUTURES                                 | 10Y                     | CBOT\_MINI:10Y1!   |
+| MICRO 30-YEAR YIELD FUTURES                                 | 30Y                     | CBOT\_MINI:30Y1!   |
+| **METALS**                                                  |                         |                    |
+| GOLD (COMEX)                                                | GC                      | COMEX:GC1!         |
+| SILVER (COMEX)                                              | SI                      | COMEX:SI1!         |
+| COPPER (COMEX)                                              | HG                      | COMEX:HG1!         |
+| PALLADIUM (NYMEX)                                           | PA                      | NYMEX:PA1!         |
+| PLATINUM (NYMEX)                                            | PL                      | NYMEX:PL1!         |
+| MICRO GOLD (COMEX)                                          | MGC                     | COMEX\_MINI:MGC1!  |
+| E-MICRO SILVER (COMEX)                                      | SIL                     | COMEX\_MINI:SIL1!  |
+| ALUMINUM (COMEX)                                            | ALI                     | COMEX:ALI1!        |
+| MICRO COPPER (COMEX)                                        | MHG                     | COMEX\_MINI:MHG1!  |
+| MINI GOLD (ICE)                                             | YG                      | ICEUS:YG1!         |
+| MINI SILVER (ICE)                                           | YI                      | ICEUS:YI1!         |
+| **ENERGIES**                                                |                         |                    |
+| CRUDE OIL (NYMEX)                                           | CL                      | NYMEX:CL1!         |
+| NATURAL GAS (NYMEX)                                         | NG                      | NYMEX:NG1!         |
+| HEATING OIL (NYMEX)                                         | HO                      | NYMEX:HO1!         |
+| RBOB GASOLINE (NYMEX)                                       | RB                      | NYMEX:RB1!         |
+| BRENT CRUDE OIL (ICE)                                       | BRN                     | ICEEUR:BRN1!       |
+| LOW SULPHUR GASOIL (ICE)                                    | ULS                     | ICEEUR:GAS1!       |
+| E-MINY CRUDE OIL (NYMEX)                                    | QM                      | NYMEX\_MINI:QM1!   |
+| E-MINY NATURAL GAS (NYMEX)                                  | QN                      | NYMEX\_MINI:QG1!   |
+| E-MINY HEATING OIL (NYMEX)                                  | QH                      | NYMEX\_MINI:QH1!   |
+| E-MINY RBOB GASOLINE (NYMEX)                                | QU                      | NYMEX\_MINI:QU1!   |
+| MICRO CRUDE OIL (NYMEX)                                     | MCL                     | NYMEX\_MINI:MCL1!  |
+| MICRO HEATING OIL                                           | MHO                     | NYMEX\_MINI:MHO1!  |
+| MICRO RBOB GASOLINE                                         | MRB                     | NYMEX:MRB1!        |
+| **AGRICULTURE (CBOT)**                                      |                         |                    |
+| WHEAT                                                       | W                       | CBOT:ZW1!          |
+| HARD RD WINTER WHEAT                                        | KW                      | CBOT:KE1!          |
+| CORN                                                        | C                       | CBOT:ZC1!          |
+| OATS                                                        | O                       | CBOT:ZO1!          |
+| SOYBEANS                                                    | S                       | CBOT:ZO1!          |
+| SOYBEAN OIL                                                 | BO                      | CBOT:ZL1!          |
+| SOYBEAN MEAL                                                | SM                      | CBOT:ZM1!          |
+| ROUGH RICE                                                  | RR                      | CBOT:ZR1!          |
+| MILK (CME)                                                  | DA                      | CME:DC1!           |
+| BUTTER (CME)                                                | CB                      | CME:CB1!           |
+| MINI WHEAT                                                  | YW                      | CBOT\_MINI:XW1!    |
+| MINI CORN                                                   | YC                      | CBOT\_MINI:XC1!    |
+| MINI SOYBEANS                                               | YK                      | CBOT\_MINI:XK1!    |
+| **MEATS (CME)**                                             |                         |                    |
+| LEAN HOGS                                                   | LH                      | CME:HE1!           |
+| LIVE CATTLE                                                 | LC                      | CME:LE1!           |
+| FEEDER CATTLE                                               | FC                      | CME:GF1!           |
+| **SOFTS (ICE)**                                             |                         |                    |
+| COFFEE                                                      | KC                      | ICEUS:KC1!         |
+| COTTON                                                      | CT                      | ICEUS:CT1!         |
+| FROZEN OJ                                                   | OJ                      | ICEUS:OJ1!         |
+| COCOA                                                       | CC                      | ICEUS:CC1!         |
+| SUGAR #11                                                   | SB                      | ICEUS:SB1!         |
+| **OTHER**                                                   |                         | ###OTHER           |
+| LUMBER (CME)                                                | LB                      | CME:LBS1!          |
 
 {% hint style="warning" %}
 You are responsible for ensuring futures positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything for futures contract positions based on expiration date.
