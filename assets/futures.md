@@ -111,7 +111,7 @@ TradersPost currently supports trading with the following futures tickers.
 | E-MINY NATURAL GAS (NYMEX)                                  | QN                      | NYMEX\_MINI:QG1!   |
 | E-MINY HEATING OIL (NYMEX)                                  | QH                      | NYMEX\_MINI:QH1!   |
 | E-MINY RBOB GASOLINE (NYMEX)                                | QU                      | NYMEX\_MINI:QU1!   |
-| MICRO CRUDE OIL (NYMEX)                                     | MCL                     | NYMEX\_MINI:MCL1!  |
+| MICRO CRUDE OIL (NYMEX)                                     | MCL                     | NYMEX:MCL1!        |
 | MICRO HEATING OIL                                           | MHO                     | NYMEX\_MINI:MHO1!  |
 | MICRO RBOB GASOLINE                                         | MRB                     | NYMEX:MRB1!        |
 | **AGRICULTURE (CBOT)**                                      |                         |                    |
