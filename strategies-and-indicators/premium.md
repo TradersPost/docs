@@ -7,6 +7,7 @@ description: >-
 
 # Premium
 
+* [Rainbow Trends](https://rainbow-trends.com/)
 * [SmarterOptions](https://smarteroptions.com/)
 * [LuxAlgo](https://www.luxalgo.com/)
 * [TrendMaster](https://www.trendmaster.com/)
