@@ -6,6 +6,18 @@ description: >-
 
 # Example Strategies
 
+### 8-55 EMA Crossover NQ Futures Strategy
+
+{% embed url="https://www.tradingview.com/script/tubAmq4X-8-55-EMA-Crossover-NQ-Futures-Strategy/" %}
+&#x20;View on TradingView
+{% endembed %}
+
+{% embed url="https://github.com/TradersPost/pinescript/blob/master/strategies/8-55-EMA-Crossover-NQ-Futures-Strategy.pinescript" %}
+View on GitHub
+{% endembed %}
+
+{% embed url="https://www.youtube.com/watch?v=61mYTkmM8XU" %}
+
 ### High-Low Range Trend-Following
 
 {% embed url="https://www.tradingview.com/script/ouTuH5zc-TradersPost-High-Low-Range-Strategy/" %}
