@@ -27,9 +27,17 @@ This JSON data structure is very important and it must be 100% correct otherwise
 
 You can dynamically send the values in the above JSON using TradingView variables. You can read more about TradingView variables [here](https://www.tradingview.com/support/solutions/43000531021-how-to-use-a-variable-value-in-alert/?offer\_id=10\&aff\_id=26514).
 
-#### Strategies
+### Strategies
 
-Using Pinescript strategies as opposed to indicators or studies is the best way to build automated trading strategies that work well with systems like TradersPost. If you build your script as a strategy, you only need one alert per ticker, and you can use the following JSON for the alert.
+Using Pine Script strategies as opposed to indicators or studies is the best way to build automated trading strategies that work well with systems like TradersPost.
+
+The Pine Script code of a strategy will have a line at the top of the code which calls the function `strategy()`
+
+```javascript
+strategy("My TradersPost Strategy", overlay=true)
+```
+
+If you build your Pine Script as a strategy, you only need one alert per ticker, and you can use the following JSON for the alert.
 
 ```json
 {
@@ -40,6 +48,33 @@ Using Pinescript strategies as opposed to indicators or studies is the best way 
     "price": "{{close}}"
 }
 ```
+
+TradingView will replace the `{{...}}` values dynamically with a real value when the alert gets sent to TradersPost.
+
+* **\{{ticker\}}** - the ticker the alert is setup on
+* **\{{strategy.order.action\}}** - buy or sell
+* **\{{strategy.market\_position\}}** - long, short or flat. This value tells TradersPost what the state of the position should be after executing the&#x20;
+* **\{{strategy.order.contracts\}}** - the quantity of the order executed
+* **\{{close\}}** - the current price at the time the alert was triggered
+
+### Indicators
+
+You can alternatively use a Pine Script indicator instead of a strategy to send signals to TradersPost.
+
+The Pine Script of an indicator will have a line at the top of the code which calls the function `indicator()`
+
+```javascript
+indicator("My TradersPost Indicator", overlay=true)
+```
+
+With an indicator, you have to setup separate buy and sell alerts per ticker. Your code should have multiple calls to the `alertcondition()` function.
+
+```javascript
+alertcondition(tradersPostBuy, title="TradersPost Buy")
+alertcondition(tradersPostSell, title="TradersPost Sell")
+```
+
+Then you can copy and paste the following JSON snippets in to the alert message in TradingView.
 
 #### Enter Bullish
 
@@ -92,7 +127,9 @@ You can also use the sentiment field to exit a bullish position without entering
 }
 ```
 
-You can also use the sentiment field to exit a bearish position without entering a bullish position on the other side. When you send sentiment=flat, it will always exit the full quantity of the open position.
+You can also use the sentiment field to exit a bearish position without entering a bullish position on the other side.
+
+When you send sentiment=flat, it will always exit the full quantity of the open position.
 
 ```json
 {
@@ -113,7 +150,7 @@ This is a simple example to demonstrate the basics of how you can integrate Trad
 
 ## Pine Script Strategies
 
-There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that are back testable.
+There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that can be backtested.
 
 ### Shared Strategies
 
@@ -130,8 +167,6 @@ Just send the following JSON in the alert message to TradersPost.
     "price": "{{close}}"
 }
 ```
-
-The `{{strategy.order.action}}` code will be dynamically replaced with a value of `buy` or `sell` when the strategy triggers an order.
 
 ### Custom Strategies
 
@@ -164,7 +199,7 @@ if tradersPostSell
     strategy.close("Long", when = open[0], alert_message = sellAlertMessage)
 ```
 
-Then when you are setting up the alert for your strategy you can put the following code in the `Alert Message` text area.
+Then when you are setting up the alert for your strategy you can put the following code in the `Alert Message` text area in TradingView.
 
 ```
 {{strategy.order.alert_message}} 
@@ -270,7 +305,37 @@ strategy.exit('Exit Short', from_entry = "Short", profit = takeProfitShort, loss
 strategy.close_all(when = timeConditionEnd)
 ```
 
-If you have an idea for a strategy and you need help with implementing the strategy in Pine Script, TradersPost can help you! [Learn more](broken-reference) about our custom strategy development team.
+### TradersPost Compatibility
+
+It is important when building your Pine Script strategy to understand the differences between building a strategy for a backtest and building a strategy for live automated execution. It is possible to build a strategy that works well in a backtest, but cannot be automated. Here is an example.
+
+If you program your strategy to swap sides from long to short or short to long, you need to program the swap from one side to the other in one order instead of two.
+
+Here is an example where it is done in two orders. When you do this, it will execute fine in the backtest, but this results in 2 alerts being sent to TradersPost at the exact same time and it is not possible to know which one to execute first.
+
+```javascript
+// wrong
+if tradersPostBuy
+    strategy.close("TradersPost Short")
+    strategy.entry("TradersPost Long", strategy.long)
+
+if tradersPostSell
+    strategy.close("TradersPost Long")
+    strategy.entry("TradersPost Short", strategy.short)
+```
+
+Here is how you can do the same thing in one order instead of two:
+
+```javascript
+// right
+if tradersPostBuy
+    strategy.entry("TradersPost Long", strategy.long)
+
+if tradersPostSell
+    strategy.entry("TradersPost Short", strategy.short)
+```
+
+This will swap from one side to the other in one order and will send one signal to TradersPost with all of the quantity required to both close the current open position and swap to the other side in one order.
 
 ## Pine Script Studies
 
