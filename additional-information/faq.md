@@ -12,13 +12,9 @@ Yes, TradersPost supports paper trading with multiple different brokers. Read mo
 
 TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](../paper-trading.md#alpaca) or [TradeStation](../paper-trading.md#tradestation) or use the [TradersPost Paper Trading](../paper-trading.md#traderspost-paper) functionality.
 
-### Do I need TradingView?
-
-No. You can subscribe to existing strategies that have been published on TradersPost. An account on TradingView is only required if you want to connect your own custom strategies to TradersPost.
-
 ### Does TradersPost require coding?
 
-No. TradersPost does not require coding. You can easily connect strategies to TradersPost that other traders have created and published on TradingView.
+No. TradersPost does not require coding. You can easily connect strategies to TradersPost that other traders have created and published on [TradingView](https://cdn.traderspost.io/images/TradingView.png). Or you can use a platform like [TrendSpider](https://trendspider.com/?\_go=traderspost) which allows you to build strategies without code.
 
 ### Can I trade both long and short?
 
@@ -28,13 +24,13 @@ Yes, TradersPost supports trading both the long and short sides of a strategy.
 
 Not yet, but it is on the roadmap for 2023.
 
-### Do you support options?
-
-Yes, options support is in beta and available to all customers.
-
 ### Do you support futures?
 
-Yes, futures support is in beta and available to all customers.
+Yes, futures support is available and can be enabled in your account settings.
+
+### Do you support options?
+
+Yes, options support is in beta and can be enabled in your account settings.
 
 ### What brokers do you support?
 
@@ -87,3 +83,7 @@ When you use market orders, the price you get filled at can be different from th
 ### Why are my TradeStation simulated orders not filling?
 
 TradeStation simulated paper trading environment often has delays with filling simulated orders. Especially with options. When you experience these issues, you can report the problem to [clientservice@tradestation.com](<mailto:clientservice@tradestation.com >).
+
+### Why is my fill price different than my signal price?
+
+This is caused by slippage. Slippage is caused by the spread between the bid and the ask and the price movement that occurs between when a strategy signal is generated and an order is filled. Make sure you account for enough slippage in your strategy backtests. The amount of slippage depends on the ticker and the amount of volume it has.
