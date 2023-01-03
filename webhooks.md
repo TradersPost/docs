@@ -379,6 +379,8 @@ The following fields are allowed on the **takeProfit** object.
 
 ```json
 {
+    "ticker": "SQ",
+    "action": "buy",
     "takeProfit": {
         "percent": 10
     }
@@ -389,6 +391,8 @@ The following fields are allowed on the **takeProfit** object.
 
 ```json
 {
+    "ticker": "SQ",
+    "action": "buy",
     "takeProfit": {
         "amount": 10
     }
@@ -399,6 +403,8 @@ The following fields are allowed on the **takeProfit** object.
 
 ```json
 {
+    "ticker": "SQ",
+    "action": "buy",
     "takeProfit": {
         "limitPrice": 19.99
     }
@@ -427,6 +433,8 @@ The following fields are allowed on the **stopLoss** object.
 
 ```json
 {
+    "ticker": "SQ",
+    "action": "buy",
     "stopLoss": {
         "percent": 5
     }
@@ -437,6 +445,8 @@ The following fields are allowed on the **stopLoss** object.
 
 ```json
 {
+    "ticker": "SQ",
+    "action": "buy",
     "stopLoss": {
         "amount": 5
     }
@@ -447,6 +457,8 @@ The following fields are allowed on the **stopLoss** object.
 
 ```json
 {
+    "ticker": "SQ",
+    "action": "buy",
     "stopLoss": {
         "stopPrice": 10.71
     }
@@ -457,6 +469,8 @@ The following fields are allowed on the **stopLoss** object.
 
 ```json
 {
+    "ticker": "SQ",
+    "action": "buy",
     "stopLoss": {
         "type": "stop_limit",
         "stopPrice": 10.71,
