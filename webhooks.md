@@ -479,6 +479,32 @@ The following fields are allowed on the **stopLoss** object.
 }
 ```
 
+#### **Use a 1% trailing stop trail percent.**
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "stopLoss": {
+        "type": "trailing_stop",
+        "trailPercent": 1
+    }
+}
+```
+
+#### **Use a $1 trailing stop trail price.**
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "stopLoss": {
+        "type": "trailing_stop",
+        "trailPrice": 1
+    }
+}
+```
+
 ## Third Parties
 
 Because TradersPost works using standard webhooks, this enables users to integrate with third party platforms that support sending alerts as webhooks.
