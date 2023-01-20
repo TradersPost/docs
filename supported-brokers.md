@@ -18,8 +18,6 @@ Here is a list of brokers that TradersPost currently integrates with and support
 
 API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API.
 
-[Countries supported by Alpaca](https://alpaca.markets/support/countries-alpaca-is-available)
-
 {% hint style="danger" %}
 While Alpaca does support crypto, TradersPost has not integrated it with our platform yet but we plan to in the future.\
 \

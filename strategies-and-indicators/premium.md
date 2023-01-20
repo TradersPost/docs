@@ -7,6 +7,7 @@ description: >-
 
 # Premium
 
+* [ScaleTrade](https://scaletrade.ai/)
 * [Rainbow Trends](https://rainbow-trends.com/)
 * [SmarterOptions](https://smarteroptions.com/)
 * [LuxAlgo](https://www.luxalgo.com/)
