@@ -83,7 +83,3 @@ This is caused by slippage. Slippage is caused by the spread between the bid and
 ### Why are my TradeStation simulated orders not filling?
 
 TradeStation simulated paper trading environment often has delays with filling simulated orders. Especially with options. When you experience these issues, you can report the problem to [clientservice@tradestation.com](<mailto:clientservice@tradestation.com >).
-
-### Why is my fill price different than my signal price?
-
-This is caused by slippage. Slippage is caused by the spread between the bid and the ask and the price movement that occurs between when a strategy signal is generated and an order is filled. Make sure you account for enough slippage in your strategy backtests. The amount of slippage depends on the ticker and the amount of volume it has.
