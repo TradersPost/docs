@@ -78,7 +78,7 @@ Unfortunately, TradersPost does not have much visibility in to the backend of th
 
 ### Why is my fill price different than my signal price?
 
-When you use market orders, the price you get filled at can be different from the price which the signal generates at because the price can move in between the time the signal is generated and when the market order is filled. This is called slippage. Here is some more general information about slippage [https://www.investopedia.com/terms/s/slippage.asp](https://www.investopedia.com/terms/s/slippage.asp)
+This is caused by slippage. Slippage is caused by the spread between the bid and the ask and the price movement that occurs between when a strategy signal is generated and an order is filled. Make sure you account for enough slippage in your strategy backtests. The amount of slippage depends on the ticker and the amount of volume it has. Here is some more general information about slippage [https://www.investopedia.com/terms/s/slippage.asp](https://www.investopedia.com/terms/s/slippage.asp)
 
 ### Why are my TradeStation simulated orders not filling?
 
