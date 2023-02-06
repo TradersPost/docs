@@ -401,7 +401,7 @@ Sometimes you may want to close your positions at a specific time. For example, 
 
 ```javascript
 if hour(time, "UTC-5") == 16
-    strategy.close_all("NY Closing", immediately = true)
+    strategy.close_all("NY Closing", immediately=true)
 ```
 
 ## Pine Script Repainting
