@@ -395,15 +395,6 @@ alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker
 alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
 
-## Close Orders Before Market Close
-
-Sometimes you may want to close your positions at a specific time. For example, before the market closes. You can do this with Pine Script with code like the following.
-
-```javascript
-if hour(time, "UTC-5") == 16
-    strategy.close_all("NY Closing", immediately=true)
-```
-
 ## Pine Script Repainting
 
 {% hint style="warning" %}
