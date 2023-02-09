@@ -505,6 +505,23 @@ The following fields are allowed on the **stopLoss** object.
 }
 ```
 
+### Take Profit & Stop Loss
+
+You can use the take profit and stop loss functionality together. Just send us both the `takeProfit` and `stopLoss` with your entry signal. Here is an example.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "takeProfit": {
+        "limitPrice": 19.99
+    },
+    "stopLoss": {
+        "stopPrice": 10.71
+    }
+}
+```
+
 ## Third Parties
 
 Because TradersPost works using standard webhooks, this enables users to integrate with third party platforms that support sending alerts as webhooks.
