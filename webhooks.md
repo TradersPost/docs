@@ -416,7 +416,7 @@ The following fields are allowed on the **takeProfit** object.
 You can optionally send stop loss information with your entry signals.
 
 {% hint style="info" %}
-The signal take profit will only be used if you check **Use signal stop loss** in the strategy subscription settings in TradersPost.
+The signal stop loss will only be used if you check **Use signal stop loss** in the strategy subscription settings in TradersPost.
 {% endhint %}
 
 The following fields are allowed on the **stopLoss** object.
