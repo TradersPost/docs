@@ -337,6 +337,12 @@ if tradersPostSell
 
 This will swap from one side to the other in one order and will send one signal to TradersPost with all of the quantity required to both close the current open position and swap to the other side in one order.
 
+{% hint style="info" %}
+For this type of setup to work when you are sending a quantity in your signal and using the TradingView strategy JSON, make sure you check "Use signal quantity" and "Subtract exit quantity from signal quantity" in your TradersPost strategy subscription settings.\
+\
+If you are long 5 shares of SPY and you want to swap to the short side with 5 shares of SPY then TradingView will send a quantity of 10 in that scenario and TradersPost can subtract the quantity of the open position from the signal quantity so you get 5 to exit the long position and 5 to enter short on the other side.
+{% endhint %}
+
 ## Pine Script Studies
 
 Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
