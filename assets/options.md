@@ -42,7 +42,7 @@ In this example we have configured our strategy subscription to do the following
 
 ## Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from platforms like [TradingView](../tradingview/) or [TrendSpider](../trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../webhooks.md) from platforms like [TradingView](../tradingview.md) or [TrendSpider](../trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
 Inside of TradersPost when setting up a strategy you can configure what kind of option contracts to buy when you receive a signal. Here are the signals you can send and the resulting behavior.
 
@@ -107,3 +107,11 @@ If you configure your strategy subscription to use limit orders and to use the s
 {% hint style="warning" %}
 TradersPost does not currently support sending prices in signals for options. If you send a price in the signal, the value will not be used. If your strategy subscription is configured to send limit orders, then we will calculate the midpoint price between the bid and ask and use that price for the limit order.
 {% endhint %}
+
+## Paper Options Market Data
+
+The TradersPost paper broker does not have options data by default. To get options support in the TradersPost paper broker, you can connect a broker that does have options support (like TD Ameritrade or TradeStation) and then choose that broker as the **Market data source** for the TradersPost paper broker and then you will have options support. Here is a quick video showing you how to do this.
+
+{% embed url="https://www.youtube.com/watch?v=qqw5Olknra4" %}
+How To Enable Options Support In The TradersPost Paper Broker
+{% endembed %}

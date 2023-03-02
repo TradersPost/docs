@@ -25,7 +25,7 @@ TradingView is one of many tools that exist in the market for  building strategi
 
 ### Backtesting MOMO
 
-You can find an example MOMO strategy backtester [here](tradingview/#complex-strategy) that can be used with TradingView. You can explore TradingView [backtesting scripts](https://www.tradingview.com/scripts/backtesting/) as well to get ideas for how to backtest other strategy ideas.
+You can find an example MOMO strategy backtester [here](tradingview.md#complex-strategy) that can be used with TradingView. You can explore TradingView [backtesting scripts](https://www.tradingview.com/scripts/backtesting/) as well to get ideas for how to backtest other strategy ideas.
 
 {% embed url="https://www.youtube.com/watch?v=FKICHC0kF3o" %}
 TradingView Strategy Tester Video
