@@ -528,7 +528,7 @@ Because TradersPost works using standard webhooks, this enables users to integra
 
 Here are some popular platforms that enable you to build strategies and send alerts as webhooks.
 
-* [TradingView](tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
+* [TradingView](tradingview/) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
 * [TrendSpider](trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
 
 ## Custom Code
