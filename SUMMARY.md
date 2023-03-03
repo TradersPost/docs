@@ -1,6 +1,7 @@
 # Table of contents
 
 * [What is TradersPost?](README.md)
+* [Getting Started](getting-started.md)
 * [Supported Brokers](supported-brokers.md)
 * [Asset Classes](assets/README.md)
   * [Stocks](assets/stocks.md)
@@ -20,7 +21,6 @@
 * [Fractional Shares](fractional-shares.md)
 * [Custom Code Examples](custom-code-examples.md)
 * [API](api.md)
-* [Getting Started](getting-started.md)
 
 ## Strategies & Indicators
 
