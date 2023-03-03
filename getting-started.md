@@ -74,7 +74,7 @@ Give your webhook a name like **Stocks Webhook** and click **Save** at the top r
 
 ## Create a Strategy
 
-Now that you have a webhook created, you are ready to create a strategy. Click the Create a new strategy link after saving your webhook.
+Now that you have a webhook created, you are ready to create a strategy. Click the **Create a new strategy** link after saving your webhook.
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.47 PM.png" alt=""><figcaption><p>TradersPost Webhook Edit Page</p></figcaption></figure>
 
@@ -100,7 +100,7 @@ Your new strategy subscription has been created, but it is not enabled yet. Lets
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.53 PM.png" alt=""><figcaption><p>Strategy Subscription Edit Page</p></figcaption></figure>
 
-Check the **Auto submit** checkbox because we want the trades to submit to the broker automatically, without us having to manually approve or reject each trade. If you leave this checked, you will be able to approve or reject the trade before it submits to the broker.
+Check the **Auto submit** checkbox because we want the trades to submit to the broker automatically, without us having to manually approve or reject each trade. If you leave this unchecked, you will be able to approve or reject the trade before it submits to the broker.
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.12 PM.png" alt=""><figcaption><p>Check auto submit checkbox</p></figcaption></figure>
 
@@ -124,7 +124,7 @@ Your strategy subscription is now enabled! You are ready to start sending signal
 
 ## Copy Webhook URL
 
-In the top menu bar, hover over **Strategies** and click **Webhooks**. We're going to go back to the webhook we created in the beginning to copy the webhook URL so that we can use it in TradingView or TrendSpider.
+In the top menu bar, hover over **Strategies** and click **Webhooks**. We're going to go back to the webhook we created in the beginning to copy the webhook URL so that we can use it in TradingView alerts.
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.28.24 PM.png" alt=""><figcaption><p>Webhooks Menu</p></figcaption></figure>
 
@@ -152,7 +152,7 @@ Fill out the **Settings** tab in the **Create Alert on SQ** form. Enter the foll
 * Choose **ProjectX Buy Alert** from the 2nd dropdown under Condition
 * Click **Once Per Bar Close** next to the **Trigger** section.
 * Give the alert a name like **TradersPost SQ Buy Alert**.
-* Paste the following JSOn in to the alert messag textarea.
+* Paste the following JSON in to the alert message textarea.
 
 ```json
 {
@@ -163,7 +163,7 @@ Fill out the **Settings** tab in the **Create Alert on SQ** form. Enter the foll
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.37.15 PM.png" alt=""><figcaption><p>TradingView Create Buy Alert</p></figcaption></figure>
 
-Click the Notifications tab and paste the TradersPost Webhook URL in the Webhook URL field and then click the blue **Create** button.
+Click the **Notifications** tab and paste the TradersPost Webhook URL in the Webhook URL field and then click the blue **Create** button.
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.54.33 PM (1).png" alt=""><figcaption><p>TradingView Create Alert Notifications Tab</p></figcaption></figure>
 
