@@ -82,7 +82,7 @@ Give your strategy a name like **Stocks Strategy** and associate your **Stocks W
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.09 PM (1).png" alt=""><figcaption><p>TradersPost New Strategy Page</p></figcaption></figure>
 
-## Subscribe to your Strategy
+## Subscribe to Strategy
 
 Now that your strategy is created, you are ready to connect it to your Alpaca broker by subscribing to the strategy. Click the **Create a subscription** button to connect your subscription to your broker.
 
