@@ -1,7 +1,7 @@
 ---
 description: >-
   Quick tutorial for getting setup on TradersPost with an automated trading
-  strategy in less than 10 minutes.
+  strategy in less than 30 minutes.
 ---
 
 # Getting Started
