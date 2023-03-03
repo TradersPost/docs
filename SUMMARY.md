@@ -9,7 +9,6 @@
   * [Futures](assets/futures.md)
   * [Crypto](assets/crypto.md)
   * [Forex](assets/forex.md)
-* [Connect Your Broker](connecting-your-broker.md)
 * [Webhooks](webhooks.md)
 * [TradingView](tradingview/README.md)
 * [TrendSpider](trend-spider.md)
