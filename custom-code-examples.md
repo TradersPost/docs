@@ -188,29 +188,25 @@ int main() {
 
 ## C\#
 
-```csharp
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-class Program
-{
+<pre class="language-csharp"><code class="lang-csharp"><strong>class Program
+</strong>{
     static async Task Main(String[] args)
     {
-        using var client = new HttpClient();
+        var client = new HttpClient();
+        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-        var json = @"{\"ticker\": \"AMD"", \"action\": \"buy\", \"price\": 85.50}";
+        var json = "{\"ticker\": \"AMD"", \"action\": \"buy\", \"price\": 85.50}";
 
-        using var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        using var response = client.PostAsync("https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74", content);
+        var response = client.PostAsync("https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74", content);
 
-        string responseBody = response.Content.ReadAsStringAsync();
+        string responseBody = response.ToString();
 
         Console.WriteLine(responseBody);
     }
 }
-```
+</code></pre>
 
 ## Java
 
