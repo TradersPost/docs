@@ -199,7 +199,7 @@ class Program
     {
         using var client = new HttpClient();
 
-        var json = @"{""ticker"": ""AMD"", ""action"": ""buy"", ""price"": 85.50}";
+        var json = @"{\"ticker\": \"AMD"", \"action\": \"buy\", \"price\": 85.50}";
 
         using var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
