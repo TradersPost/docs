@@ -41,7 +41,7 @@ Signals are buy and sell instructions that can be produced by an automated algor
 
 You can use webhooks to send signals to TradersPost from your own custom code, or from a system like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) or [TrendSpider](https://trendspider.com/?\_go=traderspost). A webhook receives data in the JSON format. JSON is an open standard format, and data interchange format, that uses human-readable text to store and transmit data between systems.
 
-Here is an example of what the JSON would look like for **AMD** to **buy** at a price of **$85.50**.
+Here is an example of what the JSON would look like for **AMD** to **buy** 5 shares at a price of **$85.50** with a take profit and stop loss**.**
 
 ```json
 {
@@ -71,44 +71,13 @@ The values wrapped in **\{{** and **\}}** will be replaced dynamically by Tradin
 
 You can learn more about TradersPost webhooks [here](webhooks.md).
 
-### **Custom Code**
-
-You can send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). Here is an example using [PHP](https://php.net) and the [Symfony HTTP Client](https://symfony.com/doc/current/http\_client.html).
-
-```
-$ composer require symfony/http-client
-```
-
-```php
-<?php
-// traderspost-test.php
-
-require 'vendor/autoload.php';
-
-use Symfony\Component\HttpClient\HttpClient;
-
-$webhookUrl = 'https://traderspost.io/trading/webhook/9d9f8620-d60d-416e-827e-0ec01ef93532/9b5b8c4264421f5515fd4fcb6571af50';
-
-$client = HttpClient::create();
-
-$response = $client->request('POST', $webhookUrl, [
-    'json' => [
-        'ticker' => 'AMD',
-        'action' => 'buy',
-        'price' => 85.50,
-    ]
-]);
-
-echo $response->getContent();
-```
-
-```
-$ php traderspost-test.php
-```
+{% hint style="info" %}
+You can also send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). You can see some custom custom code examples for various programming languages [here](custom-code-examples.md).
+{% endhint %}
 
 ## Strategies
 
-Strategies define a group of signals. Strategies are private by default. Strategy managers can publish their strategies and allow other users to subscribe to them. When a user subscribes to a strategy, the trades will be placed automatically in the broker linked to the subscription.
+Strategies are what get connected to a broker with a strategy subscription. Strategies are private by default. Strategy managers can publish their strategies and allow other users to subscribe to them. When a user subscribes to a strategy, the trades will be placed automatically in the broker linked to the subscription.
 
 As a strategy manager, if you don't want to publish your strategy for the public to use, you can keep it as a private subscription.
 
@@ -119,6 +88,7 @@ TradersPost has a "bring your own broker" architecture. We are not a broker or a
 * [Alpaca](supported-brokers.md#alpaca) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
 * [TD Ameritrade](supported-brokers.md#tdameritrade) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
 * [TradeStation](supported-brokers.md#tradestation) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
+* Tradier - Tradier provides a full range of services in a scalable, secure, and easy-to-use REST-based API for businesses and individual developers. It’s unlike anything you’ve seen before.
 * [Robinhood](supported-brokers.md#robinhood) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
 
 Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
