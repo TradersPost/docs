@@ -12,7 +12,6 @@
 * [Webhooks](webhooks.md)
 * [TradingView](tradingview/README.md)
 * [TrendSpider](trend-spider.md)
-* [Example Strategies](tradingview/example-strategies.md)
 * [Backtesting](backtesting.md)
 * [Order Behavior](order-behavior.md)
 * [Order Queueing](order-queueing.md)
@@ -24,10 +23,11 @@
 
 ## Strategies & Indicators
 
+* [Strategy Developers](strategies-and-indicators/strategy-developers.md)
+* [Example Strategies](strategies-and-indicators/example-strategies.md)
 * [Premium](strategies-and-indicators/premium.md)
 * [Free](strategies-and-indicators/free.md)
 * [Build Your Own](strategies-and-indicators/build-your-own.md)
-* [Strategy Developers](strategies-and-indicators/strategy-developers.md)
 
 ## Additional Information
 
