@@ -24,7 +24,7 @@
 ## Strategies & Indicators
 
 * [Strategy Developers](strategies-and-indicators/strategy-developers.md)
-* [Example Strategies](strategies-and-indicators/example-strategies.md)
+* [Example Strategies](tradingview/example-strategies.md)
 * [Premium](strategies-and-indicators/premium.md)
 * [Free](strategies-and-indicators/free.md)
 * [Build Your Own](strategies-and-indicators/build-your-own.md)

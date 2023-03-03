@@ -195,7 +195,7 @@ using System.Threading.Tasks;
 
 class Program
 {
-    static async Task Main(string[] args)
+    static async Task Main(String[] args)
     {
         using var client = new HttpClient();
 
@@ -203,9 +203,9 @@ class Program
 
         using var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-        using var response = await client.PostAsync("https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74", content);
+        using var response = client.PostAsync("https://traderspost.io/trading/webhook/8c9d9620-c50d-416e-926e-0ec01ee83522/a353c3e16f9e3ded7c58cfedd2c38d74", content);
 
-        string responseBody = await response.Content.ReadAsStringAsync();
+        string responseBody = response.Content.ReadAsStringAsync();
 
         Console.WriteLine(responseBody);
     }
