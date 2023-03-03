@@ -88,7 +88,7 @@ TradersPost has a "bring your own broker" architecture. We are not a broker or a
 * [Alpaca](supported-brokers.md#alpaca) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
 * [TD Ameritrade](supported-brokers.md#tdameritrade) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
 * [TradeStation](supported-brokers.md#tradestation) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
-* [Tradier](https://docs.traderspost.io/docs/supported-brokers#tradier) - Tradier provides a full range of services in a scalable, secure, and easy-to-use REST-based API for businesses and individual developers. It’s unlike anything you’ve seen before.
+* [Tradier](supported-brokers.md#tradier) - Tradier provides a full range of services in a scalable, secure, and easy-to-use REST-based API for businesses and individual developers. It’s unlike anything you’ve seen before.
 * [Robinhood](supported-brokers.md#robinhood) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
 
 Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
