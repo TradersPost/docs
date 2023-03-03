@@ -6,7 +6,7 @@ description: >-
 
 # Getting Started
 
-## Create TradersPost Account
+## Create an Account
 
 First, go to [TradersPost.io](https://traderspost.io) and click [Register](https://app.traderspost.io/register) at the top right of the page.
 
