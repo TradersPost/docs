@@ -20,6 +20,7 @@
 * [Fractional Shares](fractional-shares.md)
 * [Custom Code Examples](custom-code-examples.md)
 * [API](api.md)
+* [Getting Started](getting-started.md)
 
 ## Strategies & Indicators
 
