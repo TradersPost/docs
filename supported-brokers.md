@@ -79,7 +79,7 @@ TradeStation offers state-of-the-art trading technology and online electronic br
 While TradeStation does support crypto and forex, TradersPost has not integrated it with our platform yet but we plan to in the future.
 {% endhint %}
 
-## Tradier
+### Tradier
 
 Tradier provides a full range of services in a scalable, secure, and easy-to-use REST-based API for businesses and individual developers. It’s unlike anything you’ve seen before.
 
