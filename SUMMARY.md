@@ -19,6 +19,7 @@
 * [Position Sizing](position-sizing.md)
 * [Fractional Shares](fractional-shares.md)
 * [Custom Code Examples](custom-code-examples.md)
+* [Discord Trading Bot](discord-trading-bot.md)
 * [API](api.md)
 
 ## Strategies & Indicators
