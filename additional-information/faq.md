@@ -83,3 +83,7 @@ This is caused by slippage. Slippage is caused by the spread between the bid and
 ### Why are my TradeStation simulated orders not filling?
 
 TradeStation simulated paper trading environment often has delays with filling simulated orders. Especially with options. When you experience these issues, you can report the problem to [clientservice@tradestation.com](<mailto:clientservice@tradestation.com >).
+
+### Do you support Two-Factor (2FA) Authentication?
+
+Yes, we support Two-Factor (2FA) authentication with popular authenticator apps like Google Authenticator and Authy.
