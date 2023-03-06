@@ -92,7 +92,6 @@ We plan to continually add more broker integrations to our system over time. Her
 * [Interactive Brokers](https://traderspost.io/broker/ibkr)
 * [Coinbase Pro](https://traderspost.io/broker/coinbasepro)
 * [Fidelity](https://traderspost.io/broker/fidelity)
-* [WeBull](https://traderspost.io/broker/webull)
 
 You can find the full list of supported brokers and broker wait lists [here](https://traderspost.io/brokers).
 
