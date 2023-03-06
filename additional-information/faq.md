@@ -87,3 +87,7 @@ TradeStation simulated paper trading environment often has delays with filling s
 ### Do you support Two-Factor (2FA) Authentication?
 
 Yes, we support Two-Factor (2FA) authentication with popular authenticator apps like Google Authenticator and Authy.
+
+### What is the Pattern Day Trading (PDT) rule?
+
+A pattern day trader (PDT) is a regulatory designation for those traders or investors that execute four or more day trades over the span of five business days. Once your account is labeled as a pattern day trader then you have to maintain at least $25,000 in equity in your account. This means that in order to execute automated trading strategies that frequently buy and sell in the same day, you need at least $25,000 equity in your account.
