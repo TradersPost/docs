@@ -1,8 +1,8 @@
 ---
 description: >-
   TradersPost is an automated trading platform that can automate your
-  TradingView or TrendSpider. strategies in brokers like TD Ameritrade,
-  TradeStation, Robinhood and Alpaca.
+  TradingView or TrendSpider strategies in brokers like TD Ameritrade,
+  TradeStation, Tradier, Robinhood, and Alpaca.
 cover: .gitbook/assets/Documentation Cover.jpeg
 coverY: 0
 ---
