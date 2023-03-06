@@ -91,3 +91,10 @@ Yes, we support Two-Factor (2FA) authentication with popular authenticator apps 
 ### What is the Pattern Day Trading (PDT) rule?
 
 A pattern day trader (PDT) is a regulatory designation for those traders or investors that execute four or more day trades over the span of five business days. Once your account is labeled as a pattern day trader then you have to maintain at least $25,000 in equity in your account. This means that in order to execute automated trading strategies that frequently buy and sell in the same day, you need at least $25,000 equity in your account.
+
+### Are there limits on how many webhook signals you can send?
+
+There are no technical limits enforced today but TradersPost is **NOT** designed to be a high frequency trading platform. While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategies if we determine that your account is sending too many requests.
+
+For example, strategies running on a timeframe lower than 1 minute which are getting in and out of a trade every minute or less than every minute are not supported. TradingView alerts can be delayed by 30 to 60 seconds in some rare cases so your strategy needs to run on a timeframe that is higher than the possible delay.
+
