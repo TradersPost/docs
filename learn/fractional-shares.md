@@ -27,6 +27,6 @@ Here are some notes on fractional trading behavior to consider when trading frac
 
 If you want to use fractional shares in your automated strategy subscriptions, you just need to check the `Use fractional quantity` checkbox in your strategy subscription.
 
-![Use fractional quantities in your strategy subscriptions.](<.gitbook/assets/Use Fractional Quantity Checkbox>)
+![Use fractional quantities in your strategy subscriptions.](<../.gitbook/assets/Use Fractional Quantity Checkbox>)
 
 Now when order quantities are calculated, we will not round them to whole numbers and will instead round the quantity to the number of decimal places supported by the broker.

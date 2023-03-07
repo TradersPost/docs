@@ -56,7 +56,7 @@ If you omit the price field in the JSON, then the resulting order will be limit 
 
 Sending a quantity with your signal will work for both entries and exits. The quantity will only be used if you check the **Use signal quantity** checkbox in your strategy subscription.
 
-![Use signal quantity checkbox.](<.gitbook/assets/Use Signal Quantity Checkbox>)
+![Use signal quantity checkbox.](<../.gitbook/assets/Use Signal Quantity Checkbox>)
 
 ### Entries
 
@@ -93,7 +93,7 @@ Sending a quantity with your signal for exits looks the same and has the followi
 
 You can add to existing open positions by enabling the **Allow add to position** checkbox in your strategy subscription.
 
-![Allow add to position checkbox.](<.gitbook/assets/Allow Add To Position Checkbox>)
+![Allow add to position checkbox.](<../.gitbook/assets/Allow Add To Position Checkbox>)
 
 Normally, if you for example have an existing open long position and you send another **buy** signal, the trade would be rejected. However, if you enable **Allow add to position**, then the signal won't be rejected and an order will be created to add to your existing position.
 

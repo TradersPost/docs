@@ -72,5 +72,5 @@ By default TradersPost will round decimal quantity to a whole number. If you che
 
 ## Screenshot
 
-![Position Size Configuration](<.gitbook/assets/Screen Shot 2022-08-17 at 10.06.27 PM.png>)
+![Position Size Configuration](<../.gitbook/assets/Screen Shot 2022-08-17 at 10.06.27 PM.png>)
 

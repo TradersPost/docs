@@ -5,7 +5,7 @@ description: >-
   next market open.
 ---
 
-# Order Queuing
+# Order Queueing
 
 TradersPost will queue strategy signal trades for the next market open in the following scenarios.
 
@@ -14,7 +14,7 @@ TradersPost will queue strategy signal trades for the next market open in the fo
 
 When a trade is queued for the next market open, it will look like the following.
 
-![Queued trade for the next market open.](<.gitbook/assets/Trade Queueing.png>)
+![Queued trade for the next market open.](<../.gitbook/assets/Trade Queueing.png>)
 
 ### Alpaca
 

@@ -3,24 +3,29 @@
 * [What is TradersPost?](README.md)
 * [Getting Started](getting-started.md)
 * [Supported Brokers](supported-brokers.md)
-* [Asset Classes](assets/README.md)
-  * [Stocks](assets/stocks.md)
-  * [Options](assets/options.md)
-  * [Futures](assets/futures.md)
-  * [Crypto](assets/crypto.md)
-  * [Forex](assets/forex.md)
-* [Webhooks](webhooks.md)
-* [TradingView](tradingview/README.md)
-* [TrendSpider](trend-spider.md)
-* [Backtesting](backtesting.md)
-* [Order Behavior](order-behavior.md)
-* [Order Queueing](order-queueing.md)
-* [Paper Trading](paper-trading.md)
-* [Position Sizing](position-sizing.md)
-* [Fractional Shares](fractional-shares.md)
-* [Custom Code Examples](custom-code-examples.md)
-* [Discord Trading Bot](discord-trading-bot.md)
-* [API](api.md)
+
+## Learn
+
+* [Webhooks](learn/webhooks.md)
+* [TradingView](learn/tradingview.md)
+* [TrendSpider](learn/trend-spider.md)
+* [Backtesting](learn/backtesting.md)
+* [Order Behavior](learn/order-behavior.md)
+* [Order Queueing](learn/order-queueing.md)
+* [Paper Trading](learn/paper-trading.md)
+* [Position Sizing](learn/position-sizing.md)
+* [Fractional Shares](learn/fractional-shares.md)
+* [Custom Code Examples](learn/custom-code-examples.md)
+* [Discord Trading Bot](learn/discord-trading-bot.md)
+* [API](learn/api.md)
+
+## Assets
+
+* [Stocks](assets/stocks.md)
+* [Futures](assets/futures.md)
+* [Options](assets/options.md)
+* [Crypto](assets/crypto.md)
+* [Forex](assets/forex.md)
 
 ## Strategies & Indicators
 

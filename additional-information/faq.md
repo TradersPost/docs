@@ -6,11 +6,11 @@ description: Get answers to the most frequently asked questions about TradersPos
 
 ### Do you support paper trading?
 
-Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](../paper-trading.md).
+Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](../learn/paper-trading.md).
 
 ### Can I paper trade with TD Ameritrade?
 
-TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](../paper-trading.md#alpaca) or [TradeStation](../paper-trading.md#tradestation) or use the [TradersPost Paper Trading](../paper-trading.md#traderspost-paper) functionality.
+TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](../learn/paper-trading.md#alpaca) or [TradeStation](../learn/paper-trading.md#tradestation) or use the [TradersPost Paper Trading](../learn/paper-trading.md#traderspost-paper) functionality.
 
 ### Does TradersPost require coding?
 
@@ -62,7 +62,7 @@ Yes, we support TD Ameritrade accounts with ThinkOrSwim advanced features disabl
 
 ### Do you have an API?
 
-No, but it is on our 2023 roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../webhooks.md).
+No, but it is on our 2023 roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../learn/webhooks.md).
 
 ### Are trades executed on my own dedicated server?
 
@@ -70,7 +70,7 @@ No, TradersPost is a software as a service and is hosted in a cloud environment.
 
 ### What happens if a signal is received when the market is closed
 
-The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../order-queueing.md) here.
+The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../learn/order-queueing.md) here.
 
 ### Why was my order rejected by my broker?
 

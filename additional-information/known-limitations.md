@@ -17,7 +17,7 @@ Failed or rejected orders will never be retried. If communication with a broker 
 
 ### Alert Webhook Delays
 
-Alert webhooks from third parties like [TradingView](../tradingview/) and [TrendSpider](../trend-spider.md) can be delayed for an undetermined amount of time or may not be sent at all. You are responsible for monitoring your automated trading strategy and taking manual action when necessary.&#x20;
+Alert webhooks from third parties like [TradingView](../learn/tradingview.md) and [TrendSpider](../learn/trend-spider.md) can be delayed for an undetermined amount of time or may not be sent at all. You are responsible for monitoring your automated trading strategy and taking manual action when necessary.&#x20;
 
 ### Race Conditions
 
