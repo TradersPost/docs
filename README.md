@@ -9,6 +9,10 @@ coverY: 0
 
 # What is TradersPost?
 
+{% hint style="warning" %}
+TradersPost is **NOT** designed to be a high frequency trading platform. While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategies if we determine that your account is sending too many requests.
+{% endhint %}
+
 {% embed url="https://www.youtube.com/watch?v=WucPurodgk8" %}
 TradersPost Explainer Video
 {% endembed %}
