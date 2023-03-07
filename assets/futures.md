@@ -245,4 +245,13 @@ You are responsible for ensuring futures contract positions are exited before ex
 
 The TradersPost continuous contract symbols like **NQ1!** rollover on the exact expiration date. We do not rollover automatically early or based on volume.
 
-This means if your strategy gets in a trade before the current contract expires, TradersPost will NOT automatically exit the position for you.
+This means if your strategy gets in a trade before the current contract expires, TradersPost will NOT automatically exit the position for you.\
+\
+If you want to trade a specific contract, then you can send **NQH2023** or **NQM2023** instead of **NQ1!** for example. Here is an example JSON.
+
+```json
+{
+    "ticker": "NQH2023",
+    "action": "buy"
+}
+```
