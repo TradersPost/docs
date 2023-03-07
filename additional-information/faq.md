@@ -98,7 +98,10 @@ There are no technical limits enforced today but TradersPost is **NOT** designed
 
 For example, strategies running on a timeframe lower than 1 minute which are getting in and out of a trade every minute or less than every minute are not supported. TradingView alerts can be delayed by 30 to 60 seconds in some rare cases so your strategy needs to run on a timeframe that is higher than the possible delay.
 
-### Can you trade extended hours with futures?
+### How does trading in extended hours work?
 
-Futures don’t have a concept of extended hours. The extended hours checkboxes are for stocks only. You can’t use extended hours orders with futures. Futures have one single 23 hour session 6 days a week and there is no pre/post market hours. You can leave the extended hours checkboxes unchecked when you are setting up a futures strategy subscription.
+For Stocks and Stock Options you can place market orders in regular trading hours but only limit orders in extended hours.&#x20;
+
+Futures don’t have a concept of extended hours as the extended hours checkboxes are for stocks only. You can’t use extended hours orders with futures. Futures have one single 23 hour session 6 days a week and there is no pre/post market hours. You can leave the extended hours checkboxes unchecked when you are setting up a futures strategy subscription.\
+
 
