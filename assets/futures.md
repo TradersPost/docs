@@ -141,10 +141,6 @@ TradersPost currently supports trading with the following futures tickers.
 | **OTHER**                                                   |                         | ###OTHER           |
 | LUMBER (CME)                                                | LB                      | CME:LBS1!          |
 
-{% hint style="warning" %}
-You are responsible for ensuring futures positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything for futures contract positions based on expiration date.
-{% endhint %}
-
 ## Symbol Format
 
 TradersPost understands many different futures symbol formats. Since every broker and trading platform has subtle differences in the format we try to be as flexible as possible.
@@ -240,3 +236,13 @@ To keep track of the different news events that may cause the market to move in 
 
 * [https://www.federalreserve.gov/newsevents/calendar.htm](https://www.federalreserve.gov/newsevents/calendar.htm)
 * [https://www.marketwatch.com/economy-politics/calendar](https://www.marketwatch.com/economy-politics/calendar)
+
+## Contract Rollover
+
+{% hint style="danger" %}
+You are responsible for ensuring futures contract positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything special for futures contract positions based on expiration date.
+{% endhint %}
+
+The TradersPost continuous contract symbols like **NQ1!** rollover on the exact expiration date. We do not rollover automatically early or based on volume.
+
+This means if your strategy gets in a trade before the current contract expires, TradersPost will NOT automatically exit the position for you.
