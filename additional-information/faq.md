@@ -111,3 +111,7 @@ Futures don’t have a concept of extended hours as the extended hours checkboxe
 ### Can I manually exit a position before my strategy exits?
 
 If the quantity is hardcoded to a fixed number and you aren’t using a position aware quantity from your strategy then it is ok to manually exit a position early. If you ARE using a position aware quantity from your strategy then it could cause an issue because the strategy will send a signal with enough quantity to close the open position and enter a new position on the other side. Since the open position is already closed, the full quantity sent would be used to enter a new position. Essentially if your strategy is position aware and your broker is not in sync with the quantity your strategy thinks you have, you will have issues.
+
+### Do you charge a fee per trade?
+
+No, TradersPost does not charge a fee per trade. Our service is a monthly or yearly Software as a Service (SaaS) fee. Take a look at our [pricing](https://traderspost.io/pricing) to learn more.
