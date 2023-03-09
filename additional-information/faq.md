@@ -119,3 +119,7 @@ If the quantity is hardcoded to a fixed number and you aren’t using a position
 ### Do you charge a fee per trade?
 
 No, TradersPost does not charge a fee per trade. Our service is a monthly or yearly Software as a Service (SaaS) fee. Take a look at our [pricing](https://traderspost.io/pricing) to learn more.
+
+### How can I see my profit and loss per trade?
+
+We don't currently have strategy or trade level analytics or reports. You will need to use your broker data to do analysis or use a third-party [Trade Journaling](trade-journaling.md) tool.
