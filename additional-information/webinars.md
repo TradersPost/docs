@@ -7,11 +7,17 @@ description: >-
 
 # Webinars
 
-## 02/07/2023
+## 04/04/2023
 
-Next webinar will be on Tuesday February 7th, 2023 at 4pm eastern time.
+Next webinar will be on Tuesday April 4th, 2023 at 4pm eastern time.
 
 RSVP here [https://zoom.us/webinar/register/WN\_OTgKg5iTRdSVQu-6K9DS9g](https://zoom.us/webinar/register/WN\_OTgKg5iTRdSVQu-6K9DS9g)
+
+## 03/07/2023
+
+{% embed url="https://www.youtube.com/watch?v=5afqjrnZKvw" %}
+Connect Tradier to TradersPost
+{% endembed %}
 
 ## 01/03/2023
 
