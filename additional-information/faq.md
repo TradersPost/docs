@@ -36,6 +36,10 @@ Yes, options support is in beta and can be enabled in your account settings.
 
 No, currently we only support directional options trades. This means we only support buying or selling calls in the same way you would buy shares of the underlying. Just instead of buying shares, you are buying calls. Or instead of shorting a underlying, you are buying puts.
 
+### Do you support index options on indexes like SPX?
+
+No, we don't yet support index options. We only support Stock & ETF options. So in the case of SPX, you can trade SPY ETF options instead.
+
 ### What brokers do you support?
 
 TradersPost currently integrates with TD Ameritrade, Alpaca, TradeStation and Robinhood.
