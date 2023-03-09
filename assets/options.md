@@ -1,8 +1,20 @@
+---
+description: >-
+  Automate directional options trading strategies with TradersPost. Buy and sell
+  calls or puts based on strategies in TradingView or TrendSpider.
+---
+
 # Options
 
 {% embed url="https://www.youtube.com/watch?v=Kbb37xqMwR4" %}
 TradersPost Automated Options Trading Setup
 {% endembed %}
+
+{% hint style="info" %}
+TradersPost currently only supports directional options trades. This means that you can only buy and sell calls or puts and you can't have multiple options positions open at the same time on the same underlying ticker in the same broker account.\
+\
+Some customers separate the positions in separate broker accounts to work around this limitation.
+{% endhint %}
 
 ## Symbol Format
 
@@ -21,8 +33,10 @@ When setting up a strategy within TradersPost you will have the ability to choos
 * **Call** - Buy calls when bullish (action=buy) and sell calls when bearish (action=sell).
 * **Put** - Buy puts when bearish (action=sell) and sell puts when bullish (action=buy.
 
-{% hint style="info" %}
-It can be a little confusing that when you configure a strategy to use puts, an action of **sell** will actually buy puts and an action of **buy** will sell puts. Essentially, a **buy** action indicates a bullish sentiment and a **sell** signal indicates a bearish sentiment.
+{% hint style="warning" %}
+It may seem counterintuitive that an action of **sell** will actually buy puts and an action of **buy** will sell puts. Essentially, a **buy** action indicates a bullish sentiment and a **sell** signal indicates a bearish sentiment.\
+\
+This is important for compatibility with TradingView since strategies are always running on the underlying ticker so the generated action is always buy or sell. What kind of order is created and sent to your broker based on the action, is determined by your strategy subscription settings in TradersPost.
 {% endhint %}
 
 ## Option Chain Scanning
