@@ -106,6 +106,8 @@ For example, strategies running on a timeframe lower than 1 minute which are get
 
 For Stocks and Stock Options you can place market orders in regular trading hours but only limit orders in extended hours.&#x20;
 
-Futures don’t have a concept of extended hours as the extended hours checkboxes are for stocks only. You can’t use extended hours orders with futures. Futures have one single 23 hour session 6 days a week and there is no pre/post market hours. You can leave the extended hours checkboxes unchecked when you are setting up a futures strategy subscription.\
+Futures don’t have a concept of extended hours as the extended hours checkboxes are for stocks only. You can’t use extended hours orders with futures. Futures have one single 23 hour session 6 days a week and there is no pre/post market hours. You can leave the extended hours checkboxes unchecked when you are setting up a futures strategy subscription.
 
+### Can I manually exit a position before my strategy exits?
 
+If the quantity is hardcoded to a fixed number and you aren’t using a position aware quantity from your strategy then it is ok to manually exit a position early. If you ARE using a position aware quantity from your strategy then it could cause an issue because the strategy will send a signal with enough quantity to close the open position and enter a new position on the other side. Since the open position is already closed, the full quantity sent would be used to enter a new position. Essentially if your strategy is position aware and your broker is not in sync with the quantity your strategy thinks you have, you will have issues.
