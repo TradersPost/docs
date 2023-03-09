@@ -32,6 +32,10 @@ Yes, futures support is available and can be enabled in your account settings.
 
 Yes, options support is in beta and can be enabled in your account settings.
 
+### Do you support spreads or other complex options strategies?
+
+No, currently we only support directional options trades. This means we only support buying or selling calls in the same way you would buy shares of the underlying. Just instead of buying shares, you are buying calls. Or instead of shorting a underlying, you are buying puts.
+
 ### What brokers do you support?
 
 TradersPost currently integrates with TD Ameritrade, Alpaca, TradeStation and Robinhood.
