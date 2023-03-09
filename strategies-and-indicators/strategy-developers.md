@@ -1,8 +1,18 @@
+---
+description: >-
+  Hire a strategy developer on popular gig sites like Fiverr or Upwork to bring
+  your strategy idea to life and automate it with TradersPost.
+---
+
 # Strategy Developers
 
 If you have an idea for a strategy but don't know how to code, you can hire Pine Script developers on gig sites like [Fiverr](https://www.fiverr.com/search/gigs?query=Pine%20Script\&source=top-bar\&search\_in=everywhere\&search-autocomplete-original-term=pine%20script) and [Upwork](https://www.upwork.com/search/profiles/?q=Pine%20Script\&user\_pref=2).
 
 Here are a few profiles of Pine Script developers others customers have worked with in the past.
+
+{% hint style="info" %}
+If you hire a developer to code your strategy, it is important that the coder is aware you intend to use the strategy with TradersPost for automation. Not all strategies can be automated so it is important it is built in a way that is compatible with automation and TradersPost. Read more about [TradersPost Compatibility](../learn/tradingview.md#traderspost-compatibility).
+{% endhint %}
 
 ### **TradingView Pine Script Developers**
 
