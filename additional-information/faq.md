@@ -123,3 +123,7 @@ No, TradersPost does not charge a fee per trade. Our service is a monthly or yea
 ### How can I see my profit and loss per trade?
 
 We don't currently have strategy or trade level analytics or reports. You will need to use your broker data to do analysis or use a third-party [Trade Journaling](trade-journaling.md) tool.
+
+### How come I see trades on my chart that didn't alert in realtime?
+
+Your strategy may suffer from [repainting](../learn/tradingview.md#pine-script-repainting). Make sure you study up on repainting to avoid any potential issues with your strategy being coded in a way where it executes in a backtest but does not execute in the same way with live data.
