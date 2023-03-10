@@ -127,3 +127,7 @@ We don't currently have strategy or trade level analytics or reports. You will n
 ### How come I see trades on my chart that didn't alert in realtime?
 
 Your strategy may suffer from [repainting](../learn/tradingview.md#pine-script-repainting). Make sure you study up on repainting to avoid any potential issues with your strategy being coded in a way where it executes in a backtest but does not execute in the same way with live data.
+
+### Can I export my traders from TradersPost?
+
+No, we don't yet support exporting data from TradersPost.
