@@ -44,7 +44,7 @@ It is recommended that you use one of the above simulated paper trading environm
 
 ### Market Data Source
 
-By default, TradersPost paper data is delayed and only supports stocks and futures. If you want the TradersPost paper broker to support options, you will need to connect a broker that supports  options, like TDAmeritrade or TradeStation.
+By default, TradersPost paper data is delayed and only supports stocks and futures. Additionally, the futures data can be delayed by over an hour and does not update in real-time. If you want the TradersPost paper broker to support options and have real-time data, you will need to connect a broker that supports options and has live data, like TDAmeritrade or TradeStation.
 
 1. Go to **Brokers** and click **Connect Broker** and connect your TDAmeritrade account.
 2. Once your TDAmeritrade account is connected, go back to **Brokers** and click **Edit** next to your TradersPost paper broker.
