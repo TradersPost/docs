@@ -135,3 +135,7 @@ No, we don't yet support exporting data from TradersPost.
 ### What payment options do you accept? Do you accept crypto payments?
 
 We support payments from Visa, Mastercard, American Express and Discover. We don't accept crypto payments.
+
+### Can I combine multiple indicator alerts before triggering a trade?
+
+No, we recommend that you combine the indicators as a Pine Script strategy so that it can be properly backtested in TradingView.&#x20;
