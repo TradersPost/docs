@@ -131,3 +131,7 @@ Your strategy may suffer from [repainting](../learn/tradingview.md#pine-script-r
 ### Can I export my traders from TradersPost?
 
 No, we don't yet support exporting data from TradersPost.
+
+### What payment options do you accept? Do you accept crypto payments?
+
+We support payments from Visa, Mastercard, American Express and Discover. We don't accept crypto payments.
