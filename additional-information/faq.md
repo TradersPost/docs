@@ -138,4 +138,8 @@ We support payments from Visa, Mastercard, American Express and Discover. We don
 
 ### Can I combine multiple indicator alerts before triggering a trade?
 
-No, we recommend that you combine the indicators as a Pine Script strategy so that it can be properly backtested in TradingView.&#x20;
+No, we recommend that you combine the indicators as a Pine Script strategy so that it can be properly backtested in TradingView.
+
+### Are TradingView alert webhooks delayed?
+
+TradingView webhooks can be delayed by anywhere from 2-3 seconds to upwards of 60 or more. TradingView considers a 25 to 45 second delay to be normal.
