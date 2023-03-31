@@ -56,9 +56,15 @@ Here is a quick video showing you how to set this up.
 How to Connect A Live Market Data Source To Your TradersPost Paper Broker
 {% endembed %}
 
-[https://www.youtube.com/watch?v=NK\_AE2aTDrU](https://www.youtube.com/watch?v=NK\_AE2aTDrU)
+### Market Price Type
 
-If you have any other questions about paper trading on TradersPost, you can email [support@traderspost.io](mailto:support@traderspost.io).
+The TradersPost paper broker allows you to configure a `Market Price Type` so you can control which price to use as the current market price for market orders and open positions. By default TradersPost will use the `Bid-ask midpoint` price from the quote. The available options are as follows.
+
+* **Bid-ask midpoint (default)** - This option will use the midpoint between the bid price and ask price.
+* **Use ask for buys and bid for sells** - This option will use the quote ask price for buys and bid price for sells.
+* **Always use ask** - This option will always use the quote ask price.
+* **Always use bid** - This option will always use the quote bid price.
+* **Use last price** - This option will always use the quote last price.
 
 ## Other Brokers
 
@@ -66,3 +72,5 @@ Unfortunately, not all brokers support simulated paper trading environments. The
 
 * [Robinhood](https://robinhood.com/?utm\_source=traderspost)
 * [TDAmeritrade](https://www.tdameritrade.com/?utm\_source=traderspost)
+
+If you have any other questions about paper trading on TradersPost, you can email [support@traderspost.io](mailto:support@traderspost.io).
