@@ -66,6 +66,8 @@ The TradersPost paper broker allows you to configure a `Market Price Type` so yo
 * **Always use bid** - This option will always use the quote bid price.
 * **Use last price** - This option will always use the quote last price.
 
+When market orders are filled, the configured option will be used to fill the paper orders and open positions will use that price as the position current price.
+
 ## Other Brokers
 
 Unfortunately, not all brokers support simulated paper trading environments. The following brokers that TradersPost supports do not offer paper trading functionality.
