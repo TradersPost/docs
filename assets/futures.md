@@ -143,11 +143,10 @@ TradersPost currently supports trading with the following futures tickers.
 
 ## Symbol Format
 
-TradersPost understands many different futures symbol formats. Since every broker and trading platform has subtle differences in the format we try to be as flexible as possible.
+TradersPost standardizes the futures symbol format to have a 4 digit year. We convert this symbol format back and fourth when communicating with each broker so you don't have to worry about the differences between brokers.
 
 | Symbol  | Type                         |
 | ------- | ---------------------------- |
-| NQZ21   | 2 digit year (TradeStation)  |
 | NQZ2021 | 4 digit year (TradersPost)   |
 | NQ1!    | TradingView current contract |
 | NQ2!    | TradingView next contract    |
