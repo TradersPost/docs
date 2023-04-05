@@ -52,4 +52,6 @@ description: >-
 * **Strike Price:** Also known as the exercise price, is the predetermined price at which the holder of the option contract can buy (in the case of a call option) or sell (in the case of a put option) the underlying asset.
 * **Take Profit**: An order to sell a security when it reaches a certain price, used to lock in profits.
 * **Ticker**: A ticker is a unique symbol that represents a financial instrument, such as a stock, futures contract. You use tickers to tell TradersPost what asset you want to trade in your trading signals.
+* **TradingView:** TradingView is a web-based platform that provides charting tools, real-time market data, and a social network for traders and investors.
+* **TrendSpider:** TrendSpider is a web-based, automated technical analysis software designed for traders and investors to efficiently analyze market data and identify trading opportunities.
 * **Webhook:** A webhook is an automated method for one web application to communicate with another web application in real-time by sending data or notifications when a specific event occurs. In the context of automating trading, webhooks are used to send a trade signal from one system to another like TradersPost.

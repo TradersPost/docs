@@ -60,6 +60,10 @@ TradersPost was founded by the CEO & Founder, [Jonathan Wage](https://www.linked
 
 TradersPost is free to get started. You can paper trade for free for 30 days. Once you are ready to trade live with real money, a paid subscription is required.
 
+### What happens after my free 30 day trial is up?
+
+Your strategy subscriptions will be disabled and your account will be disabled. To reactivate your account, you can upgrade to the paid Starter plan for $49 per month to get access to paper and live trading.
+
 ### I don't have a supported broker, how can I get started?
 
 TradersPost comes with a free paper account that lets you test strategies and get familiar with the platform.
