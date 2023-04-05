@@ -7,7 +7,7 @@ description: >-
 # Glossary
 
 * **Arbitrage:** The practice of exploiting price differences in different markets for the same asset.
-* **Asset**: A resource with economic value that an individual or corporation owns with the expectation it will provide future benefit.
+* **Asset Class**: An asset class is a group of financial instruments or investments
 * **Ask Price**: The lowest price at which a seller is willing to sell a security.
 * **Automated Trading:** The use of computer programs to execute trades automatically without human intervention.
 * **Bear Market:** A market trend where prices of securities are declining.
@@ -35,6 +35,7 @@ description: >-
 * **Margin:** The amount of money required to open and maintain a position.
 * **Margin Call:** A request by a broker to deposit more funds into a margin account to cover losses.
 * **Market Order:** An order to buy or sell an asset at the current market price.
+* **Midpoint:** The middle price between the bid price and the ask price.
 * **Option:** A contract that gives the holder the right, but not the obligation, to buy or sell an asset at a specified price and time.
 * **Portfolio:** A collection of investments held by an individual or institution.
 * **Price-Earnings Ratio (P/E Ratio):** A ratio used to measure the value of a company's stock by comparing its current price to its earnings per share.
