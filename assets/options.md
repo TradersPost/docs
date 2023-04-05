@@ -49,8 +49,8 @@ In this example we have configured our strategy subscription to do the following
 * **Option Type = Both** will buy calls when bullish and buy puts when bearish.
 * **Intrinsic value = In The Money** will filter out any Out Of The money contracts.
 * **Expiration = +3 months** will filter out any contracts that expire before 3 months out.
-* **Strike Count** limits how many strikes to analyze per expiration date when we're scanning the option chain.
-* **Strikes Away = 3** will select the 3rd contract away from At The Money.
+* **Strike Count** limits how many strikes to analyze per expiration date when we're scanning the option chain. This does not effect which strike gets selected, it just reduces the number of strikes that will be returned from the broker API for each expiration date. As such, there is no optimal value for this field that will change which strike is selected.
+* **Strikes Away** with a value of **3** will select the 3rd contract away from At The Money.
 
 ![Options Asset Configuration Example](<../.gitbook/assets/Screen Shot 2022-02-11 at 10.06.21 PM.png>)
 
