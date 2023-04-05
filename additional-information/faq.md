@@ -146,4 +146,4 @@ TradingView webhooks can be delayed by anywhere from 2-3 seconds to upwards of 6
 
 ### How much does TradersPost cost?
 
-TradersPost is a Software as a Service. We charge a monthly or yearly software subscription fee. You can learn more about our available pricing [here](https://traderspost.io/pricing).
+TradersPost is a Software as a Service. We charge a monthly or yearly software subscription fee. The base Starter plan costs $49 per month or $499.80 per year if paid annually. You can learn more about our available pricing [here](https://traderspost.io/pricing).
