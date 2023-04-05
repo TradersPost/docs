@@ -54,7 +54,7 @@ If you connect an account with existing open positions, TradersPost will not do 
 
 ### How old is TradersPost?
 
-TradersPost was founded by [Jonathan Wage](https://www.linkedin.com/in/jwage/) on January 1st 2021.
+TradersPost was founded by the CEO & Founder, [Jonathan Wage](https://www.linkedin.com/in/jwage/), on January 1st 2021. You can learn more about TradersPost [here](https://traderspost.io/about).
 
 ### Is TradersPost free?
 
