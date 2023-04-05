@@ -38,6 +38,7 @@
 ## Additional Information
 
 * [Glossary](additional-information/glossary.md)
+* [Error Messages](additional-information/error-messages.md)
 * [Troubleshooting](additional-information/troubleshooting.md)
 * [Frequently Asked Questions](additional-information/faq.md)
 * [Known Limitations](additional-information/known-limitations.md)
