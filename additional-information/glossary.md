@@ -1,6 +1,10 @@
-# Glossary
+---
+description: >-
+  Here are some common investing terms related to risk management and trading
+  strategies that may be useful for traders using TradersPost.
+---
 
-Here are some common investing terms related to risk management and trading strategies that may be useful for traders using TradersPost.
+# Glossary
 
 * **Arbitrage:** The practice of exploiting price differences in different markets for the same asset.
 * **Asset**: A resource with economic value that an individual or corporation owns with the expectation it will provide future benefit.
@@ -43,4 +47,7 @@ Here are some common investing terms related to risk management and trading stra
 * **Short Position:** The act of selling an asset with the expectation that its value will decrease.
 * **Spread:** The difference between the bid and ask price of an asset.
 * **Stop Loss**: An order to sell a security when it reaches a certain price, used to limit potential losses.
-* **Take Profit**: An order to sell a security when it reaches a certain price, used to lock in profits
+* **Strategy Subscription:** A strategy subscription is how you connect a strategy to a broker in TradersPost.
+* **Strike Price:** Also known as the exercise price, is the predetermined price at which the holder of the option contract can buy (in the case of a call option) or sell (in the case of a put option) the underlying asset.
+* **Take Profit**: An order to sell a security when it reaches a certain price, used to lock in profits.
+* **Webhook:** A webhook is an automated method for one web application to communicate with another web application in real-time by sending data or notifications when a specific event occurs. In the context of automating trading, webhooks are used to send a trade signal from one system to another like TradersPost.
