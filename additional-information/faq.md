@@ -48,7 +48,7 @@ TradersPost currently integrates with TD Ameritrade, Alpaca, TradeStation and Ro
 
 Yes, TD Ameritrade and TradeStation both support specialty account types like IRA (retirement), business and other specialty account types.
 
-### What happens to existing positions when I connect my broker
+### What happens to existing positions when I connect my broker?
 
 If you connect an account with existing open positions, TradersPost will not do anything to those positions unless your strategy subscription has those tickers selected. It is up to you to be sure your manual trading does not conflict with the tickers being managed by TradersPost. It is recommended that you use an account dedicated to TradersPost but we do not strictly disallow you from trading manually in the same account.
 
