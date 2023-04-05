@@ -45,6 +45,7 @@
 * [Trading Communities](additional-information/trading-communities.md)
 * [Webinars](additional-information/webinars.md)
 * [Trade Journaling](additional-information/trade-journaling.md)
+* [Useful URLs](additional-information/useful-urls.md)
 
 ## Links
 
