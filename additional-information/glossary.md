@@ -11,6 +11,7 @@ description: >-
 * **Ask Price**: The lowest price at which a seller is willing to sell a security.
 * **Automated Trading:** The use of computer programs to execute trades automatically without human intervention.
 * **Bear Market:** A market trend where prices of securities are declining.
+* **Bender:** Bender is an AI chatbot that is trained on all things TradersPost. He can assist customers by answering simple or complex questions about how TradersPost works. You can DM him in [Discord](https://traderspost.io/discord) to ask questions.
 * **Bid Price**: The highest price at which a buyer is willing to buy a security.
 * **Bull Market:** A market trend where prices of securities are rising.
 * **Call Option:** An option contract that gives the holder the right to buy an asset at a specified price.
