@@ -20,7 +20,7 @@ Alpaca offers paper trading for free to all Alpaca users.
 
 You can read more about Alpaca paper trading [here](https://alpaca.markets/docs/trading-on-alpaca/paper-trading/). If you have questions about Alpaca paper trading, you can email [support@alpaca.markets](mailto:support@alpaca.markets).
 
-[**Open Alpaca Account**](https://app.alpaca.markets/signup)****
+[**Open Alpaca Account**](https://app.alpaca.markets/signup)
 
 ## TradeStation
 
@@ -30,7 +30,7 @@ TradeStation offers paper trading for free to all TradeStation users.
 
 You can read more about TradeStation paper trading [here](https://www.tradestation.com/platforms-and-tools/simulated-trading/). If you have questions about TradeStation paper trading, you can email [ClientService@tradestation.com](mailto:ClientService@tradestation.com).
 
-[**Open TradeStation Account**](https://getstarted2.tradestation.com/intro?offer=0147AFWX\&sales\_rep=AHayes)****
+[**Open TradeStation Account**](https://getstarted2.tradestation.com/intro?offer=0147AFWX\&sales\_rep=AHayes)
 
 ## TradersPost Paper
 
@@ -67,6 +67,10 @@ The TradersPost paper broker allows you to configure a `Market Price Type` so yo
 * **Use last price** - This option will always use the quote last price.
 
 When market orders are filled, the configured option will be used to fill the paper orders and open positions will use that price as the position current price.
+
+### Reset Paper Broker
+
+You can reset the TradersPost paper broker account balances, orders and positions by navigating to **Connected Brokers** and then click the **Reset** button next to the TradersPost paper broker you want to reset.
 
 ## Other Brokers
 
