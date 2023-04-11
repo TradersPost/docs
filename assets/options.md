@@ -48,7 +48,7 @@ In this example we have configured our strategy subscription to do the following
 * **Asset class = Options** will buy and sell options contracts.
 * **Option Type = Both** will buy calls when bullish and buy puts when bearish.
 * **Intrinsic value = In The Money** will filter out any Out Of The money contracts.
-* **Expiration = +3 months** will filter out any contracts that expire before 3 months out. If you want to trade same day expiration (0DTE) contracts, then you can put the expiration as 0 days or leave the field blank and TradersPost will select the first expiration date returned by the broker. You can enter an expiration in the strategy subscription settings, click save, then you can see the example entry order and the contract that was selected at the top right of the page.\
+* **Expiration = +3 months** will filter out any contracts that expire before 3 months out. If you want to trade same day expiration (0DTE) contracts, then you can enter **0 days** in the expiration field or leave the field blank and TradersPost will select the first expiration date returned by the broker. You can enter an expiration in the strategy subscription settings, click save, then you can see the example entry order and the contract that was selected at the top right of the page.\
   **Strike Count** limits how many strikes to analyze per expiration date when we are scanning the option chain. This does not effect which strike gets selected, it just reduces the number of strikes that will be returned from the broker API for each expiration date. As such, there is no optimal value for this field that will change which strike is selected.
 * **Strikes Away** with a value of **3** will select the 3rd contract away from At The Money.
 
