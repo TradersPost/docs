@@ -14,7 +14,7 @@ TradersPost Automated Futures Trading Setup
 
 TradersPost currently supports trading with the following futures tickers.
 
-[View our TradingView Watchlist with all available symbols.](https://www.tradingview.com/watchlists/97337195/)
+[View our TradingView Watchlist with all available symbols.](https://www.tradingview.com/watchlists/109951165/)
 
 | Description                                      | TradersPost Symbol Root | TradingView Symbol |
 | ------------------------------------------------ | ----------------------- | ------------------ |
