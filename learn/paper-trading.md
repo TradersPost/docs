@@ -28,6 +28,10 @@ TradeStation offers paper trading for free to all TradeStation users.
 
 > Test your trading strategies before you trade. Our simulated trading account allows you to test your strategies in real-time – without risking your capital. You also have access to one of the industry’s largest historical market databases, allowing you to back-test your stock, options, and futures trading strategies on decades of historical market data.
 
+{% hint style="warning" %}
+Please be aware that the TradeStation simulated paper environment frequently has issues with delayed data, delayed order fills and delayed order cancels.
+{% endhint %}
+
 You can read more about TradeStation paper trading [here](https://www.tradestation.com/platforms-and-tools/simulated-trading/). If you have questions about TradeStation paper trading, you can email [ClientService@tradestation.com](mailto:ClientService@tradestation.com).
 
 [**Open TradeStation Account**](https://getstarted2.tradestation.com/intro?offer=0147AFWX\&sales\_rep=AHayes)
