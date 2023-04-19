@@ -407,7 +407,7 @@ It is common for users to want to program in logic for a specific window of time
 
 ```javascript
 //@version=5
-strategy('TradersPost Trading Time Window Example Strategy', overlay=true)
+strategy("TradersPost Trading Time Window Example Strategy", overlay=true)
 
 tradingWindow = input.session("0900-1455", title="Trading Time Window")
 
