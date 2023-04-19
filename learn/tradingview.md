@@ -403,7 +403,9 @@ alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"tick
 
 ## Trading Time Window
 
-It is common for users to want to program in logic for a specific window of time that their strategy trades during. Here is some example Pine Script code demonstrates how you can implement something like this.
+It is common for users to want to program in logic for a specific window of time that their strategy trades during. It is important that this logic exists in your strategy so that you are backtesting your strategy with those time based rules and your forward testing execution matches the same rules from your backtest.
+
+Here is an example Pine Script strategy that demonstrates how you can implement something like this.
 
 ```javascript
 //@version=5
@@ -439,6 +441,8 @@ if (inTradingWindow and tradersPostSell)
 if (useExitHour == true and hour == exitHour and minute == exitMinute)
     strategy.close_all()
 ```
+
+Now you have some new settings you can use to control when your strategy is allowed to trade and when it should exit.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
