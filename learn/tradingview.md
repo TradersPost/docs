@@ -343,6 +343,53 @@ For this type of setup to work when you are sending a quantity in your signal an
 If you are long 5 shares of SPY and you want to swap to the short side with 5 shares of SPY then TradingView will send a quantity of 10 in that scenario and TradersPost can subtract the quantity of the open position from the signal quantity so you get 5 to exit the long position and 5 to enter short on the other side.
 {% endhint %}
 
+### Trading Time Window
+
+It is common for users to want to program in logic for a specific window of time that their strategy trades during. It is important that this logic exists in your strategy so that you are backtesting your strategy with those time based rules and your forward testing execution matches the same rules from your backtest.
+
+Here is an example Pine Script strategy that demonstrates how you can implement something like this.
+
+```javascript
+//@version=5
+strategy('TradersPost Trading Window Example Strategy', overlay=true)
+
+tradingWindow = input.session("0900-1455", title="Trading Window")
+
+group1 = "Exit Rules"
+useExitHour = input.bool(defval=true, title="Exit at Defined Hour and Minute", group = group1)
+exitHour = input.int(defval=6, title="Hour", minval=0, maxval=23, step=1, group = group1, inline = "Exit Time")
+exitMinute = input.int(defval=0, title="Minute", minval=0, maxval=59, step=1, group = group1, inline = "Exit Time")
+
+inTradingWindow = not na(time(timeframe.period, tradingWindow))
+
+bgcolor(color=inTradingWindow ? color.new(color.green, 90) : color.new(color.white, 99))
+
+ema8 = ta.ema(close, 8)
+ema21 = ta.ema(close, 21)
+
+isUptrend = ema8 >= ema21
+isDowntrend = ema8 <= ema21
+trendChanging = ta.cross(ema8, ema21)
+
+tradersPostBuy = trendChanging and isUptrend
+tradersPostSell = trendChanging and isDowntrend
+
+if (inTradingWindow and tradersPostBuy)
+    strategy.entry("TradersPost Long", strategy.long)
+
+if (inTradingWindow and tradersPostSell)
+    strategy.entry("TradersPost Short", strategy.short)
+
+if (useExitHour == true and hour == exitHour and minute == exitMinute)
+    strategy.close_all()
+```
+
+Now you have some new settings you can use to control when your strategy is allowed to trade and when it should exit.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+You can find a more complex example in the [8-55 EMA Crossover NQ Futures Strategy](https://github.com/TradersPost/pinescript/blob/master/strategies/8-55-EMA-Crossover-NQ-Futures-Strategy.pinescript) in our GitHub repository.
+
 ## Pine Script Studies
 
 Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
@@ -400,53 +447,6 @@ Notice how the **Message** field in the alert was automatically filled in with t
 alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"buy\", \"price\": {{close}}}")
 alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
-
-## Trading Time Window
-
-It is common for users to want to program in logic for a specific window of time that their strategy trades during. It is important that this logic exists in your strategy so that you are backtesting your strategy with those time based rules and your forward testing execution matches the same rules from your backtest.
-
-Here is an example Pine Script strategy that demonstrates how you can implement something like this.
-
-```javascript
-//@version=5
-strategy('TradersPost Trading Window Example Strategy', overlay=true)
-
-tradingWindow = input.session("0900-1455", title="Trading Window")
-
-group1 = "Exit Rules"
-useExitHour = input.bool(defval=true, title="Exit at Defined Hour and Minute", group = group1)
-exitHour = input.int(defval=6, title="Hour", minval=0, maxval=23, step=1, group = group1, inline = "Exit Time")
-exitMinute = input.int(defval=0, title="Minute", minval=0, maxval=59, step=1, group = group1, inline = "Exit Time")
-
-inTradingWindow = not na(time(timeframe.period, tradingWindow))
-
-bgcolor(color=inTradingWindow ? color.new(color.green, 90) : color.new(color.white, 99))
-
-ema8 = ta.ema(close, 8)
-ema21 = ta.ema(close, 21)
-
-isUptrend = ema8 >= ema21
-isDowntrend = ema8 <= ema21
-trendChanging = ta.cross(ema8, ema21)
-
-tradersPostBuy = trendChanging and isUptrend
-tradersPostSell = trendChanging and isDowntrend
-
-if (inTradingWindow and tradersPostBuy)
-    strategy.entry("TradersPost Long", strategy.long)
-
-if (inTradingWindow and tradersPostSell)
-    strategy.entry("TradersPost Short", strategy.short)
-
-if (useExitHour == true and hour == exitHour and minute == exitMinute)
-    strategy.close_all()
-```
-
-Now you have some new settings you can use to control when your strategy is allowed to trade and when it should exit.
-
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-You can find a more complex example in the [8-55 EMA Crossover NQ Futures Strategy](https://github.com/TradersPost/pinescript/blob/master/strategies/8-55-EMA-Crossover-NQ-Futures-Strategy.pinescript) in our GitHub repository.
 
 ## Pine Script Repainting
 

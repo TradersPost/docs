@@ -22,7 +22,7 @@ If you would like your strategy to trade in extended hours, you will need to set
 
 To make your strategy submit orders to the broker automatically, make sure you have the **Auto submit** checkbox checked in your strategy subscription settings.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Auto submit checkbox configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Auto submit checkbox configuration</p></figcaption></figure>
 
 ### My trade did not execute. How can I troubleshoot?
 
