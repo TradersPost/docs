@@ -21,7 +21,7 @@ In the context of automated trading, the webhook message contains all the inform
 
 Here is a full reference API documentation for the trading webhoook API end point.
 
-{% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://webhooks.traderspost.io" summary="TradersPost Webhook Request API documentation." %}
+{% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://webhooks.traderspost.io" summary="TradersPost Webhook Request API documentation." expanded="true" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -43,7 +43,7 @@ The ticker symbol name. Example
 {% swagger-parameter in="body" name="action" type="String" required="true" %}
 The signal action. Supported values are **buy,** **sell, exit, cancel or add.**
 
-****
+
 
 **buy** - Exit bearish position and optionally open bullish position
 

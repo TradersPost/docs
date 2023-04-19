@@ -407,9 +407,14 @@ It is common for users to want to program in logic for a specific window of time
 
 ```javascript
 //@version=5
-strategy("TradersPost Trading Time Window Example Strategy", overlay=true)
+strategy('TradersPost Trading Window Example Strategy', overlay=true)
 
-tradingWindow = input.session("0900-1455", title="Trading Time Window")
+tradingWindow = input.session("0900-1455", title="Trading Window")
+
+group1 = "Exit Rules"
+useExitHour = input.bool(defval=true, title="Exit at Defined Hour and Minute", group = group1)
+exitHour = input.int(defval=6, title="Hour", minval=0, maxval=23, step=1, group = group1, inline = "Exit Time")
+exitMinute = input.int(defval=0, title="Minute", minval=0, maxval=59, step=1, group = group1, inline = "Exit Time")
 
 inTradingWindow = not na(time(timeframe.period, tradingWindow))
 
@@ -431,10 +436,11 @@ if (inTradingWindow and tradersPostBuy)
 if (inTradingWindow and tradersPostSell)
     strategy.entry("TradersPost Short", strategy.short)
 
-// Define condition for when you want to close all open positions
-//if (...)
-//    strategy.close_all()
+if (useExitHour == true and hour == exitHour and minute == exitMinute)
+    strategy.close_all()
 ```
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 You can find a more complex example in the [8-55 EMA Crossover NQ Futures Strategy](https://github.com/TradersPost/pinescript/blob/master/strategies/8-55-EMA-Crossover-NQ-Futures-Strategy.pinescript) in our GitHub repository.
 

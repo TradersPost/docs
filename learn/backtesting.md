@@ -11,8 +11,8 @@ description: >-
 
 Backtesting can provide you with critical statistical feedback about a given system and how you should deploy the system depending on market conditions. For example, deciding which tickers to run the strategy on or whether or not to be long or short is a critical decision for the trader running the strategy. Here are some common backtesting statistics that you should be on the lookout for.
 
-* **Net profit or loss:** __ Net percentage gained or lost
-* [**Volatility**](https://www.investopedia.com/terms/v/volatility.asp) **measures:** __ Maximum percentage upside and downside
+* **Net profit or loss:** Net percentage gained or lost
+* [**Volatility**](https://www.investopedia.com/terms/v/volatility.asp) **measures:** Maximum percentage upside and downside
 * **Averages:** Percentage average gain and average loss, average bars held
 * [**Exposure**](https://www.investopedia.com/terms/m/marketexposure.asp)**:** Percentage of capital invested (or exposed to the market)
 * **Ratios:** Wins-to-losses ratio
