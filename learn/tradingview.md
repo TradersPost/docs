@@ -401,6 +401,43 @@ alertcondition(tradersPostBuy, title="TradersPost Buy Alert", message="{\"ticker
 alertcondition(tradersPostSell, title="TradersPost Sell Alert", message="{\"ticker\": \"{{ticker}}\", \"action\": \"sell\", \"price\": {{close}}}")
 ```
 
+## Trading Time Window
+
+It is common for users to want to program in logic for a specific window of time that their strategy trades during. Here is some example Pine Script code demonstrates how you can implement something like this.
+
+```javascript
+//@version=5
+strategy('TradersPost Trading Time Window Example Strategy', overlay=true)
+
+tradingWindow = input.session("0900-1455", title="Trading Time Window")
+
+inTradingWindow = not na(time(timeframe.period, tradingWindow))
+
+bgcolor(color=inTradingWindow ? color.new(color.green, 90) : color.new(color.white, 99))
+
+ema8 = ta.ema(close, 8)
+ema21 = ta.ema(close, 21)
+
+isUptrend = ema8 >= ema21
+isDowntrend = ema8 <= ema21
+trendChanging = ta.cross(ema8, ema21)
+
+tradersPostBuy = trendChanging and isUptrend
+tradersPostSell = trendChanging and isDowntrend
+
+if (inTradingWindow and tradersPostBuy)
+    strategy.entry("TradersPost Long", strategy.long)
+
+if (inTradingWindow and tradersPostSell)
+    strategy.entry("TradersPost Short", strategy.short)
+
+// Define condition for when you want to close all open positions
+//if (...)
+//    strategy.close_all()
+```
+
+You can find a more complex example in the [8-55 EMA Crossover NQ Futures Strategy](https://github.com/TradersPost/pinescript/blob/master/strategies/8-55-EMA-Crossover-NQ-Futures-Strategy.pinescript) in our GitHub repository.
+
 ## Pine Script Repainting
 
 {% hint style="warning" %}
