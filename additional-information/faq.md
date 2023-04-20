@@ -159,3 +159,7 @@ No, TradersPost, TradingView and TrendSpider all live in the cloud so they are a
 ### How can I contact TradersPost?
 
 You can contact TradersPost by emailing us at [support@traderspost.io](mailto:support@traderspost.io) or by calling us at +1 (302) 469-6705. Phone support is only available Monday through Friday from 9:30am to 4pm eastern time (market hours).  We are also available in [Discord](https://traderspost.io/discord) with the rest of the TradersPost community.
+
+### Does TradersPost support advanced order types like Fill or Kill?
+
+No, TradersPosts currently only supports Good For Day and Good Until Canceled orders from automated trading strategies.
