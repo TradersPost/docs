@@ -173,3 +173,9 @@ Here is a simple example with fake numbers to make the math easy. If you are on 
 ### Why can't I connect my Robinhood account?
 
 Robinhood accounts are required to have 2fa (two-factor authentication) enabled in order to connect to TradersPost. Go to your Robinhood security settings and make sure 2fa is enabled. If you are still have issues connecting, try turning 2fa off and on again.
+
+### Can I update take profit or stop losses or send take profit or stop losses after the entry?
+
+You can't update stop losses that are in the broker that get established at entry time, but if you control all your take profit and stop loss logic in the strategy, then you can move it and change it dynamically and when the price is reached in your strategy, an exit signal can be generated and sent to TradersPost.\
+
+
