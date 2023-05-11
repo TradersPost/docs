@@ -89,7 +89,31 @@ Sending a quantity with your signal for exits looks the same and has the followi
 }
 ```
 
-## Add to Position
+## Partial Exits
+
+You can't specify a quantity using **take profit** or **stop loss** so instead you can partially exit a position like demonstrated on the example below. The first code block would be the entry, the second code block would be the partial exit.\
+\
+Entry:
+
+```
+{
+    "ticker": "TSLA",
+    "action": "buy",
+    "quantity": 5
+}
+```
+
+Partial Exit:
+
+```
+{
+    "ticker": "TSLA",
+    "action": "sell",
+    "quantity": 3
+}
+```
+
+## Add to position
 
 You can add to existing open positions by enabling the **Allow add to position** checkbox in your strategy subscription.
 
