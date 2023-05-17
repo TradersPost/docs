@@ -36,10 +36,12 @@ The **Percent of portfolio value** allows you to dynamically calculate an amount
 ```
 portfolioValue = portfolioValue - unrealized
 
-amountPerPosition = portfolioValue * percentOfBuyingPower
+amountPerPosition = portfolioValue * percentOfPortfolioValue
 
 quantity = amountPerPosition / entryPrice
 ```
+
+If you want to use margin, you can use percentages that add up to greater than 100%. If you are trading 5 tickers, each with 25%, then you will use 125% of your total portfolio value which will require some margin.
 
 ## Quantity
 
