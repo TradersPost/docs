@@ -148,6 +148,16 @@ When you create an alert in TradingView, you only need to enter the above JSON i
 
 This is a simple example to demonstrate the basics of how you can integrate TradingView alerts with TradersPost but the same principals apply if you are doing something more advanced with a Pine Script indicator. Continue reading to learn how you can integrate your Pine Script indicators and alerts with TradersPost.
 
+## WebhookMessage Library
+
+{% embed url="https://www.tradingview.com/script/Dfo3ErmN-TradersPost-WebhookMessage-Library-Automatically-Build-JSON/" %}
+View the WebhookMessage Library
+{% endembed %}
+
+To make it easier to write strategies with the alert messages automatically constructed in valid JSON, we have written the WebhookMessage Library that allows you to pass along your parameters and it will build the JSON for you.
+
+You can add the library to your favorites and then import the library into your Pine Script strategies and indicators.
+
 ## Pine Script Strategies
 
 There are several different ways that you can build strategies in TradingView from studies that are purely visual indicators to strategies that can be backtested.
