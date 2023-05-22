@@ -24,6 +24,10 @@ To make your strategy submit orders to the broker automatically, make sure you h
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Auto submit checkbox configuration</p></figcaption></figure>
 
+### Why can I not see any example orders on my subscription settings page?
+
+This is likely due to you selecting a contract that you can't afford based on the Position Size settings you set. Check your Position Size settings and try removing your settings until you get an entry order generated.&#x20;
+
 ### My trade did not execute. How can I troubleshoot?
 
 You can troubleshoot your traded by examining the TradingView and TradersPost logs.
