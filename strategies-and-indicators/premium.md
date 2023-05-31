@@ -7,6 +7,7 @@ description: >-
 
 # Premium
 
+* [TD Strategic](https://whop.com/td-strategic/)
 * [ScaleTrade](https://scaletrade.ai/)
 * [Rainbow Trends](https://rainbow-trends.com/)
 * [SmarterOptions](https://smarteroptions.com/)
