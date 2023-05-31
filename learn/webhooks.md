@@ -264,7 +264,7 @@ You can optionally send take profit information with your entry signals.
 The signal take profit will only be used if you check **Use signal take profit** in the strategy subscription settings in TradersPost.
 {% endhint %}
 
-The following fields are allowed on the **takeProfit** object.
+The following fields are allowed on the **takeProfit** object, but never together. You can only choose one of the three types of take profit types (limitPrice, percent, or amount).
 
 * **limitPrice** - Absolute limit price calculated on the webhook sender side.
 * **percent**: Relative percentage take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
