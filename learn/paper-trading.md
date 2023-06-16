@@ -24,7 +24,7 @@ You can read more about Alpaca paper trading [here](https://alpaca.markets/docs/
 
 ## TradeStation
 
-TradeStation offers paper trading for free to all TradeStation users.
+TradeStation offers paper trading for free to all TradeStation users. You can have one margin equities account and one futures paper account with TradeStation, but not more than one of each.
 
 > Test your trading strategies before you trade. Our simulated trading account allows you to test your strategies in real-time – without risking your capital. You also have access to one of the industry’s largest historical market databases, allowing you to back-test your stock, options, and futures trading strategies on decades of historical market data.
 
