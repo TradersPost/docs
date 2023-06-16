@@ -168,7 +168,9 @@ No, TradersPosts currently only supports Good For Day and Good Until Canceled or
 
 The used time on your current month and current plan will be billed at the current plan rate and the rest of the month will be billed at the new plan rate. This amount isn't billed immediately, it is added to your next invoice.\
 \
-Here is a simple example with fake numbers to make the math easy. If you are on the $100 per month plan and you upgrade to the $200 per month plan in the middle of the month, your next invoice would be $250. This would be $200 for the next month, $100 for half of the month and then $50 reduced from half of the original month.
+Here is a simple example with fake numbers to make the math easy. If you are on the $100 per month plan and you upgrade to the $200 per month plan in the middle of the month, your next invoice would be $250. This would be $200 for the next month, $100 for half of the month and then $50 reduced from half of the original month.\
+\
+If you are upgrading on an already existing yearly plan, the billing cost will take into account your unused days on your current plan.
 
 ### Why can't I connect my Robinhood account?
 
