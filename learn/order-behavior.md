@@ -113,6 +113,16 @@ Partial Exit:
 }
 ```
 
+## Sentiment
+
+The JSON sentiment field in TradersPost allows you to specify the sentiment or position of the trade. When sending a webhook, you can include the "sentiment" field with a value of "flat" to exit a bullish or bearish position without entering the opposite position. This means that it will always exit the full quantity of the open position without entering a new position on the other side.
+
+For example, if you send a JSON payload with "action" set to "sell" and "sentiment" set to "flat", it will exit a bullish position without entering a bearish position. Similarly, if you send "action" as "buy" and "sentiment" as "flat", it will exit a bearish position without entering a bullish position.
+
+You are also able to have "sentiment" as "bullish" or "bearish" for incase you want to control the direction of the trades from your JSON. For example, you may have "sides" set to "both" and then use the sentiment options of "bullish" or "bearish" to direct the trade outcome.
+
+
+
 ## Add to position
 
 You can add to existing open positions by enabling the **Allow add to position** checkbox in your strategy subscription.
