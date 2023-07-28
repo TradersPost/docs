@@ -43,6 +43,10 @@ quantity = amountPerPosition / entryPrice
 
 If you want to use margin, you can use percentages that add up to greater than 100%. If you are trading 5 tickers, each with 25%, then you will use 125% of your total portfolio value which will require some margin.
 
+{% hint style="info" %}
+The **`entryPrice`** variable in the above examples use the price from the signal if limit orders are configured and uses the latest quote price when using market orders.
+{% endhint %}
+
 ## Quantity
 
 If you don't want to dynamically calculate a quantity, you can input a hardcoded fixed quantity to buy per signal in the **Quantity** field. TradersPost will pass this quantity directly to your broker.
