@@ -49,7 +49,9 @@ If you don't want to dynamically calculate a quantity, you can input a hardcoded
 
 ## Use signal quantity
 
-In addition to being able to dynamically calculate quantity. You can simply pass your quantity to use in the signal. You must check the **Use signal quantity** checkbox in order to tell TradersPost you want to use the quantity from the signal.
+In addition to being able to dynamically calculate quantity. You can simply pass your quantity to use in the signal. You must check the **Use signal quantity** checkbox in order to tell TradersPost you want to use the quantity from the signal.\
+\
+If you have **use signal quantity** unchecked then it will completely ignore all signal quantity, even if it is hardcoded into a TradingView strategy for example.
 
 ## Subtract exit quantity from signal quantity
 
