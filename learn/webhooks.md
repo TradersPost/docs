@@ -244,6 +244,10 @@ The signal quantity will only be used if you check **Use signal quantity** in th
 }
 ```
 
+{% hint style="danger" %}
+The full quantity of the open position in the broker will be exited if you do not send a quantity in the exit signal. TradersPost is only able to partially exit open positions by sending the explicit quantity to exit in the webhook JSON.
+{% endhint %}
+
 ### Signal Price
 
 The signal price is optional. If you omit a price from the signal, the mid point between the bid and the ask will be used if you have limit orders configured.
