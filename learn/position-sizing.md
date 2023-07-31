@@ -10,6 +10,10 @@ description: >-
 TradersPost does not verify you have the buying power for an order and we depend on the broker accepting or rejecting the order based on your available buying power and the rules each broker implements surrounding buying power.
 {% endhint %}
 
+{% hint style="danger" %}
+The position sizing features documented here are only for dynamically calculating quantities for entry orders and the full quantity of the open position is used for exit orders unless a quantity is explicitly sent in the webhook JSON.
+{% endhint %}
+
 ## Amount per position
 
 The **Amount per position** field allows you to configure a fixed dollar amount to be used to calculate the quantity for your entry order.
