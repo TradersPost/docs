@@ -276,6 +276,10 @@ The following fields are allowed on the **takeProfit** object, but never togethe
 
 #### **Percentage take profit calculated relative to entry price.**
 
+{% hint style="info" %}
+When using market orders and you are calculating a relative take profit price, TradersPost will fetch a quote from your broker and use the price from the quote as the entry price in order to calculate the take profit limit price since with markets orders, we don't know the price you will be filled at so we have to use the quote price.
+{% endhint %}
+
 ```json
 {
     "ticker": "SQ",
@@ -329,6 +333,10 @@ The following fields are allowed on the **stopLoss** object.
 * **trailPercent** - A percent value away from the highest water mark. If you set this to 1.0 for a sell trailing stop, the stop price is always hwm \* 0.99. **type** must be set to **trailing\_stop** to use this field.
 
 **Percentage stop loss calculated relative to entry price.**
+
+{% hint style="info" %}
+When using market orders and you are calculating a relative stop loss price, TradersPost will fetch a quote from your broker and use the price from the quote as the entry price in order to calculate the stop loss stop price since with markets orders, we don't know the price you will be filled at so we have to use the quote price.
+{% endhint %}
 
 ```json
 {
