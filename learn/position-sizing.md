@@ -63,6 +63,12 @@ In addition to being able to dynamically calculate quantity. You can simply pass
 \
 If you have **Use signal quantity** unchecked then it will completely ignore the `quantity` field in the signal, even if it is hardcoded into a TradingView strategy for example.
 
+{% hint style="info" %}
+For entries, TradersPost will buy a quantity of **1** if no quantity is provided in the signal and no dynamic quantity calculation is configured in your strategy subscription settings.
+
+For exits, TradersPost will exit the **FULL** quantity of the open position in the broker if you do not provide a quantity to exit in the signal.
+{% endhint %}
+
 ## Subtract exit quantity from signal quantity
 
 Sometimes when you are flipping from one side to the other, for example long to short, you need to send the full quantity to exit the current open position and use the remaining quantity to enter a new position on the other side. Check the **Subtract exit quantity from signal quantity** checkbox to enable this behavior.
