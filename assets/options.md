@@ -20,10 +20,7 @@ Some customers separate the positions in separate broker accounts to work around
 
 TradersPost understands many different stock options symbol formats. Since every broker and trading platform has subtle differences in the format we try to be as flexible as possible.
 
-| Symbol           | Type                      |
-| ---------------- | ------------------------- |
-| TSLA 210121C325  | TradeStation, TradersPost |
-| TSLA\_210121C325 | TD Ameritrade             |
+<table><thead><tr><th width="212.54110898661565">Symbol</th><th>Type</th></tr></thead><tbody><tr><td>TSLA 210121C325</td><td>TradeStation, TradersPost</td></tr><tr><td>TSLA_210121C325</td><td>TD Ameritrade</td></tr></tbody></table>
 
 ## Supported Option Types
 

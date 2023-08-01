@@ -1,7 +1,11 @@
+---
+description: >-
+  Automate crypto trading strategies built in TradingView or TrendSpider
+  directly in your crypto exchange.
+---
+
 # Crypto
 
-{% hint style="info" %}
-**Coming Soon!** Crypto trading is currently under development and will be available for paper trading in 2023. You can join the wait list [here](https://traderspost.io/wait-list/crypto).
-{% endhint %}
+Support for crypto in TradersPost is in beta and we currently only support crypto with the Alpaca broker. We are working on adding support for Coinbase next.
 
-##
+If you have any questions about our crypto support, you can email us at [support@traderspost.io](mailto:support@traderspost.io)
