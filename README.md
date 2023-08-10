@@ -91,11 +91,11 @@ As a strategy manager, if you don't want to publish your strategy for the public
 
 TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
 
-* [Alpaca](supported-brokers.md#alpaca) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
-* [TD Ameritrade](supported-brokers.md#tdameritrade) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
-* [TradeStation](supported-brokers.md#tradestation) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
-* [Tradier](supported-brokers.md#tradier) - Tradier provides a full range of services in a scalable, secure, and easy-to-use REST-based API for businesses and individual developers. It’s unlike anything you’ve seen before.
-* [Robinhood](supported-brokers.md#robinhood) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
+* [Alpaca](broken-reference) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
+* [TD Ameritrade](broken-reference) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
+* [TradeStation](broken-reference) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
+* [Tradier](broken-reference) - Tradier provides a full range of services in a scalable, secure, and easy-to-use REST-based API for businesses and individual developers. It’s unlike anything you’ve seen before.
+* [Robinhood](broken-reference) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
 
 Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
 

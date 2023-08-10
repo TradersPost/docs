@@ -2,7 +2,6 @@
 
 * [What is TradersPost?](README.md)
 * [Getting Started](getting-started.md)
-* [Supported Brokers](supported-brokers.md)
 
 ## Learn
 
@@ -18,6 +17,18 @@
 * [Custom Code Examples](learn/custom-code-examples.md)
 * [Discord Trading Bot](learn/discord-trading-bot.md)
 * [API](learn/api.md)
+
+## Brokers
+
+* [Alpaca](brokers/alpaca.md)
+* [Robinhood](brokers/robinhood.md)
+* [TDAmeritrade](brokers/tdameritrade.md)
+* [TradeStation](brokers/tradestation.md)
+* [Tradier](brokers/tradier.md)
+* [Broker Roadmap](brokers/broker-roadmap/README.md)
+  * [Coinbase](brokers/broker-roadmap/coinbase.md)
+  * [Interactive Brokers](brokers/broker-roadmap/interactive-brokers.md)
+  * [Tradovate](brokers/broker-roadmap/tradovate.md)
 
 ## Assets
 
