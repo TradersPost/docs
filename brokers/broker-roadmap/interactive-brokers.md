@@ -39,6 +39,8 @@ The IBKR API does not have a reliable way to retrieve quotes for symbols, so pri
 }
 ```
 
+If the `price` field is omitted and you have a feature enabled in your strategy subscription settings that requires a price, like limit orders, then the trade will be rejected.
+
 ## Paper Account
 
 Some paper IBKR accounts have trouble connecting to TradersPost and may receive the message "This username is not associated with a paper trading account" when trying to connect with TradersPost.
