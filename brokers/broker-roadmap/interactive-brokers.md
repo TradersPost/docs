@@ -29,7 +29,15 @@ Since the Interactive Brokers API is basically unavailable during these windows 
 
 ## Quotes
 
-The IBKR API does not have a reliable way to retrieve quotes for symbols, so prices are always required to be sent in the webhook signal when you want to submit limit orders. We are unable to fetch quotes to use the midpoint price as the limit price for limit orders.
+The IBKR API does not have a reliable way to retrieve quotes for symbols, so prices are always required to be sent in the webhook signal when you want to submit limit orders. We are unable to fetch quotes to use the midpoint price as the limit price for limit orders. See example below.
+
+```json5
+{
+    "ticker": "SPY",
+    "action": "buy",
+    "price": 447.31
+}
+```
 
 ## Paper Account
 
