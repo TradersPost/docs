@@ -10,3 +10,9 @@ description: >-
 {% hint style="info" %}
 COMING SOON
 {% endhint %}
+
+## Contact Information
+
+Email: [support@tradovate.com](mailto:support@tradovate.com)
+
+Phone: [+1 (844) 283-3100](tel:18442833100)

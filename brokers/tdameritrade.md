@@ -7,6 +7,12 @@ description: >-
 
 # TDAmeritrade
 
+## Contact Information
+
+Email: [api@tdameritrade.com](mailto:api@tdameritrade.com)
+
+Phone: [+1 (800) 669-3900](tel:18006693900)
+
 ## Supported Asset Classes
 
 <table><thead><tr><th>Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>true</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
