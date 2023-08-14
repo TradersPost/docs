@@ -13,6 +13,10 @@ Email: [clientservice@tradestation.com](mailto:clientservice@tradestation.com)
 
 Phone: [+1 (800) 822-0512](tel:18008220512)
 
+## Reliability
+
+The TradeStation API is generally reliable but they do have system instability from time to time which can cause trade execution to fail. On average, the TradeStation API responds to our requests in **71.6 milliseconds**.
+
 ## Supported Asset Classes
 
 <table><thead><tr><th width="363">Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>true</td></tr><tr><td>Futures</td><td>true</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
