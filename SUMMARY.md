@@ -27,6 +27,7 @@
 * [Tradier](brokers/tradier.md)
 * [Broker Roadmap](brokers/broker-roadmap/README.md)
   * [Coinbase](brokers/broker-roadmap/coinbase.md)
+  * [E\*Trade](brokers/broker-roadmap/e-trade.md)
   * [Interactive Brokers](brokers/broker-roadmap/interactive-brokers.md)
   * [Tradovate](brokers/broker-roadmap/tradovate.md)
 
