@@ -66,3 +66,5 @@ You can do this by logging into TWS and going to **Global Config > Presets > Fut
 You can put 0s in all fields to disable them, and then those precautionary confirmation messages won't be required when submitting orders through the IBKR API via TradersPost.
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+### Wait list- [Join now](https://traderspost.io/broker/ibkr)
