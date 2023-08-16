@@ -119,7 +119,7 @@ The JSON sentiment field in TradersPost allows you to specify what the sentiment
 
 For example, if you send a JSON payload with `action` set to `sell` and `sentiment` set to `flat`, it will exit a bullish position without entering a bearish position. Similarly, if you send `action` as `buy` and `sentiment` as `flat`, it will exit a bearish position without entering a bullish position.
 
-You are also able to have a `sentiment` of `bullish` or `bearish`. This is useful whenever you are partially exiting a position and you aren't fully exiting the position and you aren't changing sides. For example, if you are in a bearish short position with a quantity of 10 and you send a JSON payload with `action` set to `buy`, `quantity` set to `5` and sentiment set to `bullish`, this means that after executing the buy, you will still be in a bullish position with a quantity of 5.
+You are also able to have a `sentiment` of `bullish` or `bearish`. This is useful whenever you are partially exiting a position and you aren't fully exiting the position and you aren't changing sides. For example, if you are in a `bearish` short position with a quantity of 10 and you send a JSON payload with `action` set to `buy`, `quantity` set to `5` and sentiment set to `bearish`, this means that after executing the buy, you will still be in a `bearish` position with a quantity of 5.
 
 ## Add to position
 
