@@ -19,7 +19,9 @@ Phone: [+1 (877) 442-2757](tel:18774422757)
 
 ## Reliability
 
-The Interactive Brokers API is unfortunately quite unreliable relative to other broker integrations. This means that trade execution can fail more often when using Interactive Brokers due to Interactive Brokers server errors and request timeouts. These issues have been reported to the IBKR support team but they have not given any indication as to if they plan to resolve these issues.
+The Interactive Brokers API is unfortunately quite unreliable relative to other broker integrations. This means that trade execution can fail more often when using Interactive Brokers due to Interactive Brokers server errors and request timeouts. These issues have been reported to the IBKR support team but they have not given any indication as to if they plan to resolve these issues. Errors from IBKR may look like this with a message like "**Idle timeout reached**". This means we sent a request to the IBKR API and it timed out after waiting 10 seconds for a response.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2023-08-21 at 5.42.06 PM.png" alt=""><figcaption></figcaption></figure>
 
 On average, the IBKR API responds to our requests in **252 milliseconds**. This is around 5x slower than [Alpaca](../alpaca.md) and [Robinhood](../robinhood.md) for example.
 
