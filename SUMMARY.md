@@ -62,7 +62,7 @@
 
 ## Links
 
-* [Discord](https://traderspost.io/discord)
+* [Discord](links/discord.md)
 * [Community](https://traderspost.io/community/)
 * [Pricing](https://traderspost.io/pricing/)
 * [Register](https://traderspost.io/register)
