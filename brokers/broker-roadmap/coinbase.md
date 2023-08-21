@@ -7,7 +7,7 @@ description: >-
 # Coinbase
 
 {% hint style="info" %}
-COMING SOON
+COMING SOON.
 {% endhint %}
 
 ### Contact Information

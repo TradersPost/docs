@@ -8,7 +8,7 @@ description: >-
 # Tradovate
 
 {% hint style="info" %}
-COMING SOON
+COMING SOON. Join the [wait list](https://traderspost.io/broker/tradovate) to be notified once Tradovate is available.
 {% endhint %}
 
 ## Contact Information
