@@ -19,11 +19,13 @@ Phone: [+1 (877) 442-2757](tel:18774422757)
 
 ## Reliability
 
-The Interactive Brokers API is unfortunately quite unreliable relative to other broker integrations. This means that trade execution can fail more often when using Interactive Brokers due to Interactive Brokers server errors. On average, the IBKR API responds to our requests in **252 milliseconds**. This is around 5x slower than Alpaca and Robinhood for example.
+The Interactive Brokers API is unfortunately quite unreliable relative to other broker integrations. This means that trade execution can fail more often when using Interactive Brokers due to Interactive Brokers server errors and request timeouts. These issues have been reported to the IBKR support team but they have not given any indication as to if they plan to resolve these issues.
+
+On average, the IBKR API responds to our requests in **252 milliseconds**. This is around 5x slower than [Alpaca](../alpaca.md) and [Robinhood](../robinhood.md) for example.
 
 ## Supported Asset Classes
 
-<table><thead><tr><th width="363">Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>true</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
+<table><thead><tr><th width="363">Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
 
 ## Daily Reset
 
