@@ -8,7 +8,7 @@ description: >-
 # Interactive Brokers
 
 {% hint style="info" %}
-COMING SOON
+COMING SOON. Join the [wait list](https://traderspost.io/broker/ibkr) to be notified once Interactive Brokers is available.
 {% endhint %}
 
 ## Contact Information
@@ -70,5 +70,3 @@ You can do this by logging into TWS and going to **Global Config > Presets > Fut
 You can put 0s in all fields to disable them, and then those precautionary confirmation messages won't be required when submitting orders through the IBKR API via TradersPost.
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
-
-### Wait list- [Join now](https://traderspost.io/broker/ibkr)
