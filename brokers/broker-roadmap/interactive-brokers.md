@@ -70,3 +70,14 @@ You can do this by logging into TWS and going to **Global Config > Presets > Fut
 You can put 0s in all fields to disable them, and then those precautionary confirmation messages won't be required when submitting orders through the IBKR API via TradersPost.
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+## User Sessions
+
+Interactive Brokers only allows a login username to have one session active at a time. Once you connect your IBKR account to TradersPost, we will ping the session every 1 minute to make sure our session remains active and is ready to execute automated trades if an automated trade signal comes in. If you login to another client, like the TWS application with the same username, it will steal the session from TradersPost and when our process runs every minute it will steal the session back from TWS.
+
+{% hint style="danger" %}
+If you login to another IBKR client with the same username that TradersPost uses, it is possible it can cause automated trades to fail as the session may not be active and available when we go to execute the trade. We will make an attempt to start the session and wait for the session to become active before retrying the trade, but it is possible IBKR may be delayed in starting the session and the trade won't be able to be executed.
+{% endhint %}
+
+The only workaround for this is to create a 2nd username that is dedicated for use with TradersPost. Read about [adding a user](https://www.ibkrguides.com/clientportal/uar/addingauser.htm) in the IBKR documentation to get your 2nd user setup.
+
