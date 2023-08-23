@@ -1,8 +1,8 @@
 ---
 description: >-
-  Interactive Brokers is a popular broker for international traders and they
-  support stocks and futures. Build automated trading strategies using
-  TradersPost on top of your Interactive Brokers account.
+  Interactive Brokers is a popular stocks trading broker for international
+  traders. Build automated trading strategies using TradersPost on top of your
+  Interactive Brokers account.
 ---
 
 # Interactive Brokers
@@ -65,7 +65,7 @@ Then you will be able to connect your IBKR paper account to TradersPost.
 
 Interactive Brokers by default requires order confirmations under certain conditions. For example, if the order total value is greater than $100000, the order will require a confirmation before being able to submit the order. These confirmations can slow down trade execution and can increase the likelihood that something fails. IBKR recommends turning off these precautionary settings.
 
-You can do this by logging into TWS and going to **Global Config > Presets > Futures (or whatever other asset class).**
+You can do this by logging into TWS and going to **Global Config > Presets > Stocks (or whatever other asset class).**
 
 You can put 0s in all fields to disable them, and then those precautionary confirmation messages won't be required when submitting orders through the IBKR API via TradersPost.
 
