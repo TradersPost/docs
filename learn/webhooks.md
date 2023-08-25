@@ -343,6 +343,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
     "ticker": "SQ",
     "action": "buy",
     "stopLoss": {
+        "type": "stop",
         "percent": 5
     }
 }
@@ -355,6 +356,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
     "ticker": "SQ",
     "action": "buy",
     "stopLoss": {
+        "type": "stop",
         "amount": 5
     }
 }
@@ -367,6 +369,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
     "ticker": "SQ",
     "action": "buy",
     "stopLoss": {
+        "type": "stop",
         "stopPrice": 10.71
     }
 }
@@ -424,6 +427,7 @@ You can use the take profit and stop loss functionality together. Just send us b
         "limitPrice": 19.99
     },
     "stopLoss": {
+        "type": "stop",
         "stopPrice": 10.71
     }
 }
