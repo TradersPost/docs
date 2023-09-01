@@ -237,6 +237,17 @@ This functionality is only supported by brokers that support complex conditional
 
 ### How are take profit & stop loss orders calculated?
 
-TradersPost supports the ability for you to send pre-calculated prices for your take profit & stop loss or you can send relative values to us like a dollar amount or percentage and we will calculate the price to send to the broker. For example, if you use a $10 stop loss amount and you enter at $100, then your stop loss stop price will be calculated at $90. If you buy 10 shares of a stock with an entry at $100 and a stop loss stop price at $90, then the most you can theoretically lose on the trade will be $100.
+TradersPost supports the ability for you to send pre-calculated absolute prices for your take profit & stop loss or you can send relative values to us like a dollar amount or percentage and we will calculate the price to send to the broker.
+
+For example, if you use a $10 stop loss amount and you enter at $100, then your stop loss stop price will be calculated at $90. If you buy 10 shares of a stock with an entry at $100 and a stop loss stop price at $90, then the most you can theoretically lose on the trade will be $100.
+
+Or if you use a 5% stop loss and you enter at $100,  then your stop loss stop price will be calculated at $95.
+
+{% hint style="info" %}
+When TradersPost calculates a take profit or stop loss price using a relative value like a dollar amount or percentage, the entry price we use to do the calculation will be the following in these scenarios:
+
+* If limit order, we will use the price from the webhook signal or the midpoint price from the latest quote if the webhook signal does not have a price.
+* If market order, we will always use the midpoint price from the latest quote.
+{% endhint %}
 
 You can configure your strategy subscription to include your take profit & stop loss settings, or you can send your take profit & stop losses with your webhook signal. Take a look at the [Webhooks](webhooks.md#signal-take-profit) documentation learn more about how to send your take profit & stop losses with your webhook signal.
