@@ -219,3 +219,24 @@ To exit a short position, send an **exit** action to the webhook.
     "action": "exit"
 }
 ```
+
+## Take Profit & Stop Loss
+
+TradersPost has the ability to send take profit and stop loss orders with your initial entry order. This is useful for strategies where your entry, take profit and stop loss levels are all pre-defined and you want these orders to be sitting in your broker ahead of time.
+
+{% hint style="warning" %}
+If you are sending your take profit and stop loss to the broker with your entry order, it is recommended to not also have your strategy send duplicate exit signals to TradersPost when the take profit or stop loss level is hit in your strategy. Since the broker is executing your take profit & stop loss, there is no need to send a webhook to TradersPost to exit the position when the take profit or stop loss is hit in your strategy.
+{% endhint %}
+
+This functionality is only supported by brokers that support complex conditional order types that are often referred to as OTO (One Triggers Other), OSO (Order Sends Order), or OCO (One Cancels Other). It is currently supported by the following brokers within TradersPost.
+
+* Alpaca
+* TradeStation
+* TDAmeritrade
+* Tradier
+
+### How are take profit & stop loss orders calculated?
+
+TradersPost supports the ability for you to send pre-calculated prices for your take profit & stop loss or you can send relative values to us like a dollar amount or percentage and we will calculate the price to send to the broker. For example, if you use a $10 stop loss amount and you enter at $100, then your stop loss stop price will be calculated at $90. If you buy 10 shares of a stock with an entry at $100 and a stop loss stop price at $90, then the most you can theoretically lose on the trade will be $100.
+
+You can configure your strategy subscription to include your take profit & stop loss settings, or you can send your take profit & stop losses with your webhook signal. Take a look at the [Webhooks](webhooks.md#signal-take-profit) documentation learn more about how to send your take profit & stop losses with your webhook signal.
