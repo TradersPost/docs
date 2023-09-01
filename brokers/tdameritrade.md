@@ -32,3 +32,7 @@ You can read more about how TDAmeritrade applies the wash sale rule [here](https
 While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.html) platform, they unfortunately do not allow futures trading through their API. If you would like to see TDAmeritrade support futures trading through their API, please email their support team at [api@tdameritrade.com](<mailto:api@tdameritrade.com >).
 
 ## Schwab Migration
+
+If your TDAmeritrade account has ever been connected to a platform like TradersPost that uses the TDAmeritrade API or you are a heavy ThinkOrSwim user, then your account should not be migrated to Schwab until March 2024.
+
+The Schwab API that will replace the TDAmeritrade API is not available yet but we've been told that it should be ready and available for TradersPost to start integrating with by November of 2023. Once it is made available to us, we will do the development integration work to make sure it is available within TradersPost before the March 2024 migration date so that you can switch over without any disruption to service.
