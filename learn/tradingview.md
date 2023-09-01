@@ -487,3 +487,7 @@ When writing Pine Script strategies and indicators it is important to ensure you
 
 If you are interested automating your TradingView strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
 
+## Alert Webhooks Delay
+
+TradingView alert webhooks can be delayed by anywhere from 2-3 seconds to upwards of 60 or more. TradingView considers a 25 to 45 second delay to be normal.
+
