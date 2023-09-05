@@ -43,6 +43,7 @@ TradersPost offers a very basic paper trading functionality for testing your str
 * Market hours are not respected and orders will fill 24/7.
 * Limit orders will fill at any price specified.
 * Market orders will fill at the middle point between the bid and the ask.
+* Options and futures contract positions will not expire and be removed from your open positions. Open positions for expired contracts will remain open until they are closed.
 
 It is recommended that you use one of the above simulated paper trading environments provided by a broker if you want a more real simulated environment. The TradersPost paper trading functionality is only useful for testing that your strategies are configured correctly but should not be used to measure the performance of your strategy.
 
