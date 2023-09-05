@@ -36,6 +36,14 @@ You can read more about TradeStation paper trading [here](https://www.tradestati
 
 [**Open TradeStation Account**](https://getstarted2.tradestation.com/intro?offer=0147AFWX\&sales\_rep=AHayes)
 
+## Tradier
+
+Tradier offers paper trading for free to all Tradier customers. Paper trading can be used to trade Stocks and Options.
+
+{% hint style="info" %}
+Beware that the Tradier paper trading environment is always operating off of 15 minute delayed data and there is no option to make it live. If you would like to see Tradier support paper trading with live data, you can email them at [service@tradierbrokerage.com](mailto:service@tradierbrokerage.com).
+{% endhint %}
+
 ## TradersPost Paper
 
 TradersPost offers a very basic paper trading functionality for testing your strategies. Please note the following about TradersPost paper accounts:
