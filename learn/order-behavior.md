@@ -251,3 +251,22 @@ When TradersPost calculates a take profit or stop loss price using a relative va
 {% endhint %}
 
 You can configure your strategy subscription to include your take profit & stop loss settings, or you can send your take profit & stop losses with your webhook signal. Take a look at the [Webhooks](webhooks.md#signal-take-profit) documentation learn more about how to send your take profit & stop losses with your webhook signal.
+
+## Min Move / Min Tick Size
+
+Brokers often enforce what is a called a `Min Move` or `Min Tick Size.` This is a rule that controls how precise the price can be when sending orders to the broker. For example, the futures product `M6E` has a `Min Move` of `0.0001` (4 decimal places).
+
+TradersPost will round prices to the nearest precision automatically for you so that the broker will not reject the order. For example, if you sent a `sell` signal with a price of `1.07375` and the `Min Move` is `0.0001` , then TradersPost will round the price up to `1.0738`.
+
+{% hint style="info" %}
+TradersPost will round up to the nearest precision for **sell** orders and down for **buy** orders. You can control the rounding on your side in your strategy and send a price with the exact precision to control the logic for rounding.
+{% endhint %}
+
+You can view what the `Min Move` value is in TradersPost by viewing the quote for the ticker you are trading.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-09-06 at 8.24.35 AM.png" alt=""><figcaption></figcaption></figure>
+
+This data can also be viewed in TradingView by clicking the three dots at the top of the chart and then clicking `Symbol Info` from the dropdown. Additionally, in TradingView PineScript, you can get what the `Min Move` is by using the `syminfo.mintick` variable.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-09-06 at 8.29.22 AM.png" alt=""><figcaption></figcaption></figure>
+
