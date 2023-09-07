@@ -182,5 +182,5 @@ You can't update stop losses that are in the broker that get established at entr
 
 ### Can I receive email notifications for signals?
 
-Yes, you can go to your account settings and then scroll down to enter the email address you wish to use. You can be notified of new webhooks, failed webhooks, new trades and failed trades.&#x20;
+Yes, you can navigate to **My Account > Settings** and then scroll down to the section named **Account Notification Settings** and enter the email address you wish to use. You can be notified of new webhooks, failed webhooks, new trades and failed trades. Check the **Notify failures only**  checkbox if you only wish to be notified of failures.
 
