@@ -178,6 +178,9 @@ Robinhood accounts are required to have 2fa (two-factor authentication) enabled 
 
 ### Can I update take profit or stop losses or send take profit or stop losses after the entry?
 
-You can't update stop losses that are in the broker that get established at entry time, but if you control all your take profit and stop loss logic in the strategy, then you can move it and change it dynamically and when the price is reached in your strategy, an exit signal can be generated and sent to TradersPost.\
+You can't update stop losses that are in the broker that get established at entry time, but if you control all your take profit and stop loss logic in the strategy, then you can move it and change it dynamically and when the price is reached in your strategy, an exit signal can be generated and sent to TradersPost.
 
+### Can I receive email notifications for signals?
+
+Yes, you can go to your account settings and then scroll down to enter the email address you wish to use. You can be notified of new webhooks, failed webhooks, new trades and failed trades.&#x20;
 
