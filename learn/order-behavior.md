@@ -275,3 +275,11 @@ This data can also be viewed in TradingView by clicking the three dots at the to
 Added ability to retry trades that fail during trade planning. You can configure how many times to retry and how long to wait in between retries. This will only retry a trade if an API call fails when communicating with the broker during trade planning, it will not retry trades if the API fails after trade planning during execution. For example, if the broker API fails when we send an exit or entry order, we will not retry the trade. This is because we don't have a way currently to guarantee that the order creation did not actually succeed, even though we received a failure response back from the broker.
 
 <figure><img src="https://2220089858-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfaGHqKUfUy1dxnpnFnAi%2Fuploads%2Fi0hAhHEwhBLDvrjSaR9C%2FScreenshot%202023-08-28%20at%201.57.52%20PM.png?alt=media&#x26;token=7f94f8a5-0c55-4e04-b930-e735592d3635" alt=""><figcaption></figcaption></figure>
+
+## Isolate Sides
+
+In the strategy subscription settings you can check the `Isolate sides` checkbox so that when paired with the `Sides` dropdown, you can limit a strategy subscription from touching a position on the opposite side of the `Sides` you have selected.
+
+For example, if you have `Sides` set to `Bullish` and `Isolate sides` checked, the strategy subscription will not be allowed to close a `Bearish` short position if there was one open. Or if you have `Sides` set to `Bearish` and `Isolate sides` checked, the strategy subscription will not be allowed to close a `Bullish` position if there was one open.
+
+Without the `Isolate sides` checkbox checked, if you have an open position on the other side of your `Sides` selection, TradersPost will first close the open position before entering on the other side. With `Isolate sides` checked, TradersPost will not be able to exit the open position and therefore will not be able to enter a new position on the other side and the trade will be rejected with a message as such.
