@@ -33,8 +33,8 @@ While TDAmeritrade supports futures via the [ThinkOrSwim](https://www.tdameritra
 
 ## Schwab Migration
 
-If your TDAmeritrade account has ever been connected to a platform like TradersPost that uses the TDAmeritrade API or you are a heavy ThinkOrSwim user, then your account should not be migrated to Schwab until March 2024.
+Once your account has been migrated to Schwab from TDAmeritrade, you will unfortunately no longer be able to use TradersPost with TDAmeritrade or Schwab. TDAmeritrade has started migrating accounts to Schwab before the new Schwab API is ready and available for TradersPost to integrate with and they don't have a concrete date on when the Schwab API will be available for us to integrate.
 
-The Schwab API that will replace the TDAmeritrade API is not available yet but we've been told that it should be ready and available for TradersPost to start integrating with by November of 2023. Once it is made available to us, we will do the development integration work to make sure it is available within TradersPost before the March 2024 migration date so that you can switch over without any disruption to service.
+The only solution at this time is to migrate your trading to a different broker such as Alpaca, TradeStation, Tradier or Robinhood.
 
 If you have questions about the transition from TDAmeritrade to Schwab, you can call the TDAmeritrade to Schwab transition team at [+1 800-780-8614](tel:18007808614).
