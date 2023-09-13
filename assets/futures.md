@@ -14,7 +14,9 @@ TradersPost Automated Futures Trading Setup
 
 TradersPost currently supports trading with the following futures tickers through TradeStation.
 
-NOTE: The ticker names are not always the same from TradingView to TradersPost. Because of this, it's recommended that you hard code your ticker symbol into your alerts instead of using the \{{ticker\}} TradingView variable. For example, Lumber with TradeStation is LB and on TradingView it's LBS. To ensure you end up in the front contract for Lumber, use the TradersPost Symbol Root LB1!:
+{% hint style="info" %}
+The ticker names are not always the same from TradingView to TradersPost. Because of this, it's recommended that you hard code your ticker symbol into your alerts instead of using the **\{{ticker\}}** TradingView variable. For example, Lumber with TradeStation is **LB** and on TradingView it's **LBS**. To ensure you end up in the front contract for Lumber, use the TradersPost Symbol Root LB1!
+{% endhint %}
 
 ```json
 {
