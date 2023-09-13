@@ -28,7 +28,6 @@
 * [TradeStation](brokers/tradestation.md)
 * [Tradier](brokers/tradier.md)
 * [Broker Roadmap](brokers/broker-roadmap/README.md)
-  * [E\*Trade](brokers/broker-roadmap/e-trade.md)
   * [Kraken](brokers/broker-roadmap/kraken.md)
   * [Tradovate](brokers/broker-roadmap/tradovate.md)
 
