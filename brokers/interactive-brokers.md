@@ -7,8 +7,8 @@ description: >-
 
 # Interactive Brokers
 
-{% hint style="info" %}
-COMING SOON. Join the [wait list](https://traderspost.io/broker/ibkr) to be notified once Interactive Brokers is available.
+{% hint style="warning" %}
+The Interactive Brokers integration is generally available for all TradersPost customers. Please remember that this integration is in <mark style="color:orange;">**BETA**</mark> and you may experience issues that we have not discovered yet. It is recommended to test with a paper account first. If you have any issues or questions, please email us at [support@traderspost.io](mailto:support@traderspost.io)
 {% endhint %}
 
 ## Contact Information
@@ -21,9 +21,9 @@ Phone: [+1 (877) 442-2757](tel:18774422757)
 
 The Interactive Brokers API is unfortunately quite unreliable relative to other broker integrations. This means that trade execution can fail more often when using Interactive Brokers due to Interactive Brokers server errors and request timeouts. These issues have been reported to the IBKR support team but they have not given any indication as to if they plan to resolve these issues. Errors from IBKR may look like this with a message like "**Idle timeout reached**". This means we sent a request to the IBKR API and it timed out after waiting 10 seconds for a response.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-08-21 at 5.42.06 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-21 at 5.42.06 PM.png" alt=""><figcaption></figcaption></figure>
 
-On average, the IBKR API responds to our requests in **252 milliseconds**. This is around 5x slower than [Alpaca](../alpaca.md) and [Robinhood](../robinhood.md) for example.
+On average, the IBKR API responds to our requests in **252 milliseconds**. This is around 5x slower than [Alpaca](alpaca.md) and [Robinhood](robinhood.md) for example.
 
 ## Supported Asset Classes
 
@@ -69,7 +69,7 @@ You can do this by logging into TWS and going to **Global Config > Presets > Sto
 
 You can put 0s in all fields to disable them, and then those precautionary confirmation messages won't be required when submitting orders through the IBKR API via TradersPost.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## User Login Sessions
 

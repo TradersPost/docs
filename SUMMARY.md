@@ -21,14 +21,15 @@
 ## Brokers
 
 * [Alpaca](brokers/alpaca.md)
+* [Coinbase](brokers/coinbase.md)
+* [Interactive Brokers](brokers/interactive-brokers.md)
 * [Robinhood](brokers/robinhood.md)
 * [TDAmeritrade](brokers/tdameritrade.md)
 * [TradeStation](brokers/tradestation.md)
 * [Tradier](brokers/tradier.md)
 * [Broker Roadmap](brokers/broker-roadmap/README.md)
-  * [Coinbase](brokers/broker-roadmap/coinbase.md)
   * [E\*Trade](brokers/broker-roadmap/e-trade.md)
-  * [Interactive Brokers](brokers/broker-roadmap/interactive-brokers.md)
+  * [Kraken](brokers/broker-roadmap/kraken.md)
   * [Tradovate](brokers/broker-roadmap/tradovate.md)
 
 ## Assets
