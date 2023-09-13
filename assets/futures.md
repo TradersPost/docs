@@ -148,7 +148,7 @@ The ticker names are not always the same from TradingView to TradersPost. Becaus
 | COCOA                                            | CC                      | CC1!               |
 | SUGAR #11                                        | SB                      | SB1!               |
 | **OTHER**                                        |                         |                    |
-| LUMBER (CME)                                     | LB                      | LBS1!              |
+| LUMBER (CME)                                     | LB                      | LBR1!              |
 | One-Month SOFR Futures                           | SR1                     | SR1!               |
 | Three-Month SOFR Futures                         | SR3                     | SR3!               |
 
