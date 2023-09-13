@@ -147,6 +147,8 @@ NOTE: The ticker names are not always the same from TradingView to TradersPost. 
 | SUGAR #11                                        | SB                      | SB1!               |
 | **OTHER**                                        |                         |                    |
 | LUMBER (CME)                                     | LB                      | LBS1!              |
+| One-Month SOFR Futures                           | SR1                     | SR1!               |
+| Three-Month SOFR Futures                         | SR3                     | SR3!               |
 
 ## Symbol Format
 
