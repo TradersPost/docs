@@ -22,7 +22,7 @@ Yes, TradersPost supports trading both the long and short sides of a strategy.
 
 ### Do you support crypto?
 
-Yes, currently you can trade crypto on Alpaca. Coinbase is currently in beta testing stages.
+Yes, currently you can trade crypto on Alpaca and Coinbase. Coinbase is currently in the beta testing stage.
 
 ### Do you support futures?
 
