@@ -81,3 +81,9 @@ If you login to another IBKR client with the same username that TradersPost uses
 
 The only workaround for this is to create a 2nd username that is dedicated for use with TradersPost. Read about [adding a user](https://www.ibkrguides.com/clientportal/uar/addingauser.htm) in the IBKR documentation to get your 2nd user setup. Make sure that the dedicated user you create in IBKR only has access to the one account you want to trade within TradersPost. TradersPost and IBKR does not support executing trades across multiple different accounts from one user login session.
 
+## Historical Orders
+
+The Interactive Brokers API only has the ability to view todays orders so we are not able to show historical orders within TradersPost. This means you may have issues viewing historical trades as well, since we are unable to pull order data for older order ids. You will get an error when viewing old order ids that says something like this.
+
+> Idle timeout reached for "https://api.ibkr.com/v1/api/iserver/account/order/status/519256816".
+
