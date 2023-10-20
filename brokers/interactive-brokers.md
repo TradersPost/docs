@@ -35,19 +35,15 @@ The IBKR API has a daily "reset" window that occurs between 23:45 and 00:45 ET f
 
 Since the Interactive Brokers API is basically unavailable during these windows and cannot be relied upon to execute automated trades, it is recommended to program your strategy to not send signals during these windows. If you send orders during these windows, it is possible that the trades will fail to execute, even with retries enabled.
 
-## Quotes
+## Market Data Quotes
 
-The IBKR API does not have a reliable way to retrieve quotes for symbols, so prices are always required to be sent in the webhook signal when you want to submit limit orders. We are unable to fetch quotes to use the midpoint price as the limit price for limit orders. See example below.
+The Interactive Brokers API does not have a 100% reliable API for retrieving market data quotes for use with automated trading. In the scenarios where we cannot retrieve a quote from IBKR, we fallback to our Polygon market data provider. We will fallback to Polygon in the following scenarios.
 
-```json5
-{
-    "ticker": "SPY",
-    "action": "buy",
-    "price": 447.31
-}
-```
-
-If the `price` field is omitted and you have a feature enabled in your strategy subscription settings that requires a price, like limit orders, then the trade will be rejected.
+* If you are logged in to another IBKR session, then we will fallback to Polygon. For example, logging in to the IBKR mobile app or TWS will cause TradersPost to not be able to use your market data. IBKR market data can only be used in one active session at a time.
+* If you don't have market data in IBKR for the exchange being requested.
+* If the IBKR API fails when fetching a quote from it.
+* If it is the first request for a quote from IBKR for that symbol during the current session. Sessions are active for 24 hours and are restarted every night due to the IBKR [Daily Reset](interactive-brokers.md#daily-reset). Subsequent requests for the same symbol in the same session will return data from IBKR and we will use that data if it exists, otherwise it will fallback to Polygon.
+* If IBKR returns a quote but the data is delayed, we will fallback to Polygon.
 
 ## Paper Account
 
@@ -86,13 +82,3 @@ The only workaround for this is to create a 2nd username that is dedicated for u
 The Interactive Brokers API only has the ability to view todays orders so we are not able to show historical orders within TradersPost. This means you may have issues viewing historical trades as well, since we are unable to pull order data for older order ids. You will get an error when viewing old order ids that says something like this.
 
 > Idle timeout reached for "https://api.ibkr.com/v1/api/iserver/account/order/status/519256816".
-
-## Market Data Quotes
-
-The Interactive Brokers API does not have a 100% reliable API for retrieving market data quotes for use with automated trading. In the scenarios where we cannot retrieve a quote from IBKR, we fallback to our Polygon market data provider. We will fallback to Polygon in the following scenarios.
-
-* If you are logged in to another IBKR session, then we will fallback to Polygon. For example, logging in to the IBKR mobile app or TWS will cause TradersPost to not be able to use your market data. IBKR market data can only be used in one active session at a time.
-* If you don't have market data in IBKR for the exchange being requested.
-* If the IBKR API fails when fetching a quote from it.
-* If it is the first request for a quote from IBKR for that symbol during the current session. Sessions are active for 24 hours and are restarted every night due to the IBKR [Daily Reset](interactive-brokers.md#daily-reset). Subsequent requests for the same symbol in the same session will return data from IBKR and we will use that data if it exists, otherwise it will fallback to Polygon.
-* If IBKR returns a quote but the data is delayed, we will fallback to Polygon.
