@@ -87,3 +87,12 @@ The Interactive Brokers API only has the ability to view todays orders so we are
 
 > Idle timeout reached for "https://api.ibkr.com/v1/api/iserver/account/order/status/519256816".
 
+## Market Data Quotes
+
+The Interactive Brokers API does not have a 100% reliable API for retrieving market data quotes for use with automated trading. In the scenarios where we cannot retrieve a quote from IBKR, we fallback to our Polygon market data provider. These are the following scenarios we are aware of where we will fallback to Polygon.
+
+* IBKR market data can only be used in one active session at a time. If you are logged in to another IBKR session, then we will fallback to Polygon. For example, logging in to the IBKR mobile app or TWS will cause TradersPost to not be able to use your market data.
+* You don't have market data in IBKR for the exchange being requested.
+* The IBKR API fails when fetching a quote from it.
+* It is the first request for a quote from IBKR for that symbol. Subsequent requests for the same symbol will return data from IBKR and use that data if it exists, otherwise it will fallback to Polygon.
+* If IBKR returns a quote but the data is delayed, we will fallback to Polygon.
