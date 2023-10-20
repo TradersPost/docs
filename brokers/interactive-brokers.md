@@ -89,10 +89,10 @@ The Interactive Brokers API only has the ability to view todays orders so we are
 
 ## Market Data Quotes
 
-The Interactive Brokers API does not have a 100% reliable API for retrieving market data quotes for use with automated trading. In the scenarios where we cannot retrieve a quote from IBKR, we fallback to our Polygon market data provider. These are the following scenarios we are aware of where we will fallback to Polygon.
+The Interactive Brokers API does not have a 100% reliable API for retrieving market data quotes for use with automated trading. In the scenarios where we cannot retrieve a quote from IBKR, we fallback to our Polygon market data provider. We will fallback to Polygon in the following scenarios.
 
-* IBKR market data can only be used in one active session at a time. If you are logged in to another IBKR session, then we will fallback to Polygon. For example, logging in to the IBKR mobile app or TWS will cause TradersPost to not be able to use your market data.
-* You don't have market data in IBKR for the exchange being requested.
-* The IBKR API fails when fetching a quote from it.
-* It is the first request for a quote from IBKR for that symbol. Subsequent requests for the same symbol will return data from IBKR and use that data if it exists, otherwise it will fallback to Polygon.
+* If you are logged in to another IBKR session, then we will fallback to Polygon. For example, logging in to the IBKR mobile app or TWS will cause TradersPost to not be able to use your market data. IBKR market data can only be used in one active session at a time.
+* If you don't have market data in IBKR for the exchange being requested.
+* If the IBKR API fails when fetching a quote from it.
+* If it is the first request for a quote from IBKR for that symbol during the current session. Sessions are active for 24 hours and are restarted every night due to the IBKR [Daily Reset](interactive-brokers.md#daily-reset). Subsequent requests for the same symbol in the same session will return data from IBKR and we will use that data if it exists, otherwise it will fallback to Polygon.
 * If IBKR returns a quote but the data is delayed, we will fallback to Polygon.
