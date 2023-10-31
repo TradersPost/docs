@@ -26,7 +26,7 @@ TradersPost Explainer Video
 
 ## How does it work?
 
-TradersPost is made of the following concepts. You can use them together to create automated trading strategies in your broker and allow other people to subscribe to your strategies.
+TradersPost is made of the following core concepts. You can use them together to create automated trading strategies in your broker and allow other people to subscribe to your strategies.
 
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
 * [Webhooks](./#webhooks) - Webhooks are buy or sell signals that can be produced by an automated algorithm or even a manual human trader.
@@ -51,7 +51,7 @@ TradersPost has a "bring your own broker" architecture. We are not a broker or a
 * [Coinbase](brokers/coinbase.md)
 * [Robinhood](brokers/robinhood.md)
 
-Don't see your broker listed here? Check our full list of [supported brokers](https://traderspost.io/brokers).
+Don't see your broker listed here? Check our full list of [supported brokers](https://traderspost.io/brokers) and our [broker roadmap](brokers/broker-roadmap/).
 
 ## Webhooks
 
