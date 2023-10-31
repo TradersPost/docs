@@ -29,9 +29,9 @@ TradersPost Explainer Video
 TradersPost is made of the following concepts. You can use them together to create automated trading strategies in your broker and allow other people to subscribe to your strategies.
 
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
-* [Webhooks](learn/webhooks.md) - Webhooks are buy or sell signals that can be produced by an automated algorithm or even a manual human trader.
+* [Webhooks](./#webhooks) - Webhooks are buy or sell signals that can be produced by an automated algorithm or even a manual human trader.
 * [Strategies](./#strategies) - Strategies are what get connected to a broker. Users can subscribe to strategies and have the webhook signals place trades directly in their broker.
-* [Subscriptions](./#strategy-subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
+* [Subscriptions](./#subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
 
 If you prefer to watch a video demo of TradersPost to get a high level overview, this video is for you. If not, feel free to continue reading to get a high level overview.
 
