@@ -19,7 +19,34 @@ In the context of automated trading, the webhook message contains all the inform
 }
 ```
 
-Here is a full reference API documentation for the trading webhoook API end point.
+## Create a Webhook
+
+Once you have [connected your broker](brokers/#connect-your-broker), you will be ready to create a webhook. To create your first webhook, follow these steps.
+
+1. Navigate to **Strategies > Webhooks** and click the **New Webhook** button at the top right. Give it a name and choose which asset class this webhook should work for.
+2. Review the other optional available settings. These settings are optional and can be ignored if you are just getting started.
+3. Finally, click the **Save** button and your webhook will be created.
+4. Now you will see a **Webhook URL** and a **Copy** button. You can use the copy button to copy the webhook URL to your clipboard for pasting it in TradingView later.
+
+Next, you are ready to create a [strategy](strategies.md).
+
+{% hint style="info" %}
+You can continue reading and learning about webhooks below. You can always come back to this page later to learn about the functionality that you can control with the webhook JSON payload.
+{% endhint %}
+
+## Webhook API Documentation
+
+Here is a quick reference list of all the supported fields and values for the TradersPost webhook JSON.
+
+* **`ticker`** - The ticker symbol name. Example **AMD.**
+* **`action`** - The signal action. Supported values are `buy`, `sell`,  `exit`, `cancel` or `add`.
+* **`sentiment`** - The signal sentiment. Supported values are `bullish`, `long`, `bearish`, `short` and `flat`.
+* **`price`** - The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.
+* **`quantity`** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.
+* **`takeProfit`** - The take profit to attach to your entry order. This objects supported fields are `limitPrice`, `price`, `percent`.
+* **`stopLoss`** - The stop loss to attach to your entry order. This objects supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailPrice` and `trailPercent`.
+
+Here is the full reference documentation for the TradersPost webhook JSON.
 
 {% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://webhooks.traderspost.io" summary="TradersPost Webhook Request API documentation." expanded="true" %}
 {% swagger-description %}
@@ -35,9 +62,7 @@ Password string used to protect access to your webhook. You can change this by c
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="ticker" type="String" required="true" %}
-The ticker symbol name. Example 
-
-**AMD**
+The ticker symbol name. Example **AMD**.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="action" type="String" required="true" %}
@@ -73,19 +98,11 @@ The quantity to enter. If you omit this value, the quantity will be dynamically 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="takeProfit" type="Object" %}
-
-
 [Read more](webhooks.md#signal-take-profit)
-
-
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="stopLoss" type="Object" required="false" %}
-
-
 [Read more](webhooks.md#signal-stop-loss)
-
-
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Successful webhook response." %}
@@ -550,8 +567,8 @@ Because TradersPost works using standard webhooks, this enables users to integra
 
 Here are some popular platforms that enable you to build strategies and send alerts as webhooks.
 
-* [TradingView](tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
-* [TrendSpider](trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
+* [TradingView](../learn/tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
+* [TrendSpider](../learn/trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
 
 ## Custom Code
 
@@ -604,4 +621,4 @@ php traderspost-test.php
 
 This is a simple example, but you can combine this with a service like [Polygon.io](https://polygon.io) to get live real-time market data and build your own completely custom trading strategies and TradersPost can handle the integrations with your broker.
 
-You can read more about [custom code examples here.](custom-code-examples.md)
+You can read more about [custom code examples here.](../learn/custom-code-examples.md)
