@@ -107,4 +107,6 @@ A strategy subscription is how a user connects a strategy to a broker. Any signa
 
 You can learn more about subscriptions [here](core-concepts/subscriptions.md).
 
-**Ready to get started?** [Register](https://traderspost.io/register) your free account today!
+## Get Started
+
+Ready to get started? [Register](https://traderspost.io/register) your free account today and head over to the [Getting Started](getting-started.md) tutorial.
