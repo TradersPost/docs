@@ -42,9 +42,9 @@ Here is a quick reference list of all the supported fields and values for the Tr
 * **action** - The signal action. Supported values are `buy`, `sell`,  `exit`, `cancel` or `add`.
 * **sentiment** - The signal sentiment. Supported values are `bullish`, `long`, `bearish`, `short` and `flat`.
 * **price** - The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.
-* **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.
-* **takeProfit** - The take profit to attach to your entry order. This objects supported fields are `limitPrice`, `price`, `percent`.
-* **stopLoss** - The stop loss to attach to your entry order. This objects supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailPrice` and `trailPercent`.
+* **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. Check **Use signal quantity** in your strategy subscription settings to use this quantity.
+* **takeProfit** - The take profit to attach to your entry order. This objects supported fields are `limitPrice`, `price`, `percent`. Check **Use signal take profit** in your strategy subscription settings to use this take profit.
+* **stopLoss** - The stop loss to attach to your entry order. This objects supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailPrice` and `trailPercent`. Check **Use signal stop loss** in your strategy subscription settings to use this stop loss.
 
 Here is the full reference documentation for the TradersPost webhook JSON.
 
