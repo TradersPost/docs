@@ -28,9 +28,9 @@ TradersPost Explainer Video
 
 TradersPost is made of the following concepts. You can use them together to create automated trading strategies in your broker and allow other people to subscribe to your strategies.
 
-* [Signals](./#signals) - Signals are buy or sell signal that can be produced by an automated algorithm or even a manual human trader.
-* [Strategies](./#strategies) - Strategies define a group of signals. Users can subscribe to strategies and have the signals place trades directly in their broker.
 * [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
+* [Webhooks](learn/webhooks.md) - Webhooks are buy or sell signals that can be produced by an automated algorithm or even a manual human trader.
+* [Strategies](./#strategies) - Strategies are what get connected to a broker. Users can subscribe to strategies and have the webhook signals place trades directly in their broker.
 * [Subscriptions](./#strategy-subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
 
 If you prefer to watch a video demo of TradersPost to get a high level overview, this video is for you. If not, feel free to continue reading to get a high level overview.
@@ -39,9 +39,23 @@ If you prefer to watch a video demo of TradersPost to get a high level overview,
 Watch a demo of TradersPost if you prefer a video.
 {% endembed %}
 
-## Signals
+## Brokers
 
-Signals are buy and sell instructions that can be produced by an automated algorithm or even a manual human trader. Signals are sent to TradersPost via webhooks using JSON.
+TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
+
+* [TradeStation](brokers/tradestation.md)
+* [Alpaca](brokers/alpaca.md)
+* [Interactive Brokers](brokers/interactive-brokers.md)
+* [Tradier](brokers/tradier.md)
+* [TD Ameritrade](brokers/tdameritrade.md)
+* [Coinbase](brokers/coinbase.md)
+* [Robinhood](brokers/robinhood.md)
+
+Don't see your broker listed here? Check our full list of [supported brokers](https://traderspost.io/brokers).
+
+## Webhooks
+
+Webhooks are signals that contain buy and sell instructions that can be produced by an automated algorithm or even a manual human trader. Signals are sent to TradersPost via webhooks using JSON.
 
 > A webhook in web development is a method of augmenting or altering the behavior of a web page or web application with custom callbacks. These callbacks may be maintained, modified, and managed by third-party users and developers who may not necessarily be affiliated with the originating website or application.
 
@@ -75,7 +89,7 @@ Or if you are a user of TradingView, you can configure an alert to send a webhoo
 
 The values wrapped in **\{{** and **\}}** will be replaced dynamically by TradingView when the alert is sent to the webhook URL. With this, you can use something like the [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/?offer\_id=10\&aff\_id=26514) strategy by Matt DeLong and place the MOMO trades directly in your broker!
 
-You can learn more about TradersPost webhooks [here](learn/webhooks.md).
+You can learn more about webhooks [here](learn/webhooks.md).
 
 {% hint style="info" %}
 You can also send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). You can see some custom custom code examples for various programming languages [here](learn/custom-code-examples.md).
@@ -83,35 +97,14 @@ You can also send webhooks to TradersPost from custom code using programming lan
 
 ## Strategies
 
-Strategies are what get connected to a broker with a strategy subscription. Strategies are private by default. Strategy managers can publish their strategies and allow other users to subscribe to them. When a user subscribes to a strategy, the trades will be placed automatically in the broker linked to the subscription.
+Strategies are what you connect to a broker in TradersPost. They are linked to a webhook and you can subscribe to a strategy to connect it to your broker. Strategies are private by default. Strategy managers can publish their strategies or individual control which users have access to the strategy. When a user subscribes to a strategy, the trades will be placed automatically in the broker linked to the subscription.
 
-As a strategy manager, if you don't want to publish your strategy for the public to use, you can keep it as a private subscription.
+You can learn more about strategies [here](core-concepts/strategies.md).
 
-## Brokers
-
-TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
-
-* [Alpaca](broken-reference) - API for Stock Trading - Trade with algorithms, connect with apps, build services — all with commission-free stock trading API
-* [TD Ameritrade](broken-reference) - TD Ameritrade is a broker that offers an electronic trading platform for the trade of financial assets.
-* [TradeStation](broken-reference) - TradeStation offers state-of-the-art trading technology and online electronic brokerage services to active individual and institutional traders in the U.S. and worldwide.
-* [Tradier](broken-reference) - Tradier provides a full range of services in a scalable, secure, and easy-to-use REST-based API for businesses and individual developers. It’s unlike anything you’ve seen before.
-* [Robinhood](broken-reference) - Robinhood is a free-trading app that lets investors trade stocks, options, exchange-traded funds and cryptocurrency without paying commissions or fees.
-
-Don't see your broker listed here? Email [support@traderspost.io](mailto:support@traderspost.io) if you would like to see support for your broker added to TradersPost.
-
-## Strategy Subscriptions
+## Subscriptions
 
 A strategy subscription is how a user connects a strategy to a broker. Any signal associated with a strategy will create a new trade for the strategy subscription and allow you to either auto submit the trade to your broker or get an email to review the trade before approving or rejecting.
 
-Before the trade is placed in the connected broker, it is passed through the TradersPost order and risk management system which gives you the ability to fine tune your entry, position size, take profit and stop loss.
-
-#### What happens when you get a subscription trade?
-
-1. **Cancel Open Orders** - Open orders for the ticker will be canceled if one of the following is true
-   * There is no open position for the ticker.
-   * There is an open position and it is on the opposite side of the signal. For example you have an open long stocks position and you receive an `action=sell` signal. Any take profit or stop loss sell orders will be canceled before exiting the long stocks position.
-   * The signal is an explicit cancel signal where `action=cancel`.
-2. **Exit Current Position** - Any open position for the ticker in the signal will be exited based on the configuration details in your subscription. For example, if you have a long stocks position open for AMD and you get an `action=sell` signal, the long position will be closed with a sell order.
-3. **Enter New Position** - A new position will be entered with an order based on the configuration details in your subscription.
+You can learn more about subscriptions [here](core-concepts/subscriptions.md).
 
 **Ready to get started?** [Register](https://traderspost.io/register) your free account today!

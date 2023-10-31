@@ -16,6 +16,15 @@ Once you have connected your broker and created a webhook and strategy, now you 
 4. Now your strategy subscription is created, but has not been enabled yet. Review the settings for your strategy subscription and click Save if you make any changes.
 5. Once you are ready, click the green **Enable** button at the top right to enable your strategy subscription. Now, when TradersPost receives a request to your webhook, a trade will be executed and orders sent to your broker.
 
+## What happens when  a trade is executed?
+
+1. **Cancel Open Orders** - Open orders for the ticker will be canceled if one of the following is true
+   * There is no open position for the ticker.
+   * There is an open position and it is on the opposite side of the signal. For example you have an open long stocks position and you receive an `action=sell` signal. Any take profit or stop loss sell orders will be canceled before exiting the long stocks position.
+   * The signal is an explicit cancel signal where `action=cancel`.
+2. **Exit Current Position** - Any open position for the ticker in the signal will be exited based on the configuration details in your subscription. For example, if you have a long stocks position open for AMD and you get an `action=sell` signal, the long position will be closed with a sell order.
+3. **Enter New Position** - A new position will be entered with an order based on the configuration details in your subscription.
+
 ## Architecture
 
 We separate the Brokers, Webhooks, Strategies and Subscriptions at an architecture level to give more flexibility. Some of the benefits are:
