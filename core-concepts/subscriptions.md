@@ -6,6 +6,8 @@ description: >-
 
 # Subscriptions
 
+## Create a Subscription
+
 Once you have connected your broker and created a webhook and strategy, now you are ready to subscribe to the strategy to connect it to your broker.
 
 1. Navigate to **Strategies > Subscriptions** and click the **New Subscription** button at the top right.

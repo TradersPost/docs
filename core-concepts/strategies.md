@@ -6,6 +6,8 @@ description: >-
 
 # Strategies
 
+## Create a Strategy
+
 Once you have created a webhook, you will be ready to create a strategy.
 
 1. Navigate to **Strategies** and click the **New Strategy** button at the top right. Give it a name and choose which webhook you want the strategy to be linked to.
