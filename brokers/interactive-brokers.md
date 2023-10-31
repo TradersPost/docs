@@ -21,7 +21,7 @@ Phone: [+1 (877) 442-2757](tel:18774422757)
 
 The Interactive Brokers API is generally pretty reliable. You may occasionally receive errors from IBKR that may look like this with a message like "**Idle timeout reached**". This means we sent a request to the IBKR API and it timed out after waiting 10 seconds for a response.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-08-21 at 5.42.06 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-21 at 5.42.06 PM.png" alt=""><figcaption></figcaption></figure>
 
 On average, the IBKR API responds to our requests in **229 milliseconds**.
 
@@ -65,7 +65,7 @@ You can do this by logging into TWS and going to **Global Config > Presets > Sto
 
 You can put 0s in all fields to disable them, and then those precautionary confirmation messages won't be required when submitting orders through the IBKR API via TradersPost.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## User Login Sessions
 

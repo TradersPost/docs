@@ -21,14 +21,14 @@ In the context of automated trading, the webhook message contains all the inform
 
 ## Create a Webhook
 
-Once you have [connected your broker](brokers/#connect-your-broker), you will be ready to create a webhook. To create your first webhook, follow these steps.
+Once you have [connected your broker](../core-concepts/brokers/#connect-your-broker), you will be ready to create a webhook. To create your first webhook, follow these steps.
 
 1. Navigate to **Strategies > Webhooks** and click the **New Webhook** button at the top right. Give it a name and choose which asset class this webhook should work for.
 2. Review the other optional available settings. These settings are optional and can be ignored if you are just getting started.
 3. Finally, click the **Save** button and your webhook will be created.
 4. Now you will see a **Webhook URL** and a **Copy** button. You can use the copy button to copy the webhook URL to your clipboard for pasting it in TradingView later.
 
-Next, you are ready to create a [strategy](strategies.md).
+Next, you are ready to create a [strategy](../core-concepts/strategies.md).
 
 {% hint style="info" %}
 You can continue reading and learning about webhooks below. You can always come back to this page later to learn about the functionality that you can control with the webhook JSON payload.
@@ -567,8 +567,8 @@ Because TradersPost works using standard webhooks, this enables users to integra
 
 Here are some popular platforms that enable you to build strategies and send alerts as webhooks.
 
-* [TradingView](../learn/tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
-* [TrendSpider](../learn/trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
+* [TradingView](tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
+* [TrendSpider](trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
 
 ## Custom Code
 
@@ -621,4 +621,4 @@ php traderspost-test.php
 
 This is a simple example, but you can combine this with a service like [Polygon.io](https://polygon.io) to get live real-time market data and build your own completely custom trading strategies and TradersPost can handle the integrations with your broker.
 
-You can read more about [custom code examples here.](../learn/custom-code-examples.md)
+You can read more about [custom code examples here.](custom-code-examples.md)
