@@ -19,6 +19,20 @@ To connect your broker to TradersPost, follow these steps:
 TradersPost does not have access to your banking information and does not have the ability to transfer money in or out of your accounts. We only have access to the functionality to control trading activities.
 {% endhint %}
 
+## Broker Settings
+
+#### **Name**
+
+Assign a unique and descriptive name to each of your broker connections on TradersPost to easily differentiate between them, especially if you have multiple accounts with the same broker. Note that only one live and one paper account are allowed per connection, and the number of connections available depends on your payment plan. For example, you could name a futures account with TradeStation as "TradeStation Futures" and a margin account as "TradeStation Stocks," each set up as separate broker connections.
+
+#### **Choose Paper Account / Choose Live Account**
+
+Here you will decide which account to use for your live trading for this broker, and which account to use for paper trading. We sometimes see that customers choose their margin account here, when they meant to choose their futures account and they see errors indicating that futures aren't supported. Make sure you've selected the right live account for your broker connection.
+
+#### **Max strategy positions**
+
+Enter the max number of positions you want allow with this broker when using it with automated strategy subscriptions. Any existing positions opened prior to using TradersPost will still count as a position, and crypto dust is often seen as a position if worth roughly more than $1.50 USD.
+
 ## Supported Brokers
 
 Check out our ever growing list of supported brokers. If you do not see your broker listed here, take a look at our [broker roadmap](../../brokers/broker-roadmap/). These are the brokers that are being actively worked on by our development team. You can also view a longer list of our [waitlist brokers](https://traderspost.io/brokers) that we may integrate in the future. Add your email to the wait list for the broker you are interested in to be notified when it is available in the future.
