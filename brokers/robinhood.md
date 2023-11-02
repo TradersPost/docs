@@ -18,7 +18,7 @@ The Robinhood API is quite reliable with a very low failure rate. On average, th
 
 ## Supported Asset Classes
 
-<table><thead><tr><th width="411">Asset Class</th><th data-type="checkbox">Supported</th></tr></thead><tbody><tr><td>Stocks</td><td>true</td></tr><tr><td>Options</td><td>false</td></tr><tr><td>Futures</td><td>false</td></tr><tr><td>Crypto</td><td>false</td></tr><tr><td>Forex</td><td>false</td></tr></tbody></table>
+* Stocks
 
 ## Crypto & Options Support
 
