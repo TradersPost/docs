@@ -107,6 +107,13 @@ A strategy subscription is how a user connects a strategy to a broker. Any signa
 
 You can learn more about subscriptions [here](core-concepts/subscriptions.md).
 
+## Supported Asset Classes
+
+* Stocks
+* Futures
+* Options
+* Crypto
+
 ## Get Started
 
 Ready to get started? [Register](https://traderspost.io/register) your free account today and head over to the [Getting Started](getting-started.md) tutorial.
