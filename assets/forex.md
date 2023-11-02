@@ -1,3 +1,7 @@
+---
+description: TradersPost does not currently support Forex.
+---
+
 # Forex
 
 {% hint style="info" %}
