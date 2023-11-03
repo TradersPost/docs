@@ -10,6 +10,15 @@ description: >-
 TradersPost Automated Stocks Trading Setup
 {% endembed %}
 
+## Supported Brokers
+
+* [TradeStation](../brokers/tradestation.md)
+* [Alpaca](../brokers/alpaca.md)
+* [Interactive Brokers](../brokers/interactive-brokers.md)
+* [Tradier](../brokers/tradier.md)
+* [TD Ameritrade](../brokers/tdameritrade.md)
+* [Robinhood](../brokers/robinhood.md)
+
 ## Signals
 
 It's easy to send signals to TradersPost using [Webhooks](../learn/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.

@@ -10,6 +10,11 @@ description: >-
 TradersPost Automated Futures Trading Setup
 {% endembed %}
 
+## Supported Brokers
+
+* [TradeStation](../brokers/tradestation.md)
+* [Tradovate](../brokers/broker-roadmap/tradovate.md) (coming soon)
+
 ## Supported Tickers
 
 TradersPost currently supports trading with the following futures tickers through TradeStation.

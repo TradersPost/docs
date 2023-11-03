@@ -1,5 +1,5 @@
 ---
-description: TradersPost does not currently support Forex.
+description: TradersPost does not currently support Forex but we may add it in the future.
 ---
 
 # Forex

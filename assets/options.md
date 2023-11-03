@@ -16,6 +16,12 @@ TradersPost currently only supports directional options trades. This means that 
 Some customers separate the positions in separate broker accounts to work around this limitation.
 {% endhint %}
 
+## Supported Brokers
+
+* [TD Ameritrade](../brokers/tdameritrade.md)
+* [TradeStation](../brokers/tradestation.md)
+* [Tradier](../brokers/tradier.md)
+
 ## Symbol Format
 
 TradersPost understands many different stock options symbol formats. Since every broker and trading platform has subtle differences in the format we try to be as flexible as possible.
