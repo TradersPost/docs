@@ -23,7 +23,7 @@ In the context of automated trading, the webhook message contains all the inform
 
 Once you have [connected your broker](../core-concepts/brokers/#connect-your-broker), you will be ready to create a webhook. To create your first webhook, follow these steps.
 
-1. Navigate to **Strategies > Webhooks** and click the **New Webhook** button at the top right. Give it a name and choose which asset class this webhook should work for.
+1. Navigate to **Webhooks** and click the **New Webhook** button at the top right. Give it a name and choose which asset class this webhook should work for.
 2. Review the other optional available settings. These settings are optional and can be ignored if you are just getting started.
 3. Finally, click the **Save** button and your webhook will be created.
 4. Now you will see a **Webhook URL** and a **Copy** button. You can use the copy button to copy the webhook URL to your clipboard for pasting it in TradingView later.
