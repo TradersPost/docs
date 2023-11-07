@@ -520,6 +520,23 @@ Sentiment must be one of: bullish, bearish, flat. The available sentiments are b
 
 Sentiment can only be used with action buy or sell. You can only pass a sentiment in a webhook request when using action=buy or action=sell.
 
+For example, sending a payload with `"action": "exit"` and `"sentiment": "flat"` will produce an error since only the `"action": "exit"` is needed.
+
+```
+// Invalid JSON
+{
+    "ticker": "GOOGL",
+    "action": "exit",
+    "sentiment": "flat"
+}
+
+// Valid JSON that will exit the entire GOOGL position
+{
+    "ticker": "GOOGL",
+    "action": "exit"
+}
+```
+
 **not-trading-view** - Request did not come from TradingView.
 
 If you check Limit to TradingView in your webhook configuration, then the only IP addresses that will be allowed to send a request to it will be from TradingView.
