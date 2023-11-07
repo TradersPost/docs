@@ -522,7 +522,7 @@ Sentiment can only be used with action buy or sell. You can only pass a sentimen
 
 For example, sending a payload with `"action": "exit"` and `"sentiment": "flat"` will produce an error since only the `"action": "exit"` is needed.
 
-```
+```json5
 // Invalid JSON
 {
     "ticker": "GOOGL",
