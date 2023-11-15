@@ -24,11 +24,11 @@ After creating your account, you will be redirected to a form to setup your acco
 
 After you setup your account, navigate to **Brokers** in the top menu bar.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.36.43 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.36.43 PM.png" alt=""><figcaption></figcaption></figure>
 
 On the next page, click **Connect Live Broker** or **Connect Paper Broker**.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.08 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.08 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, choose what broker you want to connect to TradersPost. In this example, we will use [Alpaca](https://app.alpaca.markets/signup?utm\_source=traderspost).&#x20;
 
@@ -46,7 +46,7 @@ Read the Disclosure, Terms of Service and Privacy Policy then click the green **
 
 Click the yellow **Allow** button to authorize TradersPost to access your Alpaca account.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.22 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.22 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected back to TradersPost after your Alpaca account is connected successfully.
 
@@ -64,7 +64,7 @@ Start by hovering over **Strategies** in the top menu bar and click **Webhooks**
 
 Click the black **New Webhook** button at the top right of the page.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.23 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.23 PM.png" alt=""><figcaption></figcaption></figure>
 
 Give your webhook a name like **Stocks Webhook** and click **Save** at the top right of the page.
 
@@ -74,11 +74,11 @@ Give your webhook a name like **Stocks Webhook** and click **Save** at the top r
 
 Now that you have a webhook created, you are ready to create a strategy. Click the **Create a new strategy** link after saving your webhook.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.47 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.47 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 Give your strategy a name like **Stocks Strategy** and associate your **Stocks Webhook** with the strategy by checking the checkbox next to your webhook, then click the **Save** button at the top right of the page.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.09 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.09 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Subscribe to Strategy
 
@@ -104,7 +104,7 @@ Check the **Auto submit** checkbox because we want the trades to submit to the b
 
 Scroll down a little bit to the **Tickers** section and check **SQ** under the list of available **Tickers** or check **Allow any ticker** if you want to allow any ticker on this strategy subscription.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.28 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.28 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 Scroll down a little more to the **Advanced Options** section and check **Entry market** and **Exit market** and then click the **Save** button. Lets keep it simple to start, normal market hours only with market orders.
 
@@ -174,6 +174,6 @@ Now do the same thing for the sell side. Except choose **ProjectX Sell Alert** t
 }
 ```
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.54.35 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.54.35 PM (2).png" alt=""><figcaption></figcaption></figure>
 
 **Congratulations!** You are all set. You are live with your first automated trading strategy connected to your Alpaca broker. If you have any questions, join us in our [Discord](https://traderspost.io/discord) chat. Looking forward to seeing you there!

@@ -35,32 +35,32 @@ Enter the max number of positions you want allow with this broker when using it 
 
 ## Supported Brokers
 
-Check out our ever growing list of supported brokers. If you do not see your broker listed here, take a look at our [broker roadmap](../../brokers/broker-roadmap/). These are the brokers that are being actively worked on by our development team. You can also view a longer list of our [waitlist brokers](https://traderspost.io/brokers) that we may integrate in the future. Add your email to the wait list for the broker you are interested in to be notified when it is available in the future.
+Check out our ever growing list of supported brokers. If you do not see your broker listed here, take a look at our [broker roadmap](broker-roadmap/). These are the brokers that are being actively worked on by our development team. You can also view a longer list of our [waitlist brokers](https://traderspost.io/brokers) that we may integrate in the future. Add your email to the wait list for the broker you are interested in to be notified when it is available in the future.
 
-{% content-ref url="../../brokers/tradestation.md" %}
-[tradestation.md](../../brokers/tradestation.md)
+{% content-ref url="tradestation.md" %}
+[tradestation.md](tradestation.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../brokers/alpaca.md" %}
-[alpaca.md](../../brokers/alpaca.md)
+{% content-ref url="alpaca.md" %}
+[alpaca.md](alpaca.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../brokers/interactive-brokers.md" %}
-[interactive-brokers.md](../../brokers/interactive-brokers.md)
+{% content-ref url="interactive-brokers.md" %}
+[interactive-brokers.md](interactive-brokers.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../brokers/tradier.md" %}
-[tradier.md](../../brokers/tradier.md)
+{% content-ref url="tradier.md" %}
+[tradier.md](tradier.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../brokers/tdameritrade.md" %}
-[tdameritrade.md](../../brokers/tdameritrade.md)
+{% content-ref url="tdameritrade.md" %}
+[tdameritrade.md](tdameritrade.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../brokers/coinbase.md" %}
-[coinbase.md](../../brokers/coinbase.md)
+{% content-ref url="coinbase.md" %}
+[coinbase.md](coinbase.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../brokers/robinhood.md" %}
-[robinhood.md](../../brokers/robinhood.md)
+{% content-ref url="robinhood.md" %}
+[robinhood.md](robinhood.md)
 {% endcontent-ref %}

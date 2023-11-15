@@ -8,9 +8,9 @@ description: >-
 
 ## Supported Brokers
 
-* [Alpaca](../brokers/alpaca.md)
-* [Coinbase](../brokers/coinbase.md)
-* [Kraken](../brokers/broker-roadmap/kraken.md) (coming soon)
+* [Alpaca](../core-concepts/brokers/alpaca.md)
+* [Coinbase](../core-concepts/brokers/coinbase.md)
+* [Kraken](../core-concepts/brokers/broker-roadmap/kraken.md) (coming soon)
 
 ## Crypto Dust
 

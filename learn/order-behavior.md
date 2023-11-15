@@ -250,7 +250,7 @@ When TradersPost calculates a take profit or stop loss price using a relative va
 * If market order, we will always use the midpoint price from the latest quote.
 {% endhint %}
 
-You can configure your strategy subscription to include your take profit & stop loss settings, or you can send your take profit & stop losses with your webhook signal. Take a look at the [Webhooks](webhooks.md#signal-take-profit) documentation learn more about how to send your take profit & stop losses with your webhook signal.
+You can configure your strategy subscription to include your take profit & stop loss settings, or you can send your take profit & stop losses with your webhook signal. Take a look at the [Webhooks](../core-concepts/webhooks.md#signal-take-profit) documentation learn more about how to send your take profit & stop losses with your webhook signal.
 
 ## Min Move / Min Tick Size
 

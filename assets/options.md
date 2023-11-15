@@ -18,9 +18,9 @@ Some customers separate the positions in separate broker accounts to work around
 
 ## Supported Brokers
 
-* [TD Ameritrade](../brokers/tdameritrade.md)
-* [TradeStation](../brokers/tradestation.md)
-* [Tradier](../brokers/tradier.md)
+* [TD Ameritrade](../core-concepts/brokers/tdameritrade.md)
+* [TradeStation](../core-concepts/brokers/tradestation.md)
+* [Tradier](../core-concepts/brokers/tradier.md)
 
 ## Symbol Format
 
@@ -59,7 +59,7 @@ In this example we have configured our strategy subscription to do the following
 
 ## Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../learn/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
 Inside of TradersPost when setting up a strategy you can configure what kind of option contracts to buy when you receive a signal. Here are the signals you can send and the resulting behavior.
 

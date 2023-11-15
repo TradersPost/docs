@@ -22,7 +22,7 @@ If you would like your strategy to trade in extended hours, you will need to set
 
 To make your strategy submit orders to the broker automatically, make sure you have the **Auto submit** checkbox checked in your strategy subscription settings.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Auto submit checkbox configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Auto submit checkbox configuration</p></figcaption></figure>
 
 ### Why can I not see any example orders on my subscription settings page?
 
@@ -42,7 +42,7 @@ Second, in TradersPost navigate to **Strategies > Webhooks** and click **Logs** 
 
 After you click **Logs**, you will see a list of all the requests that have been sent to your webhook. You can use this to determine whether or not any webhook requests were sent to your webhook from TradingView or TrendSpider.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 11.07.44 AM.png" alt=""><figcaption><p>TradersPost Webhook Logs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 11.07.44 AM (1).png" alt=""><figcaption><p>TradersPost Webhook Logs</p></figcaption></figure>
 
 You can then click in to each webhook request to see information about the request, where it came from, what time it was received and any trades that were exected as a result of the webhook request.
 

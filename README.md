@@ -43,15 +43,15 @@ Watch a demo of TradersPost if you prefer a video.
 
 TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
 
-* [TradeStation](brokers/tradestation.md)
-* [Alpaca](brokers/alpaca.md)
-* [Interactive Brokers](brokers/interactive-brokers.md)
-* [Tradier](brokers/tradier.md)
-* [TD Ameritrade](brokers/tdameritrade.md)
-* [Coinbase](brokers/coinbase.md)
-* [Robinhood](brokers/robinhood.md)
+* [TradeStation](core-concepts/brokers/tradestation.md)
+* [Alpaca](core-concepts/brokers/alpaca.md)
+* [Interactive Brokers](core-concepts/brokers/interactive-brokers.md)
+* [Tradier](core-concepts/brokers/tradier.md)
+* [TD Ameritrade](core-concepts/brokers/tdameritrade.md)
+* [Coinbase](core-concepts/brokers/coinbase.md)
+* [Robinhood](core-concepts/brokers/robinhood.md)
 
-Don't see your broker listed here? Check our full list of [supported brokers](https://traderspost.io/brokers) and our [broker roadmap](brokers/broker-roadmap/).
+Don't see your broker listed here? Check our full list of [supported brokers](https://traderspost.io/brokers) and our [broker roadmap](core-concepts/brokers/broker-roadmap/).
 
 ## Webhooks
 
@@ -89,7 +89,7 @@ Or if you are a user of TradingView, you can configure an alert to send a webhoo
 
 The values wrapped in **\{{** and **\}}** will be replaced dynamically by TradingView when the alert is sent to the webhook URL. With this, you can use something like the [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/?offer\_id=10\&aff\_id=26514) strategy by Matt DeLong and place the MOMO trades directly in your broker!
 
-You can learn more about webhooks [here](learn/webhooks.md).
+You can learn more about webhooks [here](core-concepts/webhooks.md).
 
 {% hint style="info" %}
 You can also send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). You can see some custom custom code examples for various programming languages [here](learn/custom-code-examples.md).

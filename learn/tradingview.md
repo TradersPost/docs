@@ -396,7 +396,7 @@ if (useExitHour == true and hour == exitHour and minute == exitMinute)
 
 Now you have some new settings you can use to control when your strategy is allowed to trade and when it should exit.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 You can find a more complex example in the [8-55 EMA Crossover NQ Futures Strategy](https://github.com/TradersPost/pinescript/blob/master/strategies/8-55-EMA-Crossover-NQ-Futures-Strategy.pinescript) in our GitHub repository.
 

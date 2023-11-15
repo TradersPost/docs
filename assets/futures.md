@@ -12,8 +12,8 @@ TradersPost Automated Futures Trading Setup
 
 ## Supported Brokers
 
-* [TradeStation](../brokers/tradestation.md)
-* [Tradovate](../brokers/broker-roadmap/tradovate.md) (coming soon)
+* [TradeStation](../core-concepts/brokers/tradestation.md)
+* [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md) (coming soon)
 
 ## Supported Tickers
 
@@ -171,7 +171,7 @@ TradersPost standardizes the futures symbol format to have a 4 digit year. We co
 
 ## Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../learn/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
 ### Enter Bullish
 
@@ -240,7 +240,7 @@ While futures trading generally supports market orders, under certain conditions
 
 During these market conditions, you may receive rejected orders with a reject reason of the following:
 
-![Order type not permitted while the market is reserved](<../.gitbook/assets/Screen Shot 2022-07-13 at 9.17.30 AM.png>)
+![Order type not permitted while the market is reserved](<../.gitbook/assets/Screen Shot 2022-07-13 at 9.17.30 AM (1).png>)
 
 Whenever trading futures and you are facing upcoming volatile market conditions, you have two options:
 
