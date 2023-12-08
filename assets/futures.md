@@ -258,11 +258,15 @@ To keep track of the different news events that may cause the market to move in 
 You are responsible for ensuring futures contract positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything special for futures contract positions based on expiration date.
 {% endhint %}
 
-The TradersPost continuous contract symbols like **NQ1!** rollover on the exact expiration date. We do not rollover automatically early or based on volume.
-
-This means if your strategy gets in a trade before the current contract expires, TradersPost will NOT automatically exit the position for you.\
 \
-If you want to trade a specific contract, then you can send **NQH2023** or **NQM2023** instead of **NQ1!** for example. Here is an example JSON.
+In a recent release we made a change to improve how we handle continuous contract symbols and when we switch from the current contract to the next contract.\
+\
+We will now switch from the current contract to the next contract two days before the beginning of the expiration date. So take `MNQZ2023` for example. It has an expiration date of **Friday December 15th, 2023**.
+
+* Before this change, `MNQ1!` switches to `MNQH2024` at the end of **December 15th, 2023**.
+* After this change, `MNQ1!` switches to `MNQH2024` at the beginning of **December 13th, 2023**.
+* \
+  If you want to trade a specific contract, then you can send **NQH2023** or **NQM2023** instead of **NQ1!** for example. Here is an example JSON.
 
 ```json
 {
