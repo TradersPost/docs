@@ -165,9 +165,9 @@ You can read more about 400 Bad Requests here.
 {% endswagger-response %}
 {% endswagger %}
 
-{% hint style="danger" %}
-Be sure you are aware of webhook rate limiting in TradersPost. You can read more [here](../additional-information/known-limitations.md#rate-limiting).
-{% endhint %}
+## Rate Limiting
+
+TradersPost is **NOT** designed to be a high frequency trading platform. While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategies if we determine that your account is sending too many requests.
 
 ## Examples
 
