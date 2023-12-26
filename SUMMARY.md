@@ -62,6 +62,7 @@
 * [Trade Journaling](additional-information/trade-journaling.md)
 * [Useful URLs](additional-information/useful-urls.md)
 * [WebhookMessage Library](additional-information/webhookmessage-library.md)
+* [Releases](https://app.gitbook.com/o/MWqRLlYTaCaJh8cAqevI/s/faGHqKUfUy1dxnpnFnAi/)
 
 ## Links
 
