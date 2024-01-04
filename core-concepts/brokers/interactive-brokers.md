@@ -82,3 +82,7 @@ The only workaround for this is to create a 2nd username that is dedicated for u
 The Interactive Brokers API only has the ability to view todays orders so we are not able to show historical orders within TradersPost. This means you may have issues viewing historical trades as well, since we are unable to pull order data for older order ids. You will get an error when viewing old order ids that says something like this.
 
 > Idle timeout reached for "https://api.ibkr.com/v1/api/iserver/account/order/status/519256816".
+
+## IBKR LITE Accounts
+
+Unfortunately, the IBKR WebAPI does not support IBKR LITE accounts. You will be able to connect your account to TradersPost, but they will not allow orders to be created. We have no way to identify if your account is a LITE account or not to notify you when you connect to TradersPost. You will only see a message when trying to create an order that says "API orders are not allowed for lite accounts".
