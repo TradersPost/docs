@@ -16,17 +16,33 @@ If you hire a developer to code your strategy, it is important that the coder is
 
 ### **TradingView Pine Script Developers**
 
-* [Kurtis Bulock](https://www.fiverr.com/kurtisbulock) - Financial Programmer and IT Expert. Over 4 years Experience programming complex trading strategies using Pine Script on Trading view. Please reach out if you have any questions.
-* [sammyboy1721](https://www.fiverr.com/sammyboy1721) - I have years of experience with technical strategies and programming. No task is too complex. I can make any of your trading ideas turn into reality and discover creative solutions to improve performance.
-* [tabrejalam](https://www.fiverr.com/tabrejalam) - I have more than two years of experience in developing strategies in pine script. I have Developed many trading strategies in pine script. passionate about Trading. Graduate in Bachelor's Of Technology In Electrical And Electronics Engineering.
-* [Ricardo D.](https://www.upwork.com/freelancers/\~014a4eacc3a1c444df) - Ricardo D. is an Algorithmic Trading Specialist with extensive experience creating and designing trading indicators and strategies in PineScript for TradingView.
-* [hiubriss](https://www.fiverr.com/freelancers/hiubriss) - TradingView Indicators Optimized for Profit - I am a 26-year-old graduate in software engineering, with a wide range of knowledge in many languages ​​and technologies. Last 5 years I've been focused on developing, editing, and writing Tradingview (pinescript) strategies and indicators for people and myself as well as trading. If you have any questions feel free to message me.
-* [kriswaters](https://www.fiverr.com/freelancers/kriswaters) - Pine Script Programmer - I'm a programmer and Udemy instructor. I'm interested in algorithmic trading. I create content and develop strategies about cryptocurrencies since 2017.
-* [null\_vector](https://www.fiverr.com/null\_vector) - Your Ideas ' Make Them Real - Hello I'm a software engineer who is interested in variety of software technologies, problems and solutions.
-* [vitruvius\_trade](https://www.fiverr.com/vitruvius\_trade) - I am a senior software developer who is interested in automated and algorithmic trading. I am a "trusted pine programmer" and have been professionally developing indicators and strategies since 2018.
-* [karthik\_pkr](https://www.fiverr.com/karthik\_pkr) - A software engineer by profession and a stock market trader by passion. I am a passionate software engineer with strong problem solving skills. Good in creating reliable and effective codes. Mostly focus on the punctuality and quality of the work delivered. Knowledgeable on multiple areas of coding, trading and investing.
-* [trademate2000](https://www.fiverr.com/trademate2000) - We code custom trading strategies and automate them for you. We will deliver exactly what you have in mind. We have coded almost all elements in technical analysis and delivered in time.
-* [akshayy\_dev](https://www.fiverr.com/akshayy\_dev) - Android App developer, Python script coder with 7+ years of experience.
+* [Kurtis Bulock](https://www.fiverr.com/kurtisbulock)
+* [sammyboy1721](https://www.fiverr.com/sammyboy1721)
+* [tabrejalam](https://www.fiverr.com/tabrejalam)
+* [Ricardo D.](https://www.upwork.com/freelancers/\~014a4eacc3a1c444df)
+* [hiubriss](https://www.fiverr.com/freelancers/hiubriss)
+* [kriswaters](https://www.fiverr.com/freelancers/kriswaters)
+* [null\_vector](https://www.fiverr.com/null\_vector)
+* [vitruvius\_trade](https://www.fiverr.com/vitruvius\_trade)
+* [karthik\_pkr](https://www.fiverr.com/karthik\_pkr)
+* [trademate2000](https://www.fiverr.com/trademate2000)
+* [akshayy\_dev](https://www.fiverr.com/akshayy\_dev)
+* [Baris Y](https://www.fiverr.com/vitruvius\_trade)
+* [Swastik](https://www.fiverr.com/the\_pro\_coder)
+* [Radoslav H](https://www.fiverr.com/rickhardypro)
+* [Uday D.](https://www.fiverr.com/codee\_studio)
+* [Evgenii](https://www.fiverr.com/evgenii\_trade)
+* [Hendrik Coder](https://www.fiverr.com/hendrik\_jeroen)
+* [Quantdev](https://www.fiverr.com/dk\_codenut)
+* [Nextelonmusk](https://www.fiverr.com/nextelonmusk99)
+* [Alex T](https://www.fiverr.com/thegreatescapex)
+* [Kanny Tech](https://www.fiverr.com/kannytech)
+* [Prakash K](https://www.fiverr.com/trademate2000)
+* [Sascha](https://www.fiverr.com/berlincode42)
+* [samscripter](https://www.fiverr.com/samscripter)
+* [backpacktrader](https://www.fiverr.com/backpacktrader)
+* [Hakan K.](https://www.fiverr.com/hakank969)
+* [Arjun Singh](https://www.fiverr.com/actorarjun)
 * [**View more Pine Script developers on Fiverr**](https://www.fiverr.com/search/gigs?query=pinescript%20developer)
 * [**View more Pine Script developers on Upwork**](https://www.upwork.com/search/profiles/?q=Pine%20Script%20developer)
 
