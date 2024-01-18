@@ -20,6 +20,10 @@ The Robinhood API is quite reliable with a very low failure rate. On average, th
 
 * Stocks
 
+## Robinhood Retirement (IRA) Support
+
+Robinhood's IRA accounts are **not** currently supported by TradersPost. We will announce any support of these account types in the future.
+
 ## Crypto & Options Support
 
 While Robinhood does support crypto and options, TradersPost has not integrated it with our platform yet but we plan to in the future.
