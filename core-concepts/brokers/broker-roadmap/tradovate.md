@@ -36,3 +36,4 @@ The TradersPost + Tradovate integration currently does not have quotes/market da
 * Limit orders without a price in the signal. If limit orders are configured and the signal does not have a price, then a market order will be submitted.
 * No take profit or stop loss functionality.
 * No trailing stop functionality.
+* No Profit & Loss or current price data on open positions.
