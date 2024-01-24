@@ -14,6 +14,7 @@
   * [Coinbase](core-concepts/brokers/coinbase.md)
   * [Robinhood](core-concepts/brokers/robinhood.md)
   * [Broker Roadmap](core-concepts/brokers/broker-roadmap/README.md)
+    * [Bybit](core-concepts/brokers/broker-roadmap/bybit.md)
     * [Kraken](core-concepts/brokers/broker-roadmap/kraken.md)
     * [Tradovate](core-concepts/brokers/broker-roadmap/tradovate.md)
 * [Webhooks](core-concepts/webhooks.md)
