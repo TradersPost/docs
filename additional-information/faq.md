@@ -184,3 +184,6 @@ You can't update stop losses that are in the broker that get established at entr
 
 Yes, you can navigate to **My Account > Settings** and then scroll down to the section named **Account Notification Settings** and enter the email address you wish to use. You can be notified of new webhooks, failed webhooks, new trades and failed trades. Check the **Notify failures only**  checkbox if you only wish to be notified of failures.
 
+### How long do promotional discounts last for?
+
+Promotional discounts typically only last for 12 months. If it appears that you have been charged slightly higher than usual then it is likely down to your promotional discount code expiring.
