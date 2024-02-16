@@ -186,4 +186,4 @@ Yes, you can navigate to **My Account > Settings** and then scroll down to the s
 
 ### How long do promotional discounts last for?
 
-Promotional discounts typically only last for 12 months. If it appears that you have been charged slightly higher than usual then it is likely down to your promotional discount code expiring.
+Promotional discounts typically only last for 12 months. If it appears that you have been charged slightly higher than usual then it is likely due to your promotional discount code expiring.
