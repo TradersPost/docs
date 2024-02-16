@@ -7,6 +7,7 @@
 
 * [Brokers](core-concepts/brokers/README.md)
   * [TradeStation](core-concepts/brokers/tradestation.md)
+  * [Tradovate](core-concepts/brokers/tradovate.md)
   * [Alpaca](core-concepts/brokers/alpaca.md)
   * [Interactive Brokers](core-concepts/brokers/interactive-brokers.md)
   * [Tradier](core-concepts/brokers/tradier.md)
@@ -16,7 +17,6 @@
   * [Broker Roadmap](core-concepts/brokers/broker-roadmap/README.md)
     * [Bybit](core-concepts/brokers/broker-roadmap/bybit.md)
     * [Kraken](core-concepts/brokers/broker-roadmap/kraken.md)
-    * [Tradovate](core-concepts/brokers/broker-roadmap/tradovate.md)
 * [Webhooks](core-concepts/webhooks.md)
 * [Strategies](core-concepts/strategies.md)
 * [Subscriptions](core-concepts/subscriptions.md)
