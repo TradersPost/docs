@@ -17,6 +17,7 @@
   * [Broker Roadmap](core-concepts/brokers/broker-roadmap/README.md)
     * [Bybit](core-concepts/brokers/broker-roadmap/bybit.md)
     * [Kraken](core-concepts/brokers/broker-roadmap/kraken.md)
+    * [tastytrade](core-concepts/brokers/broker-roadmap/tastytrade.md)
 * [Webhooks](core-concepts/webhooks.md)
 * [Strategies](core-concepts/strategies.md)
 * [Subscriptions](core-concepts/subscriptions.md)

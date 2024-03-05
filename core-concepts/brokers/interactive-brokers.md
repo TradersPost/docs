@@ -19,9 +19,13 @@ Phone: [+1 (877) 442-2757](tel:18774422757)
 
 ## Reliability
 
-The Interactive Brokers API is generally pretty reliable. You may occasionally receive errors from IBKR that may look like this with a message like "**Idle timeout reached**". This means we sent a request to the IBKR API and it timed out after waiting 10 seconds for a response.
+The Interactive Brokers API is generally pretty reliable. You may occasionally receive errors from IBKR that may look like this with a message like "**Idle timeout reached**". This means we sent a request to the IBKR API and it timed out after waiting 5 seconds for a response.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-08-21 at 5.42.06 PM.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+To reduce the instances where Interactive Brokers API gives us an idle timeout, we've been told by the IBKR API support team to only send one order at a time per user. This means that if you send multiple trades at the exact same time, only one will be executed at a time.
+{% endhint %}
 
 On average, the IBKR API responds to our requests in **229 milliseconds**.
 
