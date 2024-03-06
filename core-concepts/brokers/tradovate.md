@@ -37,3 +37,7 @@ The TradersPost + Tradovate integration currently does not have quotes/market da
 * No take profit or stop loss functionality.
 * No trailing stop functionality.
 * No Profit & Loss or current price data on open positions.
+
+{% hint style="info" %}
+Note that even though we can't support bracket orders for take profits or stop losses with Tradovate, you can still manage your take profits and stop losses in your strategy and simply send an exit signal to TradersPost from your strategy whenever your take profit or stop loss logic is met and TradersPost will exit the open position in your broker.
+{% endhint %}
