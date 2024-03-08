@@ -58,7 +58,7 @@ TradersPost was founded by the CEO & Founder, [Jonathan Wage](https://www.linked
 
 ### Is TradersPost free?
 
-TradersPost is free to get started. You can paper trade for free for 30 days. Once you are ready to trade live with real money, a paid subscription is required.
+TradersPost is free to get started. You can paper trade for free for 7 days. Once you are ready to trade live with real money, a paid subscription is required.
 
 ### What happens after my free 7 day trial is up?
 
