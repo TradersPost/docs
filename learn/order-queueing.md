@@ -16,6 +16,14 @@ When a trade is queued for the next market open, it will look like the following
 
 ![Queued trade for the next market open.](<../.gitbook/assets/Trade Queueing.png>)
 
+{% hint style="warning" %}
+You are only allowed one queued trade per strategy subscription and ticker. If you send multiple trades for the same strategy subscription and ticker, previous older trades will be replaced with newer trades.
+{% endhint %}
+
 ### Alpaca
 
-Alpaca doesn’t directly enforce any timing rules. They simply accept all orders and then route them to one of several execution partners. Each partner has slightly different rules. Some of these partners may reject non extended hours orders in extended hours after Alpaca accepts the order and sends it to the partner. This means that non extended hours orders sent in extended hours may get rejected but not always. Because of this, we will queue these trade orders and send them to Alpaca at the start of the next market open.
+{% hint style="info" %}
+Alpaca doesn’t directly enforce any timing rules. They simply accept all orders and then route them to one of several execution partners. Each partner has slightly different rules. Some of these partners may reject non extended hours orders in extended hours after Alpaca accepts the order and sends it to the partner. This means that non extended hours orders sent in extended hours may get rejected but not always.
+{% endhint %}
+
+Because of this, TradersPost will queue these trade orders and send them to Alpaca at the start of the next market open.
