@@ -50,64 +50,31 @@ Properties other than the ones listed above can be sent, but will be ignored by 
 
 Here is the full reference documentation for the TradersPost webhook JSON.
 
-{% swagger method="post" path="/trading/webhook/{uuid}/{password}" baseUrl="https://webhooks.traderspost.io" summary="TradersPost Webhook Request API documentation." expanded="true" %}
-{% swagger-description %}
+## TradersPost Webhook Request API documentation.
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://webhooks.traderspost.io/trading/webhook/{uuid}/{password}`
 
-{% swagger-parameter in="query" name="uuid" type="String" required="true" %}
-Unique webhook UUID string used to identify a webhook. This never changes.
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="password" type="String" required="true" %}
-Password string used to protect access to your webhook. You can change this by clicking Generate New URL in TradersPost when editing your webhook.
-{% endswagger-parameter %}
+| Name                                       | Type   | Description                                                                                                                                        |
+| ------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| uuid<mark style="color:red;">\*</mark>     | String | Unique webhook UUID string used to identify a webhook. This never changes.                                                                         |
+| password<mark style="color:red;">\*</mark> | String | Password string used to protect access to your webhook. You can change this by clicking Generate New URL in TradersPost when editing your webhook. |
 
-{% swagger-parameter in="body" name="ticker" type="String" required="true" %}
-The ticker symbol name. Example **AMD**.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="action" type="String" required="true" %}
-The signal action. Supported values are **buy,** **sell, exit, cancel or add.**
+| Name                                     | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ticker<mark style="color:red;">\*</mark> | String | The ticker symbol name. Example **AMD**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| action<mark style="color:red;">\*</mark> | String | <p>The signal action. Supported values are <strong>buy,</strong> <strong>sell, exit, cancel or add.</strong></p><p></p><p><strong>buy</strong> - Exit bearish position and optionally open bullish position</p><p><strong>sell</strong> - Exit bullish position and optionally open bearish position</p><p><strong>exit</strong> - Exit open position without entering a new position on the other side.</p><p><strong>cancel</strong> - Cancel open orders</p><p><strong>add</strong> - Add to existing open position</p> |
+| price                                    | String | The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.                                                                                                                                                                                                                                                                                                                                                                                             |
+| quantity                                 | String | The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.                                                                                                                                                                                                                                                                                                                                                                                                              |
+| sentiment                                | String | <p><strong>bullish</strong> - Open position after trade is executed should be bullish or flat.</p><p><strong>bearish</strong> - Open position after trade is executed should be bearish or flat.</p><p><strong>flat</strong> - No position should be open after trade is executed.</p>                                                                                                                                                                                                                                     |
+| stopLoss                                 | Object | [Read more](webhooks.md#signal-stop-loss)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| takeProfit                               | Object | [Read more](webhooks.md#signal-take-profit)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-
-
-**buy** - Exit bearish position and optionally open bullish position
-
-**sell** - Exit bullish position and optionally open bearish position
-
-**exit** - Exit open position without entering a new position on the other side.
-
-**cancel** - Cancel open orders
-
-**add** - Add to existing open position
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="sentiment" type="String" %}
-**bullish** - Open position after trade is executed should be bullish or flat.
-
-**bearish** - Open position after trade is executed should be bearish or flat.
-
-**flat** - No position should be open after trade is executed.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="price" type="String" required="false" %}
-The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="quantity" type="String" %}
-The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="takeProfit" type="Object" %}
-[Read more](webhooks.md#signal-take-profit)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="stopLoss" type="Object" required="false" %}
-[Read more](webhooks.md#signal-stop-loss)
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="Successful webhook response." %}
+{% tabs %}
+{% tab title="200: OK Successful webhook response." %}
 ```javascript
 {
     "success":true,
@@ -122,9 +89,9 @@ The quantity to enter. If you omit this value, the quantity will be dynamically 
     }
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="400: Bad Request" description="Rejected webhook response." %}
+{% tab title="400: Bad Request Rejected webhook response." %}
 When a webhook request is sent to TradersPost, we run it through several different validation checks. If any of these validation rules fail, the webhook will respond like the following with a status code of 400.
 
 Here is an example invalid JSON payload.
@@ -148,9 +115,9 @@ Here is the response you would get for that payload.
 ```
 
 You can read more about 400 Bad Requests here.
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="404: Not Found" description="Webhook not found." %}
+{% tab title="404: Not Found Webhook not found." %}
 ```javascript
 {
     "success": false,
@@ -158,12 +125,12 @@ You can read more about 400 Bad Requests here.
     "message": "Webhook not found."
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="500: Internal Server Error" description="Something went wrong" %}
+{% tab title="500: Internal Server Error Something went wrong" %}
 
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Rate Limiting
 
