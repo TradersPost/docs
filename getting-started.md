@@ -10,11 +10,11 @@ description: >-
 
 First, go to [TradersPost.io](https://traderspost.io) and click [Register](https://app.traderspost.io/register) at the top right of the page.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.17.28 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 12.55.13 PM.png" alt=""><figcaption></figcaption></figure>
 
-Enter your email and click the **I agree, Register** button. Alternatively, you can login with your Google account if you have a Google account.
+Enter your email and click the **Register** button. Alternatively, you can login with your Google account if you have a Google account.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.21.10 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.41.33 PM.png" alt=""><figcaption></figcaption></figure>
 
 After creating your account, you will be redirected to a form to setup your account. Fill out the setup your account form with your information and click **I agree, Continue**.
 
@@ -24,11 +24,11 @@ After creating your account, you will be redirected to a form to setup your acco
 
 After you setup your account, navigate to **Brokers** in the top menu bar.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.36.43 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.45.39 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 On the next page, click **Connect Live Broker** or **Connect Paper Broker**.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.08 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.47.20 PM.png" alt=""><figcaption></figcaption></figure>
 
 Next, choose what broker you want to connect to TradersPost. In this example, we will use [Alpaca](https://app.alpaca.markets/signup?utm\_source=traderspost).&#x20;
 
@@ -38,11 +38,11 @@ If you don't already have an Alpaca account, [click here](https://app.alpaca.mar
 
 Now, back in TradersPost click the **Alpaca** button to connect your Alpaca account to TradersPost.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.14 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.53.08 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 Read the Disclosure, Terms of Service and Privacy Policy then click the green **I agree** button to continue.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.17 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.54.04 PM.png" alt=""><figcaption></figcaption></figure>
 
 Click the yellow **Allow** button to authorize TradersPost to access your Alpaca account.
 
@@ -50,89 +50,45 @@ Click the yellow **Allow** button to authorize TradersPost to access your Alpaca
 
 You will be redirected back to TradersPost after your Alpaca account is connected successfully.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.26 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.55.34 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 Congratulations! You successfully connected your broker to TradersPost. Continue reading to learn how start sending signals to TradersPost from your strategy.
 
-## Create a Webhook
-
-Webhooks are how signals get sent to TradersPost from external third-party platforms like [TradingView](https://tradingview.com) or [TrendSpider](https://trendspider.com).
-
-Start by hovering over **Strategies** in the top menu bar and click **Webhooks**.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.15 PM.png" alt=""><figcaption></figcaption></figure>
-
-Click the black **New Webhook** button at the top right of the page.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.23 PM.png" alt=""><figcaption></figcaption></figure>
-
-Give your webhook a name like **Stocks Webhook** and click **Save** at the top right of the page.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.41 PM.png" alt=""><figcaption></figcaption></figure>
-
 ## Create a Strategy
 
-Now that you have a webhook created, you are ready to create a strategy. Click the **Create a new strategy** link after saving your webhook.
+Now that you have your broker connected, you are ready to create a strategy. Click the **Strategies** in the header and then click **New Strateg**y at the top right of the page.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.57.47 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.55.34 PM.png" alt=""><figcaption></figcaption></figure>
 
-Give your strategy a name like **Stocks Strategy** and associate your **Stocks Webhook** with the strategy by checking the checkbox next to your webhook, then click the **Save** button at the top right of the page.
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.59.40 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.09 PM.png" alt=""><figcaption></figcaption></figure>
+Give your strategy a name like **Stocks Strategy** and then click the **Save** button at the bottom left of the page.
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.01.52 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Subscribe to Strategy
 
-Now that your strategy is created, you are ready to connect it to your Alpaca broker by subscribing to the strategy. Click the **Create a subscription** button to connect your subscription to your broker.
+Now that your strategy is created, you are ready to connect it to your Alpaca broker by subscribing to the strategy. Click the broker that you want to connect the strategy to. In this example, we'll connect it to the paper Alpaca broker.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.14 PM.png" alt=""><figcaption></figcaption></figure>
-
-Choose which broker you want to connect the strategy to. Lets choose the **Live Alpaca** broker here.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.43 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.03.16 PM.png" alt=""><figcaption></figcaption></figure>
 
 Check the **Confirm** checkbox and then click the **Confirm** button to continue.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.49 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.04.52 PM.png" alt=""><figcaption></figcaption></figure>
 
 Your new strategy subscription has been created, but it is not enabled yet. Lets customize some of the settings before we enable it.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.58.53 PM.png" alt=""><figcaption></figcaption></figure>
+Check the **Auto submit** checkbox and click **Enable**. We want **Auto submit** enabled because we want the trades to submit to the broker automatically, without us having to manually approve or reject each trade. If you leave this unchecked, you will be able to approve or reject the trade before it submits to the broker.
 
-Check the **Auto submit** checkbox because we want the trades to submit to the broker automatically, without us having to manually approve or reject each trade. If you leave this unchecked, you will be able to approve or reject the trade before it submits to the broker.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.12 PM.png" alt=""><figcaption></figcaption></figure>
-
-Scroll down a little bit to the **Tickers** section and check **SQ** under the list of available **Tickers** or check **Allow any ticker** if you want to allow any ticker on this strategy subscription.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.28 PM (1).png" alt=""><figcaption></figcaption></figure>
-
-Scroll down a little more to the **Advanced Options** section and check **Entry market** and **Exit market** and then click the **Save** button. Lets keep it simple to start, normal market hours only with market orders.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.38 PM.png" alt=""><figcaption></figcaption></figure>
-
-You are ready to enable your first strategy subscription. Click the green **Enable** button at the top right to enable your strategy.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.44 PM.png" alt=""><figcaption></figcaption></figure>
-
-Confirm you have read the TradersPost Terms of Service and Privacy Policy and check the checkbox then click the green **Enable** button.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.59.51 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.06.43 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 Your strategy subscription is now enabled! You are ready to start sending signals to TradersPost from your strategy.
 
 ## Copy Webhook URL
 
-In the top menu bar, hover over **Strategies** and click **Webhooks**. We're going to go back to the webhook we created in the beginning to copy the webhook URL so that we can use it in TradingView alerts.
+You can copy the webhook URL by clicking the **Copy** button above the example orders. This will put the webhook URL in your clipboard so you can paste it in to TradingView in the next steps.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.28.24 PM.png" alt=""><figcaption></figcaption></figure>
-
-Click the **View** button next to the webhook that we created in the beginning of this tutorial.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.29.13 PM.png" alt=""><figcaption></figcaption></figure>
-
-Click the **Copy** button next to the masked **Webhook URL** to copy the URL in to your computers clipboard.
-
-<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.29.22 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.16.04 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Setup TradingView Alerts
 
