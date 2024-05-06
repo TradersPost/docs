@@ -29,15 +29,8 @@ Tradovate is a new broker integration for TradersPost, but generally it has been
 
 The Tradovate integration comes with a few limitations compared to other integrations. These limitations may change in the future as we are able to improve the integration.
 
-### Market Data
-
 The TradersPost + Tradovate integration currently does not have quotes/market data. This may change in the future if we are able to implement market data. Without market data, we aren't able to implement the following features:
 
 * Limit orders without a price in the signal. If limit orders are configured and the signal does not have a price, then a market order will be submitted.
-* No take profit or stop loss functionality.
 * No trailing stop functionality.
 * No Profit & Loss or current price data on open positions.
-
-{% hint style="info" %}
-Note that even though we can't support bracket orders for take profits or stop losses with Tradovate, you can still manage your take profits and stop losses in your strategy and simply send an exit signal to TradersPost from your strategy whenever your take profit or stop loss logic is met and TradersPost will exit the open position in your broker.
-{% endhint %}
