@@ -7,6 +7,12 @@ description: >-
 
 # Example Strategies
 
+## Simple Trend Lines - TradingView Indicator
+
+A walkthrough of our newest indicator, Simple Trend Lines, made for TradingView. Designed to allow the automation of trend lines for use in algorithmic trading. Check out the source code on TradingView [here](https://www.tradingview.com/script/ny3RIRSs-TradersPost-Simple-Trend-Lines/).
+
+{% embed url="https://www.youtube.com/watch?v=yHjJNJc4HaI" %}
+
 ### 8-55 EMA Crossover NQ Futures Strategy
 
 This automated strategy was built from a discretionary strategy by Brett Glover. Don't miss our interview of Brett and his journey to becoming a full time futures trader: [Creating Income Trading NQ Futures with Brett Glover - Trading Bot Sessions (EP 004)](https://www.youtube.com/watch?v=514gnyuO1TM)
