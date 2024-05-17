@@ -6,32 +6,18 @@ description: >-
 
 # WebhookMessage Library
 
-{% embed url="https://www.tradingview.com/script/Dfo3ErmN-TradersPost-WebhookMessage-Library-Automatically-Build-JSON/" %}
-Add this library to your favorites.
-{% endembed %}
 
-```
+
+{% embed url="https://www.tradingview.com/script/xkUpiNa6-TradersPost-WebhookMessage-Library-Automatically-Build-JSON/" %}
+
+````
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
-// © TradersPostInc (https://traderspost.io). Visit TradersPost to automate your TradingView strategies and indicators.
+// © TradersPostInc
 
-//@version=5
+//@version=5 
 
 // @description The webhook message library provides several functions for building JSON payloads 
-// used as instructions to manage automated orders and positions with TradersPost.io. See:
-// https://docs.traderspost.io/docs/learn/webhooks
-library("WebhookMessage", overlay = false)
-
-// Example: Go long, 1 contract, with a 0.75% trailing stop
-// import TradersPostInc/WebhookMessage/1 as wm
-// cnst = wm.CONSTANTS.new()
-// msg = wm.webhookMessage.new(
-//   ticker = syminfo.ticker,
-//   action = cnst.ACTION_BUY,
-//   sentiment = cnst.SENTIMENT_BULLISH,
-//   quantity = 1,
-//   stopLoss = wm.stopLossMessage.new(type = cnst.STOP_LOSS_TYPE_TRAILING_STOP, trailPercent = 0.75).buildStopLossJson()
-//   ).buildWebhookJson()
-// alert(msg, freq = alert.freq_once_per_bar_close)
+library("WebhookMessageLibrary", overlay = true)
 
 // @type Constants for payload values.
 // @field <string> ACTION_BUY buy - Exit bearish position and optionally open bullish position. Used in webhookMessage.action.
@@ -60,9 +46,7 @@ export type CONSTANTS
 	STOP_LOSS_TYPE_STOP_LIMIT    = "stop_limit"
 	STOP_LOSS_TYPE_TRAILING_STOP = "trailing_stop"
 
-cnst = CONSTANTS.new()
-
-// @type Final webhook message. See: https://docs.traderspost.io/docs/learn/webhooks#what-is-a-webhook
+// @type Final webhook message.
 // @field <string> ticker The ticker symbol name. Example: SPY.
 // @field <string> action The signal action. Supported values are buy, sell, exit, cancel or add.
 // @field <string> sentiment bullish, bearish, or flat.
@@ -72,14 +56,14 @@ cnst = CONSTANTS.new()
 // @field <stopLossMessage> stopLoss. See stopLossMessage.
 export type webhookMessage
 	string ticker
-	string action
+	string action 
 	string sentiment
 	float price
 	int quantity
 	string takeProfit = ""
 	string stopLoss = ""
 
-// @type Take profit message. See: https://docs.traderspost.io/docs/learn/webhooks#signal-take-profit
+// @type Take profit message.
 // @field <string> limitPrice Absolute limit price calculated on the webhook sender side.
 // @field <float> percent Relative percentage take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
 // @field <float> amount Relative dollar amount take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
@@ -88,7 +72,7 @@ export type takeProfitMessage
 	float percent
 	float amount
 
-// @type Stop loss message. See: https://docs.traderspost.io/docs/learn/webhooks#signal-stop-loss
+// @type Stop loss message.
 // @field <string> type Type of stop loss. If a value is provided, it overrides the stop loss type configured in strategy subscription settings. Allowed values are: stop, stop_limit, trailing_stop.
 // @field <float> percent Relative percentage stop loss to calculate relative to entry price.
 // @field <float> amount Relative dollar amount stop loss to calculate relative to entry price.
@@ -106,9 +90,11 @@ export type stopLossMessage
 	float trailPercent
 
 // @function Builds the final JSON payload from a webhookMessage type.
-// @param <webhookMessage> msg A prepared webhookMessage.
+// @param msg (webhookMessage) A prepared webhookMessage.
 // @returns <string> A JSON Payload.
-export method buildWebhookJson(webhookMessage msg) =>
+export method buildWebhookJson(webhookMessage msg, CONSTANTS constants = na) =>
+	cnst = na(constants) ? CONSTANTS.new() : constants
+
 	json = "{"
 	json += '"library": "WebhookMessage"'
 	json += ',"timestamp": "' + str.tostring(time) + '"'
@@ -133,7 +119,7 @@ export method buildWebhookJson(webhookMessage msg) =>
 	json
 
 // @function Builds the takeProfit JSON message to be used in a webhook message.
-// @param <takeProfitMessage> msg
+// @param msg (takeProfitMessage)
 // @returns <string> A JSON takeProfit payload.
 export method buildTakeProfitJson(takeProfitMessage msg) =>
 	json = '{'
@@ -143,10 +129,12 @@ export method buildTakeProfitJson(takeProfitMessage msg) =>
 	json += "}"
 	json
 
-// @function Builds the stopLoss JSON message to be used in a webhook message.
-// @param <stopLossMessage> msg
+/// @function Builds the stopLoss JSON message to be used in a webhook message.
+// @param msg (stopLossMessage)
 // @returns <string> A JSON stopLoss payload.
-export method buildStopLossJson(stopLossMessage msg) =>
+export method buildStopLossJson(stopLossMessage msg, CONSTANTS constants = na) =>
+	cnst = na(constants) ? CONSTANTS.new() : constants
+
 	//overload type message if not configured properly
 	if (not na(msg.limitPrice) and msg.type != cnst.STOP_LOSS_TYPE_STOP_LIMIT)
 		msg.type := cnst.STOP_LOSS_TYPE_STOP_LIMIT
@@ -173,6 +161,16 @@ export method buildStopLossJson(stopLossMessage msg) =>
 	json += "}"
 	json
 
-//plot nothing to pass publishing rules
-plot(0)
+// tp = takeProfitMessage.new(percent = 2).buildTakeProfitJson()
+// sl = stopLossMessage.new(type = STOP_LOSS_TYPE_TRAILING_STOP, percent = 0.75).buildStopLossJson()
+// msg = webhookMessage.new(ticker = syminfo.ticker, action = ACTION_BUY, sentiment = SENTIMENT_BULLISH, quantity = 1, takeProfit = tp, stopLoss = sl)
+
+// msg2 = webhookMessage.new(
+//   ticker = syminfo.ticker,
+//   action = ACTION_SELL,
+//   sentiment = SENTIMENT_BEARISH,
+//   quantity = 1,
+//   stopLoss = stopLossMessage.new(type = STOP_LOSS_TYPE_TRAILING_STOP, percent = 0.75).buildStopLossJson()
+//   )
 ```
+````
