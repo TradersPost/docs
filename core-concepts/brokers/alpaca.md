@@ -13,14 +13,11 @@ Email: [support@alpaca.markets](mailto:support@alpaca.markets)
 
 Phone: none
 
-## Reliability
-
-The Alpaca API is quite reliable with a very low failure rate. On average, the Alpaca API responds to our requests in **56 milliseconds**.
-
 ## Supported Asset Classes
 
 * Stocks
 * Crypto
+* Options
 
 ## Supported Countries
 

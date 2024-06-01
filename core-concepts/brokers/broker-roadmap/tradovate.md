@@ -17,10 +17,6 @@ Email: [support@tradovate.com](mailto:support@tradovate.com)
 
 Phone: [+1 (844) 283-3100](tel:18442833100)
 
-## Reliability
-
-Tradovate is a new broker integration for TradersPost, but generally it has been stable so far.
-
 ## Supported Asset Classes
 
 * Futures

@@ -17,10 +17,6 @@ Email: [api@tdameritrade.com](mailto:api@tdameritrade.com)
 
 Phone: [+1 (800) 669-3900](tel:18006693900)
 
-## Reliability
-
-The TDAmeritrade API is quite reliable with a very low failure rate. On average, the TDAmeritrade API responds to our requests in 167 milliseconds. While this is around 3x slower than Alpaca and Robinhood for example, it is still within an acceptable amount of time.
-
 ## Supported Asset Classes
 
 * Stocks

@@ -17,6 +17,7 @@
   * [Bybit](core-concepts/brokers/bybit.md)
   * [Kraken](core-concepts/brokers/kraken.md)
   * [Broker Roadmap](core-concepts/brokers/broker-roadmap/README.md)
+    * [E\*TRADE](core-concepts/brokers/broker-roadmap/e-trade.md)
     * [tastytrade](core-concepts/brokers/broker-roadmap/tastytrade.md)
     * [Binance](core-concepts/brokers/broker-roadmap/binance.md)
     * [Schwab](core-concepts/brokers/broker-roadmap/schwab.md)
