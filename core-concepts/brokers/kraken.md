@@ -7,10 +7,6 @@ description: >-
 
 # Kraken
 
-{% hint style="info" %}
-COMING SOON. Join the [wait list](https://traderspost.io/broker/kraken) to be notified once Kraken is available.
-{% endhint %}
-
 ## Contact Information
 
 Email: [support@kraken.com](mailto:support@kraken.com)

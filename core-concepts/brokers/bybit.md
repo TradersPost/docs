@@ -7,10 +7,6 @@ description: >-
 
 # Bybit
 
-{% hint style="info" %}
-COMING SOON. Join the [wait list](https://traderspost.io/broker/bybit) to be notified once Bybit is available.
-{% endhint %}
-
 ## Contact Information
 
 Email: [support@bybit.com](mailto:support@bybit.com)

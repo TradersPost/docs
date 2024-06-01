@@ -10,7 +10,7 @@ description: >-
 
 * [Alpaca](../core-concepts/brokers/alpaca.md)
 * [Coinbase](../core-concepts/brokers/coinbase.md)
-* [Kraken](../core-concepts/brokers/broker-roadmap/kraken.md) (coming soon)
+* [Kraken](../core-concepts/brokers/kraken.md) (coming soon)
 
 ## Crypto Dust
 
