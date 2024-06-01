@@ -371,13 +371,31 @@ The `risk_dollar_amount` quantity in this example means you want to calculate a 
 
 ### Signal Price
 
-The signal price is optional. If you omit a price from the signal, the mid point between the bid and the ask will be used if you have limit orders configured.
+The signal price is optional. It is only necessary when you are using relative take profit or stop losses and the broker does not support fetching quotes to be able to perform the calculation. Here is an example where the price at the time of the signal was `$18500` and we specify that we want a `$100` take profit. So a take profit order with a limit price of `$18600` will be calculated and sent to your broker along with your market entry order.
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "MNQ",
     "action": "buy",
-    "price": 60.30
+    "orderType": "market",
+    "signalPrice": 18500,
+    "takeProfit": {
+        "amount": 100
+    }
+}
+```
+
+If you are using limit orders, then the `limitPrice` you send will be used to calculate your take profit.
+
+```json
+{
+    "ticker": "MNQ",
+    "action": "buy",
+    "orderType": "limit",
+    "limitPrice": 18500,
+    "takeProfit": {
+        "amount": 100
+    }
 }
 ```
 
