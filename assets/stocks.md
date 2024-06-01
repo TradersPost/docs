@@ -14,9 +14,8 @@ TradersPost Automated Stocks Trading Setup
 
 * [TradeStation](../core-concepts/brokers/tradestation.md)
 * [Alpaca](../core-concepts/brokers/alpaca.md)
-* [Interactive Brokers](../core-concepts/brokers/interactive-brokers.md)
 * [Tradier](../core-concepts/brokers/tradier.md)
-* [TD Ameritrade](../core-concepts/brokers/tdameritrade.md)
+* [Interactive Brokers](../core-concepts/brokers/interactive-brokers.md)
 * [Robinhood](../core-concepts/brokers/robinhood.md)
 
 ## Signals

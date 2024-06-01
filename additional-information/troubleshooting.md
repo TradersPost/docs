@@ -8,21 +8,15 @@ description: >-
 
 ### **My strategy is only sending limit orders, how do I send market orders?**
 
-In your Strategy Subscription settings, scroll down to the Advanced Options section and make sure that you have **Entry market** and **Exit market** checked if you want market orders to be sent to the broker for both entries and exits.
-
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 10.53.16 AM.png" alt=""><figcaption><p>Market orders configuration checkboxes</p></figcaption></figure>
+In your Strategy Subscription settings, scroll down to the `Entry` and `Exit` sections and change the `Entry order type` and `Exit order type` from `Limit` to `Market`.
 
 ### Why is my strategy not trading in extended hours?
 
 If you would like your strategy to trade in extended hours, you will need to setup the alert in TradingView or TrendSpider with extended hours enabled on the chart. Then, in TradersPost, make sure you have the **Allow entry extended hours** and **Allow exit extended hours** checkboxes checked so that TradersPost knows to send orders with extended hours enabled. This tells the broker that the order is allowed to be filled in extended hours. Note that in extended hours, you can only use limit orders and market orders are not allowed.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 10.50.39 AM.png" alt=""><figcaption><p>Extended hours configuration checkboxes</p></figcaption></figure>
-
 ### Why is my strategy trading manually rather than automatically?
 
 To make your strategy submit orders to the broker automatically, make sure you have the **Auto submit** checkbox checked in your strategy subscription settings.
-
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Auto submit checkbox configuration</p></figcaption></figure>
 
 ### Why can I not see any example orders on my subscription settings page?
 

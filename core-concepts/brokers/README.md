@@ -31,36 +31,8 @@ Here you will decide which account to use for your live trading for this broker,
 
 #### **Max strategy positions**
 
+{% hint style="warning" %}
+WARNING: this feature has been deprecated and will be removed in a future version of TradersPost.
+{% endhint %}
+
 Enter the max number of positions you want allow with this broker when using it with automated strategy subscriptions. Any existing positions opened prior to using TradersPost will still count as a position, and crypto dust is often seen as a position if worth roughly more than $1.50 USD.
-
-## Supported Brokers
-
-Check out our ever growing list of supported brokers. If you do not see your broker listed here, take a look at our [broker roadmap](broker-roadmap/). These are the brokers that are being actively worked on by our development team. You can also view a longer list of our [waitlist brokers](https://traderspost.io/brokers) that we may integrate in the future. Add your email to the wait list for the broker you are interested in to be notified when it is available in the future.
-
-{% content-ref url="tradestation.md" %}
-[tradestation.md](tradestation.md)
-{% endcontent-ref %}
-
-{% content-ref url="alpaca.md" %}
-[alpaca.md](alpaca.md)
-{% endcontent-ref %}
-
-{% content-ref url="interactive-brokers.md" %}
-[interactive-brokers.md](interactive-brokers.md)
-{% endcontent-ref %}
-
-{% content-ref url="tradier.md" %}
-[tradier.md](tradier.md)
-{% endcontent-ref %}
-
-{% content-ref url="tdameritrade.md" %}
-[tdameritrade.md](tdameritrade.md)
-{% endcontent-ref %}
-
-{% content-ref url="coinbase.md" %}
-[coinbase.md](coinbase.md)
-{% endcontent-ref %}
-
-{% content-ref url="robinhood.md" %}
-[robinhood.md](robinhood.md)
-{% endcontent-ref %}

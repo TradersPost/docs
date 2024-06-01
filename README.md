@@ -47,7 +47,7 @@ TradersPost has a "bring your own broker" architecture. We are not a broker or a
 * [Alpaca](core-concepts/brokers/alpaca.md)
 * [Interactive Brokers](core-concepts/brokers/interactive-brokers.md)
 * [Tradier](core-concepts/brokers/tradier.md)
-* [TD Ameritrade](core-concepts/brokers/tdameritrade.md)
+* [Tradovate](core-concepts/brokers/broker-roadmap/tradovate.md)
 * [Coinbase](core-concepts/brokers/coinbase.md)
 * [Robinhood](core-concepts/brokers/robinhood.md)
 
@@ -57,8 +57,6 @@ Don't see your broker listed here? Check our full list of [supported brokers](ht
 
 Webhooks are signals that contain buy and sell instructions that can be produced by an automated algorithm or even a manual human trader. Signals are sent to TradersPost via webhooks using JSON.
 
-> A webhook in web development is a method of augmenting or altering the behavior of a web page or web application with custom callbacks. These callbacks may be maintained, modified, and managed by third-party users and developers who may not necessarily be affiliated with the originating website or application.
-
 You can use webhooks to send signals to TradersPost from your own custom code, or from a system like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) or [TrendSpider](https://trendspider.com/?\_go=traderspost). A webhook receives data in the JSON format. JSON is an open standard format, and data interchange format, that uses human-readable text to store and transmit data between systems.
 
 Here is an example of what the JSON would look like for **AMD** to **buy** 5 shares at a price of **$85.50** with a take profit and stop loss**.**
@@ -67,23 +65,20 @@ Here is an example of what the JSON would look like for **AMD** to **buy** 5 sha
 {
     "ticker": "AMD",
     "action": "buy",
-    "price": "85.50"
+    "orderType": "limit",
+    "limitPrice": "85.50",
+    "quantity": 5
 }
 ```
 
-Sending webhooks is easy! You can send webhooks with any computer that has internet access using widely available tools like [curl](https://curl.se) or programming languages such as [PHP](https://php.net) or [Python](https://www.python.org). Here is an example using [curl](https://curl.se) from the command line.
-
-```bash
-$ curl -H 'Content-Type: application/json; charset=utf-8' -d '{"ticker": "AMD", "action": "buy", "price": 85.50}' -X POST https://traderspost.io/trading/webhook/9d9f8620-d60d-416e-827e-0ec01ef93532/9b5b8c4264421f5515fd4fcb6571af50
-```
-
-Or if you are a user of TradingView, you can configure an alert to send a webhook with a message like this.
+Sending webhooks is easy! If you are a user of TradingView, you can configure an alert to send a webhook with a message like this.
 
 ```json
 {
     "ticker": "{{ticker}}",
     "action": "buy",
-    "price": "{{close}}"
+    "orderType": "limit",
+    "limitPrice": "{{close}}"
 }
 ```
 
@@ -103,7 +98,7 @@ You can learn more about strategies [here](core-concepts/strategies.md).
 
 ## Subscriptions
 
-A strategy subscription is how a user connects a strategy to a broker. Any signal associated with a strategy will create a new trade for the strategy subscription and allow you to either auto submit the trade to your broker or get an email to review the trade before approving or rejecting.
+A strategy subscription is how a user connects a strategy to a broker. Any signal associated with a strategy will create a new trade for the strategy subscribers and allow you to either auto submit the trade to your broker or get an email to review the trade before approving or rejecting.
 
 You can learn more about subscriptions [here](core-concepts/subscriptions.md).
 

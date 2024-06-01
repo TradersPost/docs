@@ -8,10 +8,6 @@ description: Get answers to the most frequently asked questions about TradersPos
 
 Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](../learn/paper-trading.md).
 
-### Can I paper trade with TD Ameritrade?
-
-TD Ameritrade does not support paper trading. Only the ThinkOrSwim platform supports paper trading and ThinkOrSwim does not provide an API for TradersPost to integrate with. If you would like to get started paper trading, you can register a free account with [Alpaca](../learn/paper-trading.md#alpaca) or [TradeStation](../learn/paper-trading.md#tradestation) or use the [TradersPost Paper Trading](../learn/paper-trading.md#traderspost-paper) functionality.
-
 ### Does TradersPost require coding?
 
 No. TradersPost does not require coding. You can easily connect strategies to TradersPost that other traders have created and published on [TradingView](https://cdn.traderspost.io/images/TradingView.png). Or you can use a platform like [TrendSpider](https://trendspider.com/?\_go=traderspost) which allows you to build strategies without code.
@@ -22,15 +18,15 @@ Yes, TradersPost supports trading both the long and short sides of a strategy.
 
 ### Do you support crypto?
 
-Yes, currently you can trade crypto on Alpaca and Coinbase. Coinbase is currently in the beta testing stage.
+Yes, we support crypto with several different popular crypto exchanges like [Coinbase](../core-concepts/brokers/coinbase.md) and [Kraken](../core-concepts/brokers/kraken.md).
 
 ### Do you support futures?
 
-Yes, futures support is available and can be enabled in your account settings.
+Yes, futures support is available and can be enabled in your account settings. We support futures with popular brokers like [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md) and [TradeStation](../core-concepts/brokers/tradestation.md).
 
 ### Do you support options?
 
-Yes, options support is in beta and can be enabled in your account settings.
+Yes, options support is in beta and can be enabled in your account settings. We support options with popular brokers like [TradeStation](../core-concepts/brokers/tradestation.md) and [Tradier](../core-concepts/brokers/tradier.md).
 
 ### Do you support spreads or other complex options strategies?
 
@@ -42,11 +38,11 @@ No, we don't yet support index options. We only support Stock & ETF options. So 
 
 ### What brokers do you support?
 
-TradersPost currently integrates with TD Ameritrade, Alpaca, TradeStation and Robinhood.
+TradersPost currently integrates with brokers like [TradeStation](../core-concepts/brokers/tradestation.md) and [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md). You can see our full list of brokers on our website [here](https://traderspost.io/connections).
 
 ### Can I trade my IRA?
 
-Yes, TD Ameritrade and TradeStation both support specialty account types like IRA (retirement), business and other specialty account types.
+Yes, TradeStation and other brokers supports specialty account types like IRA (retirement), business and other specialty account types. Note that with Robinhood we don't currently support trading in IRA accounts.
 
 ### What happens to existing positions when I connect my broker?
 
@@ -68,13 +64,9 @@ Your strategy subscriptions will be disabled and your account will be disabled. 
 
 TradersPost comes with a free paper account that lets you test strategies and get familiar with the platform.
 
-### Does TradersPost support ThinkOrSwim?
-
-Yes, we support TD Ameritrade accounts with ThinkOrSwim advanced features disabled. If you have ThinkOrSwim advanced features enabled, you may experience unexpected behavior and you will not have the ability to use OCO take profit and stop loss orders. It is recommended to use TradersPost with accounts that have ThinkOrSwim advanced features disabled.
-
 ### Do you have an API?
 
-No, but it is on our 2023 roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../core-concepts/webhooks.md).
+No, but it is on our future roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../core-concepts/webhooks.md).
 
 ### Are trades executed on my own dedicated server?
 
@@ -142,7 +134,9 @@ We support payments from Visa, Mastercard, American Express and Discover. We don
 
 ### Can I combine multiple indicator alerts before triggering a trade?
 
-No, we recommend that you combine the indicators as a Pine Script strategy so that it can be properly backtested in TradingView.
+Yes, you can perform logic in TradingView to combine multiple indicators in to one alert. Read this [blog post](https://blog.traderspost.io/article/new-indicator-confluence-of-alerts) to learn more about our Confluence of Alerts indicator.&#x20;
+
+{% embed url="https://www.youtube.com/watch?v=nKVavKVFV60" %}
 
 ### Are TradingView alert webhooks delayed?
 
@@ -162,7 +156,7 @@ There are several contact options on the [Contact Us Page](https://traderspost.i
 
 ### Does TradersPost support advanced order types like Fill or Kill?
 
-No, TradersPosts currently only supports Good For Day and Good Until Canceled orders from automated trading strategies.
+Yes, if the broker supports that order type, then you can send orders with the fill or kill time in force.
 
 ### If I want to upgrade my plan how will the billing be handled?
 

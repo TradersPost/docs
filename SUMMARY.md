@@ -21,9 +21,9 @@
     * [tastytrade](core-concepts/brokers/broker-roadmap/tastytrade.md)
     * [Binance](core-concepts/brokers/broker-roadmap/binance.md)
     * [Schwab](core-concepts/brokers/broker-roadmap/schwab.md)
-* [Webhooks](core-concepts/webhooks.md)
 * [Strategies](core-concepts/strategies.md)
 * [Subscriptions](core-concepts/subscriptions.md)
+* [Webhooks](core-concepts/webhooks.md)
 
 ## Learn
 
@@ -63,7 +63,6 @@
 * [Frequently Asked Questions](additional-information/faq.md)
 * [Known Limitations](additional-information/known-limitations.md)
 * [Trading Communities](additional-information/trading-communities.md)
-* [Webinars](additional-information/webinars.md)
 * [Trade Journaling](additional-information/trade-journaling.md)
 * [Useful URLs](additional-information/useful-urls.md)
 * [WebhookMessage Library](additional-information/webhookmessage-library.md)

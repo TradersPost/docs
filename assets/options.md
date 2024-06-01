@@ -18,8 +18,8 @@ Some customers separate the positions in separate broker accounts to work around
 
 ## Supported Brokers
 
-* [TD Ameritrade](../core-concepts/brokers/tdameritrade.md)
 * [TradeStation](../core-concepts/brokers/tradestation.md)
+* [Alpaca](../core-concepts/brokers/alpaca.md)
 * [Tradier](../core-concepts/brokers/tradier.md)
 
 ## Symbol Format

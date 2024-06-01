@@ -8,41 +8,18 @@ description: >-
 
 TradersPost provides basic paper trading functionality in addition to working with paper trading provided by third-party brokers. However, not all brokers provide simulated paper trading environments.
 
-**Please note that trading with paper money is only a simulation. It provides an approximation for what to expect in real live trading, but it is not a substitute for real live trading and your performance may differ.**
-
-Below you will find information about the brokers that do provide paper trading in addition to the paper trading functionality provided by TradersPost.
-
-## Alpaca
-
-Alpaca offers paper trading for free to all Alpaca users.
-
-> Paper trading is a real-time simulation environment where you can test your code. You can reset and test your algorithm as much as you want using free, real-time market data. Everything on the broker side behaves the same way as the live account except the orders aren’t routed to the real exchanges. Instead, the system simulates the order filling based on the real-time quotes.
-
-You can read more about Alpaca paper trading [here](https://alpaca.markets/docs/trading-on-alpaca/paper-trading/). If you have questions about Alpaca paper trading, you can email [support@alpaca.markets](mailto:support@alpaca.markets).
-
-[**Open Alpaca Account**](https://app.alpaca.markets/signup)
-
-## TradeStation
-
-TradeStation offers paper trading for free to all TradeStation users. You can have one margin equities and one futures paper account with TradeStation, but not more than one of each.&#x20;
-
-> Test your trading strategies before you trade. Our simulated trading account allows you to test your strategies in real-time – without risking your capital. You also have access to one of the industry’s largest historical market databases, allowing you to back-test your stock, options, and futures trading strategies on decades of historical market data.
-
-{% hint style="warning" %}
-Please be aware that the TradeStation simulated paper environment frequently has issues with delayed data, delayed order fills and delayed order cancels.
-{% endhint %}
-
-You can read more about TradeStation paper trading [here](https://www.tradestation.com/platforms-and-tools/simulated-trading/). If you have questions about TradeStation paper trading, you can email [ClientService@tradestation.com](mailto:ClientService@tradestation.com).
-
-[**Open TradeStation Account**](https://getstarted2.tradestation.com/intro?offer=0147AFWX\&sales\_rep=AHayes)
-
-## Tradier
-
-Tradier offers paper trading for free to all Tradier customers. Paper trading can be used to trade Stocks and Options.
-
 {% hint style="info" %}
-Beware that the Tradier paper trading environment is always operating off of 15 minute delayed data and there is no option to make it live. If you would like to see Tradier support paper trading with live data, you can email them at [service@tradierbrokerage.com](mailto:service@tradierbrokerage.com).
+Please note that trading with paper money is only a simulation. It provides an approximation for what to expect in real live trading, but it is not a substitute for real live trading and your performance may differ.
 {% endhint %}
+
+The following brokers supported by TradersPost currently support paper trading.
+
+* TradeStation - has delayed data
+* Alpaca - realtime data
+* Tradier - 15 minutes delayed data
+* Tradovate - realtime data
+* Interactive Brokers - realtime data
+* Bybit - realtime data
 
 ## TradersPost Paper
 
@@ -87,9 +64,6 @@ You can reset the TradersPost paper broker account balances, orders and position
 
 ## Other Brokers
 
-Unfortunately, not all brokers support simulated paper trading environments. The following brokers that TradersPost supports do not offer paper trading functionality.
-
-* [Robinhood](https://robinhood.com/?utm\_source=traderspost)
-* [TDAmeritrade](https://www.tdameritrade.com/?utm\_source=traderspost)
+Unfortunately, not all brokers support simulated paper trading environments. If your current broker does not support paper trading, try another one of our supported brokers.
 
 If you have any other questions about paper trading on TradersPost, you can email [support@traderspost.io](mailto:support@traderspost.io).
