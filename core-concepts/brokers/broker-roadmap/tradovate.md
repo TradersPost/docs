@@ -27,10 +27,42 @@ Tradovate is a new broker integration for TradersPost, but generally it has been
 
 ## Limitations
 
-The Tradovate integration comes with a few limitations compared to other integrations. These limitations may change in the future as we are able to improve the integration.
+The TradersPost + Tradovate integration currently does not support market data so we are not able to fetch quotes. This means we have the following limitations:
 
-The TradersPost + Tradovate integration currently does not have quotes/market data. This may change in the future if we are able to implement market data. Without market data, we aren't able to implement the following features:
+### Limit orders without a price in the signal
 
-* Limit orders without a price in the signal. If limit orders are configured and the signal does not have a price, then a market order will be submitted.
-* No trailing stop functionality.
-* No Profit & Loss or current price data on open positions.
+This means you are required to send a price in your signal since we aren't able to fetch quotes. In the following example, since we are entering with a market order and we don't know what price you will be filled at, we will use the `signalPrice` to calculate the limit order limit price of `$18600`.
+
+{% hint style="warning" %}
+If limit orders are configured and the signal does not have a price, then a market order will be submitted.
+{% endhint %}
+
+```json
+{
+    "ticker": "MNQ",
+    "action": "buy",
+    "orderType": "market",
+    "signalPrice": 18500,
+    "takeProfit": {
+        "amount": 100
+    }
+}
+```
+
+And if you are using limit orders, then the entry limit price will be used to calculate the take profit limit price. In this example, a take profit limit order will be calculated with a limit price of `$18600`.
+
+```json
+{
+    "ticker": "MNQ",
+    "action": "buy",
+    "orderType": "limit",
+    "limitPrice": 18500,
+    "takeProfit": {
+        "amount": 100
+    }
+}
+```
+
+### No Profit & Loss or current price data on open positions.
+
+Since we aren't able to use your market data or fetch quotes, we aren't able to show open position P\&L.
