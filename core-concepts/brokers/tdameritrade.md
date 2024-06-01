@@ -7,6 +7,10 @@ description: >-
 
 # TDAmeritrade
 
+{% hint style="danger" %}
+The TDAmeritrade integration is no longer active and available and unfortunately, Schwab has thus far rejected our application to integrate TradersPost with them. We hope this changes in the future but right now Schwab is not available. Please email [traderapi@schwab.com](<mailto:traderapi@schwab.com >) to let them know you would like to use your Schwab accounts with TradersPost.
+{% endhint %}
+
 ## Contact Information
 
 Email: [api@tdameritrade.com](mailto:api@tdameritrade.com)
