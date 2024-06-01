@@ -11,7 +11,7 @@
   * [Tradier](core-concepts/brokers/tradier.md)
   * [TDAmeritrade](core-concepts/brokers/tdameritrade.md)
   * [Robinhood](core-concepts/brokers/robinhood.md)
-  * [Tradovate](core-concepts/brokers/tradovate.md)
+  * [Tradovate](core-concepts/brokers/broker-roadmap/tradovate.md)
   * [Interactive Brokers](core-concepts/brokers/interactive-brokers.md)
   * [Coinbase](core-concepts/brokers/coinbase.md)
   * [Bybit](core-concepts/brokers/bybit.md)

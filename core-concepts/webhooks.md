@@ -39,12 +39,24 @@ You can continue reading and learning about webhooks below. You can always come 
 Here is a quick reference list of all the supported fields and values for the TradersPost webhook JSON.
 
 * **ticker** - The ticker symbol name. Example **AMD.**
-* **action** - The signal action. The only supported values are `buy`, `sell`,  `exit`, `cancel` or `add`.
-* **sentiment** - The signal sentiment. The only supported values are `bullish`, `long`, `bearish`, `short` and `flat`.
-* **price** - The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.
+* **action** - The signal action. The supported values are `buy`, `sell`,  `exit`, `cancel` or `add`.
+* **sentiment** - The signal sentiment. The supported values are `bullish`, `long`, `bearish`, `short` and `flat`.
+* **optionType** - The type of option contract to trade. The supported values are `both`, `call` and `put`.
+* **intrinsicValue** - The intrinsic value of the option contract to trade. The supported values are `itm` (in the money) and `otm` (out of the money).
+* **expiration** - The expiration of the option contract to trade. The value can be a specific date like `2024-05-06` or a relative date expression like `+6 months`.
+* **strikeCount** - How many strikes to ask for from the broker when executing options trades and scanning the option chain to find a contract to trade.
+* **strikesAway** - How many strikes away from at the money to select.
+* **orderType** - The type of order to create. Supported values are `market`, `limit`, `stop`, `stop_limit`, and `trailing_stop`.
+* **limitPrice** - The limit price of the buy or sell action if `limit` orders are used. If you omit this value and `limit` orders are used, the current market price will be used when the trade is executed.
+* **stopPrice** - The stop price of the buy or sell action if `stop_limit` orders are used. If you omit this value and `stop` or `stop_limit` orders are used, the current market price will be used when the trade is executed.
+* **trailAmount** - When `orderType=trailing_stop`, you can send a dollar amount  in the `trailAmount` field to create a trailing stop order.
+* **trailPercent** - When `orderType=trailing_stop`, you can send a percentage in the `trailPercent` field to create a trailing stop order.
+* **quantityType** - The type of the value sent in the `quantity` field documented below. The only supported values are `fixed_quantity`, `dollar_amount`, `risk_dollar_amount`, `percent_of_equity`, `percent_of_position`. Default is `fixed_quantity` when you send a `quantity` without a `quantityType`.
 * **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. Check **Use signal quantity** in your strategy subscription settings to use this quantity.
 * **takeProfit** - The take profit to attach to your entry order. This objects supported fields are `limitPrice`, `price`, `percent`. Check **Use signal take profit** in your strategy subscription settings to use this take profit.
-* **stopLoss** - The stop loss to attach to your entry order. This objects supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailPrice` and `trailPercent`. Check **Use signal stop loss** in your strategy subscription settings to use this stop loss.
+* **stopLoss** - The stop loss to attach to your entry order. This objects supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailAmount` and `trailPercent`. Check **Use signal stop loss** in your strategy subscription settings to use this stop loss.
+* **timeInForce** - The time in force for your order. The supported values are `day`, `gtc`, `gtd`, `opg`, `cls`, `ioc` and `fok`.
+* **extendedHours** - Whether or not to send the order as an extended hours order. This is only applicable for stocks and the supported values are `true` or `false`.
 
 Properties other than the ones listed above can be sent, but will be ignored by TradersPost. This means you can send extra properties for debugging purposes.
 
@@ -63,15 +75,27 @@ Here is the full reference documentation for the TradersPost webhook JSON.
 
 #### Request Body
 
-| Name                                     | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ticker<mark style="color:red;">\*</mark> | String | The ticker symbol name. Example **AMD**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| action<mark style="color:red;">\*</mark> | String | <p>The signal action. Supported values are <strong>buy,</strong> <strong>sell, exit, cancel or add.</strong></p><p></p><p><strong>buy</strong> - Exit bearish position and optionally open bullish position</p><p><strong>sell</strong> - Exit bullish position and optionally open bearish position</p><p><strong>exit</strong> - Exit open position without entering a new position on the other side.</p><p><strong>cancel</strong> - Cancel open orders</p><p><strong>add</strong> - Add to existing open position</p> |
-| price                                    | String | The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.                                                                                                                                                                                                                                                                                                                                                                                             |
-| quantity                                 | String | The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.                                                                                                                                                                                                                                                                                                                                                                                                              |
-| sentiment                                | String | <p><strong>bullish</strong> - Open position after trade is executed should be bullish or flat.</p><p><strong>bearish</strong> - Open position after trade is executed should be bearish or flat.</p><p><strong>flat</strong> - No position should be open after trade is executed.</p>                                                                                                                                                                                                                                     |
-| stopLoss                                 | Object | [Read more](webhooks.md#signal-stop-loss)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| takeProfit                               | Object | [Read more](webhooks.md#signal-take-profit)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Name                                     | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ticker<mark style="color:red;">\*</mark> | String  | The ticker symbol name. Example **AMD**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| action<mark style="color:red;">\*</mark> | String  | <p>The signal action. Supported values are the following:</p><p></p><p><code>buy</code> - Exit bearish position and optionally open bullish position</p><p></p><p><code>sell</code> - Exit bullish position and optionally open bearish position</p><p></p><p><code>exit</code> - Exit open position without entering a new position on the other side.</p><p></p><p><code>cancel</code> - Cancel open orders</p><p></p><p><code>add</code> - Add to existing open position</p>                                                                                                                                                                                                                                                                                                                                                                            |
+| sentiment                                | String  | <p><code>bullish</code> - Open position after trade is executed should be bullish or flat.</p><p></p><p><code>bearish</code> - Open position after trade is executed should be bearish or flat.</p><p></p><p><code>flat</code> - No position should be open after trade is executed.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| optionType                               | String  | The type of option contract to trade. The supported values are `both`, `call` and `put`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| intrinsicValue                           | String  | The intrinsic value of the option contract to trade. The supported values are `itm` (in the money) and `otm` (out of the money).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| expiration                               | String  | The expiration of the option contract to trade. The value can be a specific date like `2024-05-06` or a relative date expression like `+6 months`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| strikeCount                              | Integer | How many strikes to ask for from the broker when executing options trades and scanning the option chain to find a contract to trade.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| strikesAway                              | Integer | How many strikes away from at the money to select.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| orderType                                | String  | The type of order to create. Supported values are `market`, `limit`, `stop`, `stop_limit`, and `trailing_stop`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| limitPrice                               | Number  | The price of the buy or sell action. If you omit this value, the current market price will be used when the trade is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| stopPrice                                | Number  | The stop price of the buy or sell action if `stop_limit` orders are used. If you omit this value and `stop` or `stop_limit` orders are used, the current market price will be used when the trade is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| trailAmount                              | Number  | When `orderType=trailing_stop`, you can send a dollar amount  in the `trailAmount` field to create a trailing stop order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| trailPercent                             | Number  | When `orderType=trailing_stop`, you can send a percentage in the `trailPercent` field to create a trailing stop order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| quantityType                             | Number  | <p>The type of the value sent in the <code>quantity</code> field documented below. Supported values are the following:</p><p></p><p><code>fixed_quantity</code> - A fixed quantity number that is used for the order.</p><p></p><p><code>dollar_amount</code> - Dynamically calculates a quantity for the given dollar amount.</p><p></p><p><code>risk_dollar_amount</code> - Dynamically calculates a quantity for the given risk dollar amount. This type requires a stop loss.</p><p></p><p><code>percent_of_equity</code> - Dynamically calculates a quantity for the given percent of equity.</p><p></p><p><code>percent_of_position</code> - Dynamically calculates a quantity for the given percent of position.</p><p></p><p>Default is <code>fixed_quantity</code> when you send a <code>quantity</code> without a <code>quantityType</code>.</p> |
+| quantity                                 | Number  | The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| stopLoss                                 | Object  | [Read more](webhooks.md#signal-stop-loss)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| takeProfit                               | Object  | [Read more](webhooks.md#signal-take-profit)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| timeInForce                              | String  | <p>The time in force for your order. The supported values are <code>day</code>, <code>gtc</code>, <code>gtd</code>, <code>opg</code>, <code>cls</code>, <code>ioc</code> and <code>fok</code>.<br><br><code>day</code> - Good For Day<br><br><code>gtc</code> - Good Until Canceled<br><br><code>gtd</code> - Good Until Date<br><br><code>opg</code> - Market on Open / Limit on Open<br><br><code>cls</code> - Market on Close / Limit on Close<br><br><code>ioc</code> - Immediate or Cancel<br><br><code>fok</code> - Fill or Kill</p>                                                                                                                                                                                                                                                                                                                 |
+| extendedHours                            | Boolean | Whether or not to send the order as an extended hours order. This is only applicable for stocks and the supported values are either `true` or `false`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 {% tabs %}
 {% tab title="200: OK Successful webhook response." %}
@@ -218,9 +242,67 @@ You can add to an existing open position by using the **add** action. This will 
 }
 ```
 
-### Signal Quantity
+### Order Type
 
-The signal quantity will only be used if you check **Use signal quantity** in the strategy subscription settings in TradersPost.
+The signal `orderType` will only be used if you check **Use signal order type for entries** or **Use signal order type for exits**.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "orderType": "limit",
+    "limitPrice": 50.50
+}
+```
+
+Or if you want to use a stop limit order:
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "orderType": "stop_limit",
+    "stopPrice" 60,
+    "limitPrice": 50.50
+}
+```
+
+### Trailing Stop
+
+You can easily create trailing stop orders by sending `trailing_stop` in the `orderType` field. The following JSON will create a $1 trailing stop order for the open SQ position.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "exit",
+    "orderType": "trailing_stop",
+    "price": 71,
+    "trailAmount": "1"
+}
+```
+
+{% hint style="info" %}
+Note that if the broker you are using does not support fetching quotes, you will need to be sure to send the current price in the `price` field so that we can use that price to calculate your trailing stop price. In the above example, the starting trailing stop price would be $70. If the price moves up to $72, then the trailing stop price would update to $71.
+{% endhint %}
+
+If you want to send a trailing stop with your entry order so that the trailing stop order is active immediately after your entry order fills and your position is open, you can do so by using the `stopLoss` object. The following example will create a buy limit order with a limit price of $71 and a trailing stop loss order with an initial trailing stop price of $70.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "orderType": "limit",
+    "limitPrice": 71,
+    "stopLoss": {
+        "type": "trailing_stop",
+        "trailAmount": 1
+    }
+}
+```
+
+### Quantity
+
+The signal `quantity` will only be used if you check **Use signal quantity** in the strategy subscription settings in TradersPost.
 
 ```json
 {
@@ -234,6 +316,59 @@ The signal quantity will only be used if you check **Use signal quantity** in th
 The full quantity of the open position in the broker will be exited if you do not send a quantity in the exit signal. TradersPost is only able to partially exit open positions by sending the explicit quantity to exit in the webhook JSON.
 {% endhint %}
 
+### Quantity Type
+
+You can optionally send a value in the `quantityType` field to control how the value in the `quantity` field should be handled. By default the value in the `quantity` field is used as the quantity for the order directly.
+
+This field is only used if you have **Use signal quantity** checked in the strategy subscription settings in TradersPost.
+
+The supported values for `quantityType` are the following:
+
+* `fixed_quantity` - A fixed quantity number that is used for the order. This is the default when you send a `quantity` without a `quantityType`.
+* `dollar_amount` - Dynamically calculates a quantity for the given dollar amount.
+* `risk_dollar_amount` - Dynamically calculates a quantity for the given risk dollar amount. This type requires a stop loss.
+* `percent_of_equity` - Dynamically calculates a quantity for the given percent of equity.
+* `percent_of_position` - Dynamically calculates a quantity for the given percent of position.
+
+Here are some examples:
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "quantityType": "fixed_quantity",
+    "quantity": 100
+}
+```
+
+This will buy 100 shares of $SQ.
+
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "ticker": "SQ",
+    "action": "buy",
+    "quantityType": "dollar_amount",
+    "quantity": 1000
+}
+</code></pre>
+
+If the price of $SQ at the time of executing the trade was $100, then TradersPost would calculate a quantity of 10.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "price": 100,
+    "quantityType": "risk_dollar_amount",
+    "quantity": 100,
+    "stopLoss": {
+        "type": "stop",
+        "stopPrice": 90
+    }
+}
+```
+
+The `risk_dollar_amount` quantity in this example means you want to calculate a quantity that would only allow you to lose roughly $100 when the stop loss is hit. In this example, TradersPost would calculate a quantity of 10. If you enter at $100 and get stopped out at $90 and the most you want to lose is $100, then you can only buy a quantity of 10.
+
 ### Signal Price
 
 The signal price is optional. If you omit a price from the signal, the mid point between the bid and the ask will be used if you have limit orders configured.
@@ -246,7 +381,7 @@ The signal price is optional. If you omit a price from the signal, the mid point
 }
 ```
 
-### Signal Take Profit
+### Take Profit
 
 You can optionally send take profit information with your entry signals.
 
@@ -300,7 +435,7 @@ When using market orders and you are calculating a relative take profit price, T
 }
 ```
 
-### Signal Stop Loss
+### Stop Loss
 
 You can optionally send stop loss information with your entry signals.
 
@@ -315,7 +450,7 @@ The following fields are allowed on the **stopLoss** object.
 * **amount** - Relative dollar amount stop loss to calculate relative to entry price.
 * **stopPrice** - Absolute stop price calculated on the webhook sender side.
 * **limitPrice** - Absolute limit price calculated on the webhook sender side. **type** must be set to **stop\_limit** to use this field.
-* **trailPrice** - A dollar value away from the highest water mark. If you set this to 2.00 for a sell trailing stop, the stop price is always hwm - 2.00. **type** must be set to **trailing\_stop** to use this field.
+* **trailAmount** - A dollar value away from the highest water mark. If you set this to 2.00 for a sell trailing stop, the stop price is always hwm - 2.00. **type** must be set to **trailing\_stop** to use this field.
 * **trailPercent** - A percent value away from the highest water mark. If you set this to 1.0 for a sell trailing stop, the stop price is always hwm \* 0.99. **type** must be set to **trailing\_stop** to use this field.
 
 **Percentage stop loss calculated relative to entry price.**
@@ -396,7 +531,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
     "action": "buy",
     "stopLoss": {
         "type": "trailing_stop",
-        "trailPrice": 1
+        "trailAmount": 1
     }
 }
 ```
@@ -416,6 +551,69 @@ You can use the take profit and stop loss functionality together. Just send us b
         "type": "stop",
         "stopPrice": 10.71
     }
+}
+```
+
+### Time In Force
+
+If you want to control the order time in force from the webhook, you can optionally send a value in the `timeInForce` field. This time in force will only be used if you have **Use signal time in force for entries** or **Use signal time in force for exits** checked.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "orderType": "limit",
+    "limitPrice": 50.50
+    "timeInForce": "gtc"
+}
+```
+
+Or if want to send the order with extended hours enabled so that the order can be filled in extended hours, you can use the `extendedHours` field to send a boolean `true` or `false` value.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "orderType": "limit",
+    "limitPrice": 50.50,
+    "timeInForce": "gtc",
+    "extendedHours" true
+}
+```
+
+### Options
+
+You have the ability to control the option chain scanning from the webhook or you can even send a specific contract to trade instead of scanning the option chain dynamically to find a contract to trade. Here is an example that will buy long calls using the contract in the `ticker` field.
+
+```json
+{
+    "ticker": "SQ 240510C68",
+    "action": "buy"
+}
+```
+
+Or if you want to instead scan the option chain dynamically to find a contract to trade, you can do so like this. This example will scan the option chain and look for an in the money call that is expiring 6 months from now and is 2 strikes away from at the money.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "optionType": "call",
+    "expiration": "+6 months",
+    "intrinsicValue": "itm",
+    "strikesAway": 2
+}
+```
+
+You can also specify the specific contract to trade with individual values instead of using the contract symbol in the `ticker` field. The following is equivalent to sending `SQ 240510C68` in the `ticker` field.
+
+```json
+{
+    "ticker": "SQ",
+    "action": "buy",
+    "optionType": "call",
+    "expiration": "2024-05-10",
+    "strikePrice": 68
 }
 ```
 

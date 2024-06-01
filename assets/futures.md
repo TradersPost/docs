@@ -13,7 +13,7 @@ TradersPost Automated Futures Trading Setup
 ## Supported Brokers
 
 * [TradeStation](../core-concepts/brokers/tradestation.md)
-* [Tradovate](../core-concepts/brokers/tradovate.md) (coming soon)
+* [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md) (coming soon)
 
 ## Supported Tickers
 
