@@ -62,7 +62,7 @@ When market orders are filled, the configured option will be used to fill the pa
 
 You can reset the TradersPost paper broker account balances, orders and positions by navigating to **Connected Brokers** and then click the **Reset** button next to the TradersPost paper broker you want to reset.
 
-## Other Brokers
+## Brokers
 
 Unfortunately, not all brokers support simulated paper trading environments. If your current broker does not support paper trading, try another one of our supported brokers.
 
