@@ -58,7 +58,7 @@ Here is the full reference documentation for the TradersPost webhook JSON.
 
 #### Query Parameters
 
-<table><thead><tr><th width="157">Name</th><th width="99">Type</th><th>Description</th></tr></thead><tbody><tr><td>uuid<mark style="color:red;">*</mark></td><td>String</td><td>Unique webhook UUID string used to identify a webhook. This never changes.</td></tr><tr><td>password<mark style="color:red;">*</mark></td><td>String</td><td>Password string used to protect access to your webhook. You can change this by clicking Generate New URL in TradersPost when editing your webhook.</td></tr></tbody></table>
+<table><thead><tr><th width="184">Name</th><th width="99">Type</th><th>Description</th></tr></thead><tbody><tr><td>uuid<mark style="color:red;">*</mark></td><td>String</td><td>Unique webhook UUID string used to identify a webhook. This never changes.</td></tr><tr><td>password<mark style="color:red;">*</mark></td><td>String</td><td>Password string used to protect access to your webhook. You can change this by clicking Generate New URL in TradersPost when editing your webhook.</td></tr></tbody></table>
 
 #### Request Body
 
