@@ -14,12 +14,12 @@ Please note that trading with paper money is only a simulation. It provides an a
 
 The following brokers supported by TradersPost currently support paper trading.
 
-* TradeStation - has delayed data
-* Alpaca - realtime data
-* Tradier - 15 minutes delayed data
-* Tradovate - realtime data
-* Interactive Brokers - realtime data
-* Bybit - realtime data
+* **TradeStation** - has delayed fills and market data sometimes
+* **Alpaca** - realtime fills and realtime market data
+* **Tradier** - 15 minutes delayed
+* **Tradovate** - realtime fills and no market data
+* **Interactive Brokers** - realtime fills and market data
+* **Bybit** - realtime fills and market data
 
 ## TradersPost Paper
 
