@@ -2,6 +2,7 @@
 
 * [What is TradersPost?](README.md)
 * [Getting Started](getting-started.md)
+* [What's new?](https://app.gitbook.com/o/MWqRLlYTaCaJh8cAqevI/s/faGHqKUfUy1dxnpnFnAi/)
 
 ## Core Concepts
 
