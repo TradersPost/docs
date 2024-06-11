@@ -15,3 +15,7 @@ Phone: [+1 (888) 247-1963](tel:18882471963)
 * Stocks
 * Futures
 * Crypto
+
+## Market Data
+
+Webull does not provide access to market data through their API, so the we use market data from [Polygon](https://polygon.io/) at no additional charge to you for stocks only. Futures and Crypto do not have market data.
