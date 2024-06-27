@@ -22,3 +22,8 @@ Phone: none
 ## Supported Countries
 
 Alpaca is supported in multiple countries. Take a look at the [supported countries list](https://alpaca.markets/support/countries-alpaca-is-available) to determine if you are eligible to use Alpaca in your country.
+
+## Limitations
+
+* Alpaca does not support complex orders (OCO, OTO, bracket) for the Crypto or Options asset class. This is a limitation of the Alpaca broker and not a limitation of TradersPost.
+
