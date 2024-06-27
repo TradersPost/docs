@@ -34,7 +34,7 @@ When setting up a strategy within TradersPost you will have the ability to choos
 
 * **Both** - Buy calls when bullish (action=buy) and buy puts when bearish (action=sell).
 * **Call** - Buy calls when bullish (action=buy) and sell calls when bearish (action=sell).
-* **Put** - Buy puts when bearish (action=sell) and sell puts when bullish (action=buy.
+* **Put** - Buy puts when bearish (action=sell) and sell puts when bullish (action=buy).
 
 {% hint style="warning" %}
 It may seem counterintuitive that an action of **sell** will actually buy puts and an action of **buy** will sell puts. Essentially, a **buy** action indicates a bullish sentiment and a **sell** signal indicates a bearish sentiment.\
