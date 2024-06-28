@@ -18,4 +18,8 @@ Phone: [+1 (888) 247-1963](tel:18882471963)
 
 ## Market Data
 
-tastytrade does not provide access to market data through their API, so the we use market data from [Polygon](https://polygon.io/) at no additional charge to you for stocks only. Futures and Crypto do not have market data.
+tastytrade does not provide access to market data through their API, so the we use market data from [Polygon](https://polygon.io/) at no additional charge to you for stocks and crypto only.
+
+{% hint style="warning" %}
+Futures do not support market data and you are not able to fetch quotes for futures symbols or see P\&L for futures positions.
+{% endhint %}
