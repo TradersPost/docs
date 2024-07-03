@@ -20,3 +20,8 @@ Phone: [+1 (284) 494-2423](tel:12844942423)
 ## Supported Asset Classes
 
 * Crypto
+
+## Limitations
+
+* Does not currently support spot margin trading.
+* Only works with unified trading accounts.
