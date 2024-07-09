@@ -24,9 +24,14 @@ Some customers separate the positions in separate broker accounts to work around
 
 ## Symbol Format
 
-TradersPost understands many different stock options symbol formats. Since every broker and trading platform has subtle differences in the format we try to be as flexible as possible.
+TradersPost options symbols are in the following format: `TSLA 210121C325`
 
-<table><thead><tr><th width="212.54110898661565">Symbol</th><th>Type</th></tr></thead><tbody><tr><td>TSLA 210121C325</td><td>TradeStation, TradersPost</td></tr><tr><td>TSLA_210121C325</td><td>TD Ameritrade</td></tr></tbody></table>
+* TSLA - The underlying ticker symbol
+* 21 - The two digit year with leading 0
+* 01 - The two digit month with leading 0
+* 21 - The two digit day with leading 0
+* C - The option type (C or P)
+* 325 - The strike price
 
 ## Supported Option Types
 
