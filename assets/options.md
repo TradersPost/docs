@@ -51,13 +51,47 @@ In this example we have configured our strategy subscription to do the following
 * **Asset class = Options** will buy and sell options contracts.
 * **Option Type = Both** will buy calls when bullish and buy puts when bearish.
 * **Intrinsic value = In The Money** will filter out any Out Of The money contracts.
-* **Expiration = +3 months** will filter out any contracts that expire before 3 months out. If you want to trade same day expiration (0DTE) contracts, then you can enter **0 days** in the expiration field or leave the field blank and TradersPost will select the first expiration date returned by the broker. You can enter an expiration in the strategy subscription settings, click save, then you can see the example entry order and the contract that was selected at the top right of the page.\
-  **Strike Count** limits how many strikes to analyze per expiration date when we are scanning the option chain. This does not effect which strike gets selected, it just reduces the number of strikes that will be returned from the broker API for each expiration date. As such, there is no optimal value for this field that will change which strike is selected.
+* **Expiration = +3 months** will filter out any contracts that expire before 3 months out. If you want to trade same day expiration (0DTE) contracts, then you can enter **0 days** in the expiration field or leave the field blank and TradersPost will select the first expiration date returned by the broker. You can enter an expiration in the strategy subscription settings, click save, then you can see the example entry order and the contract that was selected at the top right of the page.
+* **Strike Count** limits how many strikes to analyze per expiration date when we are scanning the option chain. This does not effect which strike gets selected, it just reduces the number of strikes that will be returned from the broker API for each expiration date. As such, there is no optimal value for this field that will change which strike is selected.
 * **Strikes Away** with a value of **3** will select the 3rd contract away from At The Money.
 
 ![Options Asset Configuration Example](<../.gitbook/assets/Screen Shot 2022-02-11 at 10.06.21 PM.png>)
 
-## Signals
+You are able to control the option chain scanning functionality from webhooks. Here is an example:
+
+```json
+{
+    "ticker": "AAPL",
+    "action": "buy",
+    "expiration": "+6 months",
+    "instrinsicValue": "itm",
+    "optionType": "both",
+    "strikesAway": 3
+}
+```
+
+Or send the exact contract you want to trade instead of using the option chain scanning functionality:
+
+```json
+{
+    "ticker": "AAPL",
+    "action": "buy",
+    "expiration": "2023-01-20",
+    "optionType": "call",
+    "strikePrice": 325
+}
+```
+
+Or send the full option contract symbol in the `ticker` parameter:
+
+```json
+{
+    "ticker": "AAPL 230120C325",
+    "action": "buy"
+}
+```
+
+## Webhook Signals
 
 It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
@@ -119,12 +153,7 @@ You can optionally include a **quantity** in the signal that can then be used in
 }
 ```
 
-If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy To Open Limit** order for **5** contracts. If you don’t select entry market or exit market, then we will submit a limit order with the midpoint price.\
-
-
-{% hint style="warning" %}
-TradersPost does not currently support sending prices in signals for options. If you send a price in the signal, the value will not be used. If your strategy subscription is configured to send limit orders, then we will calculate the midpoint price between the bid and ask and use that price for the limit order.
-{% endhint %}
+If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy To Open Limit** order for **5** contracts. If you don’t select entry market or exit market, then we will submit a limit order with the midpoint price.
 
 ## Paper Options Market Data
 
