@@ -64,6 +64,7 @@
 * [Error Messages](additional-information/error-messages.md)
 * [Troubleshooting](additional-information/troubleshooting.md)
 * [Frequently Asked Questions](additional-information/faq.md)
+* [Office Hours](additional-information/office-hours.md)
 * [Known Limitations](additional-information/known-limitations.md)
 * [Trading Communities](additional-information/trading-communities.md)
 * [Trade Journaling](additional-information/trade-journaling.md)
