@@ -62,3 +62,7 @@ And if you are using limit orders, then the entry limit price will be used to ca
 ### No Profit & Loss or current price data on open positions.
 
 Since we aren't able to use your market data or fetch quotes, we aren't able to show open position P\&L.
+
+### Is the API Access Add-On Required to use Tradovate?
+
+No, the API Access Add-On that Tradovate charges a monthly subscription for is not required to use TradersPost.
