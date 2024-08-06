@@ -1,9 +1,5 @@
 # E\*TRADE
 
-{% hint style="info" %}
-COMING SOON. Join the [wait list](https://traderspost.io/broker/etrade) to be notified once E\*TRADE is available.
-{% endhint %}
-
 ## Contact Information
 
 Email: [techsupport@etrade.com](mailto:techsupport@etrade.com)
