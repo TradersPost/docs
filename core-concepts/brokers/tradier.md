@@ -20,6 +20,10 @@ Phone: [+1 (980) 272-3880](tel:19802723880)
 
 ## Connect Tradier Sandbox Paper Account
 
+{% hint style="warning" %}
+Please be aware that Tradier paper accounts are delayed by 15 minutes and there is no way to change this. This means that all market data quotes and order fills will be based on data that is 15 minutes delayed.
+{% endhint %}
+
 To connect your Tradier sandbox paper account to TradersPost, follow these steps:
 
 1. **Login to Tradier:**
