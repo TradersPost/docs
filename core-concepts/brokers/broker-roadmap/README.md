@@ -5,7 +5,7 @@ If you do not see your broker listed here, please visit [this page](https://trad
 We plan to continually add more broker integrations to our system over time. Here are the brokers most immediately on our roadmap.
 
 * [E\*TRADE](../e-trade.md)
-* [tastytrade](tastytrade.md)
+* [tastytrade](../tastytrade.md)
 * [Binance](binance.md)
 * [Schwab](schwab.md)
 

@@ -12,7 +12,7 @@ description: >-
 * [Coinbase](../core-concepts/brokers/coinbase.md)
 * [Kraken](../core-concepts/brokers/kraken.md)
 * [Bybit](../core-concepts/brokers/bybit.md)
-* [Tastytrade](../core-concepts/brokers/broker-roadmap/tastytrade.md) (coming soon)
+* [Tastytrade](../core-concepts/brokers/tastytrade.md) (coming soon)
 
 ## Crypto Dust
 

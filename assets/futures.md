@@ -14,7 +14,7 @@ TradersPost Automated Futures Trading Setup
 
 * [TradeStation](../core-concepts/brokers/tradestation.md)
 * [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md)
-* [Tastytrade](../core-concepts/brokers/broker-roadmap/tastytrade.md) (coming soon)
+* [Tastytrade](../core-concepts/brokers/tastytrade.md) (coming soon)
 
 ## Supported Tickers
 
