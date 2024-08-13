@@ -30,6 +30,10 @@ Now click **API Management** in the left menu and then click **Register an API A
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-06-11 at 9.22.29 AM.png" alt=""><figcaption><p>Webull API Management</p></figcaption></figure>
 
+{% hint style="info" %}
+If the **API Management** link is missing from the left menu, please contact Webull support at [api@webull.com](mailto:api@webull.com) to enable it for you. It is not activated by default.
+{% endhint %}
+
 Follow the steps to register your API application and afterwards you should land on a screen like this. Click **Revise** and change the expiry date from 1 day to 7 days.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-06-11 at 9.22.53 AM.png" alt=""><figcaption><p>Webull API Management</p></figcaption></figure>
