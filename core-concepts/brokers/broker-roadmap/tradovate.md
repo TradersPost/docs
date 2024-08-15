@@ -21,6 +21,14 @@ Phone: [+1 (844) 283-3100](tel:18442833100)
 
 * Futures
 
+## Is the API Access Add-On Required to use Tradovate?
+
+No, the API Access Add-On that Tradovate charges a monthly subscription for is not required to use TradersPost.
+
+## 401 Access Denied
+
+If you get a 401 Access Denied when trying to submit orders to your live account, this is caused by having 2fa enabled. Make sure you have approved TradersPost after connecting to TradersPost. Check your spam/junk/promotions in your email for an email asking you to approve TradersPost.
+
 ## Limitations
 
 The TradersPost + Tradovate integration currently does not support market data so we are not able to fetch quotes. This means we have the following limitations:
@@ -62,7 +70,3 @@ And if you are using limit orders, then the entry limit price will be used to ca
 ### No Profit & Loss or current price data on open positions.
 
 Since we aren't able to use your market data or fetch quotes, we aren't able to show open position P\&L.
-
-### Is the API Access Add-On Required to use Tradovate?
-
-No, the API Access Add-On that Tradovate charges a monthly subscription for is not required to use TradersPost.
