@@ -33,6 +33,10 @@ If you get a 401 Access Denied when trying to submit orders to your live account
 
 The TradersPost + Tradovate integration currently does not support market data so we are not able to fetch quotes. This means we have the following limitations:
 
+### Market Data for TradersPost Paper Accounts
+
+Due to the lack of market data with Tradovate, a TradersPost paper broker cannot use Tradovate as a [connection for market data](../../../learn/paper-trading.md#market-data-source). [TradeStation](../tradestation.md), however, can be used as an alternative.
+
 ### Limit orders without a price in the signal
 
 This means you are required to send a price in your signal since we aren't able to fetch quotes. In the following example, since we are entering with a market order and we don't know what price you will be filled at, we will use the `signalPrice` to calculate the limit order limit price of `$18600`.
