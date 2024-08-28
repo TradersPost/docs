@@ -146,6 +146,10 @@ TradingView webhooks can be delayed by anywhere from 2-3 seconds to upwards of 6
 
 TradersPost is a Software as a Service. We charge a monthly or yearly software subscription fee. The base Starter plan costs $49 per month or $499.80 per year if paid annually. You can learn more about our available pricing [here](https://traderspost.io/pricing).
 
+### Does TradersPost require a computer to be online and on at all times? Or does the TradingView window have to be open for TradersPost to work?
+
+No, TradingView alerts and TradersPost both work in the cloud and independently of your computer. Unlike other services that might use a chrome extension to pass along the alert to your broker, TradersPost receives webhook requests behind-the-scenes from the cloud so you don't have to worry about losing internet or keeping your computer on.
+
 ### Do I have to be logged in to TradersPost for my strategies to work?
 
 No, TradersPost, TradingView and TrendSpider all live in the cloud so they are always online. Your computer does not have to be running for your automated trading strategies to work.
