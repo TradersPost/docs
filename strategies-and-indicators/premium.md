@@ -7,6 +7,10 @@ description: >-
 
 # Premium
 
+* [Zeiierman](https://www.zeiierman.com/)
+* [Trendoscope](https://www.trendoscope.io/)
+* [Kioseff Trading](https://www.kiosefftrading.com/)
+* [David.Tech](https://daviddtech.com/tradingview-strategies/)
 * [TD Strategic](https://whop.com/td-strategic/)
 * [Rainbow Trends](https://rainbow-trends.com/)
 * [LuxAlgo](https://www.luxalgo.com/)
