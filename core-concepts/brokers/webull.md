@@ -1,7 +1,7 @@
 # Webull
 
-{% hint style="info" %}
-COMING SOON. Join the [wait list](https://traderspost.io/broker/webull) to be notified once Webull is available.
+{% hint style="warning" %}
+The Webull integration is generally available for all TradersPost customers. Please remember that this integration is in <mark style="color:orange;">**BETA**</mark> and you may experience issues that we have not discovered yet. It is recommended to test with small position size first. If you have any issues or questions, please email us at [support@traderspost.io](mailto:support@traderspost.io)
 {% endhint %}
 
 ## Contact Information
@@ -24,11 +24,11 @@ Webull accounts can be connected to TradersPost manually by getting an access to
 
 To get started, first go to [Webull.com](https://webull.com) and login. Once logged in, click your profile icon at the top right and then click **My Account** from the menu.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-11 at 9.21.15 AM.png" alt=""><figcaption><p>Webull.com homepage</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-06-11 at 9.21.15 AM.png" alt=""><figcaption><p>Webull.com homepage</p></figcaption></figure>
 
 Now click **API Management** in the left menu and then click **Register an API Application**.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-11 at 9.22.29 AM.png" alt=""><figcaption><p>Webull API Management</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-06-11 at 9.22.29 AM.png" alt=""><figcaption><p>Webull API Management</p></figcaption></figure>
 
 {% hint style="info" %}
 If the **API Management** link is missing from the left menu, please contact Webull support at [api@webull.com](mailto:api@webull.com) to enable it for you. It is not activated by default.
@@ -36,14 +36,14 @@ If the **API Management** link is missing from the left menu, please contact Web
 
 Follow the steps to register your API application and afterwards you should land on a screen like this. Click **Revise** and change the expiry date from 1 day to 7 days.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-11 at 9.22.53 AM.png" alt=""><figcaption><p>Webull API Management</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-06-11 at 9.22.53 AM.png" alt=""><figcaption><p>Webull API Management</p></figcaption></figure>
 
 Change the **App Secret Expiry Date** from `1d` to `7d`.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-06-11 at 9.27.07 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-06-11 at 9.27.07 AM.png" alt=""><figcaption></figcaption></figure>
 
 Now click **Generate Key** and follow the steps to generate an API key. Copy this information and store it somewhere secure in a password manager like 1password.
 
 Once you have your API Key and Secret, head over to TradersPost and click **Brokers**, then click **Connect Live**, choose **Webull** from the list of available brokers, paste your api key and secret in the form and click Save.
 
-<figure><img src="../../../.gitbook/assets/Untitled.png" alt=""><figcaption><p>TradersPost Connect Webull</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled.png" alt=""><figcaption><p>TradersPost Connect Webull</p></figcaption></figure>
