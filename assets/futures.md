@@ -21,154 +21,23 @@ TradersPost Automated Futures Trading Setup
 TradersPost currently supports trading with the following futures tickers through TradeStation.
 
 {% hint style="info" %}
-The ticker names are not always the same from TradingView to TradersPost. Because of this, it's recommended that you hard code your ticker symbol into your alerts instead of using the **\{{ticker\}}** TradingView variable. For example, Lumber with TradeStation is **LB** and on TradingView it's **LBS**. To ensure you end up in the front contract for Lumber, use the TradersPost Symbol Root LB1!
+The ticker names are not always the same from TradingView to TradersPost. Because of this, it's recommended that you hard code your ticker symbol into your alerts instead of using the **\{{ticker\}}** TradingView variable. For example, Lumber with TradeStation is **LB** and on TradingView it's **LBR**.
 {% endhint %}
+
+Here is an example:
 
 ```json
 {
-    "ticker": "LB1!",
+    "ticker": "LBR2024",
     "action": "buy"
 }
 ```
 
 [View our TradingView Watchlist with all available symbols.](https://www.tradingview.com/watchlists/109951165/)
 
-| Description                                      | TradersPost Symbol Root | TradingView Symbol |
-| ------------------------------------------------ | ----------------------- | ------------------ |
-| **INDEXES**                                      |                         |                    |
-| E-MINI S\&P 500                                  | ES                      | ES1!               |
-| E-MINI MIDCAP 400                                | EMD                     | EMD1!              |
-| E-MINI NASDAQ 100                                | NQ                      | NQ1!               |
-| MINI RUSSELL 2000 (CME)                          | RTY                     | RTY1!              |
-| MINI DOW JONES ($5)                              | YM                      | YM1!               |
-| MICRO ES                                         | MES                     | MES1!              |
-| MICRO NQ                                         | MNQ                     | MNQ1!              |
-| MICRO RUSSELL                                    | M2K                     | M2K1!              |
-| MICRO YM                                         | MYM                     | MYM1!              |
-| NIKKEI ($ BASED) (CME)                           | NK                      | NKD1!              |
-| VIX                                              | VX                      | VX1!               |
-| MINI VOLATILITY INDEX                            | VXM                     |                    |
-| ICE Bitcoin                                      | BTM                     | BTM1!              |
-| CME BITCOIN FUTURES                              | BTC                     | BTC1!              |
-| CME MICRO BITCOIN FUTURES                        | MBT                     | MBT1!              |
-| CME ETHEREUM FUTURES                             | ETH                     | ETH1!              |
-| CME MICRO ETHEREUM FUTURES                       | MET                     | MET1!              |
-| **EUREX**                                        |                         |                    |
-| DAX                                              | FDAX                    | FDAX1!             |
-| MINI-DAX                                         | FDXM                    | FDXM1!             |
-| MICRO-DAX                                        | FDXS                    | FDXS1!             |
-| DJ STOXX 50 INDEX                                | FESX                    | FESX1!             |
-| MICRO-DJ EURO STOXX 50 INDEX FUTURES             | FSXE                    | FSXE1!             |
-| DJ STOXX 600 BANKS                               | FSTB                    | FSTB1!             |
-| DJ STOXX 600 INDST G\&S                          | FSTG                    | FSTG1!             |
-| EURO-SCHATZ                                      | FGBS                    | FGBS1!             |
-| EURO-BOBL                                        | FGBM                    | FGBM1!             |
-| EURO-BUND                                        | FGBL                    | FGBL1!             |
-| EURO-OAT                                         | FOAT                    | FOAT1!             |
-| EURO-BUXL                                        | FGBX                    | FGBX1!             |
-| DJ STOXX 600 UTILITY                             | FSTU                    | FSTU1!             |
-| **EURONEXT LIFFE**                               |                         |                    |
-| FTSE 100 INDEX FUTURES                           | LZ                      | Z1!                |
-| THREE MONTH EURO (EURIBOR) INTEREST RATE FUTURES | LT2                     | FEU31!             |
-| LONG GILT FUTURES                                | LJ                      | R1!                |
-| MEDIUM GILT FUTURES                              | H                       | H1!                |
-| SHORT GILT FUTURES                               | G                       | G1!                |
-| LONDON COCOA FUTURES                             | CC3                     | C1!                |
-| LONDON ROBUSTA COFFEE FUTURES                    | RC                      | RC1!               |
-| **CURRENCIES (CME)**                             |                         |                    |
-| AUSTRALIAN DLR.                                  | AD                      | 6A1!               |
-| BRITISH POUND                                    | BP                      | 6B1!               |
-| CANADIAN DLR.                                    | CD                      | 6C1!               |
-| EURO CURRENCY                                    | EC                      | 6E1!               |
-| JAPANESE YEN                                     | JY                      | 6J1!               |
-| MEXICAN PESO                                     | MP1                     | 6M1!               |
-| NEW ZEALAND DLR.                                 | NE1                     | 6N1!               |
-| SWISS FRANC                                      | SF                      | 6S1!               |
-| DOLLAR INDEX (ICE)                               | DX                      | DX1!               |
-| MINI EURO                                        | E7                      | E71!               |
-| MINI YEN                                         | J7                      | J71!               |
-| E-MICRO AUD/USD                                  | M6A                     | M6A1!              |
-| E-MICRO GBP/USD                                  | M6B                     | M6B1!              |
-| E-MICRO EUR/USD                                  | M6E                     | M6E1!              |
-| **INTEREST RATES (CBOT)**                        |                         |                    |
-| 30-YR T-BOND                                     | US                      | ZB1!               |
-| Ultra 30-YR T-BOND                               | UB                      | UB1!               |
-| 20-YR T-BOND                                     | TWE                     | TWE1!              |
-| 10-YR T-NOTE                                     | TY                      | ZN1!               |
-| Ultra 10-YR NOTE                                 | TEN                     | TN1!               |
-| 5-YR T-NOTE                                      | FV                      | ZF1!               |
-| 2-YR T-NOTE                                      | TU                      | ZT1!               |
-| EURODOLLAR (CME)                                 | ED                      | GE1!               |
-| ONE-MONTH SOFR                                   | SR1                     | SR11!              |
-| THREE-MONTH SOFR                                 | SR3                     | SR31!              |
-| MICRO 2-YEAR YIELD FUTURES                       | 2YY                     | 2YY1!              |
-| MICRO 5-YEAR YIELD FUTURES                       | 5YY                     | 5YY1!              |
-| MICRO 10-YEAR YIELD FUTURES                      | 10Y                     | 10Y1!              |
-| MICRO 30-YEAR YIELD FUTURES                      | 30Y                     | 30Y1!              |
-| **METALS**                                       |                         |                    |
-| GOLD (COMEX)                                     | GC                      | GC1!               |
-| SILVER (COMEX)                                   | SI                      | SI1!               |
-| COPPER (COMEX)                                   | HG                      | HG1!               |
-| PALLADIUM (NYMEX)                                | PA                      | PA1!               |
-| PLATINUM (NYMEX)                                 | PL                      | PL1!               |
-| ALUMINUM (COMEX)                                 | ALI                     | ALI1!              |
-| MICRO GOLD (COMEX)                               | MGC                     | MGC1!              |
-| E-MICRO SILVER (COMEX)                           | SIL                     | SIL1!              |
-| MICRO COPPER (COMEX)                             | MHG                     | MHG1!              |
-| **ENERGIES**                                     |                         |                    |
-| CRUDE OIL (NYMEX)                                | CL                      | CL1!               |
-| NATURAL GAS (NYMEX)                              | NG                      | NG1!               |
-| HEATING OIL (NYMEX)                              | HO                      | HO1!               |
-| RBOB GASOLINE (NYMEX)                            | RB                      | RB1!               |
-| BRENT CRUDE OIL (ICE)                            | BRN                     | BRN1!              |
-| LOW SULPHUR GASOIL (ICE)                         | ULS                     | GAS1!              |
-| E-MINY CRUDE OIL (NYMEX)                         | QM                      | QM1!               |
-| E-MINY NATURAL GAS (NYMEX)                       | QN                      | QG1!               |
-| E-MINY HEATING OIL (NYMEX)                       | QH                      | QH1!               |
-| E-MINY RBOB GASOLINE (NYMEX)                     | QU                      | QU1!               |
-| MICRO CRUDE OIL (NYMEX)                          | MCL                     | MCL1!              |
-| MICRO HEATING OIL                                | MHO                     | MHO1!              |
-| MICRO RBOB GASOLINE                              | MRB                     | MRB1!              |
-| **AGRICULTURE (CBOT)**                           |                         |                    |
-| WHEAT                                            | W                       | ZW1!               |
-| HARD RD WINTER WHEAT                             | KW                      | KE1!               |
-| CORN                                             | C                       | ZC1!               |
-| OATS                                             | O                       | ZO1!               |
-| SOYBEANS                                         | S                       | ZO1!               |
-| SOYBEAN OIL                                      | BO                      | ZL1!               |
-| SOYBEAN MEAL                                     | SM                      | ZM1!               |
-| ROUGH RICE                                       | RR                      | ZR1!               |
-| MILK (CME)                                       | DA                      | DC1!               |
-| BUTTER (CME)                                     | CB                      | CB1!               |
-| MINI WHEAT                                       | YW                      | XW1!               |
-| MINI CORN                                        | YC                      | XC1!               |
-| MINI SOYBEANS                                    | YK                      | XK1!               |
-| **MEATS (CME)**                                  |                         |                    |
-| LEAN HOGS                                        | LH                      | HE1!               |
-| LIVE CATTLE                                      | LC                      | LE1!               |
-| FEEDER CATTLE                                    | FC                      | GF1!               |
-| **SOFTS (ICE)**                                  |                         |                    |
-| COFFEE                                           | KC                      | KC1!               |
-| COTTON                                           | CT                      | CT1!               |
-| FROZEN OJ                                        | OJ                      | OJ1!               |
-| COCOA                                            | CC                      | CC1!               |
-| SUGAR #11                                        | SB                      | SB1!               |
-| **OTHER**                                        |                         |                    |
-| LUMBER (CME)                                     | LB                      | LBR1!              |
-| One-Month SOFR Futures                           | SR1                     | SR1!               |
-| Three-Month SOFR Futures                         | SR3                     | SR3!               |
-
 ## Symbol Format
 
 TradersPost standardizes the futures symbol format to have a 4 digit year. We convert this symbol format back and fourth when communicating with each broker so you don't have to worry about the differences between brokers.
-
-| Symbol  | Type                         |
-| ------- | ---------------------------- |
-| NQZ2021 | 4 digit year (TradersPost)   |
-| NQ1!    | TradingView current contract |
-| NQ2!    | TradingView next contract    |
-| NQ\*0   | TrendSpider current contract |
-| NQ\*1   | TrendSpider next contract    |
 
 ## Signals
 
@@ -273,3 +142,7 @@ We will now switch from the current contract to the next contract two days befor
     "action": "buy"
 }
 ```
+
+{% hint style="info" %}
+It is recommended to always specify the exact contract symbol you want to trade instead of using the continuous contract symbol. The logic for how brokers rollover from the current contract to the next contract may be different than how TradersPost handles rollovers. We hope to improve this in the future, but for now you should specify the exact contract symbol you would like to trade.
+{% endhint %}
