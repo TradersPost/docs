@@ -144,5 +144,5 @@ We will now switch from the current contract to the next contract two days befor
 ```
 
 {% hint style="info" %}
-It is recommended to always specify the exact contract symbol you want to trade instead of using the continuous contract symbol. The logic for how brokers rollover from the current contract to the next contract may be different than how TradersPost handles rollovers. We hope to improve this in the future, but for now you should specify the exact contract symbol you would like to trade.
+It is recommended to always specify the exact contract symbol you want to trade instead of using the continuous contract symbol. The logic for how TradingView and brokers/exchanges rollover from the current contract to the next contract may be different than how TradersPost handles rollovers. We hope to improve this in the future, but for now you should specify the exact contract symbol you would like to trade.
 {% endhint %}
