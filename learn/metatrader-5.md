@@ -1,7 +1,7 @@
 ---
 description: >-
   Meta Trader 5 (MT5) is a powerful electronic trading platform widely used by
-  forex, futures, and stock traders.
+  forex, futures, crypto, and stock traders.
 ---
 
 # MetaTrader 5 - MT5
@@ -12,11 +12,21 @@ _MetaTrader 5 can send alerts as webhooks just like TradingView can using the_ [
 
 With its advanced charting capabilities, customizable indicators, and support for algorithmic trading through Expert Advisors (EAs), MT5 offers both novice and experienced traders a robust environment to execute their trading strategies efficiently and effectively. However, it's less apparent how you might automate a strategy in MT5 through any broker of your choice.
 
-TradersPost can support futures and stock trading from MT5 using a library we've written that can help build the JSON message that is sent through a [TradersPost webhook](../core-concepts/webhooks.md).
+TradersPost can support futures, stock, and crypto trading from MT5 using a library we've written that can help build the JSON message that is sent through a [TradersPost webhook](../core-concepts/webhooks.md).
 
 We have built an example EA that will trade on the next tick if it hasn't already and then never trade again after. It's meant to demonstrate only how you construct the JSON message and send the request to TradersPost.&#x20;
 
 {% embed url="https://github.com/TradersPost/metatrader5/blob/main/MQL5/Experts/Advisors/TradersPostExample.mq5" %}
+
+## Why automate MetaTrader 5 with TradersPost?
+
+By integrating MT5 with TradersPost, users can automate their trading strategies across multiple asset classes, including stocks, futures, and cryptocurrencies. TradersPost supports a wide range of brokers such as TradeStation, Alpaca, Robinhood, E\*TRADE, tastytrade, IBKR, Webull, and futures brokers like Tradovate and NinjaTrader as well as crypto exchanges like Coinbase, Kraken, Bybit, and Binance. This integration allows users to send automated signals from MT5 directly to TradersPost, where they can manage trade execution with advanced strategy rules, risk management, and position sizing features.
+
+Notably, [Bybit offers its own MT5 servers](https://www.bybit.com/future-activity/en/mt5), which means users can automate strategies on Bybit's MT5 platform and seamlessly route trades through their Bybit connection on TradersPost. This setup provides enhanced control and sophistication in trade execution, making it easy to automate strategies across different asset classes while utilizing TradersPost's robust automation tools. Although Bybit is currently the main broker supporting MT5 servers natively, users of other brokers supported by TradersPost can still leverage MT5 to create sophisticated automated strategies, taking full advantage of TradersPost's powerful automation framework.
+
+#### Can I use an MT5 server with a broker that TradersPost doesn't support?
+
+Yes! In the examples we provide below, we're using a native server for stock data and routing the trade to a paper broker and have also tested StoneX Futures to route trades to futures brokers supported by TradersPost.
 
 ## Installing TradersPostWebhookRequest.mqh
 
