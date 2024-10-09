@@ -26,7 +26,7 @@ Notably, [Bybit offers its own MT5 servers](https://www.bybit.com/future-activit
 
 #### Can I use an MT5 server with a broker that TradersPost doesn't support?
 
-Yes! In the examples we provide below, we're using a native server for stock data and routing the trade to a paper broker and have also tested StoneX Futures to route trades to futures brokers supported by TradersPost.
+Yes! In the examples we provide below, we're using a StoneX Futures account and routing a manually constructed trade to a paper broker using TradeStation market data.
 
 ## Installing TradersPostWebhookRequest.mqh
 
@@ -36,10 +36,10 @@ Adding a library to the Include folder is fairly straight-forward.&#x20;
 2. Add the TradersPostWebhookRequest.mqh file to your Include folder. [Read more on this here](https://github.com/TradersPost/metatrader5?tab=readme-ov-file#setting-up-traderspostwebhookrequest-in-mt5).
 3. Then you can include TradersPostWebhookRequest.mqh in your EA scripts, define your webhook URL, and build JSON messages to send to TradersPost. See the [example EA here](https://github.com/TradersPost/metatrader5/blob/main/MQL5/Experts/Advisors/TradersPostExample.mq5).
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>TradersPostWebhookRequest.mqh goes into your data folder under MQL5/Include.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>TradersPostWebhookRequest.mqh goes into your data folder under MQL5/Include.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Adding the <a href="https://github.com/TradersPost/metatrader5/blob/main/MQL5/Experts/Advisors/TradersPostExample.mq5">TradersPostExample EA</a> will demonstrate how a webhook request is made to buy 1 share of MSFT with a take profit and stop loss.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Adding the <a href="https://github.com/TradersPost/metatrader5/blob/main/MQL5/Experts/Advisors/TradersPostExample.mq5">TradersPostExample EA</a> will demonstrate how a webhook request is made to buy 1 contract of NQZ2024 with a take profit and stop loss pre-configured.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>In this example, the webhook request is sent immediately to TradersPost for execution through a paper broker after manual approval. Full automation is an available option in the <a href="../core-concepts/strategies.md">strategy settings</a>.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>In this example, the webhook request is sent immediately to TradersPost to automatically execute 1 contract of NQ with a take profit and stop loss order attached as a bracket order with the paper broker.</p></figcaption></figure>
 
 If you are interested automating your MetaTrader 5 strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
