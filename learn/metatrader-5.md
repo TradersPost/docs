@@ -1,6 +1,6 @@
 ---
 description: >-
-  Meta Trader 5 (MT5) is a powerful electronic trading platform widely used by
+  MetaTrader 5 (MT5) is a powerful electronic trading platform widely used by
   forex, futures, crypto, and stock traders.
 ---
 
