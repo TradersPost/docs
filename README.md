@@ -1,8 +1,8 @@
 ---
 description: >-
-  TradersPost is an automated trading platform that can automate your
-  TradingView or TrendSpider strategies in brokers like TD Ameritrade,
-  TradeStation, Tradier, Robinhood, and Alpaca.
+  TradersPost is an automated trading platform that can automate TradingView,
+  TrendSpider, MT5 and programmatic strategies in brokers like TradeStation,
+  Tradier, Robinhood, and Alpaca and many more.
 cover: .gitbook/assets/Documentation Cover.jpeg
 coverY: 0
 ---
@@ -23,13 +23,14 @@ TradersPost Explainer Video
 
 * **Strategy Developers** - a person that is interested in creating automated trading strategies and connecting them to their broker.
 * **Traders and Investors** - a person that is interested in connecting automated trading strategies to their broker without any coding knowledge.
+* **Trading Communities -** a trading community can use TradersPost to send their trading signals to other TradersPost users where trades can be automated or manually approved or rejected.
 
 ## How does it work?
 
 TradersPost is made of the following core concepts. You can use them together to create automated trading strategies in your broker and allow other people to subscribe to your strategies.
 
-* [Brokers](./#brokers) - Bring your own broker by connecting it to TradersPost. We support several brokers like **TD Ameritrade**, **Alpaca** and **TradeStation**.
-* [Webhooks](./#webhooks) - Webhooks are buy or sell signals that can be produced by an automated algorithm or even a manual human trader.
+* Brokers - Use your own broker by connecting it to TradersPost. See our full list of [available connections here](https://traderspost.io/connections).
+* [Webhooks](./#webhooks) - Webhooks are buy or sell signals that can be produced by an automated algorithm or even a manual human trader. They contain JSON messages with the instructions for how your trade should be executed.
 * [Strategies](./#strategies) - Strategies are what get connected to a broker. Users can subscribe to strategies and have the webhook signals place trades directly in their broker.
 * [Subscriptions](./#subscriptions) - Subscriptions allow you to connect a strategy to a broker, define your risk tolerance and position sizing.
 
@@ -41,17 +42,11 @@ Watch a demo of TradersPost if you prefer a video.
 
 ## Brokers
 
-TradersPost has a "bring your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with the following brokers.
+TradersPost has a "use your own broker" architecture. We are not a broker or an exchange. We do not hold your money and you are required to connect an existing brokerage to TradersPost in order to use the functionality. We have integrations with over a dozen brokers and exchanges. The full list is availble below:
 
-* [TradeStation](core-concepts/brokers/tradestation.md)
-* [Alpaca](core-concepts/brokers/alpaca.md)
-* [Interactive Brokers](core-concepts/brokers/interactive-brokers.md)
-* [Tradier](core-concepts/brokers/tradier.md)
-* [Tradovate](core-concepts/brokers/broker-roadmap/tradovate.md)
-* [Coinbase](core-concepts/brokers/coinbase.md)
-* [Robinhood](core-concepts/brokers/robinhood.md)
+{% embed url="https://traderspost.io/connections" %}
 
-Don't see your broker listed here? Check our full list of [supported brokers](https://traderspost.io/brokers) and our [broker roadmap](core-concepts/brokers/broker-roadmap/).
+Don't see your broker listed there? Check our [broker roadmap](core-concepts/brokers/broker-roadmap/) for upcoming connections add yourself to a waitlist for other brokers listed [under the Coming Soon heading](https://traderspost.io/connections).
 
 ## Webhooks
 

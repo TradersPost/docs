@@ -8,9 +8,11 @@ description: >-
 
 ## What is a webhook?
 
-Webhooks are automated messages sent from applications when something happens. They have a message that can contain a payload of data and are sent to a unique URL.
+Webhooks are automated messages sent from applications when something happens. They have a [JSON message](https://en.wikipedia.org/wiki/JSON) that can contain a payload of data and are sent to a unique URL.
 
-In the context of automated trading, the webhook message contains all the information about the trade signal like what ticker to buy and at what price. Here is an example simple webhook.
+In the context of automated trading, the webhook JSON message contains all the information about the trade signal like what ticker to buy and at what price. Here is an example simple webhook and JSON message.
+
+<mark style="color:green;">POST</mark> `https://webhooks.traderspost.io/trading/webhook/534b8689-7fa9-43b5-8f13-599d3ca73d9f/a35dff9cd3d19976eb5688e49649f363`
 
 ```json
 {
