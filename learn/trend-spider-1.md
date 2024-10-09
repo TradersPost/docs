@@ -1,0 +1,35 @@
+---
+description: >-
+  Meta Trader 5 (MT5) is a powerful electronic trading platform widely used by
+  forex, futures, and stock traders.
+---
+
+# MetaTrader 5 - MT5
+
+_MetaTrader 5 can send alerts as webhooks just like TradingView can using the_ [_TradersPostWebhookRequest_](https://github.com/TradersPost/metatrader5) _library._&#x20;
+
+## MetaTrader 5 Expert Advisors (EA)
+
+With its advanced charting capabilities, customizable indicators, and support for algorithmic trading through Expert Advisors (EAs), MT5 offers both novice and experienced traders a robust environment to execute their trading strategies efficiently and effectively. However, it's less apparent how you might automate a strategy in MT5 through any broker of your choice.
+
+TradersPost can support futures and stock trading from MT5 using a library we've written that can help build the JSON message that is sent through a [TradersPost webhook](../core-concepts/webhooks.md).
+
+We have built an example EA that will trade on the next tick if it hasn't already and then never trade again after. It's meant to demonstrate only how you construct the JSON message and send the request to TradersPost.&#x20;
+
+{% embed url="https://github.com/TradersPost/metatrader5/blob/main/MQL5/Experts/Advisors/TradersPostExample.mq5" %}
+
+## Installing TradersPostWebhookRequest.mqh
+
+Adding a library to the Include folder is fairly straight-forward.&#x20;
+
+1. Ensure you have enabled algorithmic trading on MT5 and added the TradersPost webhook domain to your allowed WebRequest URLs. [Read more on this here](https://github.com/TradersPost/metatrader5?tab=readme-ov-file#enabling-traderpost-and-webrequests-in-mt5).
+2. Add the TradersPostWebhookRequest.mqh file to your Include folder. [Read more on this here](https://github.com/TradersPost/metatrader5?tab=readme-ov-file#setting-up-traderspostwebhookrequest-in-mt5).
+3. Then you can include TradersPostWebhookRequest.mqh in your EA scripts, define your webhook URL, and build JSON messages to send to TradersPost. See the [example EA here](https://github.com/TradersPost/metatrader5/blob/main/MQL5/Experts/Advisors/TradersPostExample.mq5).
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>TradersPostWebhookRequest.mqh goes into your data folder under MQL5/Include.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Adding the <a href="https://github.com/TradersPost/metatrader5/blob/main/MQL5/Experts/Advisors/TradersPostExample.mq5">TradersPostExample EA</a> will demonstrate how a webhook request is made to buy 1 share of MSFT with a take profit and stop loss.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>In this example, the webhook request is sent immediately to TradersPost for execution through a paper broker after manual approval. Full automation is an available option in the <a href="../core-concepts/strategies.md">strategy settings</a>.</p></figcaption></figure>
+
+If you are interested automating your MetaTrader 5 strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).
