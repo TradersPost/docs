@@ -6,7 +6,7 @@ description: >-
 
 # MetaTrader 5 - MT5
 
-MT5 webhook automation is possible by using _using the_ [_TradersPostWebhookRequest_](https://github.com/TradersPost/metatrader5) _library._&#x20;
+_MT5 webhook automation is possible by using the_ [_TradersPostWebhookRequest_](https://github.com/TradersPost/metatrader5) _library and sending you trade signals through to a broker of your choice at TradersPost._
 
 ## MetaTrader 5 Expert Advisors (EA)
 
