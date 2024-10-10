@@ -1,12 +1,11 @@
 ---
 description: >-
-  MetaTrader 5 (MT5) is a powerful electronic trading platform widely used by
-  forex, futures, crypto, and stock traders.
+  MT5 webhook automation is possible by using the TradersPostWebhookRequest
+  library and sending you trade signals through to a broker of your choice at
+  TradersPost.
 ---
 
 # MetaTrader 5 - MT5
-
-_MT5 webhook automation is possible by using the_ [_TradersPostWebhookRequest_](https://github.com/TradersPost/metatrader5) _library and sending you trade signals through to a broker of your choice at TradersPost._
 
 ## MetaTrader 5 Expert Advisors (EA)
 
