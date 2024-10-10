@@ -6,7 +6,7 @@ description: >-
 
 # MetaTrader 5 - MT5
 
-_MetaTrader 5 can send alerts as webhooks just like TradingView can using the_ [_TradersPostWebhookRequest_](https://github.com/TradersPost/metatrader5) _library._&#x20;
+MT5 webhook automation is possible by using _using the_ [_TradersPostWebhookRequest_](https://github.com/TradersPost/metatrader5) _library._&#x20;
 
 ## MetaTrader 5 Expert Advisors (EA)
 
