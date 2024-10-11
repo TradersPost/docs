@@ -6,7 +6,7 @@ We plan to continually add more broker integrations to our system over time. Her
 
 * [E\*TRADE](../e-trade.md)
 * [tastytrade](../tastytrade.md)
-* [Binance](binance.md)
+* [Binance](../binance.md)
 * [Schwab](schwab.md)
 
 You can find the full list of supported brokers and broker wait lists [here](https://traderspost.io/brokers). We are not able to provide any time estimates and any updates regarding future broker integrations will be sent out via email from the wait lists.
