@@ -18,7 +18,7 @@ Phone: [+1 (888) 275-8523](tel:18882758523)
 
 ## Robinhood Retirement (IRA) Support
 
-Robinhood's IRA accounts are **not** currently supported by TradersPost. We will announce any support of these account types in the future.
+As of August 12, 2024, TradersPost now fully supports the Traditional and Roth IRA accounts provided by Robinhood. When connecting your Robinhood account, you will now see your IRA accounts available as a selection.
 
 ## Crypto & Options Support
 
