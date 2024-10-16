@@ -233,7 +233,7 @@ Or if you want to use a stop limit order:
     "ticker": "SQ",
     "action": "buy",
     "orderType": "stop_limit",
-    "stopPrice" 60,
+    "stopPrice": 60,
     "limitPrice": 50.50
 }
 ```
