@@ -141,35 +141,6 @@ Trading can be a valuable learning experience, but be aware of the high risk and
 
 ***
 
-### Roth IRA and Futures: What Are Your Options?
-
-{% embed url="https://www.youtube.com/watch?index=7&list=PLauFD1wHyS9GPrCq-jBXt_Gl-LAtoCI3Q&pp=gAQBiAQB&v=6-qWieNoh2Q" %}
-
-**General Rule:** Roth IRAs in the U.S. do not support margin accounts, so direct futures trading is not allowed.
-
-**Restrictions:**
-
-* No margin accounts
-* No short selling
-
-**Alternative Options:**
-
-* Use levered Futures ETFs or ETPs for exposure.
-* Examples: Short the NASDAQ with SQQQ.
-
-**Broker Requirements:**
-
-* Ensure your broker supports these ETFs/ETPs.
-* Check for associated expense ratios.
-
-**Compatibility with** TradersPost**:** If your broker supports the ETFs/ETPs, TradersPost can manage the trades.
-
-**Example Strategy:** TQQQ and SQQQ strategies in Roth IRAs are possible and have been implemented successfully.
-
-For specific setups, confirm with your broker and then integrate with TradersPost as needed.
-
-***
-
 ### Using Brokers in Beta: What You Need to Know
 
 {% embed url="https://www.youtube.com/watch?index=8&list=PLauFD1wHyS9GPrCq-jBXt_Gl-LAtoCI3Q&pp=gAQBiAQB&t=5s&v=B-leFMBQtHA" %}

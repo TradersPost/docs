@@ -36,6 +36,10 @@ No, currently we only support directional options trades. This means we only sup
 
 No, we don't yet support index options. We only support Stock & ETF options. So in the case of SPX, you can trade SPY ETF options instead.
 
+### Does TradersPost manage margin or offer margin rules for my account?
+
+No. TradersPost does not currently track margin availability in your margin accounts. We also do not have settings in place to prevent the use of margin if it is available in your account. If your account does not have margin available and you send a trade that exceeds your purchasing power, the trade will be rejected by the broker.
+
 ### What brokers do you support?
 
 TradersPost currently integrates with brokers like [TradeStation](../core-concepts/brokers/tradestation.md) and [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md). You can see our full list of brokers on our website [here](https://traderspost.io/connections).
