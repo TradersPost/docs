@@ -13,7 +13,7 @@ How To Build A Trading Bot From Any TradingView Strategy In Your Broker Using Tr
 
 ## Alert Message JSON
 
-The TradersPost webhook system lets you easily integrate alerts from platforms like [TradingView](https://www.tradingview.com/?offer\_id=10\&aff\_id=26514) with TradersPost. Webhooks can receive [JSON](https://en.wikipedia.org/wiki/JSON) like the following.
+The TradersPost webhook system lets you easily integrate alerts from platforms like [TradingView](https://www.tradingview.com/?offer_id=10\&aff_id=26514) with TradersPost. Webhooks can receive [JSON](https://en.wikipedia.org/wiki/JSON) like the following.
 
 ```json
 {
@@ -25,7 +25,7 @@ The TradersPost webhook system lets you easily integrate alerts from platforms l
 
 This JSON data structure is very important and it must be 100% correct otherwise TradersPost will not be able to parse the data out of the JSON in order to use the information correctly.
 
-You can dynamically send the values in the above JSON using TradingView variables. You can read more about TradingView variables [here](https://www.tradingview.com/support/solutions/43000531021-how-to-use-a-variable-value-in-alert/?offer\_id=10\&aff\_id=26514).
+You can dynamically send the values in the above JSON using TradingView variables. You can read more about TradingView variables [here](https://www.tradingview.com/support/solutions/43000531021-how-to-use-a-variable-value-in-alert/?offer_id=10\&aff_id=26514).
 
 ### Strategies
 
@@ -51,11 +51,11 @@ If you build your Pine Script as a strategy, you only need one alert per ticker,
 
 TradingView will replace the `{{...}}` values dynamically with a real value when the alert gets sent to TradersPost.
 
-* **\{{ticker\}}** - the ticker the alert is setup on
-* **\{{strategy.order.action\}}** - buy or sell
-* **\{{strategy.market\_position\}}** - long, short or flat. This value tells TradersPost what the state of the position should be after executing the&#x20;
-* **\{{strategy.order.contracts\}}** - the quantity of the order executed
-* **\{{close\}}** - the current price at the time the alert was triggered
+* **\{{ticker\}}** - the ticker the alert is setup on.
+* **\{{strategy.order.action\}}** - buy or sell.
+* **\{{strategy.market\_position\}}** - long, short or flat. This value tells TradersPost what the state of the position should be after executing the signal.
+* **\{{strategy.order.contracts\}}** - the quantity of the order executed.
+* **\{{close\}}** - the current price at the time the alert was triggered.
 
 ### Indicators
 
@@ -402,7 +402,7 @@ You can find a more complex example in the [8-55 EMA Crossover NQ Futures Strate
 
 ## Pine Script Studies
 
-Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer\_id=10\&aff\_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
+Here is a simple trend following momentum based indicator called MOMO that was created by [Matt DeLong](https://www.tradingview.com/u/MattDeLong/?offer_id=10\&aff_id=26514) from [RealLifeTrading.com](https://lddy.no/u5jf). It uses the **EMA8** and **EMA21** and the signal is when those two values cross each other.
 
 The `message` parameter of the `alertcondition()` function is pre-populated with the JSON alert message required by TradersPost.
 
@@ -479,7 +479,7 @@ When writing Pine Script strategies and indicators it is important to ensure you
 ### Other Resources
 
 * [https://www.tradingview.com/script/s8kWs84i-How-to-avoid-repainting-when-NOT-using-security/](https://www.tradingview.com/script/s8kWs84i-How-to-avoid-repainting-when-NOT-using-security/)
-* [https://www.tradingview.com/pine-script-docs/en/v4/essential/Indicator\_repainting.html](https://www.tradingview.com/pine-script-docs/en/v4/essential/Indicator\_repainting.html)
+* [https://www.tradingview.com/pine-script-docs/en/v4/essential/Indicator\_repainting.html](https://www.tradingview.com/pine-script-docs/en/v4/essential/Indicator_repainting.html)
 * [https://zenandtheartoftrading.com/pinescript/how-to-eliminate-repainting/](https://zenandtheartoftrading.com/pinescript/how-to-eliminate-repainting/)
 * [https://medium.com/@robswc/how-to-tell-if-a-trading-indicator-or-strategy-is-fake-or-repainting-41d4c85ca745](https://medium.com/@robswc/how-to-tell-if-a-trading-indicator-or-strategy-is-fake-or-repainting-41d4c85ca745)
 
