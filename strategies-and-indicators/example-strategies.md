@@ -32,7 +32,10 @@ Steps to use it:
 
 You should now have trades coming in every minute to go long or short or exit those positions. Under your [subscriptions tab](https://app.traderspost.io/app/trading/strategies/subscriptions), you can click the Trades button next to your strategy to see the list of trades that are coming in. You can also review the [Webhooks log](https://app.traderspost.io/app/trading/webhooks) to see the messages we parsed as they came in.
 
-You can find the source code for this [simple strategy here](https://raw.githubusercontent.com/TradersPost/pinescript/refs/heads/master/strategies/Simple%20Strategy.pine).
+Links:
+
+* See the published strategy on [TradingView here](https://www.tradingview.com/script/Wq1r6KLV-Simple-Strategy/).
+* You can find the source code for this [simple strategy here](https://raw.githubusercontent.com/TradersPost/pinescript/refs/heads/master/strategies/Simple%20Strategy.pine).
 
 ## Scheduled Alert - TradingView Indicator
 
