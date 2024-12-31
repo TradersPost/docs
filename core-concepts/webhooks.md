@@ -568,7 +568,7 @@ Or if want to send the order with extended hours enabled so that the order can b
 }
 ```
 
-### Options
+### Options Contract Properties
 
 You have the ability to control the option chain scanning from the webhook or you can even send a specific contract to trade instead of scanning the option chain dynamically to find a contract to trade. Here is an example that will buy long calls using the contract in the `ticker` field.
 
@@ -604,7 +604,7 @@ You can also specify the specific contract to trade with individual values inste
 }
 ```
 
-## Extras
+### Extras
 
 Users can send additional custom JSON properties within an "extras" field, allowing for more detailed information or contextual data to be included with each request. By keeping the properties inside an "extras" property, you avoid conflicting with TradersPost properties defined on this page. This is useful for tracking specific conditions or notes related to a trade. For example:
 
