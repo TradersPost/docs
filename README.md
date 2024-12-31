@@ -1,19 +1,18 @@
 ---
-description: >-
-  TradersPost is an automated trading platform that can automate TradingView,
-  TrendSpider, MT5 and programmatic strategies in brokers like TradeStation,
-  Tradier, Robinhood, and Alpaca and many more.
+description: TradersPost is your one-stop solution for automating your trading strategies.
 cover: .gitbook/assets/Documentation Cover.jpeg
 coverY: 0
 ---
 
 # What is TradersPost?
 
-{% hint style="warning" %}
-TradersPost is **NOT** designed to be a high frequency trading platform. Your strategy needs to run on a higher timeframe. Please do not setup strategies on 1 minute chart or less and send hundreds of signals to TradersPost in a short amount of time. These types of strategies do not work due to slippage and rate limiting with the underlying broker APIs.\
-\
-While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategy subscriptions if we determine that your account is sending too many trades.
-{% endhint %}
+Our mission is simple: to help you transform trade ideas into executed orders, effortlessly. With powerful tools like dynamic take profit and stop loss management, automated position adjustments, and an options contract screener, TradersPost simplifies and optimizes your trading workflow.
+
+We empower traders to automate strategies from platforms like [TradingView](learn/tradingview.md), [TrendSpider](learn/trend-spider.md), [MT5](learn/metatrader-5.md), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](core-concepts/brokers/tradestation.md), [Tradier](core-concepts/brokers/tradier.md), [Robinhood](core-concepts/brokers/robinhood.md), [Alpaca](core-concepts/brokers/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Stocks, Options, and Crypto. Coming in 2025: Forex.
+
+Whether you're fine-tuning risk management or automating entry and exit orders, TradersPost is here to ensure your trading strategy works just as you envision.
+
+Let us handle the automation so you can focus on what really matters: **your trading success.**
 
 {% embed url="https://www.youtube.com/watch?v=WucPurodgk8" %}
 TradersPost Explainer Video
@@ -24,6 +23,12 @@ TradersPost Explainer Video
 * **Strategy Developers** - a person that is interested in creating automated trading strategies and connecting them to their broker.
 * **Traders and Investors** - a person that is interested in connecting automated trading strategies to their broker without any coding knowledge.
 * **Trading Communities -** a trading community can use TradersPost to send their trading signals to other TradersPost users where trades can be automated or manually approved or rejected.
+
+{% hint style="warning" %}
+TradersPost is **NOT** designed to be a high frequency trading platform. Your strategy needs to run on a higher timeframe. Please do not setup strategies on 1 minute chart or less and send hundreds of signals to TradersPost in a short amount of time. These types of strategies do not work due to slippage and rate limiting with the underlying broker APIs.\
+\
+While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategy subscriptions if we determine that your account is sending too many trades.
+{% endhint %}
 
 ## How does it work?
 
