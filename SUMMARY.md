@@ -31,6 +31,7 @@
 ## Learn
 
 * [TradingView](learn/tradingview.md)
+* [Prop Firm Trading](learn/prop-firm-trading.md)
 * [TrendSpider](learn/trend-spider.md)
 * [MetaTrader 5 - MT5](learn/metatrader-5.md)
 * [Backtesting](learn/backtesting.md)
