@@ -10,7 +10,7 @@ Yes, TradersPost supports paper trading with multiple different brokers. Read mo
 
 ### Does TradersPost require coding?
 
-No. TradersPost does not require coding. You can easily connect strategies to TradersPost that other traders have created and published on [TradingView](https://cdn.traderspost.io/images/TradingView.png). Or you can use a platform like [TrendSpider](https://trendspider.com/?\_go=traderspost) which allows you to build strategies without code.
+No. TradersPost does not require coding. You can easily connect strategies to TradersPost that other traders have created and published on [TradingView](https://cdn.traderspost.io/images/TradingView.png). Or you can use a platform like [TrendSpider](https://trendspider.com/?_go=traderspost) which allows you to build strategies without code.
 
 ### Can I trade both long and short?
 
@@ -128,7 +128,7 @@ We don't currently have strategy or trade level analytics or reports. You will n
 
 Your strategy may suffer from [repainting](../learn/tradingview.md#pine-script-repainting). Make sure you study up on repainting to avoid any potential issues with your strategy being coded in a way where it executes in a backtest but does not execute in the same way with live data.
 
-### Can I export my traders from TradersPost?
+### Can I export my trades from TradersPost?
 
 No, we don't yet support exporting data from TradersPost.
 
