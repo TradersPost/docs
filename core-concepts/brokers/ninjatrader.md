@@ -8,7 +8,7 @@ description: >-
 # NinjaTrader
 
 {% hint style="info" %}
-For more specific information about this integration, please see our page on the [Tradovate integration](tradovate.md).
+For more specific information about this integration, please see our page on the [Tradovate integration](broker-roadmap/tradovate.md).
 {% endhint %}
 
 ## Supported Asset Classes
@@ -17,4 +17,4 @@ For more specific information about this integration, please see our page on the
 
 ## Limitations
 
-See the [Tradovate Limitations documentation](tradovate.md).
+See the [Tradovate Limitations documentation](broker-roadmap/tradovate.md).

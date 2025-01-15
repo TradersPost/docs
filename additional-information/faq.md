@@ -22,7 +22,7 @@ Yes, we support crypto with several different popular crypto exchanges like [Coi
 
 ### Do you support futures?
 
-Yes, futures support is available and can be enabled in your account settings. We support futures with popular brokers like [Tradovate](../core-concepts/brokers/tradovate.md) and [TradeStation](../core-concepts/brokers/tradestation.md).
+Yes, futures support is available and can be enabled in your account settings. We support futures with popular brokers like [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md) and [TradeStation](../core-concepts/brokers/tradestation.md).
 
 ### Do you support options?
 
@@ -42,7 +42,7 @@ No. TradersPost does not currently track margin availability in your margin acco
 
 ### What brokers do you support?
 
-TradersPost currently integrates with brokers like [TradeStation](../core-concepts/brokers/tradestation.md) and [Tradovate](../core-concepts/brokers/tradovate.md). You can see our full list of brokers on our website [here](https://traderspost.io/connections).
+TradersPost currently integrates with brokers like [TradeStation](../core-concepts/brokers/tradestation.md) and [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md). You can see our full list of brokers on our website [here](https://traderspost.io/connections).
 
 ### Can I trade my IRA?
 

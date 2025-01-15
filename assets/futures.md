@@ -13,7 +13,7 @@ TradersPost Automated Futures Trading Setup
 ## Supported Brokers
 
 * [TradeStation](../core-concepts/brokers/tradestation.md)
-* [Tradovate](../core-concepts/brokers/tradovate.md)
+* [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md)
 * [Tastytrade](../core-concepts/brokers/tastytrade.md) (coming soon)
 
 ## Supported Tickers
@@ -128,7 +128,13 @@ To keep track of the different news events that may cause the market to move in 
 You are responsible for ensuring futures contract positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything special for futures contract positions based on expiration date.
 {% endhint %}
 
-In a recent release we made a change to improve how we handle continuous contract symbols and when we switch from the current contract to the next contract.\
+{% hint style="info" %}
+It is recommended to always specify the exact contract symbol you want to trade instead of using the continuous contract symbol. The logic for how TradingView and brokers/exchanges rollover from the current contract to the next contract may be different than how TradersPost handles rollovers. We hope to improve this in the future, but for now you should specify the exact contract symbol you would like to trade.\
+\
+Please see our [Blog Post](https://blog.traderspost.io/article/trading-continuous-futures-contracts-from-tradingview-on-traderspost) on our recommendations for trading continuous futures on TradingView.
+{% endhint %}
+
+In 2023, we made a change to improve how we handle continuous contract symbols and when we switch from the current contract to the next contract.\
 \
 We will now switch from the current contract to the next contract two days before the beginning of the expiration date. So take `MNQZ2023` for example. It has an expiration date of **Friday December 15th, 2023**.
 
@@ -142,7 +148,3 @@ We will now switch from the current contract to the next contract two days befor
     "action": "buy"
 }
 ```
-
-{% hint style="info" %}
-It is recommended to always specify the exact contract symbol you want to trade instead of using the continuous contract symbol. The logic for how TradingView and brokers/exchanges rollover from the current contract to the next contract may be different than how TradersPost handles rollovers. We hope to improve this in the future, but for now you should specify the exact contract symbol you would like to trade.
-{% endhint %}
