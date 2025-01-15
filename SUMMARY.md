@@ -11,7 +11,7 @@
   * [Alpaca](core-concepts/brokers/alpaca.md)
   * [Tradier](core-concepts/brokers/tradier.md)
   * [Robinhood](core-concepts/brokers/robinhood.md)
-  * [Tradovate](core-concepts/brokers/broker-roadmap/tradovate.md)
+  * [Tradovate](core-concepts/brokers/tradovate.md)
   * [NinjaTrader](core-concepts/brokers/ninjatrader.md)
   * [E\*TRADE](core-concepts/brokers/e-trade.md)
   * [tastytrade](core-concepts/brokers/tastytrade.md)
