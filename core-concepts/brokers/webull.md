@@ -1,7 +1,7 @@
 # Webull
 
-{% hint style="warning" %}
-The Webull integration is generally available for all TradersPost customers. Please remember that this integration is in <mark style="color:orange;">**BETA**</mark> and you may experience issues that we have not discovered yet. It is recommended to test with small position size first. If you have any issues or questions, please email us at [support@traderspost.io](mailto:support@traderspost.io)
+{% hint style="danger" %}
+The Webull integration is NOT available yet. We have completed the integration but the Webull API has not been made available publicly for all Webull customers to use. Subscribe to the Webull [wait list](https://traderspost.io/broker/webull) to be notified once it is available.
 {% endhint %}
 
 ## Contact Information
