@@ -31,7 +31,9 @@ On average, the IBKR API responds to our requests in **229 milliseconds**.
 
 ## Supported Asset Classes
 
-* Stocks
+{% hint style="warning" %}
+The IBKR WebAPI only supports the stocks asset class. While the broader IBKR platform does support other asset classes, the WebAPI that we are integrated with only supports stocks. It is unknown when IBKR will remove this limitation and allow other asset classes.
+{% endhint %}
 
 ## Daily Reset
 
