@@ -27,7 +27,7 @@ TradersPost Explainer Video
 {% hint style="warning" %}
 TradersPost is **NOT** designed to be a high frequency trading platform. Your strategy needs to run on a higher timeframe. Please do not setup strategies on 1 minute chart or less and send hundreds of signals to TradersPost in a short amount of time. These types of strategies do not work due to slippage and rate limiting with the underlying broker APIs.\
 \
-While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategy subscriptions if we determine that your account is sending too many trades.
+You are allowed 1 webhook request per second with bursts up to 60 per minute. Any requests that exceed 60 requests per minute will be blocked and will not show up in the TradersPost application. Read more about our enforced rate limits here.
 {% endhint %}
 
 ## How does it work?

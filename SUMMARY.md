@@ -37,6 +37,7 @@
 * [Backtesting](learn/backtesting.md)
 * [Order Behavior](learn/order-behavior.md)
 * [Order Queueing](learn/order-queueing.md)
+* [Order Classes](learn/order-classes.md)
 * [Paper Trading](learn/paper-trading.md)
 * [Position Sizing](learn/position-sizing.md)
 * [Fractional Shares](learn/fractional-shares.md)
