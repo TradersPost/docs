@@ -30,6 +30,7 @@
 
 ## Learn
 
+* [Rate Limits](learn/rate-limits.md)
 * [TradingView](learn/tradingview.md)
 * [Prop Firm Trading](learn/prop-firm-trading.md)
 * [TrendSpider](learn/trend-spider.md)

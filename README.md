@@ -25,9 +25,7 @@ TradersPost Explainer Video
 * **Trading Communities -** a trading community can use TradersPost to send their trading signals to other TradersPost users where trades can be automated or manually approved or rejected.
 
 {% hint style="warning" %}
-TradersPost is **NOT** designed to be a high frequency trading platform. Your strategy needs to run on a higher timeframe. Please do not setup strategies on 1 minute chart or less and send hundreds of signals to TradersPost in a short amount of time. These types of strategies do not work due to slippage and rate limiting with the underlying broker APIs.\
-\
-You are allowed 1 webhook request per second with bursts up to 60 per minute. Any requests that exceed 60 requests per minute will be blocked and will not show up in the TradersPost application. Read more about our enforced rate limits here.
+TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](learn/rate-limits.md).
 {% endhint %}
 
 ## How does it work?

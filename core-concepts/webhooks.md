@@ -126,9 +126,9 @@ You can read more about 400 Bad Requests here.
 {% endtab %}
 {% endtabs %}
 
-## Rate Limiting
+## Rate Limits
 
-TradersPost is **NOT** designed to be a high frequency trading platform. While we do not currently rate limit traffic to webhooks, we may contact you and disable your webhooks and strategies if we determine that your account is sending too many requests.
+TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](../learn/rate-limits.md).
 
 ## Examples
 
