@@ -25,6 +25,10 @@ To ensure fair access and system integrity, please adhere to the following rate 
 
 Exceeding these limits may result in temporary suspension or banning. Always monitor your strategies and the amount of webhooks being sent to TradersPost to prevent violations. If you have any questions about our rate limits, please contact us at [support@traderspost.io](mailto:support@traderspost.io).
 
+### TradingView & TrendSpider Rate Limited
+
+If you experience webhook rate limits when sending webhooks from third-party platforms like TradingView and TrendSpider, note that they might not notify you of failures directly in their interfaces. If you suspect rate limiting, contact TradingView or TrendSpider support for confirmation on whether TradersPost has limited your alert webhook
+
 ### Broker Rate Limits
 
 Brokers implement rate limits to ensure fair usage and system stability, alongside any limitations from TradersPost. These rules control request frequency to prevent overload and maintain responsiveness, providing equitable access for users. Understanding these policies is vital for optimizing trading system communication and preventing rejected requests due to
