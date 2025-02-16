@@ -25,6 +25,17 @@ In the context of automated trading, the webhook JSON message contains all the i
 You can continue reading and learning about webhooks below. You can always come back to this page later to learn about the functionality that you can control with the webhook JSON payload.
 {% endhint %}
 
+## Webhook Testing Tools
+
+Before integrating webhooks into your trading strategy, it's a good idea to test them. Here are some useful tools:
+
+- [Beeceptor](https://beeceptor.com/) – Quickly create a webhook endpoint and inspect payloads.
+- [ngrok](https://ngrok.com/) – Expose local webhook endpoints to the internet for real-time testing.
+- [Webhook.site](https://webhook.site/) – View and test incoming webhook requests.
+- [RequestBin](https://requestbin.com/) – Inspect and debug HTTP requests in real time.
+
+These tools help validate webhook payloads and troubleshoot integration issues efficiently.
+
 ## Webhook API Documentation
 
 Here is a quick reference list of all the supported fields and values for the TradersPost webhook JSON.
@@ -46,89 +57,18 @@ Here is a quick reference list of all the supported fields and values for the Tr
 * **trailPercent** - When `orderType=trailing_stop`, you can send a percentage in the `trailPercent` field to create a trailing stop order.
 * **quantityType** - The type of the value sent in the `quantity` field documented below. The only supported values are `fixed_quantity`, `dollar_amount`, `risk_dollar_amount`, `percent_of_equity`, `percent_of_position`. Default is `fixed_quantity` when you send a `quantity` without a `quantityType`.
 * **quantity** - The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. Check **Use signal quantity** in your strategy subscription settings to use this quantity.
-* **takeProfit** - The take profit to attach to your entry order. This objects supported fields are `limitPrice`, `price`, `percent`. Check **Use signal take profit** in your strategy subscription settings to use this take profit.
-* **stopLoss** - The stop loss to attach to your entry order. This objects supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailAmount` and `trailPercent`. Check **Use signal stop loss** in your strategy subscription settings to use this stop loss.
+* **takeProfit** - The take profit to attach to your entry order. This object's supported fields are `limitPrice`, `price`, `percent`. Check **Use signal take profit** in your strategy subscription settings to use this take profit.
+* **stopLoss** - The stop loss to attach to your entry order. This object's supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailAmount` and `trailPercent`. Check **Use signal stop loss** in your strategy subscription settings to use this stop loss.
 * **timeInForce** - The time in force for your order. The supported values are `day`, `gtc`, `opg`, `cls`, `ioc` and `fok`. If you send a time in force not supported by your broker, it will fallback to the default time in force or the time in force configured in the strategy subscription settings.
 * **extendedHours** - Whether or not to send the order as an extended hours order. This is only applicable for stocks and the supported values are `true` or `false`.
 
 Properties other than the ones listed above can be sent, but will be ignored by TradersPost. This means you can send extra properties for debugging purposes.
 
-Here is the full reference documentation for the TradersPost webhook JSON.
-
-## TradersPost Webhook Request API documentation.
-
-<mark style="color:green;">`POST`</mark> `https://webhooks.traderspost.io/trading/webhook/{uuid}/{password}`
-
-#### Query Parameters
-
-<table><thead><tr><th width="184">Name</th><th width="99">Type</th><th>Description</th></tr></thead><tbody><tr><td>uuid<mark style="color:red;">*</mark></td><td>String</td><td>Unique webhook UUID string used to identify a webhook. This never changes.</td></tr><tr><td>password<mark style="color:red;">*</mark></td><td>String</td><td>Password string used to protect access to your webhook. You can change this by clicking Generate New URL in TradersPost when editing your webhook.</td></tr></tbody></table>
-
-#### Request Body
-
-<table><thead><tr><th width="180">Name</th><th width="101">Type</th><th>Description</th></tr></thead><tbody><tr><td>ticker<mark style="color:red;">*</mark></td><td>String</td><td>The ticker symbol name. Example <strong>AMD</strong>.</td></tr><tr><td>action<mark style="color:red;">*</mark></td><td>String</td><td><p>The signal action. Supported values are the following:</p><p></p><p><code>buy</code> - Exit bearish position and optionally open bullish position</p><p></p><p><code>sell</code> - Exit bullish position and optionally open bearish position</p><p></p><p><code>exit</code> - Exit open position without entering a new position on the other side.</p><p></p><p><code>cancel</code> - Cancel open orders</p><p></p><p><code>add</code> - Add to existing open position</p></td></tr><tr><td>sentiment</td><td>String</td><td><p><code>bullish</code> - Open position after trade is executed should be bullish or flat.</p><p></p><p><code>bearish</code> - Open position after trade is executed should be bearish or flat.</p><p></p><p><code>flat</code> - No position should be open after trade is executed.</p></td></tr><tr><td>optionType</td><td>String</td><td>The type of option contract to trade. The supported values are <code>both</code>, <code>call</code> and <code>put</code>.</td></tr><tr><td>intrinsicValue</td><td>String</td><td>The intrinsic value of the option contract to trade. The supported values are <code>itm</code> (in the money) and <code>otm</code> (out of the money).</td></tr><tr><td>expiration</td><td>String</td><td>The expiration of the option contract to trade. The value can be a specific date like <code>2024-05-06</code> or a relative date expression like <code>+6 months</code>.</td></tr><tr><td>strikeCount</td><td>Integer</td><td>How many strikes to ask for from the broker when executing options trades and scanning the option chain to find a contract to trade.</td></tr><tr><td>strikesAway</td><td>Integer</td><td>How many strikes away from at the money to select.</td></tr><tr><td>strikePrice</td><td>Integer</td><td>Specifies the strike price of the option contract to trade.</td></tr><tr><td>signalPrice</td><td>Number</td><td>Optionally send the current market price at the time the signal was generated. This price is used in some cases when a broker does not support fetching quotes or the broker returns an empty quote.</td></tr><tr><td>orderType</td><td>String</td><td>The type of order to create. Supported values are <code>market</code>, <code>limit</code>, <code>stop</code>, <code>stop_limit</code>, and <code>trailing_stop</code>. If you send an order type not supported by your broker, it will fallback to the default order type configured in the strategy subscription settings.</td></tr><tr><td>limitPrice</td><td>Number</td><td>When <code>orderType=limit</code> or <code>orderType=stop_limit</code> you can send a <code>limitPrice</code> for the order. If you omit this value, the current market price will be used when the trade is executed.</td></tr><tr><td>stopPrice</td><td>Number</td><td>When <code>orderType=stop</code> or <code>orderType=stop_limit</code> you can send a <code>stopPrice</code> for the order. If you omit this value, the current market price will be used when the trade is executed.</td></tr><tr><td>trailAmount</td><td>Number</td><td>When <code>orderType=trailing_stop</code>, you must send a dollar amount  in the <code>trailAmount</code> field to create a trailing stop order.</td></tr><tr><td>trailPercent</td><td>Number</td><td>When <code>orderType=trailing_stop</code>, you must send a percentage in the <code>trailPercent</code> field to create a trailing stop order.</td></tr><tr><td>quantityType</td><td>Number</td><td><p>The type of the value sent in the <code>quantity</code> field documented below. Supported values are the following:</p><p></p><p><code>fixed_quantity</code> - A fixed quantity number that is used for the order.</p><p></p><p><code>dollar_amount</code> - Dynamically calculates a quantity for the given dollar amount.</p><p></p><p><code>risk_dollar_amount</code> - Dynamically calculates a quantity for the given risk dollar amount. This type requires a stop loss.</p><p></p><p><code>percent_of_equity</code> - Dynamically calculates a quantity for the given percent of equity.</p><p></p><p><code>percent_of_position</code> - Dynamically calculates a quantity for the given percent of position.</p><p></p><p>Default is <code>fixed_quantity</code> when you send a <code>quantity</code> without a <code>quantityType</code>.</p></td></tr><tr><td>quantity</td><td>Number</td><td>The quantity to enter. If you omit this value, the quantity will be dynamically calculated based on your strategy subscription settings or defaulted to 1.</td></tr><tr><td>stopLoss</td><td>Object</td><td><a href="webhooks.md#stop-loss">Read more</a></td></tr><tr><td>takeProfit</td><td>Object</td><td><a href="webhooks.md#take-profit">Read more</a></td></tr><tr><td>timeInForce</td><td>String</td><td><p>The time in force for your order. If you send a time in force not supported by your broker, it will fallback to the default time in force or the time in force configured in the strategy subscription settings.</p><p></p><p>The supported values are <code>day</code>, <code>gtc</code>, <code>opg</code>, <code>cls</code>, <code>ioc</code> and <code>fok</code>.<br><br><code>day</code> - Good For Day<br><br><code>gtc</code> - Good Until Canceled<br><br><code>opg</code> - Market on Open / Limit on Open<br><br><code>cls</code> - Market on Close / Limit on Close<br><br><code>ioc</code> - Immediate or Cancel<br><br><code>fok</code> - Fill or Kill</p></td></tr><tr><td>extendedHours</td><td>Boolean</td><td>Whether or not to send the order as an extended hours order. This is only applicable for stocks and the supported values are either <code>true</code> or <code>false</code>.</td></tr><tr><td>extras</td><td>Object</td><td><a href="webhooks.md#extras">Read more</a></td></tr></tbody></table>
-
-{% tabs %}
-{% tab title="200: OK Successful webhook response." %}
-```javascript
-{
-    "success":true,
-    "id":"47462f2d-378c-4bf5-a016-1c1221aa0e62",
-    "logId":"a036eff1-b7db-4f15-b5b6-f5e51995ad29",
-    "payload": {
-        "ticker":"NQ",
-        "action":"buy",
-        "sentiment": "bullish",
-        "price":12663.5,
-        "quantity": 1
-    }
-}
-```
-{% endtab %}
-
-{% tab title="400: Bad Request Rejected webhook response." %}
-When a webhook request is sent to TradersPost, we run it through several different validation checks. If any of these validation rules fail, the webhook will respond like the following with a status code of 400.
-
-Here is an example invalid JSON payload.
-
-```json
-{
-    "ticker": "NQ",
-    "action": "bu"
-}
-```
-
-Here is the response you would get for that payload.
-
-```json
-{
-    "success":false,
-    "logId":"bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
-    "messageCode":"invalid-action",
-    "message":"Invalid action provided. Action must be one of: buy, sell, exit, cancel, add."
-}
-```
-
-You can read more about 400 Bad Requests here.
-{% endtab %}
-
-{% tab title="404: Not Found Webhook not found." %}
-```javascript
-{
-    "success": false,
-    "messageCode": "not-found",
-    "message": "Webhook not found."
-}
-```
-{% endtab %}
-
-{% tab title="500: Internal Server Error Something went wrong" %}
-
-{% endtab %}
-{% endtabs %}
-
 ## Rate Limits
 
-TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](../learn/rate-limits.md).
+TradersPost is **NOT** designed to be a high-frequency trading platform. The minimum allowed timeframe to trade on is the 1-minute chart. You are allowed to send **60 requests per minute** and **500 requests per hour**. 
+
+If you set up a strategy on anything less than the 1-minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](../learn/rate-limits.md).
 
 ## Examples
 
