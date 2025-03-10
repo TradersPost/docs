@@ -9,6 +9,7 @@ Phone: [+1 (888) 247-1963](tel:18882471963)
 ## Supported Asset Classes
 
 * Stocks
+* Options
 * Futures
 * Crypto
 

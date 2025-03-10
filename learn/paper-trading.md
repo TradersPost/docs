@@ -36,9 +36,14 @@ It is recommended that you use one of the above simulated paper trading environm
 
 The TradersPost paper broker supports all asset classes, but the futures asset class does not come with data by default. If you want the TradersPost paper broker to have real-time futures data, you will need to connect a broker such as TradeStation that supports futures and has live data and set is as the market data source for your TradersPost paper broker.
 
-1. Go to **Brokers** and click **Connect Broker** and connect your TradeStation account.
-2. Once your TradeStation account is connected, go back to **Brokers** and click **Edit** next to your TradersPost paper broker.
-3. Choose your connected TradeStation account in the **Market Data Source** dropdown and click **Save**. Now your TradersPost paper broker will use your TradeStation account for live market data and will fully support the futures asset class.
+{% hint style="info" %}
+You must have live market data available with your broker before this feature will work. If you connect a broker that doesn't provide you with live market data (typically that you have paid for), then the data and pricing will still be delayed.
+{% endhint %}
+
+#### Using a Supported Broker for Market Data
+
+1. Once your TradeStation account is connected, go back to **Brokers** and click **Edit** next to your TradersPost paper broker.
+2. Choose your connected TradeStation account in the **Market Data Source** dropdown and click **Save**. Now your TradersPost paper broker will use your TradeStation account for live market data and will fully support the futures asset class.
 
 Here is a quick video showing you how to set this up.
 
