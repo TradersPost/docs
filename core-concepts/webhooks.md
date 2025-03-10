@@ -565,7 +565,7 @@ Or if want to send the order with extended hours enabled so that the order can b
     "orderType": "limit",
     "limitPrice": 50.50,
     "timeInForce": "gtc",
-    "extendedHours" true
+    "extendedHours": true
 }
 ```
 

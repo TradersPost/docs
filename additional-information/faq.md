@@ -18,7 +18,7 @@ Yes, TradersPost supports trading both the long and short sides of a strategy.
 
 ### Do you support crypto?
 
-Yes, we support crypto with several different popular crypto exchanges like [Coinbase](../core-concepts/brokers/coinbase.md) and [Kraken](../core-concepts/brokers/kraken.md).
+Yes, we support crypto with several different popular crypto exchanges like [Coinbase](../core-concepts/brokers/coinbase.md) and [Kraken](../core-concepts/brokers/kraken.md). We don't currently support crypto futures, but are definitely looking into adding this asset class.
 
 ### Do you support futures?
 
