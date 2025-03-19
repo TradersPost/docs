@@ -25,5 +25,5 @@ Alpaca is supported in multiple countries. Take a look at the [supported countri
 
 ## Limitations
 
-* Alpaca does not support complex orders (OCO, OTO, bracket) for the Crypto or Options asset class. This is a limitation of the Alpaca broker and not a limitation of TradersPost.
+* Alpaca does not support complex orders (OCO, OTO, bracket) for the Crypto or Options asset class. This is a limitation of the Alpaca broker and not a limitation of TradersPost. If you submit a complex order to Alpaca for the Crypto or Options asset class, you will receive a message that says "Complex orders not supported for options trading".
 
