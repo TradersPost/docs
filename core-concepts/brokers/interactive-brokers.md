@@ -23,11 +23,11 @@ The Interactive Brokers API can sometimes be unreliable. You may occasionally re
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-08-21 at 5.42.06 PM.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-To reduce the instances where Interactive Brokers API gives us an idle timeout, we've been told by the IBKR API support team to only send one order at a time per user. This means that if you send multiple trades at the exact same time, only one will be executed at a time.
-{% endhint %}
-
 On average, the IBKR API responds to our requests in **229 milliseconds**.
+
+## Synchronous Trade Execution
+
+Interactive Brokers only allows one order at a time per account. If you submit multiple trades at once, they’ll be processed sequentially—one after another—not in parallel. So if you send 10 trades, they’ll be executed one at a time, which may take some time to complete.
 
 ## Supported Asset Classes
 
