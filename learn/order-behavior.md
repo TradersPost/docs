@@ -107,6 +107,19 @@ You can't specify a quantity using `takeProfit` or `stopLoss` so instead you can
 }
 ```
 
+#### Partially exit with 20 percent of the position:
+
+```json
+{
+  "ticker": "TSLA",
+  "action": "exit",
+  "quantityType": "percent_of_position",  
+  "quantity": 20
+}
+```
+
+
+
 ## Sentiment
 
 The JSON sentiment field in TradersPost allows you to specify what the sentiment of the position should be after executing the trade. When sending a webhook, you can include the `sentiment` field with a value of `flat` to exit a bullish or bearish position without entering the opposite position. This means that it will always exit the full quantity of the open position without entering a new position on the other side.
