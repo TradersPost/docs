@@ -562,11 +562,6 @@ You can generate and execute opposite alerts using TradingView and TradersPost b
 * **Bracket Orders**: Use bracket orders if supported by your broker to ensure all orders are placed together.
 * **Sequential Orders**: For brokers that do not support bracket orders, place the entry order first, then add take profit and stop loss orders after confirmation of the entry.
 
-**Recent Improvements**:
-
-* **Order Modification**: TradersPost now allows modifying orders after the fact, enabling you to set a limit entry order and then add take profit or stop loss orders afterward.
-* **Future Enhancements**: Plans to improve the process by attaching additional orders to entries, ensuring trailing stops or stop losses are set after confirming the entry.
-
 For the most reliable execution, use bracket orders if your broker supports them. Otherwise, sequentially place your entry and stop/limit orders to avoid race conditions. TradersPost continues to enhance its features to support these functionalities better.
 
 ***
