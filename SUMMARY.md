@@ -90,7 +90,6 @@
 * [WebhookMessage Library](additional-information/webhookmessage-library.md)
 * [Maintenance Windows](additional-information/maintenance-windows.md)
 * [Releases](https://app.gitbook.com/o/MWqRLlYTaCaJh8cAqevI/s/faGHqKUfUy1dxnpnFnAi/)
-* [Prop Firm Trading](additional-information/prop-firm-trading.md)
 
 ## Links
 
