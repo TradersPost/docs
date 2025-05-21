@@ -1,7 +1,5 @@
 ---
 description: TradersPost is your one-stop solution for automating your trading strategies.
-cover: .gitbook/assets/Documentation Cover.jpeg
-coverY: 0
 ---
 
 # What is TradersPost?
