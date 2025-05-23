@@ -24,14 +24,52 @@ Some customers separate the positions in separate broker accounts to work around
 
 ## Symbol Format
 
-TradersPost options symbols are in the following format: `TSLA 210121C325`
+This section outlines the different formats TradersPost supports for representing options contracts. Users are not required to use a specific format based on their connected broker. TradersPost parses and normalizes multiple formats internally and automatically converts them to the correct format required by each broker when submitting orders.
 
-* TSLA - The underlying ticker symbol
-* 21 - The two digit year with leading 0
-* 01 - The two digit month with leading 0
-* 21 - The two digit day with leading 0
-* C - The option type (C or P)
-* 325 - The strike price
+#### Example Contract
+
+* **Underlying**: SPY
+* **Contract Type**: Call
+* **Strike Price**: $582.50
+* **Expiration Date**: May 20, 2025
+
+> **Note**: This specific contract is used for demonstration purposes only. A $582.50 strike price for SPY may not exist. The decimal is included to illustrate how different formats handle precision.
+
+#### Format Comparison
+
+<table><thead><tr><th width="153.13671875">Platform</th><th width="204.57421875">Example Format</th><th width="108.49609375">Date Format</th><th width="128.17578125">Strike Format</th><th width="264.71484375">Notes</th></tr></thead><tbody><tr><td><strong>TradersPost</strong></td><td><code>SPY 250520582.5</code></td><td>YMD</td><td>Decimal</td><td>Flexible input format. Trailing <code>.0</code> is optional.</td></tr><tr><td><strong>TDAmeritrade</strong></td><td><code>SPY_052025582.5</code></td><td>MDY</td><td>Decimal</td><td>Uses underscore between symbol and date.</td></tr><tr><td><strong>TradeStation</strong></td><td><code>SPY 250520C582.5</code></td><td>YMD</td><td>Decimal</td><td>Includes call/put indicator (<code>C</code> or <code>P</code>) before strike.</td></tr><tr><td><strong>Tradier</strong></td><td><code>SPY250520C00582500</code></td><td>YMD</td><td>Integer (scaled)</td><td>Strike is zero-padded and scaled (e.g., 582.5 → 00582500).</td></tr><tr><td><strong>TradingView</strong></td><td><code>SPY250520582.5</code></td><td>YMD</td><td>Decimal</td><td>Fully concatenated format without spaces.</td></tr></tbody></table>
+
+#### Format Details
+
+**Date Formatting**
+
+* **YMD** = `YYMMDD` (e.g. May 20, 2025 → `250520`)
+* **MDY** = `MMDDYY` (e.g. May 20, 2025 → `052025`)
+
+**Strike Formatting**
+
+* **Decimal Format**: Most formats use a decimal representation of the strike. Trailing zeroes are optional (`582.5` or `582`).
+* **Scaled Integer Format** (Tradier): Strike is padded and scaled to four decimal places (e.g., `582.5` → `00582500`).
+
+**Call/Put Indicator**
+
+* Some formats include an explicit indicator for option type:
+  * `C` = Call
+  * `P` = Put
+
+#### TradersPost Behavior
+
+* Users can input any of the supported formats regardless of broker.
+* TradersPost will parse, validate, and normalize the input.
+* When sending the order to the broker, TradersPost will format the symbol according to the broker’s specific requirements.
+
+**Examples of accepted user input:**
+
+* `SPY 250520582.5`
+* `SPY_052025582.5`
+* `SPY250520C582.5`
+* `SPY250520582.5`
+* `SPY250520C00582500`
 
 ## Supported Option Types
 
