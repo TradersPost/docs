@@ -78,6 +78,7 @@
 
 ## Additional Information
 
+* [Support Guidelines](additional-information/support-guidelines.md)
 * [Glossary](additional-information/glossary.md)
 * [Error Messages](additional-information/error-messages.md)
 * [Troubleshooting](additional-information/troubleshooting.md)
