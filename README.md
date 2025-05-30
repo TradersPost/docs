@@ -12,10 +12,6 @@ Whether you're fine-tuning risk management or automating entry and exit orders, 
 
 Let us handle the automation so you can focus on what really matters: **your trading success.**
 
-{% embed url="https://www.youtube.com/watch?v=WucPurodgk8" %}
-TradersPost Explainer Video
-{% endembed %}
-
 ## Who is TradersPost for?
 
 * **Strategy Developers** - a person that is interested in creating automated trading strategies and connecting them to their broker.
@@ -37,9 +33,7 @@ TradersPost is made of the following core concepts. You can use them together to
 
 If you prefer to watch a video demo of TradersPost to get a high level overview, this video is for you. If not, feel free to continue reading to get a high level overview.
 
-{% embed url="https://www.youtube.com/watch?v=AWSImgUtw98" %}
-Watch a demo of TradersPost if you prefer a video.
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=_q4fLhzRwWg" %}
 
 ## Brokers
 
