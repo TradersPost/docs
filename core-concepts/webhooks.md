@@ -39,7 +39,7 @@ Here is a quick reference list of all the supported fields and values for the Tr
 * **strikeCount** - How many strikes to ask for from the broker when executing options trades and scanning the option chain to find a contract to trade.
 * **strikesAway** - How many strikes away from at the money to select.
 * **strikePrice** - Specifies the strike price of the option contract to trade.
-* **signalPrice** - Optionally send the current market price at the time the signal was generated. This price is used in some cases when a broker does not support fetching quotes or the broker returns an empty quote.
+* **signalPrice** - Optionally send the current market price at the time the signal was generated. This price is used in some cases when a broker does not support fetching quotes or the broker returns an empty quote. It is also used to determine slippage between the signal and broker fill price.
 * **orderType** - The type of order to create. Supported values are `market`, `limit`, `stop`, `stop_limit`, and `trailing_stop`. If you send an order type not supported by your broker, it will fallback to the default order type configured in the strategy subscription settings.
 * **limitPrice** - The limit price of the buy or sell action if `limit` orders are used. If you omit this value and `limit` orders are used, the current market price will be used when the trade is executed.
 * **stopPrice** - The stop price of the buy or sell action if `stop_limit` orders are used. If you omit this value and `stop` or `stop_limit` orders are used, the current market price will be used when the trade is executed.
@@ -50,7 +50,7 @@ Here is a quick reference list of all the supported fields and values for the Tr
 * **takeProfit** - The take profit to attach to your entry order. This objects supported fields are `limitPrice`, `price`, `percent`. Check **Use signal take profit** in your strategy subscription settings to use this take profit.
 * **stopLoss** - The stop loss to attach to your entry order. This objects supported fields are `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trailAmount` and `trailPercent`. Check **Use signal stop loss** in your strategy subscription settings to use this stop loss.
 * **timeInForce** - The time in force for your order. The supported values are `day`, `gtc`, `opg`, `cls`, `ioc` and `fok`. If you send a time in force not supported by your broker, it will fallback to the default time in force or the time in force configured in the strategy subscription settings.
-* **time -** The time property is used to keep track of the time the signal was generated and the request to TradersPost was started. It can also be used to calculate the "time slippage" that can occur between signal creation and broker execution.
+* **time -** The time property is used to keep track of the time the signal was generated and the request to TradersPost was started. It can also be used to calculate the time it takes between the signal source and getting to TradersPost.
 * **extendedHours** - Whether or not to send the order as an extended hours order. This is only applicable for stocks and the supported values are `true` or `false`.
 
 Properties other than the ones listed above can be sent, but will be ignored by TradersPost. This means you can send extra properties for debugging purposes.
