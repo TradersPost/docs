@@ -8,6 +8,12 @@ The ProjectX integration is generally available for all TradersPost customers. P
 
 Email: [info@projectx.com](mailto:info@projectx.com)
 
+## Setup
+
+Please follow the guide from your prop firm on how to set up API access. In all cases, you will be required to purchase API access on ProjectX. For example, TopstepX has this guide: [https://help.topstep.com/en/articles/11187768-topstepx-api-access](https://help.topstep.com/en/articles/11187768-topstepx-api-access)
+
+You can register for a ProjectX account here: [https://dashboard.projectx.com/](https://dashboard.projectx.com/)
+
 ## Supported Asset Classes
 
 * Futures
