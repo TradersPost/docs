@@ -41,7 +41,7 @@ TradersPost has a "use your own broker" architecture. We are not a broker or an 
 
 {% embed url="https://traderspost.io/connections" %}
 
-Don't see your broker listed there? Check our [broker roadmap](core-concepts/brokers/broker-roadmap/) for upcoming connections add yourself to a waitlist for other brokers listed [under the Coming Soon heading](https://traderspost.io/connections).
+Don't see your broker listed there? Check our [broker roadmap](broken-reference) for upcoming connections add yourself to a waitlist for other brokers listed [under the Coming Soon heading](https://traderspost.io/connections).
 
 ## Webhooks
 
