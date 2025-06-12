@@ -166,6 +166,8 @@ You can also use the sentiment field to exit a bullish position without entering
 }
 ```
 
+When you use `sentiment: flat` feature, TradersPost will always exit the full quantity of the open position no matter what quantity is sent in the signal. This is because the sentiment is indicating that the position should be flattened.
+
 ### Enter Bearish
 
 ```json
@@ -194,6 +196,22 @@ You can also use the sentiment field to exit a bearish position without entering
 }
 ```
 
+When you use `sentiment: flat` feature, TradersPost will always exit the full quantity of the open position no matter what quantity is sent in the signal. This is because the sentiment is indicating that the position should be flattened.
+
+### Partial Exits
+
+You can partially exit an open position by using `action: exit` and sending a `quantity` in the signal with a value less than the quantity of the open position. So imagine you are long 5 shares and you want to exit 2 of them, you would send a JSON payload like this.
+
+```json5
+{
+    "ticker": "SQ",
+    "action": "exit",
+    "quantity": 2
+}
+```
+
+The above JSON would partially exit the open position and exit 2 of the 5 total shares. If you send a quantity that is greater than the quantity of the open position, the full position will be exited.
+
 ### Cancel Open Orders
 
 Cancel all the open orders for the given ticker.
@@ -212,6 +230,16 @@ You can also control the open order canceling functionality with the `cancel` pr
     "ticker": "SQ",
     "action": "exit",
     "cancel": true
+}
+```
+
+If you have order canceling enabled in your strategy subscription settings and you want to disable the order canceling for a signal, you can send `cancel: false` as well.
+
+```json5
+{
+    "ticker": "SQ",
+    "action": "exit",
+    "cancel": false
 }
 ```
 
