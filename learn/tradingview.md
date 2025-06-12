@@ -7,9 +7,7 @@ description: >-
 
 # TradingView
 
-{% embed url="https://www.youtube.com/watch?v=uPKd-BJUrMI" %}
-How To Build A Trading Bot From Any TradingView Strategy In Your Broker Using TradersPost
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=_q4fLhzRwWg" %}
 
 ## Alert Message JSON
 
