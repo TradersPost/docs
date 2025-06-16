@@ -17,31 +17,7 @@ Prop firms differ in what they allow for automation, scaling, and risk. Always c
 
 ## Supported Prop Firms
 
-As of May 2025, the list of supported prop firms includes:
-
-* [Alpha Ticks](https://app.alpha-futures.com/signup/Jonathan002558/)
-* [Alpha Trader](https://alphatraderfirm.com/ref/1048/)
-* [Apex Trader Funding](https://apextraderfunding.com/)
-* [BluSky Trading](https://blusky.pro/?ref=mzizogz)
-* [Blue Guardian](https://checkout.blueguardian.com/ref/72242/)
-* [E8X](https://e8markets.com/a/traderspost)
-* [Elite Trader Funding](https://elitetraderfunding.com/?ref=jwage)
-* [Funded Futures Family](https://www.fundedfuturesfamily.com/)
-* [Funding Futures](https://fundingfutures.com/)
-* [Futures Elite](https://app.futureselite.com/auth/sign-up?code=AFF1174182)
-* [Fxify Futures](https://app.fxifyfutures.com/?ref=CiBnOOFcHOxu)
-* [GOAT Funded](https://checkout.goatfundedfutures.com/aff/239/)
-* [Legends Trading](https://app.thelegendstrading.com/plans/ref/294/)
-* [My Funded Futures](https://myfundedfutures.com/)
-* [Purdia Capital](https://purdia.com/?i=TRADERSPOST)
-* [Take Profit Trader](https://takeprofittrader.com/)
-* [The Futures Desk](https://www.thefuturesdesk.com/)
-* [TickTickTrader](https://tickticktrader.com/)
-* [TopOneFutures](https://toponefutures.com/?linkId=lp_707970\&sourceId=traderspost\&tenantId=toponefutures)
-* [Topstep](https://www.topstep.com/)
-* [TradeDay](https://members.tradeday.com/membership-plans-pricing?a_aid=traderspost)
-* [Tradeify](https://tradeify.co/)
-* [TX3Funding](https://tx3funding.tech/checkout/ref/27/?add-to-cart=1495)
+You can find a full list of all prop firms supported by TradersPost on this [page](https://traderspost.io/use-cases/prop-firms).
 
 ## Managing Multiple Prop Firm Accounts via Tradovate
 
