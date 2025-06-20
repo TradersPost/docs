@@ -269,7 +269,7 @@ When TradersPost calculates a take profit or stop loss price using a relative va
 * If market order, we will use the midpoint price from the latest quote.
 {% endhint %}
 
-You can configure your strategy subscription to include your take profit & stop loss settings, or you can send your take profit & stop losses with your webhook signal. Take a look at the [Webhooks](../core-concepts/webhooks.md#signal-take-profit) documentation learn more about how to send your take profit & stop losses with your webhook signal.
+You can configure your strategy subscription to include your take profit & stop loss settings, or you can send your take profit & stop losses with your webhook signal. Take a look at the [Webhooks](../../core-concepts/webhooks.md#signal-take-profit) documentation learn more about how to send your take profit & stop losses with your webhook signal.
 
 ## Min Move / Min Tick Size
 
@@ -283,11 +283,11 @@ TradersPost will round up to the nearest precision for **sell** orders and down 
 
 You can view what the `Min Move` value is in TradersPost by viewing the quote for the ticker you are trading.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-09-06 at 8.24.35 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-09-06 at 8.24.35 AM.png" alt=""><figcaption></figcaption></figure>
 
 This data can also be viewed in TradingView by clicking the three dots at the top of the chart and then clicking `Symbol Info` from the dropdown. Additionally, in TradingView PineScript, you can get what the `Min Move` is by using the `syminfo.mintick` variable.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-09-06 at 8.29.22 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-09-06 at 8.29.22 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Trade Retries
 

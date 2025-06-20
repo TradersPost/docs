@@ -4,7 +4,7 @@ description: >-
   through the following brokers.
 ---
 
-# Stocks
+# Stock Trading
 
 {% embed url="https://www.youtube.com/watch?v=tJcY7M_YCmU" %}
 TradersPost Automated Stocks Trading Setup
@@ -12,15 +12,15 @@ TradersPost Automated Stocks Trading Setup
 
 ## Supported Brokers
 
-* [TradeStation](../core-concepts/brokers/tradestation.md)
-* [Alpaca](../core-concepts/brokers/alpaca.md)
-* [Tradier](../core-concepts/brokers/tradier.md)
-* [Interactive Brokers](../core-concepts/brokers/interactive-brokers.md)
-* [Robinhood](../core-concepts/brokers/robinhood.md)
+* [TradeStation](../all-supported-connections/tradestation.md)
+* [Alpaca](../all-supported-connections/alpaca.md)
+* [Tradier](../all-supported-connections/tradier.md)
+* [Interactive Brokers](../all-supported-connections/interactive-brokers.md)
+* [Robinhood](../all-supported-connections/robinhood.md)
 
 ## Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
 ### Enter Bullish
 

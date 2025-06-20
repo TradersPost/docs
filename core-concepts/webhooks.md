@@ -8,7 +8,7 @@ description: >-
 
 ## What is a webhook?
 
-Webhooks are automated messages sent from applications when something happens. They have a [JSON message](https://en.wikipedia.org/wiki/JSON) that can contain a payload of data and are sent to a unique URL.
+Webhooks are automated messages sent from applications when something happens. They have a JSON message that can contain a payload of data and are sent to a unique URL.
 
 In the context of automated trading, the webhook JSON message contains all the information about the trade signal like what ticker to buy and at what price. Here is an example simple webhook and JSON message.
 
@@ -132,7 +132,7 @@ You can read more about 400 Bad Requests here.
 
 ## Rate Limits
 
-TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](../learn/rate-limits.md).
+TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](../learn/platform-concepts/rate-limits.md).
 
 ## Examples
 
@@ -814,8 +814,8 @@ Because TradersPost works using standard webhooks, this enables users to integra
 
 Here are some popular platforms that enable you to build strategies and send alerts as webhooks.
 
-* [TradingView](../learn/tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
-* [TrendSpider](../learn/trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
+* [TradingView](../learn/signal-sources/tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
+* [TrendSpider](../learn/signal-sources/trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
 
 ## Custom Code
 
@@ -868,4 +868,4 @@ php traderspost-test.php
 
 This is a simple example, but you can combine this with a service like [Polygon.io](https://polygon.io) to get live real-time market data and build your own completely custom trading strategies and TradersPost can handle the integrations with your broker.
 
-You can read more about [custom code examples here.](../learn/custom-code-examples.md)
+You can read more about [custom code examples here.](../developer-resources/custom-code-examples.md)

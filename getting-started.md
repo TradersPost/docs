@@ -2,6 +2,7 @@
 description: >-
   Quick tutorial for getting setup on TradersPost with an automated trading
   strategy in less than 30 minutes.
+hidden: true
 ---
 
 # Getting Started
@@ -30,9 +31,9 @@ On the next page, click **Connect Live Broker** or **Connect Paper Broker**.
 
 <figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.47.20 PM.png" alt=""><figcaption></figcaption></figure>
 
-Next, choose what broker you want to connect to TradersPost. In this example, we will use [Alpaca](https://app.alpaca.markets/signup?utm\_source=traderspost).&#x20;
+Next, choose what broker you want to connect to TradersPost. In this example, we will use [Alpaca](https://app.alpaca.markets/signup?utm_source=traderspost).&#x20;
 
-If you don't already have an Alpaca account, [click here](https://app.alpaca.markets/signup?utm\_source=traderspost) to create one. Create your account and then make sure you are logged in.
+If you don't already have an Alpaca account, [click here](https://app.alpaca.markets/signup?utm_source=traderspost) to create one. Create your account and then make sure you are logged in.
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.48.38 PM.png" alt=""><figcaption></figcaption></figure>
 

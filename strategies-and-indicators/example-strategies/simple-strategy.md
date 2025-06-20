@@ -12,7 +12,7 @@ To showcase how to send JSON messages for a strategy from TradingView, we have c
 
 Steps to use it:
 
-1. [Create a strategy](../../core-concepts/strategies.md) on your TradersPost account using the [stocks asset class](../../assets/stocks.md), if you plan to test stocks. Strategies are based on an asset class, so you'll need to make this choice first.
+1. [Create a strategy](../../core-concepts/strategies.md) on your TradersPost account using the [stocks asset class](../../assets/stock-trading.md), if you plan to test stocks. Strategies are based on an asset class, so you'll need to make this choice first.
 2. Then subscribe a paper broker to that strategy using a [strategy subscription](../../core-concepts/subscriptions.md).
    1. There will be default settings when you create the subscription. The settings you'll want to change are:
       1. Auto Submit: On

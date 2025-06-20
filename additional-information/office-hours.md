@@ -3,6 +3,7 @@ description: >-
   Every Friday, we dive into your questions and feedback to discuss the latest
   updates and offer guidance on developing automated trading algorithmic
   workflows.
+hidden: true
 ---
 
 # Office Hours

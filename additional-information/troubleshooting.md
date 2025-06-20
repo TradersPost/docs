@@ -26,7 +26,7 @@ This is likely due to you selecting a contract that you can't afford based on th
 
 You can troubleshoot your traded by examining the TradingView and TradersPost logs.
 
-First, make sure that TradingView actually triggered an alert by checking the **Alerts log** in TradingView right column pane. The alert must show up here. If it shows on the chart or shows in the backtester, but it does not show in the **Alerts log** then it is likely that your Pine Script code suffers from [repainting](../learn/tradingview.md#pine-script-repainting).
+First, make sure that TradingView actually triggered an alert by checking the **Alerts log** in TradingView right column pane. The alert must show up here. If it shows on the chart or shows in the backtester, but it does not show in the **Alerts log** then it is likely that your Pine Script code suffers from [repainting](../learn/signal-sources/tradingview.md#pine-script-repainting).
 
 <figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 10.58.27 AM.png" alt=""><figcaption><p>TradingView Alerts log column pane</p></figcaption></figure>
 

@@ -8,7 +8,9 @@ description: >-
 
 ## Trade Signal Help
 
-**1 - Find the Trade Signal URL**
+{% stepper %}
+{% step %}
+### **Find the Trade Signal URL**
 
 If you're having trouble with a trade or signal, please provide as much information about the trade as possible. The best way to get help is to head to your [Strategies](https://app.traderspost.io/app/trading/strategies), find the strategy in question, click "Signals", click the signal where an issue occurred, and share that URL with us. This page is critical because it tells us where the signal came from, what JSON message was in the signal, and what happened to the trade itself.
 
@@ -22,9 +24,17 @@ https://app.traderspost.io/app/trading/strategies/<uuid characters/signals/<uuid
 
 We can then quickly look up your account and the trade issue from this link.
 
-**2 - Provide Context about the Trade**
+
+{% endstep %}
+
+{% step %}
+### Provide Context about the Trade
 
 Next, provide as much detail as possible about the trade, where it came from, how it should have fired and what you expected to happen.
+
+With this information, our support team can quickly look up your trade and help you determine what happened and what can change.
+{% endstep %}
+{% endstepper %}
 
 ## JSON Guidance
 

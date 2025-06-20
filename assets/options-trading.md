@@ -4,7 +4,7 @@ description: >-
   calls or puts based on strategies in TradingView or TrendSpider.
 ---
 
-# Options
+# Options Trading
 
 {% embed url="https://www.youtube.com/watch?v=Kbb37xqMwR4" %}
 TradersPost Automated Options Trading Setup
@@ -18,9 +18,9 @@ Some customers separate the positions in separate broker accounts to work around
 
 ## Supported Brokers
 
-* [TradeStation](../core-concepts/brokers/tradestation.md)
-* [Alpaca](../core-concepts/brokers/alpaca.md)
-* [Tradier](../core-concepts/brokers/tradier.md)
+* [TradeStation](../all-supported-connections/tradestation.md)
+* [Alpaca](../all-supported-connections/alpaca.md)
+* [Tradier](../all-supported-connections/tradier.md)
 
 ## Symbol Format
 
@@ -136,7 +136,7 @@ Or send the full option contract symbol in the `ticker` parameter:
 
 ## Webhook Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
 Inside of TradersPost when setting up a strategy you can configure what kind of option contracts to buy when you receive a signal. Here are the signals you can send and the resulting behavior.
 

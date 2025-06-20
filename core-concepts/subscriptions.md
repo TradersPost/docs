@@ -1,10 +1,6 @@
----
-description: >-
-  Subscriptions are what allow you to connect a strategy to a broker and to
-  control what kind of orders get sent to the broker.
----
-
 # Subscriptions
+
+Subscriptions, also known as Strategy Subscriptions, are what allow you to connect a strategy to a broker and to control what kind of orders get sent to the broker. A strategy subscription _copies_ the default settings of the Strategy and can essentially have its own settings. This is a powerful feature because it allows you to define different rules for different accounts all executed from the same single signal.
 
 ## Create a Subscription
 
@@ -16,7 +12,7 @@ Once you have connected your broker and created a strategy, now you are ready to
 4. Now your strategy subscription is created, but has not been enabled yet. Review the settings for your strategy subscription and click **Save** if you make any changes.
 5. Once you are ready, click the green **Enable** button to enable your strategy subscription. Now, when TradersPost receives an alert to your webhook, a trade will be executed and orders sent to your broker.
 
-## What happens when  a trade is executed?
+## What happens when a trade is executed?
 
 1. **Cancel Open Orders** - Open orders for the ticker will be canceled if one of the following is true
    * There is no open position for the ticker.
@@ -32,4 +28,3 @@ We separate the Brokers, Strategies, Subscriptions and Webhooks at an architectu
 * You can easily change the webhook that powers a strategy with zero disruption to the strategy subscribers.
 * You can connect a strategy to multiple different brokers with different settings.
 * You can connect a strategy to both a paper and live account at the same time and run them in parallel.
-* Other users can subscribe to your strategies.

@@ -31,7 +31,7 @@ TrendSpider Trading bots do not support variables for the ticker so you have to 
 
 TrendSpider only allows one webhook URL to be configured. You can set this URL by clicking your profile icon at the top right and then enter a Webhook URL.
 
-![Set your TrendSpider Webhook URL](<../.gitbook/assets/Set TrendSpider Webhook URL>)
+![Set your TrendSpider Webhook URL](<../../.gitbook/assets/Set TrendSpider Webhook URL>)
 
 ## Alert Variables
 
@@ -76,6 +76,6 @@ Now when you create a Multi-Factor alert, you can configure the note field to co
 
 Here is a screenshot of editing a Multi-Factor alert.
 
-![Edit Multi-Factor TrendSpider alert.](<../.gitbook/assets/Edit TrendSpider Multi-Factor Alert>)
+![Edit Multi-Factor TrendSpider alert.](<../../.gitbook/assets/Edit TrendSpider Multi-Factor Alert>)
 
 If you are interested automating your TrendSpider strategies, give TradersPost a try and [Register](https://traderspost.io/register) your free account today! If you have any questions, join our [Community](https://traderspost.io/community) or email us at [support@traderspost.io](mailto:support@traderspost.io).

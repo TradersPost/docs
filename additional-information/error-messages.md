@@ -2,6 +2,7 @@
 description: >-
   This page documents all the common error messages that you may receive in
   TradersPost and what they mean.
+hidden: true
 ---
 
 # Error Messages
@@ -18,7 +19,7 @@ If you get an error message when trying to save a form with a message like **Fai
 
 ### TradersPost broker does not support options.
 
-If you get an error about the TradersPost paper broker not supporting options, this is because the TradersPost paper broker does not support options data by default out of the box. You will need to connect a broker that has live options data in order to trade options with the TradersPost paper broker. You can read more about this [here](../learn/paper-trading.md#market-data-source).
+If you get an error about the TradersPost paper broker not supporting options, this is because the TradersPost paper broker does not support options data by default out of the box. You will need to connect a broker that has live options data in order to trade options with the TradersPost paper broker. You can read more about this [here](../learn/platform-concepts/paper-trading.md#market-data-source).
 
 ### Broker does not support asset class
 

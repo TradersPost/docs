@@ -1,59 +1,47 @@
 ---
-description: >-
-  Here are some common investing terms related to risk management and trading
-  strategies that may be useful for traders using TradersPost.
+description: Here are some common terms related the TradersPost platform and its use.
 ---
 
 # Glossary
 
-* **Arbitrage:** The practice of exploiting price differences in different markets for the same asset.
-* **Asset Class**: An asset class is a group of financial instruments or investments
-* **Ask Price**: The lowest price at which a seller is willing to sell a security.
-* **Automated Trading:** The use of computer programs to execute trades automatically without human intervention.
-* **Bear Market:** A market trend where prices of securities are declining.
-* **Bender:** Bender is an AI chatbot that is trained on all things TradersPost. He can assist customers by answering simple or complex questions about how TradersPost works. You can DM him in [Discord](https://traderspost.io/discord) to ask questions.
-* **Bid Price**: The highest price at which a buyer is willing to buy a security.
-* **Bull Market:** A market trend where prices of securities are rising.
-* **Call Option:** An option contract that gives the holder the right to buy an asset at a specified price.
-* **Capital:** The amount of money a trader uses to invest.
-* **Capital Gain:** The profit made when selling an asset for a higher price than what was paid for it.
-* **Capital Loss:** The loss made when selling an asset for a lower price than what was paid for it.
-* **Contract:** An agreement between two parties to buy or sell an asset at a specified price and time.
-* **Currency Pair:** Two different currencies that are traded in the forex market.
-* **Day Trading:** The practice of buying and selling securities within the same trading day.
-* **Derivative:** A financial instrument whose value is based on an underlying asset.
-* **Diversification:** The practice of investing in a variety of assets to reduce risk.
-* **Dividends**: Payments made by a corporation to its shareholders, usually in the form of cash or additional shares.
-* **Exchange:** A marketplace where securities, commodities, or derivatives are traded.
-* **Futures Contract:** An agreement between two parties to buy or sell an asset at a future date at a specified price.
-* **Hedge:** A strategy used to reduce risk by taking an offsetting position in a related asset.
-* **Index:** A benchmark that measures the performance of a group of securities.
-* **Investment:** The act of putting money into an asset with the expectation of making a profit.
-* **Initial Public Offering (IPO)**: The first sale of a company's stock to the public.
-* **Leverage:** The use of borrowed funds to increase the potential return of an investment.
-* **Limit Order:** An order to buy or sell an asset at a specified price or better.
-* **Long Position:** The act of buying an asset with the expectation that its value will increase.
-* **Margin:** The amount of money required to open and maintain a position.
-* **Margin Call:** A request by a broker to deposit more funds into a margin account to cover losses.
-* **Market Order:** An order to buy or sell an asset at the current market price.
-* **Midpoint:** The middle price between the bid price and the ask price.
-* **Option:** A contract that gives the holder the right, but not the obligation, to buy or sell an asset at a specified price and time.
-* **Portfolio:** A collection of investments held by an individual or institution.
-* **Price-Earnings Ratio (P/E Ratio):** A ratio used to measure the value of a company's stock by comparing its current price to its earnings per share.
-* **Put Option:** An option contract that gives the holder the right to sell an asset at a specified price.
-* **Quantitative Easing:** A monetary policy used by central banks to increase the supply of money by buying government bonds or other securities.
-* **Rally:** A sharp increase in the prices of securities.
-* **Recession:** A period of economic decline characterized by a decrease in GDP, employment, and trade.
-* **Risk:** The potential for loss or gain from an investment.
-* **Risk Management:** The process of identifying, assessing, and mitigating risks associated with an investment.
-* **Short Position:** The act of selling an asset with the expectation that its value will decrease.
-* **Spread:** The difference between the bid and ask price of an asset.
-* **Stop Loss**: An order to sell a security when it reaches a certain price, used to limit potential losses.
-* **Strategy Subscription:** A strategy subscription is how you connect a strategy to a broker in TradersPost.
-* **Strike Price:** Also known as the exercise price, is the predetermined price at which the holder of the option contract can buy (in the case of a call option) or sell (in the case of a put option) the underlying asset.
-* **Take Profit**: An order to sell a security when it reaches a certain price, used to lock in profits.
-* **Ticker**: A ticker is a unique symbol that represents a financial instrument, such as a stock, futures contract. You use tickers to tell TradersPost what asset you want to trade in your trading signals.
-* **TradingView:** TradingView is a web-based platform that provides charting tools, real-time market data, and a social network for traders and investors.
-* **TrendSpider:** TrendSpider is a web-based, automated technical analysis software designed for traders and investors to efficiently analyze market data and identify trading opportunities.
-* **Washsale:** A wash sale occurs when an investor sells a security at a loss and repurchases the same or a substantially identical security within 30 days before or after the sale. It's often an attempt to claim a tax loss without changing the investment position. However, the IRS has rules to prevent tax advantages from wash sales.
-* **Webhook:** A webhook is an automated method for one web application to communicate with another web application in real-time by sending data or notifications when a specific event occurs. In the context of automating trading, webhooks are used to send a trade signal from one system to another like TradersPost.
+## A
+
+**Account Scaling:** Also known as parallel account execution, copy trading, or multi-account trading, account scaling is a way to trade multiple accounts at the same time. Usually done in [prop firm accounts](../assets/prop-firm-trading.md), you can scale your own accounts by subscribing multiple broker connections to a single strategy.
+
+**Asset Class**: A group of similar financial instruments. TradersPost currently supports trading in stocks, options, futures, and spot crypto. Support for forex is planned.
+
+**Auto submit:** The main TradersPost feature that allows trading signals to be automatically executed on a connected broker account without requiring manual review or approval. When Auto Submit is enabled, incoming signals immediately route orders to the broker based on the strategy's predefined parameters. If disabled, signals are held in a pending state, allowing the user to review and approve each trade before execution.
+
+## E
+
+**Event-driven Execution:** The underlying system design of TradersPost where trading actions are triggered in response to real-time external events, specifically, signals sent from platforms like TradingView, TrendSpider, or others. When an event (signal) occurs, TradersPost immediately processes it, determines the correct strategy, and routes the appropriate order instructions to the connected broker or exchange. This enables highly responsive, automated trading based entirely on external signals, rather than scheduled or continuously polling algorithms.
+
+## J
+
+[**JSON Message**](../core-concepts/json-messages.md)**:** The standardized data format TradersPost uses to receive and process trading signals. A platform like TradingView or TrendSpider sends a JSON message via webhook that includes all the necessary trade instructions, such as the ticker symbol, trade action (buy, sell, exit), quantity, price at signal time, timestamp, and optional extras like custom exit types or risk controls. TradersPost parses this message and translates it into executable orders for your connected broker accounts, enabling fully automated and highly customizable trading.
+
+## L
+
+**Live trading:** Live trading refers to executing trades in a real, funded brokerage or exchange account where actual capital is at risk. When signals are received, orders are submitted to live markets, filled at current prices, and result in real financial gains or losses based on market outcomes.
+
+## P
+
+**Paper trading:** Paper trading allows users to simulate trading without risking real money. Orders are processed and executed in a virtual account that mirrors real market conditions, enabling users to test strategies, refine automation settings, and gain confidence before switching to live trading.
+
+**Prop firm trading:** Prop firm trading refers to trading evaluation and funded accounts provided by proprietary trading firms like Apex Trader Funding or Topstep. These accounts are typically simulated accounts that mirror real market conditions but do not involve live capital, even during the "funded" phase. Traders use their own strategies to meet the firm's profit and risk targets during evaluation, and upon passing, continue trading in a simulated environment with the opportunity to earn payouts based on performance. TradersPost allows users to automate trading across multiple prop firm accounts by connecting these accounts through supported brokers like Tradovate, or platforms like ProjectX, enabling fully automated strategy execution while following the firm's trading rules and risk limits.
+
+## S
+
+[**Signal (Trade Signal)**](../core-concepts/signals.md)**:** A signal, or trade signal, is a real-time instruction generated by a charting platform, indicator, or trading strategy that tells TradersPost when to execute a trade. This signal is delivered through a webhook URL provided by TradersPost, where the external platform sends a structured JSON message containing the details of the trade, such as the ticker, action (buy or sell), quantity, price, and any additional instructions. Once the JSON message is received through the webhook, TradersPost parses it, applies the user's strategy settings, and routes the corresponding order to the connected broker or exchange for execution.
+
+[**Strategy**](../core-concepts/strategies.md)**:** A Strategy in TradersPost is the central place where the webhook URL is provided and all subscriptions (broker connections) are established. Within a strategy, users define the asset class (stocks, options, futures, or crypto), select the trading style (systematic or discretionary), set security controls and allowed tickers, and configure the default settings that apply to all future subscriptions (broker connections) created under that strategy. Each strategy includes a unique webhook URL, which external platforms use to deliver JSON messages containing trade signals. From the Strategy Dashboard, users can monitor and manage all active subscriptions linked to the strategy, ensuring full visibility and control over how signals are routed and executed.
+
+[**Subscription**](../core-concepts/subscriptions.md) **(also called Strategy Subscription):** A Subscription in TradersPost represents the connection between a Strategy and a specific broker or exchange account. Each subscription determines how incoming signals from the strategy's webhook URL are processed for that particular account, including settings like auto submit, position size, account-specific overrides, and risk controls. Subscriptions inherit default settings from the strategy at the time of creation, but can be customized individually to suit the needs of each connected account. Multiple subscriptions can be created under a single strategy, allowing users to execute the same trading signals across multiple accounts simultaneously while maintaining independent controls for each connection.
+
+## T
+
+**Trades:** A Trade in TradersPost represents an individual order that was executed with a broker or exchange through a specific Subscription. Trades are generated after a signal is received and processed according to the subscription’s settings, such as position size, risk controls, and any account-specific overrides. Each trade record includes full context, showing the original signal, the strategy it originated from, and the subscription that executed it. The trade also contains detailed broker execution data, including order status, fill prices, and timestamps. If Auto Submit is disabled, trades are initially held in a pending state where users can manually approve or reject each trade before it is submitted to the broker.
+
+## W
+
+[**Webhook**](../core-concepts/webhooks.md)**:** A webhook is an automated method for one web application to communicate with another web application in real-time by sending data or notifications when a specific event occurs. In the context of automating trading, webhooks are used to send a trade signal from one system to another like TradersPost.

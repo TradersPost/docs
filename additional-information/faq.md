@@ -6,7 +6,7 @@ description: Get answers to the most frequently asked questions about TradersPos
 
 ### Do you support paper trading?
 
-Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](../learn/paper-trading.md).
+Yes, TradersPost supports paper trading with multiple different brokers. Read more [here](../learn/platform-concepts/paper-trading.md).
 
 ### Does TradersPost require coding?
 
@@ -18,15 +18,15 @@ Yes, TradersPost supports trading both the long and short sides of a strategy.
 
 ### Do you support crypto?
 
-Yes, we support crypto with several different popular crypto exchanges like [Coinbase](../core-concepts/brokers/coinbase.md) and [Kraken](../core-concepts/brokers/kraken.md). We don't currently support crypto futures, but are definitely looking into adding this asset class.
+Yes, we support crypto with several different popular crypto exchanges like [Coinbase](../all-supported-connections/coinbase.md) and [Kraken](../all-supported-connections/kraken.md). We don't currently support crypto futures, but are definitely looking into adding this asset class.
 
 ### Do you support futures?
 
-Yes, futures support is available and can be enabled in your account settings. We support futures with popular brokers like [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md) and [TradeStation](../core-concepts/brokers/tradestation.md).
+Yes, futures support is available and can be enabled in your account settings. We support futures with popular brokers like [Tradovate](../all-supported-connections/tradovate.md) and [TradeStation](../all-supported-connections/tradestation.md).
 
 ### Do you support options?
 
-Yes, options support is in beta and can be enabled in your account settings. We support options with popular brokers like [TradeStation](../core-concepts/brokers/tradestation.md) and [Tradier](../core-concepts/brokers/tradier.md).
+Yes, options support is in beta and can be enabled in your account settings. We support options with popular brokers like [TradeStation](../all-supported-connections/tradestation.md) and [Tradier](../all-supported-connections/tradier.md).
 
 ### Do you support spreads or other complex options strategies?
 
@@ -42,7 +42,7 @@ No. TradersPost does not currently track margin availability in your margin acco
 
 ### What brokers do you support?
 
-TradersPost currently integrates with brokers like [TradeStation](../core-concepts/brokers/tradestation.md) and [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md). You can see our full list of brokers on our website [here](https://traderspost.io/connections).
+TradersPost currently integrates with brokers like [TradeStation](../all-supported-connections/tradestation.md) and [Tradovate](../all-supported-connections/tradovate.md). You can see our full list of brokers on our website [here](https://traderspost.io/connections).
 
 ### Can I trade my IRA?
 
@@ -78,7 +78,7 @@ No, TradersPost is a software as a service and is hosted in a shared cloud envir
 
 ### What happens if a signal is received when the market is closed
 
-The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../learn/order-queueing.md) here.
+The resulting orders will be either queued for the next market open on the TradersPost side or on the broker side. You can read more about [Order Queueing](../learn/platform-concepts/order-queueing.md) here.
 
 ### Why was my order rejected by my broker?
 
@@ -126,7 +126,7 @@ We don't currently have strategy or trade level analytics or reports. You will n
 
 ### How come I see trades on my chart that didn't alert in realtime?
 
-Your strategy may suffer from [repainting](../learn/tradingview.md#pine-script-repainting). Make sure you study up on repainting to avoid any potential issues with your strategy being coded in a way where it executes in a backtest but does not execute in the same way with live data.
+Your strategy may suffer from [repainting](../learn/signal-sources/tradingview.md#pine-script-repainting). Make sure you study up on repainting to avoid any potential issues with your strategy being coded in a way where it executes in a backtest but does not execute in the same way with live data.
 
 ### Can I export my trades from TradersPost?
 

@@ -7,7 +7,7 @@ description: >-
 
 # Prop Firm Trading
 
-TradersPost connects your [TradingView](tradingview.md) or [TrendSpider](trend-spider.md) alerts to [NinjaTrader](../core-concepts/brokers/ninjatrader.md)/[Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md), letting you execute manual or automated futures trades in one, or dozens, of proprietary‑firm evaluation (eval) and funded accounts simultaneously. TradersPost handles the order routing, position sizing, and account‑level risk parameters so you can focus on strategy, not button clicking.
+TradersPost connects your [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md) alerts to [NinjaTrader](../all-supported-connections/ninjatrader.md)/[Tradovate](../all-supported-connections/tradovate.md), letting you execute manual or automated futures trades in one, or dozens, of proprietary‑firm evaluation (eval) and funded accounts simultaneously. TradersPost handles the order routing, position sizing, and account‑level risk parameters so you can focus on strategy, not button clicking.
 
 {% hint style="warning" %}
 Before linking TradersPost to any proprietary trading firm, you must verify that your trading approach complies with that firm’s rules and restrictions. TradersPost does not approve or encourage the use of our platform to circumvent, breach, or otherwise violate a prop firm's terms and conditions. You are solely responsible for understanding, following, and staying up to date with each firm's policies. Failure to do so may result in penalties or account termination imposed by the prop firm and/or suspension of your TradersPost integration. TradersPost accepts no liability for any consequences arising from non‑compliance.
@@ -35,7 +35,7 @@ So, the solution is to use one "Parent" account and share that access token with
 
 ### Start with a Parent Account
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 The Goal:
 
@@ -48,4 +48,4 @@ The Steps:
 1. Once you have turned a new or existing broker connection (under a single prop firm login) into a Parent Account, the next step is to ensure all the other broker connections show Primary Broker as the parent account.
 2. This can be done by deleting all the existing connections and starting over. Each time you add a broker account with the same prop firm login, we'll reuse the connection from the Parent Account. Or you can clone that Parent Account connection under Brokers > Inactive Brokers > Choosing the Parent Account > Clicking the three-dot menu > Clicking Clone.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>

@@ -35,7 +35,7 @@ The TradersPost + Tradovate integration currently does not support market data s
 
 ### Market Data for TradersPost Paper Accounts
 
-Due to the lack of market data with Tradovate, a TradersPost paper broker cannot use Tradovate as a [connection for market data](../../../learn/paper-trading.md#market-data-source). [TradeStation](../tradestation.md), however, can be used as an alternative.
+Due to the lack of market data with Tradovate, a TradersPost paper broker cannot use Tradovate as a [connection for market data](../learn/platform-concepts/paper-trading.md#market-data-source). [TradeStation](tradestation.md), however, can be used as an alternative.
 
 ### Limit orders without a price in the signal
 

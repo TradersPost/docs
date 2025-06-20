@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Useful URLs
 
 This page contains a list of useful URLs that you can use to learn more about TradersPost.

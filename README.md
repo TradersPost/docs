@@ -1,12 +1,13 @@
 ---
 description: TradersPost is your one-stop solution for automating your trading strategies.
+hidden: true
 ---
 
 # What is TradersPost?
 
 Our mission is simple: to help you transform trade ideas into executed orders, effortlessly. With powerful tools like dynamic take profit and stop loss management, automated position adjustments, and an options contract screener, TradersPost simplifies and optimizes your trading workflow.
 
-We empower traders to automate strategies from platforms like [TradingView](learn/tradingview.md), [TrendSpider](learn/trend-spider.md), [MT5](learn/metatrader-5.md), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](core-concepts/brokers/tradestation.md), [Tradier](core-concepts/brokers/tradier.md), [Robinhood](core-concepts/brokers/robinhood.md), [Alpaca](core-concepts/brokers/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Stocks, Options, and Crypto. Coming in 2025: Forex.
+We empower traders to automate strategies from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), [MT5](learn/signal-sources/metatrader-5.md), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Stocks, Options, and Crypto. Coming in 2025: Forex.
 
 Whether you're fine-tuning risk management or automating entry and exit orders, TradersPost is here to ensure your trading strategy works just as you envision.
 
@@ -19,7 +20,7 @@ Let us handle the automation so you can focus on what really matters: **your tra
 * **Trading Communities -** a trading community can use TradersPost to send their trading signals to other TradersPost users where trades can be automated or manually approved or rejected.
 
 {% hint style="warning" %}
-TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](learn/rate-limits.md).
+TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](learn/platform-concepts/rate-limits.md).
 {% endhint %}
 
 ## How does it work?
@@ -77,7 +78,7 @@ The values wrapped in **\{{** and **\}}** will be replaced dynamically by Tradin
 You can learn more about webhooks [here](core-concepts/webhooks.md).
 
 {% hint style="info" %}
-You can also send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). You can see some custom custom code examples for various programming languages [here](learn/custom-code-examples.md).
+You can also send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). You can see some custom custom code examples for various programming languages [here](developer-resources/custom-code-examples.md).
 {% endhint %}
 
 ## Strategies

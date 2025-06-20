@@ -3,6 +3,7 @@ description: >-
   TradersPost does not yet offer any analytics or advanced trade journaling
   functionality, but you can use one of the many other trade journaling
   solutions that exist.
+hidden: true
 ---
 
 # Trade Journaling

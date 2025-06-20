@@ -2,6 +2,7 @@
 description: >-
   The WebhookMessage Library was built to make it easier to create JSON messages
   for TradingView strategies and indicators.
+hidden: true
 ---
 
 # WebhookMessage Library
@@ -11,3 +12,4 @@ This library is now deprecated and will no longer be supported. It is best to bu
 {% endhint %}
 
 {% embed url="https://www.tradingview.com/script/xkUpiNa6-TradersPost-WebhookMessage-Library-Automatically-Build-JSON/" %}
+

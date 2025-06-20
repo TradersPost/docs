@@ -1,11 +1,8 @@
----
-description: >-
-  This page documents all the premium strategies and indicators that you can pay
-  for to potentially use with TradersPost or use a base for your own custom
-  strategy.
----
+# Strategy Providers
 
-# Premium
+## Premium
+
+This section documents all the premium strategies and indicators that you can pay for to potentially use with TradersPost or use a base for your own custom strategy.
 
 * [Zeiierman](https://www.zeiierman.com/)
 * [Trendoscope](https://www.trendoscope.io/)
@@ -28,3 +25,14 @@ description: >-
 * [BB™ Bot V.1](https://www.tradingview.com/script/D528godu-BB-Bot-V-1/)
 
 If you would like to see your premium subscription service listed here, please contact us at [support@traderspost.io](mailto:support@traderspost.io).
+
+## Free
+
+TradingView has a whole community of traders that often publish free strategies and indicators that can be used for your automation or to give you ideas for how to create your own strategy.
+
+* [Ultimate Strategy Template](https://www.tradingview.com/script/2lGyzYkC-Ultimate-Strategy-Template/)
+* [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/)
+* [dman103](https://www.tradingview.com/u/dman103/#published-scripts)
+* [3commas](https://www.tradingview.com/scripts/3commas/)
+
+If you would like to see your free strategies and indicators listed here, please contact us at [support@traderspost.io](mailto:support@traderspost.io).

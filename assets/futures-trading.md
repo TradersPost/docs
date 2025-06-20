@@ -4,7 +4,7 @@ description: >-
   support for over 100 tickers.
 ---
 
-# Futures
+# Futures Trading
 
 {% embed url="https://www.youtube.com/watch?v=g0dB64iWTpA" %}
 TradersPost Automated Futures Trading Setup
@@ -12,9 +12,9 @@ TradersPost Automated Futures Trading Setup
 
 ## Supported Brokers
 
-* [TradeStation](../core-concepts/brokers/tradestation.md)
-* [Tradovate](../core-concepts/brokers/broker-roadmap/tradovate.md)
-* [Tastytrade](../core-concepts/brokers/tastytrade.md) (coming soon)
+* [TradeStation](../all-supported-connections/tradestation.md)
+* [Tradovate](../all-supported-connections/tradovate.md)
+* [Tastytrade](../all-supported-connections/tastytrade.md) (coming soon)
 
 ## Supported Tickers
 
@@ -41,7 +41,7 @@ TradersPost standardizes the futures symbol format to have a 4 digit year. We co
 
 ## Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/tradingview.md) or [TrendSpider](../learn/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
 ### Enter Bullish
 

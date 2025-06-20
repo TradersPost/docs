@@ -1,16 +1,14 @@
----
-description: Connect your broker to TradersPost to start automating your trading!
----
+# Brokers (Connections)
 
-# Brokers
+TradersPost centers around connections with brokers, exchanges, and prop firms. Each connection represents an individual account with your broker or exchange. For instance, if you link two accounts with TradeStation, both would count under your live plan.
 
-At the core of TradersPost are the integrations with brokers. You can connect your broker to TradersPost and authorize our software to read your balances, open positions, open orders, order history, place trades and cancel orders.
+You can connect any of these to TradersPost and authorize our software to read your balances, open positions, open orders, order history, place trades and cancel orders.
 
 ## Connect Your Broker
 
 To connect your broker to TradersPost, follow these steps:
 
-1. Navigate to **Brokers > Connected Brokers** in the application and click **Connect Live Broker** or **Connect Paper Broker**. If you are just getting started, we recommend using the already connected built in TradersPost paper broker to run your first tests against.
+1. Navigate to your [dashboard](https://app.traderspost.io/app/dashboard) in the application and click [**Connect Broker**](https://app.traderspost.io/app/trading/brokers/choose) in the top right. If you are just getting started, we recommend using the already connected built in TradersPost paper broker to run your first tests against.
 2. Next, choose the broker you want to connect and follow the prompts.
 3. You will be redirected to the chosen broker and asked login and authorize TradersPost to access your account.
 4. After you agree, you will be redirected back to TradersPost and your broker account will be connected to TradersPost.

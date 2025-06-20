@@ -3,6 +3,7 @@ description: >-
   Humans are social creatures and it is more fun to trade with a community of
   like minded people. This page lists all the trading communities that
   TradersPost views as leaders in the community.
+hidden: true
 ---
 
 # Trading Communities

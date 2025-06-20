@@ -6,12 +6,12 @@ description: >-
 
 # Strategy Developers
 
-If you have an idea for a strategy but don't know how to code, you can hire Pine Script developers on gig sites like [Fiverr](https://www.fiverr.com/search/gigs?query=Pine%20Script\&source=top-bar\&search\_in=everywhere\&search-autocomplete-original-term=pine%20script) and [Upwork](https://www.upwork.com/search/profiles/?q=Pine%20Script\&user\_pref=2).
+If you have an idea for a strategy but don't know how to code, you can hire Pine Script developers on gig sites like [Fiverr](https://www.fiverr.com/search/gigs?query=Pine%20Script\&source=top-bar\&search_in=everywhere\&search-autocomplete-original-term=pine%20script) and [Upwork](https://www.upwork.com/search/profiles/?q=Pine%20Script\&user_pref=2).
 
 Here are a few profiles of Pine Script developers others customers have worked with in the past.
 
 {% hint style="info" %}
-If you hire a developer to code your strategy, it is important that the coder is aware you intend to use the strategy with TradersPost for automation. Not all strategies can be automated so it is important it is built in a way that is compatible with automation and TradersPost. Read more about [TradersPost Compatibility](../learn/tradingview.md#traderspost-compatibility).
+If you hire a developer to code your strategy, it is important that the coder is aware you intend to use the strategy with TradersPost for automation. Not all strategies can be automated so it is important it is built in a way that is compatible with automation and TradersPost. Read more about [TradersPost Compatibility](../learn/signal-sources/tradingview.md#traderspost-compatibility).
 {% endhint %}
 
 ### **TradingView Pine Script Developers**
@@ -19,21 +19,21 @@ If you hire a developer to code your strategy, it is important that the coder is
 * [Kurtis Bulock](https://www.fiverr.com/kurtisbulock)
 * [Tj Alam (tabrejalam)](https://www.fiverr.com/tabrejalam)
 * [sammyboy1721](https://www.fiverr.com/sammyboy1721)
-* [Ricardo D.](https://www.upwork.com/freelancers/\~014a4eacc3a1c444df)
+* [Ricardo D.](https://www.upwork.com/freelancers/~014a4eacc3a1c444df)
 * [hiubriss](https://www.fiverr.com/freelancers/hiubriss)
 * [kriswaters](https://www.fiverr.com/freelancers/kriswaters)
-* [null\_vector](https://www.fiverr.com/null\_vector)
-* [vitruvius\_trade](https://www.fiverr.com/vitruvius\_trade)
-* [karthik\_pkr](https://www.fiverr.com/karthik\_pkr)
+* [null\_vector](https://www.fiverr.com/null_vector)
+* [vitruvius\_trade](https://www.fiverr.com/vitruvius_trade)
+* [karthik\_pkr](https://www.fiverr.com/karthik_pkr)
 * [trademate2000](https://www.fiverr.com/trademate2000)
-* [akshayy\_dev](https://www.fiverr.com/akshayy\_dev)
-* [Baris Y](https://www.fiverr.com/vitruvius\_trade)
-* [Swastik](https://www.fiverr.com/the\_pro\_coder)
+* [akshayy\_dev](https://www.fiverr.com/akshayy_dev)
+* [Baris Y](https://www.fiverr.com/vitruvius_trade)
+* [Swastik](https://www.fiverr.com/the_pro_coder)
 * [Radoslav H](https://www.fiverr.com/rickhardypro)
-* [Uday D.](https://www.fiverr.com/codee\_studio)
-* [Evgenii](https://www.fiverr.com/evgenii\_trade)
-* [Hendrik Coder](https://www.fiverr.com/hendrik\_jeroen)
-* [Quantdev](https://www.fiverr.com/dk\_codenut)
+* [Uday D.](https://www.fiverr.com/codee_studio)
+* [Evgenii](https://www.fiverr.com/evgenii_trade)
+* [Hendrik Coder](https://www.fiverr.com/hendrik_jeroen)
+* [Quantdev](https://www.fiverr.com/dk_codenut)
 * [Nextelonmusk](https://www.fiverr.com/nextelonmusk99)
 * [Alex T](https://www.fiverr.com/thegreatescapex)
 * [Kanny Tech](https://www.fiverr.com/kannytech)
