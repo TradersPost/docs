@@ -1,8 +1,8 @@
 # Table of contents
 
-* [What is TradersPost?](README.md)
-* [Getting Started](getting-started.md)
 * [Latest Releases](https://app.gitbook.com/o/MWqRLlYTaCaJh8cAqevI/s/faGHqKUfUy1dxnpnFnAi/)
+* [Getting Started](README.md)
+* [What is TradersPost?](<README (1).md>)
 * [Getting Started](getting-started-1.md)
 
 ## Core Concepts

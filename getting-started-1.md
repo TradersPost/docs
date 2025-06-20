@@ -1,75 +1,136 @@
 ---
 description: >-
-  TradersPost is a no-code, event-driven trading automation platform that allows
-  you to turn your trade signals into executed orders across one or multiple
-  broker, exchange, or prop firm accounts.
+  Quick tutorial for getting setup on TradersPost with an automated trading
+  strategy in less than 30 minutes.
+hidden: true
 ---
 
 # Getting Started
 
-_**Our mission is simple: to help you transform trade ideas into executed orders, effortlessly.**_
+## Create an Account
 
-With powerful tools like dynamic take profit and stop loss management, automated position size adjustments, and an options contract screener, TradersPost simplifies and optimizes your trading workflow.
+First, go to [TradersPost.io](https://traderspost.io) and click [Register](https://app.traderspost.io/register) at the top right of the page.
 
-Whether you're a discretionary trader who wants help managing trade execution or a systematic trader running fully automated strategies, TradersPost gives you full control over how signals are processed and routed to your connected accounts.
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 12.55.13 PM.png" alt=""><figcaption></figcaption></figure>
 
-We empower traders to automate strategies and scale accounts from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), [MT5](learn/signal-sources/metatrader-5.md), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Futures Prop Firms, Stocks, Options, and Crypto. Coming in 2025: Forex.
+Enter your email and click the **Register** button. Alternatively, you can login with your Google account if you have a Google account.
 
-## How It Works: The Basics
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.41.33 PM.png" alt=""><figcaption></figcaption></figure>
 
-{% embed url="https://www.youtube.com/watch?v=_q4fLhzRwWg" %}
+After creating your account, you will be redirected to a form to setup your account. Fill out the setup your account form with your information and click **I agree, Continue**.
 
-It's important to understand a few core concepts in TradersPost. Terms like strategies, subscriptions, JSON messages, webhooks, connections, and signals might sound unfamiliar at first, but once you start using the platform, these building blocks will quickly become second nature.
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.25.18 PM.png" alt=""><figcaption></figcaption></figure>
 
-{% stepper %}
-{% step %}
-[**Brokers (Connections)**](core-concepts/brokers-connections.md)**: Connect a Broker, Exchange, or Prop Firm Account**
+## Connect Your Broker
 
-Link your live, paper, or prop firm accounts directly to TradersPost through our [supported connections](https://traderspost.io/connections).
-{% endstep %}
+After you setup your account, navigate to **Brokers** in the top menu bar.
 
-{% step %}
-**Create a** [**Strategy**](core-concepts/strategies.md)
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.45.39 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-Your strategy defines your asset class, trading style, allowed tickers, security settings, and provides you with a unique webhook URL.
-{% endstep %}
+On the next page, click **Connect Live Broker** or **Connect Paper Broker**.
 
-{% step %}
-**Create a** [**Subscription**](core-concepts/subscriptions.md)
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.47.20 PM.png" alt=""><figcaption></figcaption></figure>
 
-Each subscription connects one broker account to your strategy, applying account-specific settings like position size, overrides, and auto submit preferences.
-{% endstep %}
+Next, choose what broker you want to connect to TradersPost. In this example, we will use [Alpaca](https://app.alpaca.markets/signup?utm_source=traderspost).&#x20;
 
-{% step %}
-**Send** [**Trading Signals**](core-concepts/signals.md) **via** [**Webhook**](core-concepts/webhooks.md)
+If you don't already have an Alpaca account, [click here](https://app.alpaca.markets/signup?utm_source=traderspost) to create one. Create your account and then make sure you are logged in.
 
-From your external platform (like TradingView or TrendSpider), send a [JSON message](core-concepts/json-messages.md) to your strategy’s [webhook URL](core-concepts/webhooks.md). TradersPost parses this message and routes the trade to your connected broker or exchange using the settings defined in your subscription.
-{% endstep %}
-{% endstepper %}
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.48.38 PM.png" alt=""><figcaption></figcaption></figure>
 
-That’s the foundation. From here, you can explore how to customize risk management and build multi-account setups. Head to the core concepts on the left to get a better understanding of these main components of the platform.
+Now, back in TradersPost click the **Alpaca** button to connect your Alpaca account to TradersPost.
 
-## Why Automation?
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.53.08 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-Automation allows you to remove emotion, improve consistency, and scale your trading across multiple accounts at once. You can use TradersPost to:
+Read the Disclosure, Terms of Service and Privacy Policy then click the green **I agree** button to continue.
 
-* Run fully automated trading systems that execute signals as soon as they fire.
-* Mirror your trades across multiple live, paper, or prop firm accounts simultaneously.
-* Reduce manual errors, delayed entries, and inefficient order routing.
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.54.04 PM.png" alt=""><figcaption></figcaption></figure>
 
-## Who TradersPost Is For?
+Click the yellow **Allow** button to authorize TradersPost to access your Alpaca account.
 
-* **Systematic Traders**: Automate strategies using TradingView, TrendSpider, or other signal providers.
-* **Discretionary Traders**: Set up guardrails, semi-automation, and manage trade approval while preserving full control.
-* **Prop Firm Traders**: Connect and automate evaluation or funded accounts across supported prop firms.
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 8.35.22 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-TradersPost is designed exclusively for independent traders, meaning each user maintains full control over their own accounts, signal sources, strategy settings, risk management, and trade automation. Even when using third-party indicators or strategies, you are responsible for configuring your own broker connections, subscriptions, and automation preferences.
+You will be redirected back to TradersPost after your Alpaca account is connected successfully.
 
-## Key Limitations
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.55.34 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-* **Not Designed for High-Frequency or Sub-Minute Trading**\
-  TradersPost is not intended for ultra-short-term scalping or high-frequency trading strategies operating below the 1-minute timeframe. A typical lag of 1-2 seconds between signal generation and broker execution is common, with most trades executing in under 2 seconds. This time slippage may impact performance for extremely short-term strategies. Read more about our rate limiting behavior [here](learn/platform-concepts/rate-limits.md).
-* **Signal Conflicts (Race Conditions)**\
-  Since TradersPost operates as an event-driven system, it's the trader’s responsibility to ensure that multiple signals do not conflict with one another. Overlapping signals may lead to unintended trade behavior if strategy logic doesn't account for open positions, pending orders, or rapidly changing market conditions.
-* **No Broker State or Order Feedback Loop**\
-  TradersPost does not currently provide broker or exchange order IDs, position state, or account-level information for use in strategy logic. We strongly encourage users to maintain strategy state and trade logic externally on platforms like TradingView, or via direct broker APIs in their own environment. TradersPost focuses strictly on signal routing and execution based on externally provided webhook signals.
+Congratulations! You successfully connected your broker to TradersPost. Continue reading to learn how start sending signals to TradersPost from your strategy.
+
+## Create a Strategy
+
+Now that you have your broker connected, you are ready to create a strategy. Click the **Strategies** in the header and then click **New Strateg**y at the top right of the page.
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.55.34 PM.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 1.59.40 PM (1).png" alt=""><figcaption></figcaption></figure>
+
+Give your strategy a name like **Stocks Strategy** and then click the **Save** button at the bottom left of the page.
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.01.52 PM (1).png" alt=""><figcaption></figcaption></figure>
+
+## Subscribe to Strategy
+
+Now that your strategy is created, you are ready to connect it to your Alpaca broker by subscribing to the strategy. Click the broker that you want to connect the strategy to. In this example, we'll connect it to the paper Alpaca broker.
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.03.16 PM.png" alt=""><figcaption></figcaption></figure>
+
+Check the **Confirm** checkbox and then click the **Confirm** button to continue.
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.04.52 PM.png" alt=""><figcaption></figcaption></figure>
+
+Your new strategy subscription has been created, but it is not enabled yet. Lets customize some of the settings before we enable it.
+
+Check the **Auto submit** checkbox and click **Enable**. We want **Auto submit** enabled because we want the trades to submit to the broker automatically, without us having to manually approve or reject each trade. If you leave this unchecked, you will be able to approve or reject the trade before it submits to the broker.
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.06.43 PM (1).png" alt=""><figcaption></figcaption></figure>
+
+Your strategy subscription is now enabled! You are ready to start sending signals to TradersPost from your strategy.
+
+## Copy Webhook URL
+
+You can copy the webhook URL by clicking the **Copy** button above the example orders. This will put the webhook URL in your clipboard so you can paste it in to TradingView in the next steps.
+
+<figure><img src=".gitbook/assets/Screenshot 2024-05-06 at 2.16.04 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Setup TradingView Alerts
+
+Now you have your TradersPost Webhook URL in your computers clipboard so you are ready to head over to TradingView and create an alert for your strategy or indicator.
+
+First, load your strategy or indicator on your chart. If you don't have your own strategy or indicator, you can use this example [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/) strategy by Matt DeLong.
+
+Next, load the **SQ** ticker on your chart and click the **Create Alert** button at the top right of TradingView.
+
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.34.55 PM.png" alt=""><figcaption></figcaption></figure>
+
+Fill out the **Settings** tab in the **Create Alert on SQ** form. Enter the following settings.
+
+* Choose **Trend Following MOMO** from the **Condition** dropdown
+* Choose **ProjectX Buy Alert** from the 2nd dropdown under Condition
+* Click **Once Per Bar Close** next to the **Trigger** section.
+* Give the alert a name like **TradersPost SQ Buy Alert**.
+* Paste the following JSON in to the alert message textarea.
+
+```json
+{
+    "ticker": "{{ticker}}",
+    "action": "buy"
+}
+```
+
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.37.15 PM.png" alt=""><figcaption></figcaption></figure>
+
+Click the **Notifications** tab and paste the TradersPost Webhook URL in the Webhook URL field and then click the blue **Create** button.
+
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.54.33 PM (1).png" alt=""><figcaption></figcaption></figure>
+
+Now do the same thing for the sell side. Except choose **ProjectX Sell Alert** this time and paste the JSON for a sell in to the alert message textarea and then click the blue **Create** button.
+
+```json
+{
+    "ticker": "{{ticker}}",
+    "action": "sell"
+}
+```
+
+<figure><img src=".gitbook/assets/Screen Shot 2023-03-02 at 9.54.35 PM (2).png" alt=""><figcaption></figcaption></figure>
+
+**Congratulations!** You are all set. You are live with your first automated trading strategy connected to your Alpaca broker. If you have any questions, join us in our [Discord](https://traderspost.io/discord) chat. Looking forward to seeing you there!
