@@ -1,11 +1,10 @@
----
-description: >-
-  TradersPost is a no-code, event-driven trading automation platform that allows
-  you to turn your trade signals into executed orders across one or multiple
-  broker, exchange, or prop firm accounts.
----
-
 # Getting Started
+
+TradersPost is a cloud-based, no-code, event-driven trading automation platform that allows you to turn your [trade signals](core-concepts/signals.md) into executed orders across one or multiple broker, exchange, or prop firm accounts.
+
+* It's **cloud-based**, meaning that your trades execute even when you're offline. No need to keep your computer running or your browser open. Our servers process your signals 24/7, securely routing orders to your connected brokers or exchanges.
+* It's **no-code**, meaning that you don't need to write any software or have any programming knowledge to automate your trading. You can connect signals from platforms like TradingView, TrendSpider, and others directly to your broker accounts using simple configuration tools.
+* It's **event-driven**, meaning that your trades are executed automatically in real-time the moment your signal is triggered. Instead of monitoring charts or waiting for price levels manually, you define the conditions once, and TradersPost handles the execution based on live incoming alerts.
 
 _**Our mission is simple: to help you transform trade ideas into executed orders, effortlessly.**_
 
