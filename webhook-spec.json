@@ -1,0 +1,666 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "TradersPost Webhook for Executing Trades with a Strategy and Subscriptions",
+    "version": "1.0.0",
+    "description": "Webhook endpoint for sending trading signals to TradersPost for all asset classes. Authentication is handled via URL path parameters (uuid and password) - no cookies or additional headers are required."
+  },
+  "servers": [
+    {
+      "url": "https://webhooks.traderspost.io",
+      "description": "TradersPost Webhook Server"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "AssetClass": {
+        "type": "string",
+        "description": "Available asset classes on TradersPost: Stocks (Equities), Options (on Stocks and ETFs), Futures, and Spot Crypto. Forex is planned later.",
+        "enum": ["stocks", "options", "futures", "crypto"]
+      },
+      "TakeProfit": {
+        "type": "object",
+        "description": "Optional take profit configuration for the trade. If omitted, no take profit will be placed. It will be ignored if the broker or exchange does not support bracket orders. IMPORTANT: The signal take profit will only be used if you check Use signal take profit in the strategy subscription settings in TradersPost. For examples, see https://docs.traderspost.io/docs/core-concepts/webhooks#take-profit",
+        "properties": {
+          "limitPrice": {
+            "type": "number",
+            "format": "float",
+            "description": "Absolute limit price calculated on the webhook sender side."
+          },
+          "percent": {
+            "type": "number",
+            "format": "float",
+            "description": "Relative percentage take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote."
+          },
+          "amount": {
+            "type": "number",
+            "format": "float",
+            "description": "Relative dollar amount take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote."
+          }
+        }
+      },
+      "StopLoss": {
+        "type": "object",
+        "description": "Optional stop loss configuration for the trade. If omitted, no stop loss will be placed. It will be ignored if the broker or exchange does not support bracket orders. IMPORTANT: When using market orders and you are calculating a relative stop loss price, TradersPost will fetch a quote from your broker and use the price from the quote as the entry price in order to calculate the stop loss stop price since with markets orders, we don't know the price you will be filled at so we have to use the quote price. For examples, see https://docs.traderspost.io/docs/core-concepts/webhooks#stop-loss",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["stop", "stop_limit", "trailing_stop"],
+            "description": "Type of stop loss. If provided, overrides the stop loss type configured in strategy subscription settings."
+          },
+          "percent": {
+            "type": "number",
+            "format": "float",
+            "description": "Relative percentage stop loss to calculate relative to entry price."
+          },
+          "amount": {
+            "type": "number",
+            "format": "float",
+            "description": "Relative dollar amount stop loss to calculate relative to entry price."
+          },
+          "stopPrice": {
+            "type": "number",
+            "format": "float",
+            "description": "Absolute stop price calculated on the webhook sender side."
+          },
+          "limitPrice": {
+            "type": "number",
+            "format": "float",
+            "description": "Absolute limit price calculated on the webhook sender side. Requires type to be set to stop_limit."
+          },
+          "trailAmount": {
+            "type": "number",
+            "format": "float",
+            "description": "Dollar value away from the highest water mark. For a sell trailing stop, stop price is always hwm - trailAmount. Requires type to be set to trailing_stop."
+          },
+          "trailPercent": {
+            "type": "number",
+            "format": "float",
+            "description": "Percent value away from the highest water mark. For a sell trailing stop, stop price is always hwm * (1 - trailPercent/100). Requires type to be set to trailing_stop."
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/trading/webhook/{uuid}/{password}": {
+      "post": {
+        "summary": "Receive trading signal to execute on TradersPost.",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "Your unique webhook identifier, we call the uuid. Provided when you copy the entire webhook URL from your strategy dashboard."
+          },
+          {
+            "name": "password",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Your webhook password. Provided when you copy the entire webhook URL from your strategy dashboard."
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "ticker",
+                  "action"
+                ],
+                "properties": {
+                  "ticker": {
+                    "type": "string",
+                    "description": "The ticker symbol of the financial instrument (e.g., `AAPL`, `SPY 250624C596`, `MNQU2025`, `BTCUSD`).\n\n**Note:** For futures contracts, continuous symbols like NQ1! are automatically mapped to the front-month contract according to our rollover schedule. Since this schedule may differ from other platforms like TradingView, we strongly recommend using explicit futures contract symbols rather than continuous symbols."
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": ["buy", "sell", "exit", "cancel", "add"],
+                    "description": "The action or signal type used to determine what type of order to execute.\n\n**Note:** when you are trading put options, the action is inverted. So this means `action=buy` will sell to open short puts and `action=sell` will buy to open long puts. This is necessary when you are running a strategy on the underlying chart but you are buying and selling puts instead of shares."
+                  },
+                  "sentiment": {
+                    "type": "string",
+                    "enum": ["bullish", "bearish", "flat"],
+                    "description": "Optional and often used with TradingView strategies. The expected position sentiment after trade execution:\n* bullish - Open position after trade should be bullish or flat\n* bearish - Open position after trade should be bearish or flat\n* flat - No position should be open after trade execution"
+                  },
+                  "price": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "The market price at the time your alert is triggered (**RECOMMENDED**).\n\nFor TradingView alerts, you can pass this using the `{{close}}` placeholder in your alert message.\n\nThis value helps calculate slippage - the difference between the alert price and the actual fill price - allowing you to monitor execution quality.\n\nThe slippage calculation will fall back to `signalPrice`, `price`, `limitPrice`, or `stopPrice` in that order."
+                  },
+                  "signalPrice": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Optionally send the current market price at the time the signal was generated. This price is used in some cases when a broker does not support fetching quotes or the broker returns an empty quote and is also used to calculate slippage (see the `price` property)."
+                  },
+                  "orderType": {
+                    "type": "string",
+                    "enum": ["market", "limit", "stop", "stop_limit", "trailing_stop"],
+                    "description": "The type of order to create. If you send an order type not supported by your broker, it will fallback to the default order type configured in the strategy subscription settings."
+                  },
+                  "limitPrice": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "When `orderType=limit` or `orderType=stop_limit` you can send a `limitPrice` for the order.\n\n* If you omit this value, the current market price will be used when the trade is executed\n* This price is also used to calculate slippage (see the `price` property)"
+                  },
+                  "stopPrice": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "When `orderType=stop` or `orderType=stop_limit` you can send a `stopPrice` for the order. If you omit this value, the current market price will be used when the trade is executed. This is also used to calculate slippage (see the `price` property)."
+                  },
+                  "trailAmount": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "For trailing stop orders (`orderType=trailing_stop`), specifies the fixed dollar amount to trail the market price. The stop price will maintain this absolute dollar offset - for example, with $1.00, it stays $1.00 below the highest price for longs or above the lowest price for shorts. Note: Only one of `trailAmount` or `trailPercent` can be used."
+                  },
+                  "trailPercent": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "For trailing stop orders (`orderType=trailing_stop`), specifies the percentage to trail the market price. The stop price will maintain this percentage offset from the highest/lowest price reached. Note: Only one of `trailAmount` or `trailPercent` can be used."
+                  },
+                  "quantityType": {
+                    "type": "string",
+                    "enum": ["fixed_quantity", "dollar_amount", "risk_dollar_amount", "percent_of_equity", "percent_of_position"],
+                    "description": "The type of the value sent in the quantity field. Supported values are:\n* fixed_quantity - A fixed quantity number that is used for the order\n* dollar_amount - Dynamically calculates a quantity for the given dollar amount\n* risk_dollar_amount - Dynamically calculates a quantity for the given risk dollar amount. This type requires a stop loss\n* percent_of_equity - Dynamically calculates a quantity for the given percent of equity\n* percent_of_position - Dynamically calculates a quantity for the given percent of position\nDefault is fixed_quantity when you send a quantity without a quantityType."
+                  },
+                  "quantity": {
+                    "type": "number",
+                    "description": "The quantity to enter. If you omit this value, the quantity will be dynamically calculated based on your strategy subscription settings or defaulted to 1."
+                  },
+                  "takeProfit": {
+                    "$ref": "#/components/schemas/TakeProfit"
+                  },
+                  "stopLoss": {
+                    "$ref": "#/components/schemas/StopLoss"
+                  },
+                  "timeInForce": {
+                    "type": "string",
+                    "enum": ["day", "gtc", "opg", "cls", "ioc", "fok"],
+                    "description": "The time in force for your order. If you send a time in force not supported by your broker, it will fallback to the default time in force or the time in force configured in the strategy subscription settings.\n\nThe supported values are:\n* day - Good For Day\n* gtc - Good Until Canceled\n* opg - Market on Open / Limit on Open\n* cls - Market on Close / Limit on Close\n* ioc - Immediate or Cancel\n* fok - Fill or Kill"
+                  },
+                  "time": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "ISO-8601 timestamp indicating when the signal was generated (e.g. '2024-01-15T14:30:00Z'). When using TradingView, you can use the `{{timenow}}` placeholder. This timestamp is used to calculate the latency between signal generation and trade execution, which can be viewed in the trade signal logs."
+                  },
+                  "ignoreTradingWindows": {
+                    "type": "boolean",
+                    "description": "Ignore the defined trading windows in the strategy subscription settings and allow the trade to execute even if it is currently outside of the trading windows."
+                  },
+                  "cancel": {
+                    "type": "boolean",
+                    "description": "Explicitly control whether or not to cancel open orders before submitting new orders to your broker."
+                  },
+                  "extendedHours": {
+                    "type": "boolean",
+                    "description": "(STOCKS and OPTIONS SPECIFIC): Whether or not to send the order as an extended hours order. This is only applicable for stocks and the supported values are either true or false.",
+                    "x-asset-class": ["stocks", "options"]
+                  },
+                  "optionType": {
+                    "type": "string",
+                    "enum": ["both", "call", "put"],
+                    "description": "(OPTIONS SPECIFIC): The type of option contract to trade. The supported values are both, call and put.",
+                    "x-asset-class": "options"
+                  },
+                  "intrinsicValue": {
+                    "type": "string",
+                    "enum": ["itm", "otm"],
+                    "description": "(OPTIONS SPECIFIC): The intrinsic value of the option contract to trade. The supported values are itm (in the money) and otm (out of the money).",
+                    "x-asset-class": "options"
+                  },
+                  "expiration": {
+                    "type": "string",
+                    "description": "(OPTIONS SPECIFIC): The expiration of the option contract to trade. The value can be a specific date like 2024-05-06 or a relative date expression like +6 months.",
+                    "x-asset-class": "options"
+                  },
+                  "strikeCount": {
+                    "type": "integer",
+                    "description": "(OPTIONS SPECIFIC): How many strikes to ask for from the broker when executing options trades and scanning the option chain to find a contract to trade.",
+                    "x-asset-class": "options"
+                  },
+                  "strikesAway": {
+                    "type": "integer",
+                    "description": "(OPTIONS SPECIFIC): How many strikes away from at the money to select.",
+                    "x-asset-class": "options"
+                  },
+                  "strikePrice": {
+                    "type": "integer",
+                    "format": "float",
+                    "description": "(OPTIONS SPECIFIC): Specifies the strike price of the option contract to trade.",
+                    "x-asset-class": "options"
+                  },
+                  "extras": {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "description": "Custom metadata for any additional logging needs (optional). We recommend putting whatever you like in this property so they don't conflict with the other properties."
+                  }
+                },
+                "example": {
+                  "ticker": "AAPL",
+                  "action": "buy",
+                  "sentiment": "long",
+                  "price": 191.25,
+                  "quantity": 10,
+                  "quantityType": "fixed_quantity",
+                  "orderType": "market",
+                  "time": "2025-06-18T14:30:00Z",
+                  "test": true,
+                  "takeProfit": {
+                    "percent": 10
+                  },
+                  "stopLoss": {
+                    "type": "stop",
+                    "percent": 5
+                  },
+                  "extras": {
+                    "strategy": "EMA_Crossover",
+                    "comment": "Breakout entry",
+                    "exitType": "trailing_atr"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received webhook.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "47462f2d-378c-4bf5-a016-1c1221aa0e62"
+                    },
+                    "logId": {
+                      "type": "string",
+                      "example": "a036eff1-b7db-4f15-b5b6-f5e51995ad29"
+                    },
+                    "payload": {
+                      "type": "object",
+                      "properties": {
+                        "ticker": {
+                          "type": "string",
+                          "example": "AAPL"
+                        },
+                        "action": {
+                          "type": "string",
+                          "example": "buy"
+                        },
+                        "sentiment": {
+                          "type": "string",
+                          "example": "long"
+                        },
+                        "price": {
+                          "type": "number",
+                          "format": "float",
+                          "example": 191.25
+                        },
+                        "quantity": {
+                          "type": "number",
+                          "example": 10
+                        },
+                        "quantityType": {
+                          "type": "string",
+                          "example": "fixed_quantity"
+                        },
+                        "orderType": {
+                          "type": "string",
+                          "example": "market"
+                        },
+                        "time": {
+                          "type": "string",
+                          "format": "date-time",
+                          "example": "2025-06-18T14:30:00Z"
+                        },
+                        "test": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "takeProfit": {
+                          "type": "object",
+                          "example": {
+                            "percent": 10
+                          }
+                        },
+                        "stopLoss": {
+                          "type": "object",
+                          "example": {
+                            "type": "stop",
+                            "percent": 5
+                          }
+                        },
+                        "extras": {
+                          "type": "object",
+                          "additionalProperties": true,
+                          "example": {
+                            "strategy": "EMA_Crossover",
+                            "comment": "Breakout entry",
+                            "exitType": "trailing_atr"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "success",
+                    "id",
+                    "logId",
+                    "payload"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - The JSON that gets sent to TradersPost has to be precisely accurate in order for us to accept it. It is important to pay attention all the details, all the little characters have meaning and are important.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "logId": {
+                      "type": "string",
+                      "description": "Optional log identifier for tracking the request. May not be present for certain types of errors (e.g., authentication failures, malformed requests).",
+                      "example": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae"
+                    },
+                    "messageCode": {
+                      "type": "string",
+                      "enum": [
+                        "post-required",
+                        "empty-json",
+                        "malformed-json",
+                        "invalid-payload",
+                        "invalid-action",
+                        "invalid-sentiment",
+                        "invalid-sentiment-action",
+                        "invalid-order-type",
+                        "invalid-trailing-stop",
+                        "invalid-option-type",
+                        "invalid-intrinsic-value",
+                        "invalid-expiration",
+                        "invalid-strike-count",
+                        "invalid-strikes-away",
+                        "invalid-strike-price",
+                        "not-trading-view",
+                        "not-trend-spider",
+                        "invalid-ip-address",
+                        "invalid-ip-address-format",
+                        "ticker-does-not-exist",
+                        "invalid-ticker-and-option-type",
+                        "invalid-password",
+                        "empty-ticker-name",
+                        "unsupported-ticker",
+                        "invalid-quantity-type",
+                        "invalid-quantity-type-action",
+                        "invalid-risk-dollar-amount-action",
+                        "invalid-percent-of-position-action",
+                        "quantity-type-requires-quantity",
+                        "invalid-quantity-type-for-asset-class",
+                        "invalid-quantity",
+                        "invalid-time-in-force",
+                        "invalid-extended-hours",
+                        "invalid-asset-class",
+                        "invalid-take-profit-percent",
+                        "invalid-take-profit-amount",
+                        "invalid-take-profit-limit-price",
+                        "invalid-take-profit-amount-and-percent",
+                        "invalid-take-profit-relative-and-absolute",
+                        "invalid-take-profit-value-required",
+                        "invalid-stop-loss-type",
+                        "invalid-stop-loss-percent",
+                        "invalid-stop-loss-amount",
+                        "invalid-stop-loss-stop-price",
+                        "invalid-stop-loss-limit-price",
+                        "invalid-stop-loss-trail-price",
+                        "invalid-stop-loss-trail-amount",
+                        "invalid-stop-loss-trail-percent",
+                        "invalid-stop-loss-trail-value",
+                        "invalid-stop-loss-trail-value-required",
+                        "invalid-stop-loss-amount-and-percent",
+                        "invalid-stop-loss-relative-and-absolute",
+                        "invalid-stop-loss-stop-price-required",
+                        "invalid-stop-loss-value-required",
+                        "invalid-expires-at",
+                        "invalid-message-length",
+                        "invalid-message-tags"
+                      ],
+                      "description": "Specific error code indicating the type of validation error encountered."
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Human-readable error message explaining the validation error."
+                    }
+                  },
+                  "required": [
+                    "success",
+                    "messageCode",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "post-required": {
+                    "summary": "HTTP POST method required",
+                    "description": "All webhook HTTP requests must be sent with a request method of POST. All other request methods will not be accepted.",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "post-required",
+                      "message": "The HTTP POST method is required for this trade signal."
+                    }
+                  },
+                  "empty-json": {
+                    "summary": "Empty JSON payload",
+                    "description": "Your trade signal was empty. Please ensure that your trade signal contains valid JSON data.",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "empty-json",
+                      "message": "Your trade signal was empty. Please ensure that your trade signal contains valid JSON data with the necessary trade instructions. TradersPost requires this information to properly process and execute your trade."
+                    }
+                  },
+                  "malformed-json": {
+                    "summary": "Could not parse JSON payload",
+                    "description": "If you have a parse error in your JSON code, TradersPost will not be able to extract the instructions from the signal. Common issues include trailing commas and invalid quote characters.",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "malformed-json",
+                      "message": "The JSON payload could not be parsed. Please ensure that your JSON is properly formatted and valid."
+                    }
+                  },
+                  "invalid-payload": {
+                    "summary": "Invalid payload - missing required fields",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-payload",
+                      "message": "The payload is invalid. Both the action and ticker fields are required."
+                    }
+                  },
+                  "invalid-action": {
+                    "summary": "Invalid action provided",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-action",
+                      "message": "The provided action is invalid. The action field must be one of the following values: buy, sell, exit, cancel, or add."
+                    }
+                  },
+                  "invalid-sentiment": {
+                    "summary": "Invalid sentiment value",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-sentiment",
+                      "message": "The provided sentiment value is invalid. The sentiment field must be one of the following values: bullish, bearish, or flat."
+                    }
+                  },
+                  "invalid-order-type": {
+                    "summary": "Invalid order type",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-order-type",
+                      "message": "The provided orderType is invalid. The orderType field must be one of the following values: market, limit, stop, stop_limit, or trailing_stop."
+                    }
+                  },
+                  "invalid-option-type": {
+                    "summary": "Invalid option type",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-option-type",
+                      "message": "The provided optionType is invalid. The optionType field must be one of the following values: both, call, or put."
+                    }
+                  },
+                  "invalid-quantity-type": {
+                    "summary": "Invalid quantity type",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-quantity-type",
+                      "message": "The provided quantityType is invalid. The quantityType field must be one of the following values: fixed_quantity, dollar_amount, risk_dollar_amount, percent_of_equity, or percent_of_position."
+                    }
+                  },
+                  "invalid-quantity": {
+                    "summary": "Invalid quantity value",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-quantity",
+                      "message": "The provided quantity is invalid. The quantity field must be a positive numeric value."
+                    }
+                  },
+                  "invalid-take-profit-percent": {
+                    "summary": "Invalid take profit percent",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-take-profit-percent",
+                      "message": "The provided takeProfit.percent is invalid. The takeProfit.percent field must be a positive numeric value representing a relative percentage."
+                    }
+                  },
+                  "invalid-stop-loss-type": {
+                    "summary": "Invalid stop loss type",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-stop-loss-type",
+                      "message": "The provided stopLoss.type is invalid. The stopLoss.type field must be one of the following values: stop, stop_limit, or trailing_stop."
+                    }
+                  },
+                  "not-trading-view": {
+                    "summary": "Request not from TradingView",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "not-trading-view",
+                      "message": "The trade signal did not come from TradingView. You have your strategy configured to only accept trade signals from TradingView."
+                    }
+                  },
+                  "invalid-ip-address": {
+                    "summary": "Invalid IP address",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-ip-address",
+                      "message": "The trade signal did not come from one of your configured IP addresses. You have your strategy configured to only accept trade signals from specific IP addresses."
+                    }
+                  },
+                  "ticker-does-not-exist": {
+                    "summary": "Ticker does not exist",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "ticker-does-not-exist",
+                      "message": "The provided ticker does not exist in the asset class configured for this strategy."
+                    }
+                  },
+                  "invalid-password": {
+                    "summary": "Invalid webhook password",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-password",
+                      "message": "The password in your webhook URL is not correct. You may need to generate a new Webhook URL if you have lost the correct Webhook URL."
+                    }
+                  },
+                  "unsupported-ticker": {
+                    "summary": "Unsupported ticker symbol",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "unsupported-ticker",
+                      "message": "The provided ticker symbol is not allowed on this strategy. The ticker must be one of the supported tickers configured for this strategy or you must have \"Allow any ticker\" checked."
+                    }
+                  },
+                  "invalid-asset-class": {
+                    "summary": "Invalid asset class",
+                    "value": {
+                      "success": false,
+                      "logId": "bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
+                      "messageCode": "invalid-asset-class",
+                      "message": "The asset class of the provided ticker is not supported by this strategy."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "messageCode": {
+                      "type": "string",
+                      "example": "not-found"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Webhook not found."
+                    }
+                  },
+                  "required": [
+                    "success",
+                    "messageCode",
+                    "message"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error. Sometimes an HTML response might come back, but it's best just to reply on the 500 status code."
+          }
+        }
+      }
+    }
+  }
+}
