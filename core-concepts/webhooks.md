@@ -8,6 +8,10 @@ description: >-
 
 ## What is a webhook?
 
+{% hint style="info" %}
+Full technical documentation on the webhook endpoint is [available here](../developer-resources/webhook-reference.md).
+{% endhint %}
+
 Webhooks are automated messages sent from applications when something happens. They have a JSON message that can contain a payload of data and are sent to a unique URL.
 
 In the context of automated trading, the webhook JSON message contains all the information about the trade signal like what ticker to buy and at what price. Here is an example simple webhook and JSON message.
@@ -59,76 +63,9 @@ Properties other than the ones listed above can be sent, but will be ignored by 
 
 Here is the full reference documentation for the TradersPost webhook JSON.
 
-## TradersPost Webhook Request API documentation.
+## TradersPost Webhook Request API Documentation
 
-<mark style="color:green;">`POST`</mark> `https://webhooks.traderspost.io/trading/webhook/{uuid}/{password}`
-
-#### Query Parameters
-
-<table><thead><tr><th width="184">Name</th><th width="99">Type</th><th>Description</th></tr></thead><tbody><tr><td>uuid<mark style="color:red;">*</mark></td><td>String</td><td>Unique webhook UUID string used to identify a webhook. This never changes.</td></tr><tr><td>password<mark style="color:red;">*</mark></td><td>String</td><td>Password string used to protect access to your webhook. You can change this by clicking Generate New URL in TradersPost when editing your webhook.</td></tr></tbody></table>
-
-#### Request Body
-
-<table><thead><tr><th width="202.98828125">Name</th><th width="101">Type</th><th>Description</th></tr></thead><tbody><tr><td>ticker<mark style="color:red;">*</mark></td><td>String</td><td>The ticker symbol name. Example <strong>AMD</strong>.</td></tr><tr><td>action<mark style="color:red;">*</mark></td><td>String</td><td><p>The signal action. Supported values are the following:</p><p></p><p><code>buy</code> - Exit bearish position and optionally open bullish position</p><p></p><p><code>sell</code> - Exit bullish position and optionally open bearish position</p><p></p><p><code>exit</code> - Exit open position without entering a new position on the other side.</p><p></p><p><code>cancel</code> - Cancel open orders</p><p></p><p><code>add</code> - Add to existing open position<br><br><em><strong>Note: when you are trading put options, the action is inverted. So this means action=buy will sell to open short puts and action=sell will buy to open long puts. This is necessary when you are running a strategy on the underlying chart but you are buying and selling puts instead of shares.</strong></em></p></td></tr><tr><td>sentiment</td><td>String</td><td><p><code>bullish</code> - Open position after trade is executed should be bullish or flat.</p><p></p><p><code>bearish</code> - Open position after trade is executed should be bearish or flat.</p><p></p><p><code>flat</code> - No position should be open after trade is executed.</p></td></tr><tr><td>optionType</td><td>String</td><td>The type of option contract to trade. The supported values are <code>both</code>, <code>call</code> and <code>put</code>.</td></tr><tr><td>intrinsicValue</td><td>String</td><td>The intrinsic value of the option contract to trade. The supported values are <code>itm</code> (in the money) and <code>otm</code> (out of the money).</td></tr><tr><td>expiration</td><td>String</td><td>The expiration of the option contract to trade. The value can be a specific date like <code>2024-05-06</code> or a relative date expression like <code>+6 months</code>.</td></tr><tr><td>strikeCount</td><td>Integer</td><td>How many strikes to ask for from the broker when executing options trades and scanning the option chain to find a contract to trade.</td></tr><tr><td>strikesAway</td><td>Integer</td><td>How many strikes away from at the money to select.</td></tr><tr><td>strikePrice</td><td>Integer</td><td>Specifies the strike price of the option contract to trade.</td></tr><tr><td>price</td><td>Number</td><td>This is the market price at the time your TradingView (or other platform) alert is triggered. You can pass it using the {{close}} placeholder in your alert message. TradersPost uses this value to estimate slippage (the difference between the alert price and the actual fill price) so you can see how much delay or movement occurred between your signal and the trade execution.</td></tr><tr><td>signalPrice</td><td>Number</td><td>Optionally send the current market price at the time the signal was generated. This price is used in some cases when a broker does not support fetching quotes or the broker returns an empty quote.</td></tr><tr><td>orderType</td><td>String</td><td>The type of order to create. Supported values are <code>market</code>, <code>limit</code>, <code>stop</code>, <code>stop_limit</code>, and <code>trailing_stop</code>. If you send an order type not supported by your broker, it will fallback to the default order type configured in the strategy subscription settings.</td></tr><tr><td>limitPrice</td><td>Number</td><td>When <code>orderType=limit</code> or <code>orderType=stop_limit</code> you can send a <code>limitPrice</code> for the order. If you omit this value, the current market price will be used when the trade is executed.</td></tr><tr><td>stopPrice</td><td>Number</td><td>When <code>orderType=stop</code> or <code>orderType=stop_limit</code> you can send a <code>stopPrice</code> for the order. If you omit this value, the current market price will be used when the trade is executed.</td></tr><tr><td>trailAmount</td><td>Number</td><td>When <code>orderType=trailing_stop</code>, you must send a dollar amount  in the <code>trailAmount</code> field to create a trailing stop order.</td></tr><tr><td>trailPercent</td><td>Number</td><td>When <code>orderType=trailing_stop</code>, you must send a percentage in the <code>trailPercent</code> field to create a trailing stop order.</td></tr><tr><td>quantityType</td><td>Number</td><td><p>The type of the value sent in the <code>quantity</code> field documented below. Supported values are the following:</p><p></p><p><code>fixed_quantity</code> - A fixed quantity number that is used for the order.</p><p></p><p><code>dollar_amount</code> - Dynamically calculates a quantity for the given dollar amount.</p><p></p><p><code>risk_dollar_amount</code> - Dynamically calculates a quantity for the given risk dollar amount. This type requires a stop loss.</p><p></p><p><code>percent_of_equity</code> - Dynamically calculates a quantity for the given percent of equity.</p><p></p><p><code>percent_of_position</code> - Dynamically calculates a quantity for the given percent of position.</p><p></p><p>Default is <code>fixed_quantity</code> when you send a <code>quantity</code> without a <code>quantityType</code>.</p></td></tr><tr><td>quantity</td><td>Number</td><td>The quantity to enter. If you omit this value, the quantity will be dynamically calculated based on your strategy subscription settings or defaulted to 1.</td></tr><tr><td>stopLoss</td><td>Object</td><td><a href="webhooks.md#stop-loss">Read more</a></td></tr><tr><td>takeProfit</td><td>Object</td><td><a href="webhooks.md#take-profit">Read more</a></td></tr><tr><td>timeInForce</td><td>String</td><td><p>The time in force for your order. If you send a time in force not supported by your broker, it will fallback to the default time in force or the time in force configured in the strategy subscription settings.</p><p></p><p>The supported values are <code>day</code>, <code>gtc</code>, <code>opg</code>, <code>cls</code>, <code>ioc</code> and <code>fok</code>.<br><br><code>day</code> - Good For Day<br><br><code>gtc</code> - Good Until Canceled<br><br><code>opg</code> - Market on Open / Limit on Open<br><br><code>cls</code> - Market on Close / Limit on Close<br><br><code>ioc</code> - Immediate or Cancel<br><br><code>fok</code> - Fill or Kill</p></td></tr><tr><td>time</td><td>String</td><td>Used to track the time the signal was created and used in calculating the difference in time between signal creation and broker execution. Should be in ISO-8601 format (2025-05-29T16:00:43Z) and can include milliseconds and time zone.</td></tr><tr><td>extendedHours</td><td>Boolean</td><td>Whether or not to send the order as an extended hours order. This is only applicable for stocks and the supported values are either <code>true</code> or <code>false</code>.</td></tr><tr><td>ignoreTradingWindows</td><td>Boolean</td><td>Ignore the defined trading windows in the strategy subscription settings and allow the trade to execute even if it is currently outside of the trading windows.</td></tr><tr><td>cancel</td><td>Boolean</td><td>Explicitly control whether or not to cancel open orders before submitting new orders to your broker.</td></tr><tr><td>extras</td><td>Object</td><td><a href="webhooks.md#extras">Read more</a></td></tr></tbody></table>
-
-{% tabs %}
-{% tab title="200: OK Successful webhook response." %}
-```javascript
-{
-    "success":true,
-    "id":"47462f2d-378c-4bf5-a016-1c1221aa0e62",
-    "logId":"a036eff1-b7db-4f15-b5b6-f5e51995ad29",
-    "payload": {
-        "ticker":"NQ",
-        "action":"buy",
-        "sentiment": "bullish",
-        "price":12663.5,
-        "quantity": 1
-    }
-}
-```
-{% endtab %}
-
-{% tab title="400: Bad Request Rejected webhook response." %}
-When a webhook request is sent to TradersPost, we run it through several different validation checks. If any of these validation rules fail, the webhook will respond like the following with a status code of 400.
-
-Here is an example invalid JSON payload.
-
-```json
-{
-    "ticker": "NQ",
-    "action": "bu"
-}
-```
-
-Here is the response you would get for that payload.
-
-```json
-{
-    "success":false,
-    "logId":"bf3b4869-bf85-48cc-a1b3-8e49c77215ae",
-    "messageCode":"invalid-action",
-    "message":"Invalid action provided. Action must be one of: buy, sell, exit, cancel, add."
-}
-```
-
-You can read more about 400 Bad Requests here.
-{% endtab %}
-
-{% tab title="404: Not Found Webhook not found." %}
-```javascript
-{
-    "success": false,
-    "messageCode": "not-found",
-    "message": "Webhook not found."
-}
-```
-{% endtab %}
-
-{% tab title="500: Internal Server Error Something went wrong" %}
-
-{% endtab %}
-{% endtabs %}
+A full, technical reference document is [available here](../developer-resources/webhook-reference.md) and covers every available request body property and possible response bodies.
 
 ## Rate Limits
 
