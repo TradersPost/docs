@@ -30,7 +30,9 @@ Here you will decide which account to use for your live trading for this broker,
 #### **Max strategy positions**
 
 {% hint style="warning" %}
-WARNING: this feature has been deprecated and will be removed in a future version of TradersPost.
+WARNING: this feature has been deprecated and may be removed in a future version of TradersPost.
 {% endhint %}
 
 Enter the max number of positions you want allow with this broker when using it with automated strategy subscriptions. Any existing positions opened prior to using TradersPost will still count as a position, and crypto dust is often seen as a position if worth roughly more than $1.50 USD.
+
+This should not be confused with max contracts. Sometimes traders want the ability to limit the number of contracts or shares they have in any one position and that is not currently a feature TradresPost supports.

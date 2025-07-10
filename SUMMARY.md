@@ -49,6 +49,7 @@
   * [TrendSpider](learn/signal-sources/trend-spider.md)
   * [MetaTrader 5 - MT5](learn/signal-sources/metatrader-5.md)
   * [Discord Trading Bot](learn/signal-sources/discord-trading-bot.md)
+  * [Custom Code](learn/signal-sources/custom-code.md)
 * [Platform Concepts](learn/platform-concepts/README.md)
   * [Rate Limits](learn/platform-concepts/rate-limits.md)
   * [Backtesting](learn/platform-concepts/backtesting.md)

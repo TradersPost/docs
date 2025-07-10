@@ -14,7 +14,7 @@ By default, most subscription settings have a **“Use signal”** toggle enable
 
 For example, imagine you are trading futures and your signal sends an instruction to buy `NQ1!` with a quantity of 3 contracts. The JSON message would look like this:
 
-```
+```json5
 {
   "ticker": "MNQ1!",
   "action": "buy",

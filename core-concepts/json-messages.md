@@ -10,34 +10,34 @@ Head to the [webhooks documentation](webhooks.md) to see all the different types
 
 Here’s a very simple example of a JSON message that TradersPost would use:
 
-```
+```json5
 {
   "ticker": "NQ1!",
   "action": "buy",
-  "price": 18250.5,
+  "signalPrice": 18250.5,
   "quantity": 2,
   "time": "2025-06-17T10:30:00Z"
 }
 ```
 
-## Required Properties
+## Required Fields
 
 At minimum, every JSON message sent to TradersPost must include:
 
 * **ticker** — The symbol you want to trade (e.g. `NQ1!` or `MSFT`)
 * **action** — The trade action: `buy`, `sell`,  `exit`, `cancel` or `add`&#x20;
 
-Without these two properties, TradersPost won’t know what trade to place.
+Without these two fields, TradersPost won’t know what trade to place.
 
-## Recommended Properties
+## Recommended Fields
 
 While not required, we strongly recommend also including:
 
-* **price** — The price at the time your signal fired
+* **signalPrice** — The price at the time your signal fired
 * **time** — A timestamp for when the signal was generated
 
 Providing these values helps you maintain a full record of your signal and enables TradersPost to better track execution slippage and timing.
 
-## All Properties
+## All Fields
 
-See our entire [webhook documentation](webhooks.md) page for all the possible properties you can send in a JSON message.
+See our entire [webhook documentation](webhooks.md) page for all the possible fields you can send in a JSON message.
