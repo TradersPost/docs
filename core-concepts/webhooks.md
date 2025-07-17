@@ -295,6 +295,10 @@ When `orderType=trailing_stop`, you can send a dollar amount  in the `trailAmoun
 
 When `orderType=trailing_stop`, you can send a percentage in the `trailPercent` field to create a trailing stop order.
 
+### interval
+
+The time interval ((i.e. timeframe/resolution) of the chart that the alert is created on) used to generate the trading signal. You may use the placeholder `{{interval}}` on TradingView. This is currently just used for troubleshooting and for our support team to help.
+
 ### timeInForce
 
 {% hint style="info" %}
