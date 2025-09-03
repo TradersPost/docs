@@ -12,7 +12,7 @@ With powerful tools like dynamic take profit and stop loss management, automated
 
 Whether you're a discretionary trader who wants help managing trade execution or a systematic trader running fully automated strategies, TradersPost gives you full control over how signals are processed and routed to your connected accounts.
 
-We empower traders to automate strategies and scale accounts from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), [MT5](learn/signal-sources/metatrader-5.md), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Futures Prop Firms, Stocks, Options, and Crypto. Coming in 2025: Forex.
+We empower traders to automate strategies and scale accounts from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), [MT5](broken-reference), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Futures Prop Firms, Stocks, Options, and Crypto. Coming in 2025: Forex.
 
 ## How It Works: The Basics
 
