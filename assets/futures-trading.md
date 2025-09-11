@@ -8,9 +8,9 @@ description: >-
 
 ## Supported Brokers
 
-* [TradeStation](../all-supported-connections/tradestation.md)
-* [Tradovate](../all-supported-connections/tradovate.md)
-* [Tastytrade](../all-supported-connections/tastytrade.md)
+Click below to see the full list of supported futures brokers and prop firms.
+
+{% embed url="https://traderspost.io/asset/futures" %}
 
 ## Supported Tickers
 
