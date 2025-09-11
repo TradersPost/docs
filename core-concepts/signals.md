@@ -10,7 +10,7 @@ TradersPost allows you to control how much of the incoming **signal** data (cont
 
 By default, most subscription settings have a **“Use signal”** toggle enabled. This means the subscription will inherit and apply the values sent in the JSON message for properties like quantity (position size), order type, stop loss, and take profit instructions, among others. However, you can disable this inheritance on a per-subscription basis to override specific fields and apply fixed settings instead.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Example of toggling off "Use signal quantity" to trade 1 contract of NQ</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-05 at 12.34.50 PM.png" alt=""><figcaption><p>Example of toggling off "Use signal quantity" to trade 1 contract of NQ</p></figcaption></figure>
 
 For example, imagine you are trading futures and your signal sends an instruction to buy `NQ1!` with a quantity of 3 contracts. The JSON message would look like this:
 
