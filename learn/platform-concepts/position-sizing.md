@@ -11,7 +11,7 @@ TradersPost does not verify you have the buying power for an order and we depend
 {% endhint %}
 
 {% hint style="danger" %}
-The position sizing features documented here are only for dynamically calculating quantities for entry orders and the **FULL** quantity of the open position is used for exit orders unless a quantity is explicitly sent in the signal and **Use signal quantity** is checked in the strategy subscription settings. You can read more about what can be sent in signals in the [Webhooks](../../core-concepts/signals/webhooks.md) page.
+The position sizing features documented here are only for dynamically calculating quantities for entry orders and the **FULL** quantity of the open position is used for exit orders unless a quantity is explicitly sent in the signal and **Use signal quantity** is checked in the strategy subscription settings. You can read more about what can be sent in signals in the [Webhooks](../../core-concepts/webhooks.md) page.
 {% endhint %}
 
 ## Amount per position

@@ -75,7 +75,7 @@ Sending webhooks is easy! If you are a user of TradingView, you can configure an
 
 The values wrapped in **\{{** and **\}}** will be replaced dynamically by TradingView when the alert is sent to the webhook URL. With this, you can use something like the [Trend Following MOMO](https://www.tradingview.com/script/Jrw5Qegy-Trend-Following-MOMO/?offer_id=10\&aff_id=26514) strategy by Matt DeLong and place the MOMO trades directly in your broker!
 
-You can learn more about webhooks [here](core-concepts/signals/webhooks.md).
+You can learn more about webhooks [here](core-concepts/webhooks.md).
 
 {% hint style="info" %}
 You can also send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org). You can see some custom custom code examples for various programming languages [here](developer-resources/custom-code-examples.md).

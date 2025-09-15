@@ -8,9 +8,9 @@
 ## Core Concepts
 
 * [Brokers (Connections)](core-concepts/brokers-connections.md)
-* [Signals](core-concepts/signals/README.md)
-  * [JSON Message Template Creator](core-concepts/signals/json-message-template-creator.md)
-  * [JSON Message Reference](core-concepts/signals/webhooks.md)
+* [Signals](core-concepts/signals.md)
+  * [JSON Message Template Creator](core-concepts/json-messages.md)
+  * [JSON Message Reference](core-concepts/webhooks.md)
 * [Strategies](core-concepts/strategies.md)
 * [Subscriptions](core-concepts/subscriptions.md)
 

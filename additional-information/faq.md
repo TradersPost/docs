@@ -70,7 +70,7 @@ TradersPost comes with a free paper account that lets you test strategies and ge
 
 ### Do you have an API?
 
-No, but it is on our future roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../core-concepts/signals/webhooks.md).
+No, but it is on our future roadmap. The only way currently to integrate strategies with TradersPost is via [Webhooks](../core-concepts/webhooks.md).
 
 ### Are trades executed on my own dedicated server?
 
