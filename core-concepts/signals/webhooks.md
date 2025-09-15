@@ -1,14 +1,14 @@
 ---
 description: >-
   TradersPost allows third party applications like TradingView and TrendSpider
-  to integrate with your connected brokers via webhooks.
+  to integrate with your connected brokers via webhooks sending JSON messages.
 ---
 
-# Webhooks
+# JSON Message Reference
 
-## What is a webhook?
+## First, what is a webhook?
 
-Webhooks are automated messages sent from applications when something happens. They have a [JSON message](json-messages.md) that can contain a payload of data and are sent to a unique URL.
+Webhooks are automated messages sent from applications when something happens. They have a [JSON message](json-message-template-creator.md) that can contain a payload of data and are sent to a unique URL.
 
 In the context of automated trading, the webhook JSON message contains all the information about the trade signal like what ticker to buy and at what price. Here is an example simple webhook and JSON message.
 
@@ -30,11 +30,21 @@ In the context of automated trading, the webhook JSON message contains all the i
 }
 ```
 
-This example would route to a TradersPost [strategy](strategies.md), and then to one or more [strategy subscriptions](subscriptions.md) where the trade for AMD would be executed to buy 1 share of AMD with a take profit order at 10 percent above the potential entry price of 143.12 (assuming no slippage) and a stop market order 5 percent below the entry price of 143.12.
+This example would route to a TradersPost [strategy](../strategies.md), and then to one or more [strategy subscriptions](../subscriptions.md) where the trade for AMD would be executed to buy 1 share of AMD with a take profit order at 10 percent above the potential entry price of 143.12 (assuming no slippage) and a stop market order 5 percent below the entry price of 143.12.
+
+### Here are some examples of default JSON payloads that you can use to send alerts from various trading platforms to your webhook URL:
+
+| Tradingview Indicator                                                                                                                         | Tradingview Strategy                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>{<br>"ticker": "{{ticker}}",<br>"action": "buy",<br>"price": "{{close}}",<br>"time": "{{timenow}}",<br>"interval": "{{interval}}"<br>}</p> | <p>{<br>"ticker": "{{ticker}}",<br>"action": "{{strategy.order.action}}",<br>"sentiment": "{{strategy.market_position}}",<br>"quantity": "{{strategy.order.contracts}}",<br>"price": "{{close}}",<br>"time": "{{timenow}}",<br>"interval": "{{interval}}"<br>}</p> |
+
+| Trendspider                                                                                 | Custom Code                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>{<br>"ticker": "%alert_symbol%",<br>"action": "buy",<br>"price": "%last_price%"<br>}</p> | <p>curl -X POST<br>-H 'Content-Type: application/json'<br>-d '{"ticker": "MNQ", "action": "buy"}'<br>https://webhooks.traderspost.io/trading/webhook/98a90567-fac3-42b9-8c5d-97c4ec1710ba/6de6c4a446497f11debba25b90e90462</p> |
 
 ## Webhook Reference Documentation
 
-A full, technical reference document is [available here](../developer-resources/webhook-reference.md) and covers every available request body property and possible response bodies.
+A full, technical reference document is [available here](../../developer-resources/webhook-reference.md) and covers every available request body property and possible response bodies.
 
 ## Webhook Field Reference
 
@@ -871,7 +881,7 @@ If you send a ticker for an asset class that the webhook does not support, then 
 
 ## Rate Limits
 
-TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](../learn/platform-concepts/rate-limits.md).
+TradersPost is **NOT** designed to be a high frequency trading platform. The minimum allowed timeframe to trade on is the 1 minute chart. You are allowed to send 60 requests per minute and 500 requests per hour. If you setup a strategy on anything less than the 1 minute chart, your account may be temporarily suspended or permanently banned if the issue is not addressed. Read more about our rate limiting behavior [here](../../learn/platform-concepts/rate-limits.md).
 
 ## Third Parties
 
@@ -879,13 +889,13 @@ Because TradersPost works using standard webhooks, this enables users to integra
 
 Here are some popular platforms that enable you to build strategies and send alerts as webhooks.
 
-* [TradingView](../learn/signal-sources/tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
-* [TrendSpider](../learn/signal-sources/trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
+* [TradingView](../../learn/signal-sources/tradingview.md) - TradingView is a social network of 30 million traders and investors using the world's best charts and tools to spot trading opportunities across global markets.
+* [TrendSpider](../../learn/signal-sources/trend-spider.md) - TrendSpider provides technical analysis software for retail traders and investors focused on the US equity and foreign exchange markets.
 
 ## Custom Code
 
 In addition to sending webhooks from third parties, you can send webhooks to TradersPost from custom code using programming languages like [PHP](https://php.net) or [Python](https://www.python.org).
 
-{% content-ref url="../developer-resources/custom-code-examples.md" %}
-[custom-code-examples.md](../developer-resources/custom-code-examples.md)
+{% content-ref url="../../developer-resources/custom-code-examples.md" %}
+[custom-code-examples.md](../../developer-resources/custom-code-examples.md)
 {% endcontent-ref %}

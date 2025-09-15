@@ -19,7 +19,7 @@ Steps to use it:
       2. Sides: Both (Bullish & Bearish)
       3. Entry order type: Market
       4. Exit order type: Market
-3. When the subscription is successfully created, copy the [Webhook URL](../../core-concepts/webhooks.md).
+3. When the subscription is successfully created, copy the [Webhook URL](../../core-concepts/signals/webhooks.md).
 4. Create a new alert on TradingView from the [Simple Strategy Chart we provided](https://www.tradingview.com/chart/QIsX3O3T/).
    1. Under condition, choose the Simple Strategy (Both)
       1. It will say Both if the strategy settings are allowing long and short.

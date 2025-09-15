@@ -1,6 +1,6 @@
 # Getting Started
 
-TradersPost is a cloud-based, no-code, event-driven trading automation platform that allows you to turn your [trade signals](core-concepts/signals.md) into executed orders across one or multiple broker, exchange, or prop firm accounts.
+TradersPost is a cloud-based, no-code, event-driven trading automation platform that allows you to turn your [trade signals](core-concepts/signals/) into executed orders across one or multiple broker, exchange, or prop firm accounts.
 
 * It's **cloud-based**, meaning that your trades execute even when you're offline. No need to keep your computer running or your browser open. Our servers process your signals 24/7, securely routing orders to your connected brokers or exchanges.
 * It's **no-code**, meaning that you don't need to write any software or have any programming knowledge to automate your trading. You can connect signals from platforms like TradingView, TrendSpider, and others directly to your broker accounts using simple configuration tools.
@@ -40,9 +40,9 @@ Each subscription connects one broker account to your strategy, applying account
 {% endstep %}
 
 {% step %}
-**Send** [**Trading Signals**](core-concepts/signals.md) **via** [**Webhook**](core-concepts/webhooks.md)
+**Send** [**Trading Signals**](core-concepts/signals/) **via** [**Webhook**](core-concepts/signals/webhooks.md)
 
-From your external platform (like TradingView or TrendSpider), send a [JSON message](core-concepts/json-messages.md) to your strategy’s [webhook URL](core-concepts/webhooks.md). TradersPost parses this message and routes the trade to your connected broker or exchange using the settings defined in your subscription.
+From your external platform (like TradingView or TrendSpider), send a [JSON message](core-concepts/signals/json-message-template-creator.md) to your strategy’s [webhook URL](core-concepts/signals/webhooks.md). TradersPost parses this message and routes the trade to your connected broker or exchange using the settings defined in your subscription.
 {% endstep %}
 {% endstepper %}
 

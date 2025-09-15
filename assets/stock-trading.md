@@ -20,7 +20,7 @@ TradersPost Automated Stocks Trading Setup
 
 ## Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../core-concepts/signals/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
 
 ### Enter Bullish
 
@@ -739,3 +739,5 @@ Here is a list of the available retry settings:
 * `Max delay in milliseconds` - The maximum delay between retry attempts. If the delay calculated by the delay multiplier exceeds this value, the system will use this value as the delay.
 
 </details>
+
+<a href="stock-trading.md#supported-brokers" class="button primary">New button</a>
