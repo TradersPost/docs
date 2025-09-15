@@ -28,20 +28,20 @@ You can troubleshoot your traded by examining the TradingView and TradersPost lo
 
 First, make sure that TradingView actually triggered an alert by checking the **Alerts log** in TradingView right column pane. The alert must show up here. If it shows on the chart or shows in the backtester, but it does not show in the **Alerts log** then it is likely that your Pine Script code suffers from [repainting](../learn/signal-sources/tradingview.md#pine-script-repainting).
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 10.58.27 AM.png" alt=""><figcaption><p>TradingView Alerts log column pane</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-12 at 1.13.09 PM.png" alt=""><figcaption><p>TradingView Alerts log column pane and tab</p></figcaption></figure>
 
-Second, in TradersPost navigate to **Strategies > Webhooks** and click **Logs** next to your webhook.
+Second, in TradersPost navigate to your [strategies](https://app.traderspost.io/app/trading/strategies) page then click Signals.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 11.05.57 AM.png" alt=""><figcaption><p>TradersPost Webhook List</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-12 at 1.15.13 PM.png" alt=""><figcaption><p>TradersPost Strategies List</p></figcaption></figure>
 
-After you click **Logs**, you will see a list of all the requests that have been sent to your webhook. You can use this to determine whether or not any webhook requests were sent to your webhook from TradingView or TrendSpider.
+After you click **Signals**, you will see a list of all the requests that have been sent to your strategy webhook URL.&#x20;
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 11.07.44 AM (1).png" alt=""><figcaption><p>TradersPost Webhook Logs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-12 at 1.16.47 PM.png" alt=""><figcaption><p>TradersPost Webhook Logs</p></figcaption></figure>
 
-You can then click in to each webhook request to see information about the request, where it came from, what time it was received and any trades that were exected as a result of the webhook request.
+You can then click in to each signal to see information about the signal, where it came from, what time it was received and any trades that were executed as a result of the signal.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 11.10.35 AM.png" alt=""><figcaption><p>TradersPost View Webhook Request Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-12 at 1.19.07 PM.png" alt=""><figcaption><p>TradersPost View Webhook Request Page</p></figcaption></figure>
 
-Next, click the View Trade button to view the executed trade and all the associated information about the trade. Under the **Trade Plan Messages** header, you can see information about the trade. If a trade was rejected, these messages can tell you information about why the trade was rejected.
+Next, click the individual trade to view the executed trade and all the associated information about the trade. On this pop up you can see information about the trade. If a trade was rejected, these messages can tell you information about why the trade was rejected.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-04-03 at 11.11.48 AM.png" alt=""><figcaption><p>TradersPost View Trade Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-12 at 1.18.25 PM.png" alt=""><figcaption><p>TradersPost View Trade Pop Up</p></figcaption></figure>
