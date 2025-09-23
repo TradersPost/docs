@@ -59,6 +59,7 @@
   * [Position Sizing](learn/platform-concepts/position-sizing.md)
   * [Fractional Shares](learn/platform-concepts/fractional-shares.md)
 * [Known Limitations](learn/known-limitations.md)
+* [Trading Bot Sessions](learn/trading-bot-sessions.md)
 
 ## Strategies & Indicators
 
