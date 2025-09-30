@@ -23,6 +23,24 @@ layout:
 
 {% columns %}
 {% column valign="middle" %}
+<h4 align="center">September 25th, 2025 - <a href="https://youtu.be/OfKcEpSdp1M">Stanzie Benz</a></h4>
+
+{% embed url="https://youtu.be/OfKcEpSdp1M" %}
+Stanzie shares how he turned early losses into consistent prop firm payouts by focusing on sizing, risk management, and disciplined trading. He explains his transition from options to futures, why negative risk-reward scalping works in prop accounts, and how his custom tools at TradeBeacon.io improved consistency. Stanzie also discusses lessons from automated trading gone wrong andhis journey to live accounts at Topstep.
+{% endembed %}
+{% endcolumn %}
+
+{% column valign="middle" %}
+<h4 align="center">September 21st, 2025 - <a href="https://youtu.be/JOsu3kamlYo">Dr. Ernie Chan</a></h4>
+
+{% embed url="https://youtu.be/JOsu3kamlYo" %}
+Dr. Ernie Chan discusses his journey from physics to finance, the hard lessons learned running quant strategies, and why predicting risk is often more practical than predicting price. He explains the limitations of machine learning in trading, how PredictNow.AI helps investors manage drawdowns, and where generative AI might transform quantitative research. Ernie also shares thoughts on regime shifts, volatility forecasting, and the future of systematic trading.
+{% endembed %}
+{% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+{% column valign="middle" %}
 <h4 align="center">September 17th, 2025 - <a href="https://x.com/Jacobztrades">JacobzTrades</a></h4>
 
 {% embed url="https://youtu.be/WIaJUYunyH0?si=0XvfqvE6xpO1fk9_" %}
