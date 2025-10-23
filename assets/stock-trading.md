@@ -6,7 +6,7 @@ description: >-
 
 # Stock Trading
 
-{% embed url="https://www.youtube.com/watch?v=tJcY7M_YCmU" %}
+{% embed url="https://youtu.be/crno8Z1ObZ8" %}
 TradersPost Automated Stocks Trading Setup
 {% endembed %}
 
@@ -14,9 +14,12 @@ TradersPost Automated Stocks Trading Setup
 
 * [TradeStation](../all-supported-connections/tradestation.md)
 * [Alpaca](../all-supported-connections/alpaca.md)
-* [Tradier](../all-supported-connections/tradier.md)
-* [Interactive Brokers](../all-supported-connections/interactive-brokers.md)
 * [Robinhood](../all-supported-connections/robinhood.md)
+* [Interactive Brokers](../all-supported-connections/interactive-brokers.md)
+* [E\*Trade](../all-supported-connections/e-trade.md)
+* [Tastytrade](../all-supported-connections/tastytrade.md)
+* [Tradier](../all-supported-connections/tradier.md)
+* [Webull](../all-supported-connections/webull.md)
 
 ## Signals
 
