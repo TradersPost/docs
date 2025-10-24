@@ -6,7 +6,7 @@ description: >-
 
 # Options Trading
 
-{% embed url="https://www.youtube.com/watch?v=Kbb37xqMwR4" %}
+{% embed url="https://youtu.be/EDUSKTIrpHE" %}
 TradersPost Automated Options Trading Setup
 {% endembed %}
 
@@ -20,6 +20,8 @@ Some customers separate the positions in separate broker accounts to work around
 
 * [TradeStation](../all-supported-connections/tradestation.md)
 * [Alpaca](../all-supported-connections/alpaca.md)
+* [E\*Trade](../all-supported-connections/e-trade.md)
+* [Tastytrade](../all-supported-connections/tastytrade.md)
 * [Tradier](../all-supported-connections/tradier.md)
 
 ## Symbol Format
@@ -37,7 +39,7 @@ This section outlines the different formats TradersPost supports for representin
 
 #### Format Comparison
 
-<table><thead><tr><th width="153.13671875">Platform</th><th width="204.57421875">Example Format</th><th width="108.49609375">Date Format</th><th width="128.17578125">Strike Format</th><th width="264.71484375">Notes</th></tr></thead><tbody><tr><td><strong>TradersPost</strong></td><td><code>SPY 250520582.5</code></td><td>YMD</td><td>Decimal</td><td>Flexible input format. Trailing <code>.0</code> is optional.</td></tr><tr><td><strong>TDAmeritrade</strong></td><td><code>SPY_052025582.5</code></td><td>MDY</td><td>Decimal</td><td>Uses underscore between symbol and date.</td></tr><tr><td><strong>TradeStation</strong></td><td><code>SPY 250520C582.5</code></td><td>YMD</td><td>Decimal</td><td>Includes call/put indicator (<code>C</code> or <code>P</code>) before strike.</td></tr><tr><td><strong>Tradier</strong></td><td><code>SPY250520C00582500</code></td><td>YMD</td><td>Integer (scaled)</td><td>Strike is zero-padded and scaled (e.g., 582.5 → 00582500).</td></tr><tr><td><strong>TradingView</strong></td><td><code>SPY250520582.5</code></td><td>YMD</td><td>Decimal</td><td>Fully concatenated format without spaces.</td></tr></tbody></table>
+<table><thead><tr><th width="153.13671875">Platform</th><th width="204.57421875">Example Format</th><th width="108.49609375">Date Format</th><th width="128.17578125">Strike Format</th><th width="264.71484375">Notes</th></tr></thead><tbody><tr><td><strong>TradersPost</strong></td><td><code>SPY 250520582.5</code></td><td>YMD</td><td>Decimal</td><td>Flexible input format. Trailing <code>.0</code> is optional.</td></tr><tr><td><strong>TradeStation</strong></td><td><code>SPY 250520C582.5</code></td><td>YMD</td><td>Decimal</td><td>Includes call/put indicator (<code>C</code> or <code>P</code>) before strike.</td></tr><tr><td><strong>Tradier</strong></td><td><code>SPY250520C00582500</code></td><td>YMD</td><td>Integer (scaled)</td><td>Strike is zero-padded and scaled (e.g., 582.5 → 00582500).</td></tr><tr><td><strong>TradingView</strong></td><td><code>SPY250520582.5</code></td><td>YMD</td><td>Decimal</td><td>Fully concatenated format without spaces.</td></tr></tbody></table>
 
 #### Format Details
 
@@ -98,7 +100,7 @@ In this example we have configured our strategy subscription to do the following
 * **Strike Count** limits how many strikes to analyze per expiration date when we are scanning the option chain. This does not effect which strike gets selected, it just reduces the number of strikes that will be returned from the broker API for each expiration date. As such, there is no optimal value for this field that will change which strike is selected.
 * **Strikes Away** with a value of **3** will select the 3rd contract away from At The Money.
 
-![Options Asset Configuration Example](<../.gitbook/assets/Screen Shot 2022-02-11 at 10.06.21 PM.png>)
+![Options Asset Configuration Example](<../.gitbook/assets/Screenshot 2025-10-24 at 4.17.43 PM.png>)
 
 You are able to control the option chain scanning functionality from webhooks. Here is an example:
 
@@ -198,10 +200,3 @@ You can optionally include a **quantity** in the signal that can then be used in
 
 If you configure your strategy subscription to use limit orders and to use the signal quantity, then you will get a **Buy To Open Limit** order for **5** contracts. If you don’t select entry market or exit market, then we will submit a limit order with the midpoint price.
 
-## Paper Options Market Data
-
-The TradersPost paper broker does not have options data by default. To get options support in the TradersPost paper broker, you can connect a broker that does have options support (like TD Ameritrade or TradeStation) and then choose that broker as the **Market data source** for the TradersPost paper broker and then you will have options support. Here is a quick video showing you how to do this.
-
-{% embed url="https://www.youtube.com/watch?v=qqw5Olknra4" %}
-How To Enable Options Support In The TradersPost Paper Broker
-{% endembed %}
