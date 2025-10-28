@@ -2,9 +2,27 @@
 description: >-
   TradersPost supports buying, selling and shorting futures contracts with
   support for over 100 tickers.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Futures Trading
+
+{% embed url="https://youtu.be/WcjSfWbrdNE" %}
+TradersPost Futures Strategy Setup Demo
+{% endembed %}
 
 ## Supported Brokers
 

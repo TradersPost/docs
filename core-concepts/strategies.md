@@ -19,8 +19,8 @@ When sending signals to TradersPost, it's a recommended practice to head to your
 
 Next to each signal, you'll see a quick status summary showing how many of your active **subscriptions** successfully processed the signal versus how many encountered issues. This allows you to easily verify that signals are being received correctly and that trades are executing as expected across all your connected broker and exchange accounts.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/signal.gif" alt=""><figcaption></figcaption></figure>
 
-When you click on any individual signal in the list, you'll be able to view the specific **trades** that were submitted to each of your subscribed broker connections. For each trade, you can see whether it was successfully submitted and executed, or if any issues occurred. Clicking into a specific trade provides detailed information about the execution, including order fills, broker responses, and, if applicable, any errors or reasons why the trade was rejected or failed. This allows you to fully audit how each signal was processed across all your accounts.
+When you click on a signal, you’ll see the trades it generated across your connected broker accounts. Each trade shows whether it was successfully executed or if any issues occurred. Clicking into a specific trade reveals full execution details, including order fills, broker responses, and any errors or rejection reasons, so you can easily audit how every signal was handled across your accounts.
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
