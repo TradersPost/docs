@@ -23,6 +23,42 @@ layout:
 
 {% columns %}
 {% column valign="middle" %}
+<h4 align="center">October 28th, 2025 - <a href="https://youtu.be/w9W76a3UFUE">Mustang Trader</a></h4>
+
+{% embed url="https://youtu.be/w9W76a3UFUE" %}
+Nick shares how he turned prop firm trading into a disciplined business—scaling 82 accounts while mastering risk management and patience. He breaks down what separates consistent traders from gamblers in this revealing session.
+{% endembed %}
+{% endcolumn %}
+
+{% column valign="middle" %}
+<h4 align="center">October 20th, 2025 - <a href="https://youtu.be/lNlko1suHzE">Austin Silver</a></h4>
+
+{% embed url="https://youtu.be/lNlko1suHzE" %}
+In this episode of Trading Bot Sessions, Austin Silver shares the raw truths behind prop trading and the psychology that separates gamblers from real traders. From his early days at T3 to founding ASFX, Austin talks about learning to lose well, finding flow, and reprogramming his mindset for long-term success.
+{% endembed %}
+{% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+{% column valign="middle" %}
+<h4 align="center">October 14th, 2025 - <a href="https://youtu.be/axmD6uIVR38">Damn Good Trading</a></h4>
+
+{% embed url="https://youtu.be/axmD6uIVR38" %}
+Kyle Kozlowski shares his raw journey from selling luxury cars in Chicago to becoming a prop firm trader. In this TradersPost Office Hours session, Kyle opens up about his early trading losses, building multiple businesses, and the moment he turned $30K into over $100K in a single SPX trade.
+{% endembed %}
+{% endcolumn %}
+
+{% column valign="middle" %}
+<h4 align="center">October 1st, 2025 - <a href="https://youtu.be/ZReUdlFy8-4">Trevor Lyman</a></h4>
+
+{% embed url="https://youtu.be/ZReUdlFy8-4" %}
+In this episode of Trading Bot Sessions, meet the guy who was so obsessed with making it as a trader that he wanted to work for a trading-based company while trading prop on the side. Trevor discusses co-founding [TradeBeacon](https://www.tradebeacon.io/), building indicators with automation, and how working at TradersPost shaped his approach to prop trading.
+{% endembed %}
+{% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+{% column valign="middle" %}
 <h4 align="center">September 25th, 2025 - <a href="https://youtu.be/OfKcEpSdp1M">Stanzie Benz</a></h4>
 
 {% embed url="https://youtu.be/OfKcEpSdp1M" %}
