@@ -43,7 +43,9 @@ If you build your Pine Script as a strategy, you only need one alert per ticker,
     "action": "{{strategy.order.action}}",
     "sentiment": "{{strategy.market_position}}",
     "quantity": "{{strategy.order.contracts}}",
-    "price": "{{close}}"
+    "price": "{{close}}",
+    "time": "{{timenow}}",
+    "interval": "{{interval}}"
 }
 ```
 
@@ -54,6 +56,7 @@ TradingView will replace the `{{...}}` values dynamically with a real value when
 * **\{{strategy.market\_position\}}** - long, short or flat. This value tells TradersPost what the state of the position should be after executing the signal.
 * **\{{strategy.order.contracts\}}** - the quantity of the order executed.
 * **\{{close\}}** - the current price at the time the alert was triggered.
+* **\{{interval\}}** - the current interval (timeframe) the alert is running on.
 
 ### Indicators
 
@@ -172,7 +175,9 @@ Just send the following JSON in the alert message to TradersPost.
     "action": "{{strategy.order.action}}",
     "sentiment": "{{strategy.market_position}}",
     "quantity": "{{strategy.order.contracts}}",
-    "price": "{{close}}"
+    "price": "{{close}}",
+    "time": "{{timenow}}",
+    "interval": "{{interval}}"
 }
 ```
 
