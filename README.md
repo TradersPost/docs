@@ -16,7 +16,7 @@ We empower traders to automate strategies and scale accounts from platforms like
 
 ## How It Works: The Basics
 
-{% embed url="https://www.youtube.com/watch?v=_q4fLhzRwWg" %}
+{% embed url="https://youtu.be/kLJqB4Qpbvo" %}
 
 It's important to understand a few core concepts in TradersPost. Terms like strategies, subscriptions, JSON messages, webhooks, connections, and signals might sound unfamiliar at first, but once you start using the platform, these building blocks will quickly become second nature.
 

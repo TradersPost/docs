@@ -1,10 +1,14 @@
 ---
 description: >-
-  Automate crypto trading strategies built in TradingView or TrendSpider
-  directly in your crypto exchange.
+  TradersPost supports buying and selling (not shorting) spot crypto through the
+  following brokers.
 ---
 
 # Crypto Spot Trading
+
+{% embed url="https://youtu.be/C1fqbNvoOzg" %}
+TradersPost Crypto Strategy Setup Demo
+{% endembed %}
 
 ## Supported Brokers
 

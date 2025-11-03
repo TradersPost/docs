@@ -7,7 +7,7 @@ description: >-
 
 # TradingView
 
-{% embed url="https://www.youtube.com/watch?v=_q4fLhzRwWg" %}
+{% embed url="https://youtu.be/kLJqB4Qpbvo" %}
 
 ## Alert Message JSON
 

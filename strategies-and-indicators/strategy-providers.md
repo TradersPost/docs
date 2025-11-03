@@ -5,6 +5,7 @@
 This section documents all the premium strategies and indicators that you can pay for to potentially use with TradersPost or use a base for your own custom strategy.
 
 * [Zeiierman](https://www.zeiierman.com/)
+* [TradeBeacon](https://www.tradebeacon.io/)
 * [Trendoscope](https://www.trendoscope.io/)
 * [Kioseff Trading](https://www.kiosefftrading.com/)
 * [David.Tech](https://daviddtech.com/tradingview-strategies/)
@@ -20,7 +21,6 @@ This section documents all the premium strategies and indicators that you can pa
 * [BuySellBands](https://www.buysellbands.com/)
 * [TRND Bot](https://trndbot.com/)
 * [Trusted Signals](https://trustedsignals.com/)
-* [Zeiierman Trading](https://zeiiermantrading.com/)
 * [Pro Indicators](https://pro-indicators.com/)
 * [BB™ Bot V.1](https://www.tradingview.com/script/D528godu-BB-Bot-V-1/)
 
