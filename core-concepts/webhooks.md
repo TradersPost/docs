@@ -358,17 +358,55 @@ You can use the `ignoreTradingWindows` property in your JSON to ignore the defin
 
 Here is an example where maybe you entered a `SPY` position while the trading window was open, and you now you want to exit the position but the trading window is closed. Simply send the `ignoreTradingWindows` property with a value of `true` and the trade will be allowed to execute.
 
-```json5
-{
-    "ticker": "SPY",
+<pre class="language-json5"><code class="lang-json5"><strong>{
+</strong>    "ticker": "SPY",
     "action": "exit",
     "ignoreTradingWindows": true
 }
-```
+</code></pre>
 
 ### cancel
 
 Explicitly control whether or not to cancel open orders before submitting new orders to your broker.
+
+```json5
+{
+    "ticker": "SPY",
+    "action": "exit",
+    "cancel": true
+}
+```
+
+Or if you want to disable canceling for a signal:
+
+```json5
+{
+    "ticker": "SPY",
+    "action": "exit",
+    "cancel": false
+}
+```
+
+### delay
+
+The `delay` field allows you to postpone the execution of a trade signal by a specified number of seconds. When included, TradersPost will wait the defined delay period after receiving the signal before executing the trade.&#x20;
+
+You can include the delay in seconds within the webhook payload:
+
+```json
+{
+    "ticker": "QQQ",
+    "action": "buy",
+    "delay": 60
+}
+```
+
+In this example, the signal instructs TradersPost to buy QQQ, but execution will be delayed by **60 seconds** after the signal is received.
+
+You may want to use `delay` if:
+
+* You want to space out your entries to work around broker rate limits.
+* Your strategy enters and then immediately exits so on the exit you may want to add a delay to give your entry enough time to fully execute.
 
 ### extras
 
