@@ -23,6 +23,66 @@ layout:
 
 {% columns %}
 {% column valign="middle" %}
+<h4 align="center">Dec 31st, 2025 - <a href="https://youtu.be/kHM_hrqTJcU">Zach Boyajian</a></h4>
+
+{% embed url="https://youtu.be/kHM_hrqTJcU" %}
+Full conversation with Zach Boyajian on his path from Forex/CFDs into futures prop firms, what changed when he stopped overcomplicating charts, and how he approached the first payout before scaling. Includes concrete discussion of YM mean reversion, VWAP/volume profiles, and risk discipline under prop firm rules.
+{% endembed %}
+{% endcolumn %}
+
+{% column valign="middle" %}
+<h4 align="center">Dec 10th, 2025 - <a href="https://youtu.be/pvExR9P_WJI">Trades by Rina</a></h4>
+
+{% embed url="https://youtu.be/pvExR9P_WJI" %}
+Reena shares her full trading arc: getting pulled into the GameStop era, moving through options, then finding her home in NQ futures. She explains what actually improved her results—narrowing her trading window, focusing on one market, and blending discretionary ICT concepts with simpler tools and stats.
+{% endembed %}
+{% endcolumn %}
+{% endcolumns %}
+
+***
+
+{% columns %}
+{% column valign="middle" %}
+<h4 align="center">Dec 5th, 2025 - <a href="https://youtu.be/fVyeOP69_Xk">Tanner Owings</a></h4>
+
+{% embed url="https://youtu.be/fVyeOP69_Xk" %}
+Tanner Owings (“The Strong Trader”) shares his path from going full-time early to building consistency through process: structured journaling, review habits, and risk guardrails that prevent tilt from turning into blown accounts. He also breaks down how he approaches prop firm payouts, hard vs soft rules, avoiding overtrading, and ways to scale responsibly.
+{% endembed %}
+{% endcolumn %}
+
+{% column valign="middle" %}
+<h4 align="center">Nov 28th, 2025 - <a href="https://youtu.be/jCDZHJ5LVMQ">Randy Bains</a></h4>
+
+{% embed url="https://youtu.be/jCDZHJ5LVMQ" %}
+Mike sits down with Randy to unpack a trading journey that started with a $10K moonshot, spiraled into a devastating loss, and eventually rebuilt into a disciplined, sustainable approach to prop trading. They cover the emotional fallout of early wins, the reality of prop firm constraints, and how discipline outside the charts shapes results inside them.
+{% endembed %}
+{% endcolumn %}
+{% endcolumns %}
+
+***
+
+{% columns %}
+{% column valign="middle" %}
+<h4 align="center">Nov 7th, 2025 - <a href="https://youtu.be/khHY68rTFxs">Joey Morgan</a></h4>
+
+{% embed url="https://youtu.be/khHY68rTFxs" %}
+Joey breaks down a disciplined intraday approach to MNQ: \~2% daily risk cap, a one-and-done 15-point target, and scaling with 5–7 micros, plus how he uses initial balance failures and liquidity sweeps for entries.
+{% endembed %}
+{% endcolumn %}
+
+{% column valign="middle" %}
+<h4 align="center">Nov 4th, 2025 - <a href="https://youtu.be/YBedU4l2WGw">Vedictrades</a></h4>
+
+{% embed url="https://youtu.be/YBedU4l2WGw" %}
+Sahil shares the mindset and trading rules that helped him go from blowing accounts to earning steady payouts. A transparent look at the habits that make prop traders last.
+{% endembed %}
+{% endcolumn %}
+{% endcolumns %}
+
+***
+
+{% columns %}
+{% column valign="middle" %}
 <h4 align="center">October 28th, 2025 - <a href="https://youtu.be/w9W76a3UFUE">Mustang Trader</a></h4>
 
 {% embed url="https://youtu.be/w9W76a3UFUE" %}
@@ -38,6 +98,8 @@ In this episode of Trading Bot Sessions, Austin Silver shares the raw truths beh
 {% endembed %}
 {% endcolumn %}
 {% endcolumns %}
+
+***
 
 {% columns %}
 {% column valign="middle" %}
@@ -57,6 +119,8 @@ In this episode of Trading Bot Sessions, meet the guy who was so obsessed with m
 {% endcolumn %}
 {% endcolumns %}
 
+***
+
 {% columns %}
 {% column valign="middle" %}
 <h4 align="center">September 25th, 2025 - <a href="https://youtu.be/OfKcEpSdp1M">Stanzie Benz</a></h4>
@@ -74,6 +138,8 @@ Dr. Ernie Chan discusses his journey from physics to finance, the hard lessons l
 {% endembed %}
 {% endcolumn %}
 {% endcolumns %}
+
+***
 
 {% columns %}
 {% column valign="middle" %}
@@ -152,4 +218,3 @@ TradersPost's own Mike Christensen interviews Tyler Goedtel on his journey from 
 {% endembed %}
 {% endcolumn %}
 {% endcolumns %}
-
