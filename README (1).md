@@ -7,7 +7,7 @@ hidden: true
 
 Our mission is simple: to help you transform trade ideas into executed orders, effortlessly. With powerful tools like dynamic take profit and stop loss management, automated position adjustments, and an options contract screener, TradersPost simplifies and optimizes your trading workflow.
 
-We empower traders to automate strategies from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), [MT5](broken-reference), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Stocks, Options, and Crypto. Coming in 2025: Forex.
+We empower traders to automate strategies from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), [MT5](/broken/pages/qWcbDtWLcm8WC6oeftBf), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Stocks, Options, and Crypto. Coming in 2025: Forex.
 
 Whether you're fine-tuning risk management or automating entry and exit orders, TradersPost is here to ensure your trading strategy works just as you envision.
 
@@ -42,7 +42,7 @@ TradersPost has a "use your own broker" architecture. We are not a broker or an 
 
 {% embed url="https://traderspost.io/connections" %}
 
-Don't see your broker listed there? Check our [broker roadmap](broken-reference) for upcoming connections add yourself to a waitlist for other brokers listed [under the Coming Soon heading](https://traderspost.io/connections).
+Don't see your broker listed there? Check our [broker roadmap](/broken/pages/mgtv9Dsl3HtzTIcXvWLP) for upcoming connections add yourself to a waitlist for other brokers listed [under the Coming Soon heading](https://traderspost.io/connections).
 
 ## Webhooks
 

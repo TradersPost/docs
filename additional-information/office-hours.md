@@ -64,8 +64,7 @@ Subscribe to [Office Hours on our YouTube Channel](https://www.youtube.com/@Trad
 1. Go to your subscriptions or strategy settings.
 2. Find “Subscription Defaults.”
 3. Scroll down to “Allow Add to Position.”
-4. Ensure it is set to “No.”\
-
+4. Ensure it is set to “No.”<br>
 
 Disabling this setting ensures only the first Buy trade is executed for a given ticker, and any additional Buy signals are rejected.
 
@@ -79,8 +78,7 @@ Disabling this setting ensures only the first Buy trade is executed for a given 
 
 **Minimum Payout:** Currently set at $100, though this is flexible and may change based on requests.
 
-No Specific Payout Link: Payouts are managed automatically without needing a specific link.\
-
+No Specific Payout Link: Payouts are managed automatically without needing a specific link.<br>
 
 We’re refining the payout schedule to ensure consistency. For now, expect monthly payouts with a flexible minimum amount.
 

@@ -140,30 +140,59 @@ To keep track of the different news events that may cause the market to move in 
 You are responsible for ensuring futures contract positions are exited before expiration or are rolled over manually. TradersPost does not automatically do anything special for futures contract positions based on expiration date.
 {% endhint %}
 
-{% hint style="info" %}
-It is recommended to always specify the exact contract symbol you want to trade instead of using the continuous contract symbol. The logic for how TradingView and brokers/exchanges rollover from the current contract to the next contract may be different than how TradersPost handles rollovers. We hope to improve this in the future, but for now you should specify the exact contract symbol you would like to trade.\
-\
-Please see our [Blog Post](https://blog.traderspost.io/article/trading-continuous-futures-contracts-from-tradingview-on-traderspost) on our recommendations for trading continuous futures on TradingView.
-{% endhint %}
+If your position is held through a futures rollover, any exit signal must reference the new contract symbol. Once the broker rolls the position forward, exits must be sent using the rolled contract ticker.
 
-In 2023, we made a change to improve how we handle continuous contract symbols and when we switch from the current contract to the next contract.\
-\
-We will now switch from the current contract to the next contract two days before the beginning of the expiration date. So take `MNQZ2023` for example. It has an expiration date of **Friday December 15th, 2023**.
+For example, if you entered using `MNQH2025` and the broker rolls the position to `MNQM2025`, your exit signal must use:
 
-* Before this change, `MNQ1!` switches to `MNQH2024` at the end of **December 15th, 2023**.
-* After this change, `MNQ1!` switches to `MNQH2024` at the beginning of **December 13th, 2023**.
-* If you want to trade a specific contract, then you can send **NQH2023** or **NQM2023** instead of **NQ1!** for example. Here is an example JSON.
+```json
+"ticker": "MNQM2025"
+```
+
+## Continuous Futures Symbols
+
+Simply put, do not use continuous symbols with TradersPost. We understand they are convenient, but at this time we do not reliably resolve the correct front month or second month contract behind continuous symbols.
+
+Using symbols like `1!` or `2!` can lead to mismatches between TradersPost and charting platforms such as TradingView, especially around roll periods, where each platform may reference a different underlying contract.
+
+This mismatch can result in orders being sent to an unexpected contract and cause unnecessary confusion or execution issues. Until we introduce a more robust contract resolution process, we strongly recommend always sending explicit contract symbols instead of continuous symbols.
 
 ```json
 {
-    "ticker": "NQH2023",
-    "action": "buy"
+  "ticker": "GC1!", //NOT RECOMMENDED
+  "action": "buy"
 }
 ```
 
+We recommend sending the hard-coded symbol instead:
+
+```json
+{
+  "ticker": "GCJ2025", // RECOMMENDED
+  "action": "buy"
+}
+```
+
+{% hint style="info" %}
+Please see our [Blog Post](https://blog.traderspost.io/article/trading-continuous-futures-contracts-from-tradingview-on-traderspost) on our recommendations for trading continuous futures on TradingView.
+{% endhint %}
+
+TradersPost currently rolls futures contracts based on expiration dates, not volume. We switch from the current contract to the next contract two days before the contract’s expiration date.
+
+Because this is not a volume-based rollover, there are times when charting platforms like TradingView may identify a different front month contract than TradersPost. In some cases, TradingView may already be pointing several months ahead while TradersPost is still referencing the next expiring contract.
+
+For example, `MNQZ2023` expires on Friday, December 15, 2023. On TradersPost, the continuous symbol `MNQ1!` rolls to `MNQH2024` at the start of December 13, 2023.
+
 ## Determining the Continuous Futures Contract Symbol
 
-TradingView has [recently added](https://www.tradingview.com/pine-script-reference/v6/#var_syminfo.current_contract) the variable `syminfo.current_contract` to Pine Script. This would return the underlying contract for the current symbol if it is a continuous futures contract (`na` otherwise).
+You can see the contract rollovers planned by TradingView using the Continuous contract switch event. On TradingView charts, head to Settings, click Events, and turn on "Continuous contract switch".
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+This will now show you an event at the bottom of the chart with a purple arrow that indicates when the contract rollover will take place and what ticker it will change from and to. You can use this to hard-code your alerts on the day of a rollover.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+TradingView has also [added](https://www.tradingview.com/pine-script-reference/v6/#var_syminfo.current_contract) the variable `syminfo.current_contract` to Pine Script. This would return the underlying contract for the current symbol if it is a continuous futures contract (`na` otherwise).
 
 ***
 
