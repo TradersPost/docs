@@ -646,7 +646,7 @@ You send this signal with a take profit % as `5%` in your subscription settings.
 You will be entered into a `10` share long with a `10` share limit sell at `693` on SPY.&#x20;
 
 {% hint style="danger" %}
-**The take profit % is not based on profit and loss on your portfolio, it's based on the underlying ticker.** Make sure you understand that we are placing your take profit relative to the price where your stock ticker is trading.
+**The take profit % is not based on profit and loss on your portfolio, it's based on the stock ticker market price percentage change.** Make sure you understand that we are placing your take profit relative to the price where your stock ticker is trading.
 {% endhint %}
 
 **Scenario 2**:
@@ -667,7 +667,7 @@ You send this signal with a take profit amount as `10` in your subscription sett
 You will be entered into a `50` share long with a `50` share limit sell at `670` on SPY.&#x20;
 
 {% hint style="danger" %}
-**The take profit amount is not based on profit and loss on your portfolio, it's based on the underlying ticker.** It's up to you to figure out based on the number of shares you're trading and the profit you want to achieve what value to write in the `amount` field.
+**The take profit amount is not based on profit and loss on your portfolio, it's based on the stock ticker market price offset.** It's up to you to figure out based on the number of shares you're trading and the profit you want to achieve what value to write in the `amount` field.
 {% endhint %}
 
 </details>
