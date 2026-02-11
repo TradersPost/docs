@@ -2,20 +2,6 @@
 description: >-
   TradersPost supports buying, selling and shorting futures contracts with
   support for over 100 tickers.
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Futures Trading
@@ -312,7 +298,7 @@ Choose which trade directions are allowed: take both bullish and bearish trades,
 
 <details>
 
-<summary><mark style="background-color:$info;">Allow Side Swapping</mark> (Advanced)</summary>
+<summary>Allow Side Swapping (Advanced)</summary>
 
 {% hint style="warning" %}
 Normally, if a signal comes in for the opposite side, TradersPost will treat it like an exit signal by closing your position and stopping there. When this is turned on, we'll exit what you have and immediately open a new position on the opposite side.
@@ -320,7 +306,7 @@ Normally, if a signal comes in for the opposite side, TradersPost will treat it 
 
 Example: You are long `2` contracts and send the below JSON:
 
-```
+```json
 {
     "ticker": "MNQU2025",
     "action": "sell",
@@ -347,7 +333,7 @@ Your `2` contract long will immediately be closed and all open orders cancelled.
 
 <details>
 
-<summary><mark style="background-color:$info;">Subtract Exit Quantity from Signal Quantity (Advanced)</mark></summary>
+<summary>Subtract Exit Quantity from Signal Quantity (Advanced)</summary>
 
 {% hint style="info" %}
 When side swapping is enabled, enable this option to take the exit quantity and subtract it from the signal quantity before side swapping. (Sides must be set to Both and Side swapping and Use signal quantity are set to enabled)
@@ -355,7 +341,7 @@ When side swapping is enabled, enable this option to take the exit quantity and 
 
 Example: You are long `2` contracts and send the below JSON:
 
-```
+```json
 {
     "ticker": "MNQU2025",
     "action": "sell",
@@ -382,7 +368,7 @@ Your `2` contract long will immediately be closed, all open orders cancelled, an
 
 <details>
 
-<summary><mark style="background-color:$info;">Sides Isolated</mark> (Advanced)</summary>
+<summary>Sides Isolated (Advanced)</summary>
 
 {% hint style="info" %}
 If there is an open position on the opposite side, do not allow the trade signal to exit the position. (Sides must be set to Bullish or Bearish)
@@ -390,7 +376,7 @@ If there is an open position on the opposite side, do not allow the trade signal
 
 Example: You are short `2` contracts, have this setting set to "Bullish" and send the below JSON:
 
-```
+```json
 {
     "ticker": "MNQU2025",
     "action": "buy",
@@ -433,7 +419,7 @@ Enabling the "Allow exits and cancels outside of trading windows" option allows 
 
 Example: You are in a 2 contract long that was entered during a trading window that ends at 4pm. It's now 4:01pm and the following signal is received:
 
-```
+```json
 {
     "ticker": "MNQU2025",
     "action": "sell",
@@ -464,7 +450,7 @@ Your `2` contract long will remain open and your sell trade will reject.
 
 <details>
 
-<summary><mark style="background-color:$info;">Fixed Quantity</mark></summary>
+<summary>Fixed Quantity</summary>
 
 {% hint style="info" %}
 Hardcode a fixed quantity for each position instead of calculating a quantity dynamically.
@@ -476,7 +462,7 @@ This option allows you to specify a fixed quantity for your entries. For example
 
 <details>
 
-<summary><mark style="background-color:$info;">Amount Per Position</mark></summary>
+<summary>Amount Per Position (Not Supported)</summary>
 
 {% hint style="danger" %}
 Not a compatible position size option for the Futures asset class
@@ -486,7 +472,7 @@ Not a compatible position size option for the Futures asset class
 
 <details>
 
-<summary><mark style="background-color:$info;">Risk Per Position</mark></summary>
+<summary>Risk Per Position (Not Supported)</summary>
 
 {% hint style="danger" %}
 Not a compatible position size option for the Futures asset class
@@ -496,7 +482,7 @@ Not a compatible position size option for the Futures asset class
 
 <details>
 
-<summary><mark style="background-color:$info;">Percent of Equity</mark></summary>
+<summary>Percent of Equity (Not Supported)</summary>
 
 {% hint style="danger" %}
 Not a compatible position size option for the Futures asset class
@@ -508,7 +494,7 @@ Not a compatible position size option for the Futures asset class
 
 <details>
 
-<summary><mark style="background-color:$info;">Use Fractional Quantity</mark></summary>
+<summary>Use Fractional Quantity (Not Supported)</summary>
 
 {% hint style="danger" %}
 Not a compatible option for the Futures asset class
@@ -528,7 +514,7 @@ Allow adding to an existing open position. If this is not checked, trades will b
 
 Example: You are long 2 contracts and send the below JSON:
 
-<pre><code><strong>{
+<pre class="language-json"><code class="lang-json"><strong>{
 </strong>    "ticker": "MNQU2025",
     "action": "buy",
     "quantity": "2",
@@ -568,7 +554,7 @@ This multiplier is applied _only if_ the “Use signal quantity” option is ena
 
 Example: You send in the following JSON
 
-```
+```json
 {
     "ticker": "MNQU2025",
     "action": "buy",
@@ -615,8 +601,9 @@ Check this if you do not want TradersPost to cancel open orders before submittin
 
 Example: You are long 2 contracts with a stop loss and take profit, and send the below JSON:
 
-<pre><code><strong>{
-</strong>    "ticker": "MNQU2025",
+```json
+{
+    "ticker": "MNQU2025",
     "action": "sell",
     "sentiment": "flat",
     "quantity": "2",
@@ -624,7 +611,7 @@ Example: You are long 2 contracts with a stop loss and take profit, and send the
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 **Scenario 1:**
 
@@ -662,8 +649,8 @@ Choose the order type to use for entry orders. Your choices are below:
 For Trailing Stop orders, you'll also need to add one of the following
 {% endhint %}
 
-* Entry Trail Amount (in points on the underlying futures ticker)
-* Entry Trail Percent (based off the % of the underlying futures ticker)
+* Entry Trail Amount (in dollars (market price offset) on the underlying futures ticker)
+* Entry Trail Percent (based off the % of the underlying futures ticker's market price)
 
 
 
@@ -686,7 +673,7 @@ By default, TradersPost will send the appropriate time in force of either `gtc` 
 Choose the entry time in force to use for entry orders. Your choices are below:
 
 * Good For Day: The order is valid for the trading day and will be canceled if not executed by the end of the trading day
-* Good Until Cancelled: The order is good until canceled and will remain active until it is executed or canceled.Fill Or Kill
+* Good Until Cancelled: The order is good until canceled and will remain active until it is executed or canceled. Fill Or Kill
 * Immediate Or Cancel: The order is immediate or canceled, meaning it must be executed immediately or canceled.
 * Fill Or Kill: The order is fill or kill, meaning it must be executed immediately in its entirety or canceled.
 
@@ -732,7 +719,7 @@ Choose the order type to use for exit orders. Your choices are below:
 For Trailing Stop orders, you'll also need to add one of the following
 {% endhint %}
 
-* Exit Trail Amount (in points on the underlying futures ticker)
+* Exit Trail Amount (in dollars (market price offset) on the underlying futures ticker)
 * Exit Trail Percent (based off the % of the underlying futures ticker)
 
 
@@ -795,46 +782,48 @@ Tradovate, TradeStation, and Tastytrade are the only futures brokers on TradersP
 For take profits, you can have one of two choices:
 
 * Take Profit Percent (based off the % of the underlying futures ticker)
-* Take Profit Amount (based off of points on the underlying futures ticker)
+* Take Profit Amount (based off of dollars (market price offset) on the underlying futures ticker)
 
 **Scenario 1**:
 
 You send this signal with a take profit % as `5%` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "MNQU2025",
-    "action": "Buy",
+```json
+{
+    "ticker": "MNQU2025",
+    "action": "buy",
     "quantity": "2",
     "price": "23810.25",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 You will be entered into a `2` contract long with a `2` contract limit sell at `25000` on MNQ.&#x20;
 
 {% hint style="danger" %}
-**The take profit % is not based on profit and loss on your portfolio, it's based on the underlying ticker.** Even a small % on a futures ticker like MNQ will be a relatively huge amount for most traders. Make sure you understand that we are placing your take profit relative to the price where your futures ticker is trading in the signal that you send. In the above example, 23810.25 x 5% is nearly 1,200 points on MNQ.
+**The take profit % is not based on profit and loss on your portfolio, it's based on the underlying ticker.** Even a small % on a futures ticker like MNQ will be a relatively huge amount for most traders. Make sure you understand that we are placing your take profit relative to the price where your futures ticker is trading in the signal that you send. In the above example, 23810.25 x 5% is a market price offset of $1,190.50 on MNQ.
 {% endhint %}
 
 **Scenario 2**:
 
 You send this signal with a take profit amount as `250` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "MNQU2025",
-    "action": "Buy",
+```json
+{
+    "ticker": "MNQU2025",
+    "action": "buy",
     "quantity": "2",
     "price": "23810.25",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 You will be entered into a `2` contract long with a `2` contract limit sell at `24060.25` on MNQ.&#x20;
 
 {% hint style="danger" %}
-**The take profit amount is not based on profit and loss on your portfolio, it's based on points on the underlying ticker.** If you type in `250` it doesn't mean $250 profit on your P/L. It means 250 points on MNQ which for 2 contract trade would be $1000 in profit on your P/L. It's up to you to figure out based on the number of contracts you're trading and the profit you want to achieve what value to write in the `amount` field.
+**The take profit amount is not based on profit and loss on your portfolio, it's based on a dollar market price offset on the underlying ticker.** If you type in `250` it doesn't mean $250 profit on your P/L. It means 250 dollars on MNQ which for 2 contract trade would be $1000 in profit on your P/L. It's up to you to figure out based on the number of contracts you're trading and the profit you want to achieve what value to write in the `amount` field.
 {% endhint %}
 
 </details>
@@ -858,46 +847,48 @@ For the stop loss order type, there are three choices:
 As far as where the order will be placed relative to your entry, you have two choices:
 
 * Take Profit Percent (based off the % of the underlying futures ticker)
-* Take Profit Amount (based off of points on the underlying futures ticker)
+* Take Profit Amount (based off of dollars (market price offset) on the underlying futures ticker)
 
 **Scenario 1**:
 
 You send this signal with a stop loss % as `5%` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "MNQU2025",
-    "action": "Buy",
+```json
+{
+    "ticker": "MNQU2025",
+    "action": "buy",
     "quantity": "2",
     "price": "23810.25",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 You will be entered into a `2` contract long with a `2` contract sell (stop market, stop limit, or trailing stop) at `22619.75` on MNQ.&#x20;
 
 {% hint style="danger" %}
-**The stop loss % is not based on loss on your portfolio, it's based on the underlying ticker.** Even a small % on a futures ticker like MNQ will be a relatively huge amount for most traders. Make sure you understand that we are placing your stop loss / trailing stop relative to the price where your futures ticker is trading in the signal that you send. In the above example, 23810.25 x 5% is nearly 1,200 points on MNQ.
+**The stop loss % is not based on loss on your portfolio, it's based on the underlying ticker.** Even a small % on a futures ticker like MNQ will be a relatively huge amount for most traders. Make sure you understand that we are placing your stop loss / trailing stop relative to the price where your futures ticker is trading in the signal that you send. In the above example, 23810.25 - 5% is a market price offset of $1,190.50 on MNQ.
 {% endhint %}
 
 **Scenario 2**:
 
 You send this signal with a stop loss amount as `250` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "MNQU2025",
-    "action": "Buy",
+```json
+{
+    "ticker": "MNQU2025",
+    "action": "buy",
     "quantity": "2",
     "price": "23810.25",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 You will be entered into a `2` contract long with a `2` contract sell (stop market, stop limit, or trailing stop) at `24060.25` on MNQ.&#x20;
 
 {% hint style="danger" %}
-**The take profit amount is not based on profit and loss on your portfolio, it's based on points on the underlying ticker.** If you type in `250` it doesn't mean $250 profit on your P/L. It means 250 points on MNQ which for 2 contract would be $1000 in loss on your P/L. It's up to you to figure out based on the number of contracts you're trading and the profit you want to achieve what value to write in the `amount` field.
+**The take profit amount is not based on profit and loss on your portfolio, it's based on the market price offset of the futures ticker.** If you type in `250` it doesn't mean $250 profit on your P/L. It means 250 dollars on MNQ which for 2 contract would be $1000 in loss on your P/L. It's up to you to figure out based on the number of contracts you're trading and the profit you want to achieve what value to write in the `amount` field.
 {% endhint %}
 
 </details>

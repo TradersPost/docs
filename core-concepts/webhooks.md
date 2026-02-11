@@ -441,7 +441,7 @@ The following fields are allowed on the **takeProfit** object, but never togethe
 
 * **limitPrice** - Absolute limit price calculated on the webhook sender side.
 * **percent**: Relative percentage take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
-* **amount** - Relative dollar amount take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
+* **amount** - Relative dollar amount (market price offset) take profit to calculate relative to entry price. The entry price for market orders is estimated based on the mid point between the bid and ask on the most recent quote.
 
 #### **Percentage take profit calculated relative to entry price.**
 

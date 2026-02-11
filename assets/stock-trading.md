@@ -17,13 +17,13 @@ TradersPost Automated Stocks Trading Setup
 * [Robinhood](../all-supported-connections/robinhood.md)
 * [Interactive Brokers](../all-supported-connections/interactive-brokers.md)
 * [E\*Trade](../all-supported-connections/e-trade.md)
-* [Tastytrade](../all-supported-connections/tastytrade.md)
+* [tastytrade](../all-supported-connections/tastytrade.md)
 * [Tradier](../all-supported-connections/tradier.md)
 * [Webull](../all-supported-connections/webull.md)
 
 ## Signals
 
-It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
+It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON in [Signals](../core-concepts/signals.md) like the following to the webhook URL you create within TradersPost.
 
 ### Enter Bullish
 
@@ -115,7 +115,7 @@ Choose which trade directions are allowed: take both bullish and bearish trades,
 
 <details>
 
-<summary><mark style="background-color:$info;">Allow Side Swapping</mark> (Advanced)</summary>
+<summary>Allow Side Swapping (Advanced)</summary>
 
 {% hint style="warning" %}
 Normally, if a signal comes in for the opposite side, TradersPost will treat it like an exit signal by closing your position and stopping there. When this is turned on, we'll exit what you have and immediately open a new position on the opposite side.
@@ -123,7 +123,7 @@ Normally, if a signal comes in for the opposite side, TradersPost will treat it 
 
 Example: You are long `50` shares and send the below JSON:
 
-```
+```json
 {
     "ticker": "SPY",
     "action": "sell",
@@ -150,7 +150,7 @@ Your `50` share long will immediately be closed and all open orders cancelled. Y
 
 <details>
 
-<summary><mark style="background-color:$info;">Subtract Exit Quantity from Signal Quantity (Advanced)</mark></summary>
+<summary>Subtract Exit Quantity from Signal Quantity (Advanced)</summary>
 
 {% hint style="info" %}
 When side swapping is enabled, enable this option to take the exit quantity and subtract it from the signal quantity before side swapping. (Sides must be set to Both and Side swapping and Use signal quantity are set to enabled)
@@ -158,7 +158,7 @@ When side swapping is enabled, enable this option to take the exit quantity and 
 
 Example: You are long `50` shares and send the below JSON:
 
-```
+```json
 {
     "ticker": "SPY",
     "action": "sell",
@@ -185,7 +185,7 @@ Your `50` share long will immediately be closed, all open orders cancelled, and 
 
 <details>
 
-<summary><mark style="background-color:$info;">Sides Isolated</mark> (Advanced)</summary>
+<summary>Sides Isolated (Advanced)</summary>
 
 {% hint style="info" %}
 If there is an open position on the opposite side, do not allow the trade signal to exit the position. (Sides must be set to Bullish or Bearish)
@@ -193,7 +193,7 @@ If there is an open position on the opposite side, do not allow the trade signal
 
 Example: You are short `50` shares, have this setting set to "Bullish" and send the below JSON:
 
-```
+```json
 {
     "ticker": "SPY",
     "action": "buy",
@@ -236,7 +236,7 @@ Enabling the "Allow exits and cancels outside of trading windows" option allows 
 
 Example: You are in a 50 share long that was entered during a trading window that ends at 4pm. It's now 4:01pm and the following signal is received:
 
-```
+```json
 {
     "ticker": "SPY",
     "action": "sell",
@@ -267,7 +267,7 @@ Your `50` share long will remain open and your sell trade will reject.
 
 <details>
 
-<summary><mark style="background-color:$info;">Fixed Quantity</mark></summary>
+<summary>Fixed Quantity</summary>
 
 {% hint style="info" %}
 Hardcode a fixed quantity for each position instead of calculating a quantity dynamically.
@@ -279,7 +279,7 @@ This option allows you to specify a fixed quantity for your entries. For example
 
 <details>
 
-<summary><mark style="background-color:$info;">Amount Per Position</mark></summary>
+<summary>Amount Per Position</summary>
 
 {% hint style="info" %}
 Calculate a quantity of shares using a total dollar amount&#x20;
@@ -291,7 +291,7 @@ The amount per position dynamic quantity calculation method is used to calculate
 
 <details>
 
-<summary><mark style="background-color:$info;">Risk Per Position</mark></summary>
+<summary>Risk Per Position</summary>
 
 {% hint style="info" %}
 Calculate the quantity of shares to buy or sell&#x20;
@@ -301,7 +301,7 @@ Example:
 
 You have a value of 100 in the "Risk Per Position" setting and send the below JSON when Apple is trading at $100:
 
-```
+```json
 {
     "ticker": "AAPL",
     "action": "buy",
@@ -320,7 +320,7 @@ The number of shares TradersPost will send to your broker will be 10 ($100 of ri
 
 <details>
 
-<summary><mark style="background-color:$info;">Percent of Equity</mark></summary>
+<summary>Percent of Equity</summary>
 
 {% hint style="info" %}
 Enter a percent of equity to use per position. This will be used to determine the amount per position and the resulting calculated quantity per position.
@@ -336,7 +336,7 @@ For example, you can buy `10%` of your equity worth of AAPL shares. If you have 
 
 <details>
 
-<summary><mark style="background-color:$info;">Use Fractional Quantity</mark></summary>
+<summary>Use Fractional Quantity</summary>
 
 {% hint style="info" %}
 Use a fractional quantity if the broker supports it. If the broker does not support fractional trading, the calculated quantity will be rounded down to a whole number.
@@ -358,15 +358,16 @@ Allow adding to an existing open position. If this is not checked, trades will b
 
 Example: You are long 50 shares and send the below JSON:
 
-<pre><code><strong>{
-</strong>    "ticker": "SPY",
+```json
+{
+    "ticker": "SPY",
     "action": "buy",
     "quantity": "50",
     "price": "660",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 **Scenario 1**:
 
@@ -398,7 +399,7 @@ This multiplier is applied _only if_ the “Use signal quantity” option is ena
 
 Example: You send in the following JSON:
 
-```
+```json
 {
     "ticker": "SPY",
     "action": "buy",
@@ -445,7 +446,7 @@ Check this if you do not want TradersPost to cancel open orders before submittin
 
 Example: You are long 50 shares with a stop loss and take profit, and send the below JSON:
 
-<pre><code><strong>{
+<pre class="language-json"><code class="lang-json"><strong>{
 </strong>    "ticker": "SPY",
     "action": "sell",
     "sentiment": "flat",
@@ -488,8 +489,8 @@ Choose the order type to use for entry orders. Your choices are below:
 For Trailing Stop orders, you'll also need to add one of the following
 {% endhint %}
 
-* Entry Trail Amount (in points on the underlying futures ticker)
-* Entry Trail Percent (based off the % of the underlying futures ticker)
+* Entry Trail Amount (in dollars (market price offset) on the stock ticker)
+* Entry Trail Percent (based off the percent offset of the stock ticker price. We call this the market price percentage offset.)
 
 
 
@@ -516,7 +517,7 @@ By default, TradersPost will send the appropriate time in force of either `gtc` 
 Choose the entry time in force to use for entry orders. Your choices are below:
 
 * Good For Day: The order is valid for the trading day and will be canceled if not executed by the end of the trading day
-* Good Until Cancelled: The order is good until canceled and will remain active until it is executed or canceled.Fill Or Kill
+* Good Until Cancelled: The order is good until canceled and will remain active until it is executed or canceled. Fill Or Kill
 * Immediate Or Cancel: The order is immediate or canceled, meaning it must be executed immediately or canceled.
 * Fill Or Kill: The order is fill or kill, meaning it must be executed immediately in its entirety or canceled.
 
@@ -534,7 +535,7 @@ Choose what quote price to use as the current market price for entries if the si
 
 If you specify a `limitPrice`, then that value will be used.
 
-```
+```json
 {
     "ticker": "AAPL",
     "action": "buy",
@@ -563,8 +564,8 @@ Choose the order type to use for exit orders. Your choices are below:
 For Trailing Stop orders, you'll also need to add one of the following
 {% endhint %}
 
-* Exit Trail Amount (in points on the underlying futures ticker)
-* Exit Trail Percent (based off the % of the underlying futures ticker)
+* Exit Trail Amount (in dollars (market price offset) of the stock ticker)
+* Exit Trail Percent (based off the market price percentage offset of the stock ticker)
 
 
 
@@ -605,7 +606,7 @@ Choose what quote price to use as the current market price for entries if the si
 
 If you specify a `limitPrice`, then that value will be used.
 
-```
+```json
 {
     "ticker": "AAPL",
     "action": "sell",
@@ -624,24 +625,25 @@ If you specify a `limitPrice`, then that value will be used.
 
 For take profits orders, you can have one of two choices:
 
-* Take Profit Percent (based off the % of the underlying stock ticker)
-* Take Profit Amount (based off of points on the underlying stock ticker)
+* Take Profit Percent (based on the market price percentage offset of the stock ticker)
+* Take Profit Amount (based on the market price offset of the stock ticker)
 
 **Scenario 1**:
 
 You send this signal with a take profit % as `5%` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "SPY",
-    "action": "Buy",
+```json
+{
+    "ticker": "SPY",
+    "action": "buy",
     "quantity": "10",
     "price": "660",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
-You will be entered into a `10` share long with a `10` share limit sell at `693` on MNQ.&#x20;
+You will be entered into a `10` share long with a `10` share limit sell at `693` on SPY.&#x20;
 
 {% hint style="danger" %}
 **The take profit % is not based on profit and loss on your portfolio, it's based on the underlying ticker.** Make sure you understand that we are placing your take profit relative to the price where your stock ticker is trading.
@@ -651,15 +653,16 @@ You will be entered into a `10` share long with a `10` share limit sell at `693`
 
 You send this signal with a take profit amount as `10` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "SPY",
-    "action": "Buy",
+```json
+{
+    "ticker": "SPY",
+    "action": "buy",
     "quantity": "50",
     "price": "660",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 You will be entered into a `50` share long with a `50` share limit sell at `670` on SPY.&#x20;
 
@@ -681,47 +684,49 @@ For the stop loss order type, there are three choices:
 
 As far as where the order will be placed relative to your entry, you have two choices:
 
-* Take Profit Percent (based off the % of the underlying stock ticker)
-* Take Profit Amount (based off of points on the underlying stock ticker)
+* Take Profit Percent (based on the market price percentage offset of the stock ticker)
+* Take Profit Amount (based on the market price offset of the stock ticker)
 
 **Scenario 1**:
 
 You send this signal with a stop loss % as `5%` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "SPY",
-    "action": "Buy",
+```json
+{
+    "ticker": "SPY",
+    "action": "buy",
     "quantity": "50",
     "price": "660",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
 You will be entered into a `50` share long with a `50` contract sell (stop market, stop limit, or trailing stop) at `627` on SPY.&#x20;
 
 {% hint style="danger" %}
-**The stop loss % is not based on loss on your portfolio, it's based on the underlying stock ticker.** Make sure you understand that we are placing your stop loss / trailing stop relative to the price where your stock ticker is trading.
+**The stop loss % is not based on loss on your portfolio, it's based on the stock ticker market price.** Make sure you understand that we are placing your stop loss / trailing stop relative to the price where your stock ticker is trading.
 {% endhint %}
 
 **Scenario 2**:
 
 You send this signal with a stop loss amount as `10` in your subscription settings.
 
-<pre><code><strong>{
-</strong>    "ticker": "SPY",
-    "action": "Buy",
+```json
+{
+    "ticker": "SPY",
+    "action": "buy",
     "quantity": "50",
     "price": "660",
     "time": "2025-09-09T14:07:08Z",
     "interval": "5"
 }
-</code></pre>
+```
 
-You will be entered into a `50` share long with a `50` contract sell (stop market, stop limit, or trailing stop) at `670` on MNQ.&#x20;
+You will be entered into a `50` share long with a `50` contract sell (stop market, stop limit, or trailing stop) at `670` on SPY.&#x20;
 
 {% hint style="danger" %}
-**The stop loss profit amount is not based on profit and loss on your portfolio, it's based on points on the underlying ticker.** If you type in `10` it doesn't mean $10 loss on your P/L. It's up to you to figure out based on the number of contracts you're trading and the profit you want to achieve what value to write in the `amount` field.
+**The stop loss profit amount is not based on profit and loss on your portfolio, it's based on market price on the stock ticker.** If you type in `10` it doesn't mean $10 loss on your P/L. It's up to you to figure out based on the number of shares you're trading and the profit you want to achieve what value to write in the `amount` field.
 {% endhint %}
 
 </details>
