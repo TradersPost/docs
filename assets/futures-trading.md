@@ -51,6 +51,89 @@ Here is an example:
 
 TradersPost standardizes the futures symbol format to have a 4 digit year. We convert this symbol format back and fourth when communicating with each broker so you don't have to worry about the differences between brokers.
 
+## Bracket Orders, Take Profit, and Stop Loss (Futures)
+
+When trading futures with TradersPost, take profit and stop loss values are always calculated as a market price offset from your entry price.
+
+We do not calculate brackets based on P\&L targets for futures.
+
+This means your bracket orders are placed relative to the market price at entry, not based on how much profit or loss you want in dollar terms.
+
+{% hint style="warning" %}
+Important: Dynamic Risk Settings Not Supported for Futures\
+\
+Dynamic position sizing and dynamic take profit and stop loss calculations, such as defining a fixed dollar risk per trade based on account size, are not currently supported for futures.
+{% endhint %}
+
+For futures, you may only define two types of brackets for take profit and stop loss:
+
+#### Market Price Offset (Take profit amount, Stop loss amount)
+
+A Market Price Offset is a fixed price distance from your entry price. This value is applied directly to the instrument's quoted price, including any decimal increments required by its tick size.
+
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+<details open>
+
+<summary>Example</summary>
+
+If you enter MNQ at 25,125.25 and set:
+
+* Take profit offset: 100
+* Stop loss offset: 100
+
+Your bracket orders will be placed at:
+
+* Take profit: 25,225.25
+* Stop loss: 25,025.25
+
+This 100 represents a price movement, not a P\&L amount.
+
+Your actual profit or loss will depend on:
+
+* Contract size
+* Number of contracts traded
+* The instrument's dollar value per point
+
+</details>
+
+TradersPost does not use a separate "points" concept internally. All futures brackets are calculated using market price offsets.
+
+#### Market Price Percentage Offset (Take profit percent, Stop loss percent)
+
+A Market Price Percentage Offset places your bracket at a percentage distance from entry.
+
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
+<details open>
+
+<summary>Example</summary>
+
+If you enter at **25,000** and set:
+
+* Take profit: **1.00 percent**
+* Stop loss: **1.00 percent**
+
+1 percent of 25,000 is:
+
+25,000 × 0.01 = 250
+
+Your bracket orders will be placed at:
+
+* Take profit: **25,250**
+* Stop loss: **24,750**
+
+These levels are calculated directly from the entry price, not from profit or loss in dollar terms.
+
+Your actual P\&L will depend on:
+
+* The contract's dollar value per point
+* The number of contracts traded
+
+The percentage offset only determines how far the bracket is placed from entry in price terms.
+
+</details>
+
 ## Signals
 
 It's easy to send signals to TradersPost using [Webhooks](../core-concepts/webhooks.md) from platforms like [TradingView](../learn/signal-sources/tradingview.md) or [TrendSpider](../learn/signal-sources/trend-spider.md). You just need to send JSON like the following to the webhook URL you create within TradersPost.
