@@ -220,9 +220,7 @@ The stop price of the buy or sell action if `stop_limit` orders are used. If you
 
 ### quantity
 
-The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1. Check **Use signal quantity** in your strategy subscription settings to use this quantity.
-
-The signal `quantity` will only be used if you check **Use signal quantity** in the strategy subscription settings in TradersPost.
+The quantity to enter. If you omit this value, the quantity will be dynamically calculated or defaulted to 1.
 
 ```json
 {
@@ -352,8 +350,6 @@ Supported values: `market`, `limit`, `stop`, `stop_limit`, and `trailing_stop`
 
 The type of order to create.  If you send an order type not supported by your broker, it will fallback to the default order type configured in the strategy subscription settings. If that order type is still not supported, the order will be rejected by the broker.
 
-The signal `orderType` will only be used if you check **Use signal order type for entries** or **Use signal order type for exits**.
-
 ```json
 {
     "ticker": "SPY",
@@ -394,8 +390,6 @@ Supported values: `day`, `gtc`, `opg`, `cls`, `ioc` and `fok`
 {% endhint %}
 
 The time in force for your order. If you send a time in force not supported by your broker, it will fallback to the default time in force or the time in force configured in the strategy subscription settings.
-
-This time in force will only be used if you have **Use signal time in force for entries** or **Use signal time in force for exits** checked.
 
 Example:
 
@@ -511,10 +505,6 @@ Supported values: `limitPrice`, `price`, `percent`
 
 You can optionally send take profit information with your entry signals.
 
-{% hint style="info" %}
-The signal take profit will only be used if you check **Use signal take profit** in the strategy subscription settings in TradersPost.
-{% endhint %}
-
 The following fields are allowed on the **takeProfit** object, but never together. You can only choose one of the three types of take profit types (limitPrice, percent, or amount).
 
 * **limitPrice** - Absolute limit price calculated on the webhook sender side.
@@ -568,10 +558,6 @@ Supported values: `type`, `percent`, `amount`, `stopPrice`,  `limitPrice`, `trai
 {% endhint %}
 
 You can optionally send stop loss information with your entry signals.
-
-{% hint style="info" %}
-The signal stop loss will only be used if you check **Use signal stop loss** in the strategy subscription settings in TradersPost.
-{% endhint %}
 
 The following fields are allowed on the **stopLoss** object.
 
