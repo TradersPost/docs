@@ -79,7 +79,7 @@ Possible values: `buy`, `sell`, `exit`, `cancel`, `add`
 {% endhint %}
 
 {% code title="Example for ticker and action" %}
-```json5
+```json
 {
     "ticker": "MSFT",
     "action": "buy"
@@ -91,7 +91,7 @@ You can add to an existing open position by using the **add** action. This will 
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "add"
 }
 ```
@@ -102,16 +102,16 @@ Cancel all the open orders for the given ticker.
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "cancel"
 }
 ```
 
 You can also control the open order canceling functionality with the `cancel` property so you can combine it with other actions. For example, if you want to exit the open position and cancel open orders first, you can use the following.
 
-```json5
+```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "exit",
     "cancel": true
 }
@@ -119,9 +119,9 @@ You can also control the open order canceling functionality with the `cancel` pr
 
 If you have order canceling enabled in your strategy subscription settings and you want to disable the order canceling for a signal, you can send `cancel: false` as well.
 
-```json5
+```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "exit",
     "cancel": false
 }
@@ -197,7 +197,7 @@ The signal `quantity` will only be used if you check **Use signal quantity** in 
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "quantity": 5
 }
@@ -217,42 +217,51 @@ The type of the value sent in the `quantity` field documented below. The default
 
 You can optionally send a value in the `quantityType` field to control how the value in the `quantity` field should be handled. By default the value in the `quantity` field is used as the quantity for the order directly.
 
-This field is only used if you have **Use signal quantity** checked in the strategy subscription settings in TradersPost.
+This field is only used if you have **Allow signal override** checked in the strategy subscription settings in TradersPost.
 
 The supported values for `quantityType` are the following:
 
 * `fixed_quantity` - A fixed quantity number that is used for the order. This is the default when you send a `quantity` without a `quantityType`.
 * `dollar_amount` - Dynamically calculates a quantity for the given dollar amount.
 * `risk_dollar_amount` - Dynamically calculates a quantity for the given risk dollar amount. This type requires a stop loss.
+* `risk_percent` - Dynamically calculates a quantity for the given risk percent. This type requires a stop loss.
 * `percent_of_equity` - Dynamically calculates a quantity for the given percent of equity.
 * `percent_of_position` - Dynamically calculates a quantity for the given percent of position.
 
 Here are some examples:
 
+#### Fixed Quantity
+
+This will buy `100` shares of `$SPY`.
+
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "quantityType": "fixed_quantity",
     "quantity": 100
 }
 ```
 
-This will buy 100 shares of $SQ.
+#### Dollar Amount
+
+This will buy `$1000` worth of `$SPY`. If the price of `$SPY` at the time of executing the trade was `$100`, then TradersPost would calculate a quantity of `10`.
 
 <pre class="language-json"><code class="lang-json"><strong>{
-</strong>    "ticker": "SQ",
+</strong>    "ticker": "SPY",
     "action": "buy",
     "quantityType": "dollar_amount",
     "quantity": 1000
 }
 </code></pre>
 
-If the price of $SQ at the time of executing the trade was $100, then TradersPost would calculate a quantity of 10.
+#### Risk Dollar Amount
+
+The `risk_dollar_amount` quantity in this example means you want to calculate a quantity that would only allow you to lose `$100` when the stop loss is hit. In this example, TradersPost would calculate a quantity of `10`. If you enter at `$100` and get stopped out at `$90` and the most you want to lose is $`100`, then you can only buy a quantity of `10`.
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "signalPrice": 100,
     "quantityType": "risk_dollar_amount",
@@ -264,7 +273,47 @@ If the price of $SQ at the time of executing the trade was $100, then TradersPos
 }
 ```
 
-The `risk_dollar_amount` quantity in this example means you want to calculate a quantity that would only allow you to lose roughly $100 when the stop loss is hit. In this example, TradersPost would calculate a quantity of 10. If you enter at $100 and get stopped out at $90 and the most you want to lose is $100, then you can only buy a quantity of 10.
+#### Risk Percent
+
+The `risk_percent` quantity type is similar to `risk_dollar_amount` but instead of manually specifying the dollar amount, it is dynamically calculated as a percent of your total account equity. If your total account equity were `$10000` and you wanted to risk `1%` of your account, that would be a risk dollar amount of `$100` and we would calculate a quantity of `10` .
+
+```json
+{
+    "ticker": "SPY",
+    "action": "buy",
+    "signalPrice": 100,
+    "quantityType": "risk_percent",
+    "quantity": 1,
+    "stopLoss": {
+        "type": "stop",
+        "stopPrice": 90
+    }
+}
+```
+
+#### Percent of Equity
+
+The `percent_of_equity`  quantity type is similar to `dollar_amount` but instead of manually specifying the dollar amount, it is dynamically calculated as a percent of your total account equity. If your total account equity were `$10000` and you wanted to risk `10%` of your account, that would be a dollar amount of `$1000` . If the current price of `$SPY` was `$100`, then we would calculate a quantity of `10`.
+
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "ticker": "SPY",
+    "action": "buy",
+    "quantityType": "percent_of_equity",
+    "quantity": 10
+}
+</code></pre>
+
+#### Percent of Position
+
+The `percent_of_position` quantity type allows you to partially exity a percentage of your open position. So in the below example, if you had an open `SPY` position with a quantity of `10`, then the below would calculate a quantity of `5`.
+
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "ticker": "SPY",
+    "action": "exit",
+    "quantityType": "percent_of_position",
+    "quantity": 50
+}
+</code></pre>
 
 ### orderType
 
@@ -278,7 +327,7 @@ The signal `orderType` will only be used if you check **Use signal order type fo
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "orderType": "limit",
     "limitPrice": 50.50
@@ -289,7 +338,7 @@ Or if you want to use a stop limit order:
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "orderType": "stop_limit",
     "stopPrice": 60,
@@ -321,9 +370,9 @@ This time in force will only be used if you have **Use signal time in force for 
 
 Example:
 
-```json5
+```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "orderType": "limit",
     "limitPrice": 50.50,
@@ -335,7 +384,7 @@ Or if want to send the order with extended hours enabled so that the order can b
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "orderType": "limit",
     "limitPrice": 50.50,
@@ -358,7 +407,7 @@ You can use the `ignoreTradingWindows` property in your JSON to ignore the defin
 
 Here is an example where maybe you entered a `SPY` position while the trading window was open, and you now you want to exit the position but the trading window is closed. Simply send the `ignoreTradingWindows` property with a value of `true` and the trade will be allowed to execute.
 
-<pre class="language-json5"><code class="lang-json5"><strong>{
+<pre class="language-json"><code class="lang-json"><strong>{
 </strong>    "ticker": "SPY",
     "action": "exit",
     "ignoreTradingWindows": true
@@ -369,7 +418,7 @@ Here is an example where maybe you entered a `SPY` position while the trading wi
 
 Explicitly control whether or not to cancel open orders before submitting new orders to your broker.
 
-```json5
+```json
 {
     "ticker": "SPY",
     "action": "exit",
@@ -379,7 +428,7 @@ Explicitly control whether or not to cancel open orders before submitting new or
 
 Or if you want to disable canceling for a signal:
 
-```json5
+```json
 {
     "ticker": "SPY",
     "action": "exit",
@@ -412,9 +461,9 @@ You may want to use `delay` if:
 
 Users can send additional custom JSON properties within an "extras" field, allowing for more detailed information or contextual data to be included with each request. By keeping the properties inside an "extras" property, you avoid conflicting with TradersPost properties defined on this page. This is useful for tracking specific conditions or notes related to a trade. For example:
 
-```json5
+```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "extras": {
         "message": "RSI Below 30",
@@ -451,7 +500,7 @@ When using market orders and you are calculating a relative take profit price, T
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "takeProfit": {
         "percent": 10
@@ -463,7 +512,7 @@ When using market orders and you are calculating a relative take profit price, T
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "takeProfit": {
         "amount": 10
@@ -475,7 +524,7 @@ When using market orders and you are calculating a relative take profit price, T
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "takeProfit": {
         "limitPrice": 19.99
@@ -513,7 +562,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "stopLoss": {
         "type": "stop",
@@ -526,7 +575,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "stopLoss": {
         "type": "stop",
@@ -539,7 +588,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "stopLoss": {
         "type": "stop",
@@ -552,7 +601,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "stopLoss": {
         "type": "stop_limit",
@@ -566,7 +615,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "stopLoss": {
         "type": "trailing_stop",
@@ -579,7 +628,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "stopLoss": {
         "type": "trailing_stop",
@@ -598,7 +647,7 @@ You have the ability to control the option chain scanning from the webhook or yo
 
 ```json
 {
-    "ticker": "SQ 240510C68",
+    "ticker": "SPY 240510C68",
     "action": "buy"
 }
 ```
@@ -607,7 +656,7 @@ Or if you want to instead scan the option chain dynamically to find a contract t
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "optionType": "call",
     "expiration": "+6 months",
@@ -616,11 +665,11 @@ Or if you want to instead scan the option chain dynamically to find a contract t
 }
 ```
 
-You can also specify the specific contract to trade with individual values instead of using the contract symbol in the `ticker` field. The following is equivalent to sending `SQ 240510C68` in the `ticker` field.
+You can also specify the specific contract to trade with individual values instead of using the contract symbol in the `ticker` field. The following is equivalent to sending `SPY 240510C68` in the `ticker` field.
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "optionType": "call",
     "expiration": "2024-05-10",
@@ -668,7 +717,7 @@ Here are some example webhook JSON messages to demonstrate the different use cas
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy"
 }
 ```
@@ -677,7 +726,7 @@ Here are some example webhook JSON messages to demonstrate the different use cas
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "exit"
 }
 ```
@@ -686,7 +735,7 @@ You can also use the sentiment field to exit a bullish position without entering
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "sell",
     "sentiment": "flat"
 }
@@ -698,7 +747,7 @@ When you use `sentiment: flat` feature, TradersPost will always exit the full qu
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "sell"
 }
 ```
@@ -707,7 +756,7 @@ When you use `sentiment: flat` feature, TradersPost will always exit the full qu
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "exit"
 }
 ```
@@ -716,7 +765,7 @@ You can also use the sentiment field to exit a bearish position without entering
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "sentiment": "flat"
 }
@@ -728,9 +777,9 @@ When you use `sentiment: flat` feature, TradersPost will always exit the full qu
 
 You can partially exit an open position by using `action: exit` and sending a `quantity` in the signal with a value less than the quantity of the open position. So imagine you are long 5 shares and you want to exit 2 of them, you would send a JSON message like this.
 
-```json5
+```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "exit",
     "quantity": 2
 }
@@ -740,11 +789,11 @@ The above JSON would partially exit the open position and exit 2 of the 5 total 
 
 ### Trailing Stop
 
-You can easily create trailing stop orders by sending `trailing_stop` in the `orderType` field. The following JSON will create a $1 trailing stop order for the open SQ position.
+You can easily create trailing stop orders by sending `trailing_stop` in the `orderType` field. The following JSON will create a $1 trailing stop order for the open SPY position.
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "exit",
     "orderType": "trailing_stop",
     "signalPrice": 71,
@@ -760,7 +809,7 @@ If you want to send a trailing stop with your entry order so that the trailing s
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "orderType": "limit",
     "limitPrice": 71,
@@ -777,7 +826,7 @@ You can use the take profit and stop loss functionality together. Just send us b
 
 ```json
 {
-    "ticker": "SQ",
+    "ticker": "SPY",
     "action": "buy",
     "takeProfit": {
         "limitPrice": 19.99
