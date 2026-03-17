@@ -32,15 +32,34 @@ In the context of automated trading, the webhook JSON message contains all the i
 
 This example would route to a TradersPost [strategy](strategies.md), and then to one or more [strategy subscriptions](subscriptions.md) where the trade for AMD would be executed to buy 1 share of AMD with a take profit order at 10 percent above the potential entry price of 143.12 (assuming no slippage) and a stop market order 5 percent below the entry price of 143.12.
 
-### Here are some examples of default JSON payloads that you can use to send alerts from various trading platforms to your webhook URL:
+## Example Payloads
 
-| Tradingview Indicator                                                                                                                         | Tradingview Strategy                                                                                                                                                                                                                                               |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>{<br>"ticker": "{{ticker}}",<br>"action": "buy",<br>"price": "{{close}}",<br>"time": "{{timenow}}",<br>"interval": "{{interval}}"<br>}</p> | <p>{<br>"ticker": "{{ticker}}",<br>"action": "{{strategy.order.action}}",<br>"sentiment": "{{strategy.market_position}}",<br>"quantity": "{{strategy.order.contracts}}",<br>"price": "{{close}}",<br>"time": "{{timenow}}",<br>"interval": "{{interval}}"<br>}</p> |
+Here are some examples of default JSON payloads that you can use to send alerts from various trading platforms to your webhook URL:
 
-| Trendspider                                                                                 | Custom Code                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>{<br>"ticker": "%alert_symbol%",<br>"action": "buy",<br>"price": "%last_price%"<br>}</p> | <p>curl -X POST<br>-H 'Content-Type: application/json'<br>-d '{"ticker": "MNQ", "action": "buy"}'<br>https://webhooks.traderspost.io/trading/webhook/98a90567-fac3-42b9-8c5d-97c4ec1710ba/6de6c4a446497f11debba25b90e90462</p> |
+<table><thead><tr><th>Tradingview Indicator</th><th>Tradingview Strategy</th></tr></thead><tbody><tr><td><pre class="language-json"><code class="lang-json">{
+    "ticker": "{{ticker}}",
+    "action": "buy",
+    "price": "{{close}}",
+    "time": "{{timenow}}",
+    "interval": "{{interval}}"
+}
+</code></pre></td><td><pre class="language-json"><code class="lang-json">{
+    "ticker": "{{ticker}}",
+    "action": "{{strategy.order.action}}",
+    "sentiment": "{{strategy.market_position}}",
+    "quantity": "{{strategy.order.contracts}}",
+    "price": "{{close}}",
+    "time": "{{timenow}}",
+    "interval": "{{interval}}"
+}
+</code></pre></td></tr></tbody></table>
+
+<table><thead><tr><th>Trendspider</th><th>Custom Code</th></tr></thead><tbody><tr><td><pre class="language-json"><code class="lang-json">{
+    "ticker": "%alert_symbol%",
+    "action": "buy",
+    "price": "%last_price%"
+}
+</code></pre></td><td>curl -X POST<br>-H 'Content-Type: application/json'<br>-d '{"ticker": "MNQ", "action": "buy"}'<br>https://webhooks.traderspost.io/trading/webhook/98a90567-fac3-42b9-8c5d-97c4ec1710ba/6de6c4a446497f11debba25b90e90462</td></tr></tbody></table>
 
 ## Webhook Reference Documentation
 
@@ -127,12 +146,22 @@ If you have order canceling enabled in your strategy subscription settings and y
 }
 ```
 
+You can optionally send a `cancelOrderType` to filter which orders will be canceled by order type. The below example will only cancel open orders with a type of `stop`.
+
+```json
+{
+    "ticker": "SPY",
+    "action": "cancel",
+    "cancelOrderType": "stop"
+}
+```
+
 ### sentiment
 
 The sentiment field allows you to specify what the sentiment of the position should be _after_ executing the trade.&#x20;
 
 {% hint style="info" %}
-Supported values: `bullish`, `long` `bearish`, `short`, and`flat`
+Supported values: `bullish` / `long` or `bearish` / `short`, and `flat`
 {% endhint %}
 
 You can include the `sentiment` field with a value of `flat` to exit a bullish or bearish position without entering the opposite position. This means that it will always exit the full quantity of the open position without entering a new position on the other side.
@@ -210,7 +239,7 @@ The full quantity of the open position in the broker will be exited if you do no
 ### quantityType
 
 {% hint style="info" %}
-Supported values: `fixed_quantity`, `dollar_amount`, `risk_dollar_amount`, `percent_of_equity`, `percent_of_position`
+Supported values: `fixed_quantity`, `dollar_amount`, `risk_dollar_amount`, `risk_percent`, `percent_of_equity`, `percent_of_position`
 {% endhint %}
 
 The type of the value sent in the `quantity` field documented below. The default value is `fixed_quantity` when you send a `quantity` without a `quantityType`.
@@ -637,7 +666,7 @@ When using market orders and you are calculating a relative stop loss price, Tra
 }
 ```
 
-## Webhook Field Reference - Options Contracts and Screening
+## Options Contracts and Screening
 
 {% hint style="warning" %}
 When you are trading put options, the action is inverted. So this means action=buy will sell to open short puts and action=sell will buy to open long puts. This is necessary when you are running a strategy on the underlying chart but you are buying and selling puts instead of shares.
