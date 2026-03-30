@@ -3,20 +3,6 @@ description: >-
   Join us for in-depth conversations with successful prop firm and futures
   traders who share their real journeys, strategies, and insights from the
   markets.
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Trading Bot Sessions

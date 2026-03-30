@@ -1,18 +1,32 @@
 ---
 description: >-
-  When getting in touch with support, there are several things you can provide
-  to speed up and improve the quality of our help.
+  When getting in touch with support, there are a couple of things you can
+  provide to speed up and improve the quality of our help.
 ---
 
 # Support Guidelines
 
-## Trade Signal Help
+## Signal or Signal ID Help
+
+If you reach out to support, we can speed up the process of helping dramatically if you can isolate an exact signal or trade that failed, so we can look it up and investigate what happened for you. The simplest thing to provide is a Signal ID or Signal URL from your account.
+
+A [Signal](../core-concepts/signals.md) is what you send to TradersPost for us to execute your trade with any [subscriptions](../core-concepts/subscriptions.md) you have tied to a [strategy](../core-concepts/strategies.md).
 
 {% stepper %}
 {% step %}
-### **Find the Trade Signal URL**
+### Find the Signal ID
 
-If you're having trouble with a trade or signal, please provide as much information about the trade as possible. The best way to get help is to head to your [Strategies](https://app.traderspost.io/app/trading/strategies), find the strategy in question, click "Signals", click the signal where an issue occurred, and share that URL with us. This page is critical because it tells us where the signal came from, what JSON message was in the signal, and what happened to the trade itself.
+When you send a signal, we save all off them together on your [Signals dashboard](https://app.traderspost.io/app/account/signals). If you had a recent signal that didn't execute with your broker or exchange as expected, find that signal on this page and click the result.
+
+Under the Details tab, you'll see a Signal ID. Copy that text and send it to us in your support ticket.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### **Find the Signal URL**
+
+As an alternative, you can also share the entire Signal URL from the [Signals dashboard](https://app.traderspost.io/app/account/signals) by clicking on the signal that you want us to look at and share the URL from that page.
 
 The URL should look like this:
 
@@ -23,8 +37,6 @@ https://app.traderspost.io/app/trading/strategies/<uuid characters/signals/<uuid
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 We can then quickly look up your account and the trade issue from this link.
-
-
 {% endstep %}
 
 {% step %}
@@ -44,6 +56,4 @@ You have a few options when it comes to JSON and what message to use.
 2. Read through the [webhooks](https://docs.traderspost.io/docs/core-concepts/webhooks) section of the documentation for guidance on how to construct a message.
 3. If you're still stuck, reach out to an agent and we'll help you.
 
-
-
-All other questions and needs can be answered by the team through our support email or through the chat bubble on this page or your [dashboard](https://app.traderspost.io/app/dashboard).
+All other questions and needs can be answered by the team through our support email or through the chat bubble on this page or from your [dashboard](https://app.traderspost.io/app/dashboard).

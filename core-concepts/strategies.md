@@ -23,4 +23,4 @@ Next to each signal, you'll see a quick status summary showing how many of your 
 
 When you click on a signal, you’ll see the trades it generated across your connected broker accounts. Each trade shows whether it was successfully executed or if any issues occurred. Clicking into a specific trade reveals full execution details, including order fills, broker responses, and any errors or rejection reasons, so you can easily audit how every signal was handled across your accounts.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>

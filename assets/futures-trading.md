@@ -255,11 +255,11 @@ For example, `MNQZ2023` expires on Friday, December 15, 2023. On TradersPost, th
 
 You can see the contract rollovers planned by TradingView using the Continuous contract switch event. On TradingView charts, head to Settings, click Events, and turn on "Continuous contract switch".
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 This will now show you an event at the bottom of the chart with a purple arrow that indicates when the contract rollover will take place and what ticker it will change from and to. You can use this to hard-code your alerts on the day of a rollover.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 TradingView has also [added](https://www.tradingview.com/pine-script-reference/v6/#var_syminfo.current_contract) the variable `syminfo.current_contract` to Pine Script. This would return the underlying contract for the current symbol if it is a continuous futures contract (`na` otherwise).
 
