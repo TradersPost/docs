@@ -108,3 +108,7 @@
 * [Pricing](https://traderspost.io/pricing/)
 * [Register](https://traderspost.io/register)
 * [Login](https://traderspost.io/login)
+
+***
+
+* [Top 10 Things To Know on TradersPost](top-10-things-to-know-on-traderspost.md)
