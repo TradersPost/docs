@@ -18,6 +18,7 @@ If you hire a developer to code your strategy, it is important that the coder is
 
 * [Kurtis Bulock](https://www.fiverr.com/kurtisbulock)
 * [Tj Alam (tabrejalam)](https://www.fiverr.com/tabrejalam)
+* [Sebastien C](https://www.fiverr.com/sbtnc1)
 * [sammyboy1721](https://www.fiverr.com/sammyboy1721)
 * [Ricardo D.](https://www.upwork.com/freelancers/~014a4eacc3a1c444df)
 * [hiubriss](https://www.fiverr.com/freelancers/hiubriss)
