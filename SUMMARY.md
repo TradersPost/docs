@@ -9,8 +9,9 @@
 
 * [Brokers (Connections)](core-concepts/brokers-connections.md)
 * [Signals](core-concepts/signals.md)
-  * [JSON Message Template Creator](core-concepts/json-messages.md)
-  * [JSON Message Reference](core-concepts/webhooks.md)
+  * [Signal Template Creator](core-concepts/signals/signal-template-creator.md)
+  * [Signal Message Reference](core-concepts/webhooks.md)
+* [Command Pad](core-concepts/command-pad.md)
 * [Strategies](core-concepts/strategies.md)
 * [Subscriptions](core-concepts/subscriptions.md)
 
@@ -44,6 +45,7 @@
 
 ## Learn
 
+* [Signal Speed](learn/signal-speed.md)
 * [Signal Sources](learn/signal-sources/README.md)
   * [TradingView](learn/signal-sources/tradingview.md)
   * [TrendSpider](learn/signal-sources/trend-spider.md)
@@ -92,6 +94,7 @@
 
 * [Support Guidelines](additional-information/support-guidelines.md)
 * [Troubleshooting](additional-information/troubleshooting.md)
+* [Top 10 Things To Know on TradersPost](additional-information/top-10-things-to-know-on-traderspost.md)
 * [Frequently Asked Questions](additional-information/faq.md)
 * [Maintenance Windows](additional-information/maintenance-windows.md)
 * [Glossary](additional-information/glossary.md)
@@ -108,7 +111,3 @@
 * [Pricing](https://traderspost.io/pricing/)
 * [Register](https://traderspost.io/register)
 * [Login](https://traderspost.io/login)
-
-***
-
-* [Top 10 Things To Know on TradersPost](top-10-things-to-know-on-traderspost.md)

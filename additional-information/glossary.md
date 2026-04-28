@@ -18,7 +18,7 @@ description: Here are some common terms related the TradersPost platform and its
 
 ## J
 
-[**JSON Message**](../core-concepts/json-messages.md)**:** The standardized data format TradersPost uses to receive and process trading signals. A platform like TradingView or TrendSpider sends a JSON message via webhook that includes all the necessary trade instructions, such as the ticker symbol, trade action (buy, sell, exit), quantity, price at signal time, timestamp, and optional extras like custom exit types or risk controls. TradersPost parses this message and translates it into executable orders for your connected broker accounts, enabling fully automated and highly customizable trading.
+[**JSON Message**](../core-concepts/signals/signal-template-creator.md)**:** The standardized data format TradersPost uses to receive and process trading signals. A platform like TradingView or TrendSpider sends a JSON message via webhook that includes all the necessary trade instructions, such as the ticker symbol, trade action (buy, sell, exit), quantity, price at signal time, timestamp, and optional extras like custom exit types or risk controls. TradersPost parses this message and translates it into executable orders for your connected broker accounts, enabling fully automated and highly customizable trading.
 
 ## L
 

@@ -26,8 +26,8 @@ This inheritance model allows you to send one universal signal to your **strateg
 
 Looking for help in creating your first signal? Check out the links below:
 
-{% content-ref url="json-messages.md" %}
-[json-messages.md](json-messages.md)
+{% content-ref url="signals/signal-template-creator.md" %}
+[signal-template-creator.md](signals/signal-template-creator.md)
 {% endcontent-ref %}
 
 {% content-ref url="webhooks.md" %}

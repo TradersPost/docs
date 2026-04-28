@@ -1,14 +1,15 @@
 ---
 description: >-
   TradersPost allows third party applications like TradingView and TrendSpider
-  to integrate with your connected brokers via webhooks sending JSON messages.
+  to integrate with your connected brokers via webhooks sending JSON messages we
+  call Signals.
 ---
 
-# JSON Message Reference
+# Signal Message Reference
 
 ## First, what is a webhook?
 
-Webhooks are automated messages sent from applications when something happens. They have a [JSON message](json-messages.md) that can contain a payload of data and are sent to a unique URL.
+Webhooks are automated messages sent from applications when something happens. They have a [JSON message](signals/signal-template-creator.md) that can contain a payload of data and are sent to a unique URL.
 
 In the context of automated trading, the webhook JSON message contains all the information about the trade signal like what ticker to buy and at what price. Here is an example simple webhook and JSON message.
 

@@ -130,11 +130,11 @@ For example, `MNQZ2023` expires on Friday, December 15, 2023. On TradersPost, th
 
 You can see the contract rollovers planned by TradingView using the Continuous contract switch event. On TradingView charts, head to Settings, click Events, and turn on "Continuous contract switch".
 
-<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 This will now show you an event at the bottom of the chart with a purple arrow that indicates when the contract rollover will take place and what ticker it will change from and to. You can use this to hard-code your alerts on the day of a rollover.
 
-<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 TradingView has also [added](https://www.tradingview.com/pine-script-reference/v6/#var_syminfo.current_contract) the variable `syminfo.current_contract` to Pine Script. This would return the underlying contract for the current symbol if it is a continuous futures contract (`na` otherwise).
 
@@ -144,7 +144,7 @@ TradingView has also [added](https://www.tradingview.com/pine-script-reference/v
 
 If you would like to add a bracket order to your entry (like a stop loss / take profit / trailing stop) you'll want to add them in the take profit and/or stop loss areas. You will not select "Stop Market / Stop Limit / Trailing Stop" under entry order type unless you literally want your entry order to be that specific order type. If you want a traditional "bracket" (most people do), you'll select Market or Limit under entry order type and then add a take profit and/or stop loss in the areas pointed out below.
 
-<figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 ## Flat + buy/sell coming in at the same time to side swap - race conditions
 
@@ -170,7 +170,7 @@ The only option is to send a scheduled alert ([like via our Tradingview indicato
 
 If you add a trading window to your subscription and want to have a window that crosses into the next day, you have to have two windows, the first ending at 11:59:59pm and the second starting at 12:00:00am. See the below screenshot.
 
-<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -178,7 +178,7 @@ If you add a trading window to your subscription and want to have a window that 
 
 If you don't have an open position and send an exiting trade (a trade with the sentiment as flat) your trade will reject. This is not an error this is a safeguard by our platform. If you are confused by this message, compare your chart to your alert log to see why you wouldn't be in a trade at this time if you expected to be.
 
-<figure><img src=".gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -186,22 +186,22 @@ If you don't have an open position and send an exiting trade (a trade with the s
 
 Our interface is the same across many pages (signals, trades, etc.). If you hover your mouse over an entry in a list and the background changes to grey, you can click it!
 
-<figure><img src=".gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 On the next page, you can see the list of subscribers. Under any trade header (completed, failed, rejected) you can click again to drill down further.
 
-<figure><img src=".gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 Now we can see the exact reason why this trade failed.&#x20;
 
-<figure><img src=".gitbook/assets/Screenshot 2026-03-10 at 1.21.53 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2026-03-10 at 1.21.53 PM.png" alt=""><figcaption></figcaption></figure>
 
 And if we want to see why that Trailing Stop was cancelled, click again.
 
-<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 Now we can see the submission time as well as the update/cancel time. This is key for investigating when the trade was cancelled. Most likely, it was the next signal that came into your strategy that cancelled this open order.
 
-<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 99.9% of the time if you see a bracket that says "cancelled", just click that open order to see the submitted and cancelled times. Compare the cancelled time to your next signal.

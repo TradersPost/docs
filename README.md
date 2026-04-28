@@ -12,7 +12,7 @@ With powerful tools like dynamic take profit and stop loss management, automated
 
 Whether you're a discretionary trader who wants help managing trade execution or a systematic trader running fully automated strategies, TradersPost gives you full control over how signals are processed and routed to your connected accounts.
 
-We empower traders to automate strategies and scale accounts from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), and custom programmatic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Futures Prop Firms, Stocks, Options, and Crypto.
+We empower traders to automate strategies and scale accounts from platforms like [TradingView](learn/signal-sources/tradingview.md), [TrendSpider](learn/signal-sources/trend-spider.md), our own [Command Pad](core-concepts/command-pad.md), and custom programmatic and agentic approaches. With seamless integrations to brokers such as [TradeStation](all-supported-connections/tradestation.md), [Tradier](all-supported-connections/tradier.md), [Robinhood](all-supported-connections/robinhood.md), [Alpaca](all-supported-connections/alpaca.md), and [many more](https://traderspost.io/connections), TradersPost supports trading across Futures, Futures Prop Firms, Stocks, Options, and Crypto.
 
 ## How It Works: The Basics
 
@@ -42,7 +42,9 @@ Each subscription connects one broker account to your strategy, applying account
 {% step %}
 **Send** [**Trading Signals**](core-concepts/signals.md) **via** [**Webhook**](core-concepts/webhooks.md)
 
-From your external platform (like TradingView or TrendSpider), send a [JSON message](core-concepts/json-messages.md) to your strategy’s [webhook URL](core-concepts/webhooks.md). TradersPost parses this message and routes the trade to your connected broker or exchange using the settings defined in your subscription.
+From your external platform (like TradingView or TrendSpider), send a [JSON message](core-concepts/signals/signal-template-creator.md) to your strategy’s [webhook URL](core-concepts/webhooks.md). TradersPost parses this message and routes the trade to your connected broker or exchange using the settings defined in your subscription.
+
+You can also send signals directly from [Command Pad](core-concepts/command-pad.md), a trading tool we built to help discretionary traders, but also give you an interface to test signals before using them in your automated approach.
 {% endstep %}
 {% endstepper %}
 
@@ -67,7 +69,7 @@ TradersPost is designed exclusively for independent traders, meaning each user m
 ## Key Limitations
 
 * **Not Designed for High-Frequency or Sub-Minute Trading**\
-  TradersPost is not intended for ultra-short-term scalping or high-frequency trading strategies operating below the 1-minute timeframe. A typical lag of 1-2 seconds between signal generation and broker execution is common, with most trades executing in under 2 seconds. This time slippage may impact performance for extremely short-term strategies. Read more about our rate limiting behavior [here](learn/platform-concepts/rate-limits.md).
+  TradersPost is not intended for ultra-short-term scalping or high-frequency trading strategies operating below the 1-minute timeframe. We have rate limits in place to prevent abuse to our webhook system. Read more about our [rate limiting behavior](learn/platform-concepts/rate-limits.md). Signal speed is largely contingent on where your signal comes from and how quickly it can send the request to the TradersPost webhook server. The average webhook response is delivered in 80 milliseconds. Please read our article on [Signal Speed](learn/signal-speed.md) to learn more about how fast trades can be sent to one or many accounts.
 * **Signal Conflicts (Race Conditions)**\
   Since TradersPost operates as an event-driven system, it's the trader’s responsibility to ensure that multiple signals do not conflict with one another. Overlapping signals may lead to unintended trade behavior if strategy logic doesn't account for open positions, pending orders, or rapidly changing market conditions.
 * **No Broker State or Order Feedback Loop**\
