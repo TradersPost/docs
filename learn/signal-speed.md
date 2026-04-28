@@ -2,7 +2,7 @@
 
 <figure><img src="../.gitbook/assets/image (32).png" alt="" width="356"><figcaption></figcaption></figure>
 
-When a trade signal fires, the time between that moment and the order being filled at your broker is the sum of four sequential phases. Only three of them are within TradersPost's control. The fourth, and often the largest, is the time it takes the signal to travel from its source to us.
+When a trade signal fires, the time between that moment and the order being filled at your broker is the sum of four sequential phases. Only three of them are within TradersPost's control. The first, and often the largest, is the time it takes the signal to travel from its source to us.
 
 This page breaks down each phase, what drives it, and how to measure it for your own setup.
 
