@@ -21,7 +21,18 @@ The extension supports multi-strategy workflows. You can configure separate stra
 
 ### Quick Start
 
+1. Install Command Pad from the [Chrome Web Store](https://chromewebstore.google.com/detail/dmijhecpkfpomhanjgijdnedbgobpffl?utm_source=traderspost-documentation) and open it in your browser's side panel.
+2. On TradersPost, head to [Strategies](https://app.traderspost.io/app/trading/strategies) and click on the Strategy you want to configure with Command Pad.
+3. In Command Pad, click the cog icon at the top right of the LCD screen to open settings.
+4. Under "AVAILABLE FROM TRADERSPOST", click the + next to your strategy. Command Pad will install the webhook URL and function buttons for you.
 
+<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+
+5. Click Save Strategy, then experiment with sending signals and editing your buttons.
+
+{% hint style="warning" %}
+⚠️ **Important:** Disable your strategy in TradersPost while testing so signals don't accidentally send live trades to your broker.
+{% endhint %}
 
 ### LCD Screen
 
