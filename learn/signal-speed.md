@@ -23,34 +23,34 @@ The closer your signal source is to Virginia, both physically and in terms of ne
 
 If you are seeing what feels like lag in your entry execution, this phase is the most common cause.
 
-#### 2. Approval
+#### 2. Planning
 
-Once a signal arrives, the trade enters an approval state.
+Before approving the order, TradersPost queries the broker for the information needed to construct it accurately. Depending on the strategy and order type, this can include the current market quote, available buying power, and any open position in the symbol.
+
+Typical times: 100ms to 200ms, depending on the broker's API responsiveness.
+
+#### 3. Approval
+
+Once a trade is planned, the trade enters an approval state.
 
 * **Auto-approved trades**: nearly instant, with no meaningful latency added
 * **Manually approved trades**: timed from arrival to the moment you physically approve by clicking the Approve button when a subscription is in Manual Submit mode
 
 If auto-approval is enabled, this phase effectively disappears. If you require manual approval, the duration is driven entirely by your response time, and we report it as part of the trade timing so you can see exactly how long the trade waited.
 
-#### 3. Planning
-
-Before sending the order, TradersPost queries the broker for the information needed to construct it accurately. Depending on the strategy and order type, this can include the current market quote, available buying power, and any open position in the symbol.
-
-Typical times: 100ms to 200ms, depending on the broker's API responsiveness.
-
 #### 4. Execution
 
 The final phase is submitting the order to the broker.
 
-Typical times: around 200ms.
+Typical times: around 200ms - 300ms.
 
 ### A Realistic Best Case
 
 With a fast signal source, auto-approval, and a responsive broker, total time from signal to order placement looks like this:
 
 * Signal: 80ms
-* Approval: instant
 * Planning: 100ms
+* Approval: instant if Auto Submit is enabled
 * Execution: 200ms
 * **Total: 380ms**
 
