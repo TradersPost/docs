@@ -16,6 +16,7 @@ If you hire a developer to code your strategy, it is important that the coder is
 
 ### **TradingView Pine Script Developers**
 
+* [PropFirmPineScripts.com](https://propfirmpinescripts.com/?utm_source=traderspost)
 * [Kurtis Bulock](https://www.fiverr.com/kurtisbulock)
 * [Tj Alam (tabrejalam)](https://www.fiverr.com/tabrejalam)
 * [Sebastien C](https://www.fiverr.com/sbtnc1)
