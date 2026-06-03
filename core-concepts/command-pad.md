@@ -6,7 +6,7 @@
 
 TradersPost Command Pad is a Chrome extension that gives you a fluent, always-accessible interface for managing entries, exits, and risk across all of your TradersPost [strategies](strategies.md) and [subscriptions](subscriptions.md). It lives in Chrome's side panel so it stays open alongside your charts, and sends webhook signals directly to TradersPost with a single button press. Whether you trade stocks, futures, options, or crypto, Command Pad lets you define reusable signal templates, enforce session-based risk rules, and execute with precision, all without leaving your charting platform.
 
-{% embed url="https://youtu.be/61SoJkzRmzI" %}
+{% embed url="https://youtu.be/78ZGuheS3J0" %}
 
 ## Main Purpose
 
@@ -77,6 +77,8 @@ The source favicon shows which platform the data is coming from. It is faded whe
 <figure><img src="../.gitbook/assets/image (30).png" alt="" width="264"><figcaption></figcaption></figure>
 
 The lower half of the extension is a grid of signal buttons. Each button is a **Signal Template** (we just call them "buttons") -- a pre-configured JSON payload that gets sent to your TradersPost webhook when clicked.
+
+{% embed url="https://youtu.be/61SoJkzRmzI" %}
 
 Templates are fully customizable per strategy:
 
