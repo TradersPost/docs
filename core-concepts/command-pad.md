@@ -6,6 +6,8 @@
 
 TradersPost Command Pad is a Chrome extension that gives you a fluent, always-accessible interface for managing entries, exits, and risk across all of your TradersPost [strategies](strategies.md) and [subscriptions](subscriptions.md). It lives in Chrome's side panel so it stays open alongside your charts, and sends webhook signals directly to TradersPost with a single button press. Whether you trade stocks, futures, options, or crypto, Command Pad lets you define reusable signal templates, enforce session-based risk rules, and execute with precision, all without leaving your charting platform.
 
+{% embed url="https://youtu.be/61SoJkzRmzI" %}
+
 ## Main Purpose
 
 The TradersPost Command Pad replaces the manual process of constructing and sending [webhook signals](signals.md) to TradersPost. Instead of copying URLs, writing JSON, and pasting into an alert on TradingView, or in a tool like Postman or cURL, you get a visual command pad with pre-programmed buttons for every action you need:
@@ -167,6 +169,8 @@ The order type button supports arrow key cycling and keyboard shortcut codes for
 
 ### Entry and Exit Criteria
 
+{% embed url="https://youtu.be/-sJqeDBsJYM" %}
+
 Criteria are configurable validation gates that must be filled in before a signal can be sent. They help enforce discipline by requiring you to acknowledge your setup before entering or exiting a trade.
 
 Each strategy supports up to 20 **entry criteria** and 20 **exit criteria**. Each criterion can be:
@@ -181,6 +185,8 @@ Criteria values are included in the webhook payload under the `extras` object, s
 Each criterion is configured to apply to specific actions (buy, sell, add, reverse, exit, cancel, breakeven), so you can require different inputs for entries vs. exits.
 
 ### Function Buttons
+
+{% embed url="https://youtu.be/2zO-RhcPwXc" %}
 
 Function buttons (FN buttons) are quick-access links that appear above the signal keypad. They open URLs in new or existing tabs and are useful for jumping to your TradersPost dashboard, broker platform, or any tool you use alongside trading.
 
@@ -209,6 +215,8 @@ Each session can set a maximum number of entry signals (buy, sell, add). Once th
 Sessions can trigger an automatic cooldown after any matching signal action. For example, after every buy, automatically lock out for 5 minutes. The lockout duration is capped to the remaining session time so it never extends past your trading window.
 
 ### Sessions
+
+{% embed url="https://youtu.be/qN3Kt_UFocY" %}
 
 Sessions are time-based trading windows that control when you're allowed to trade. Each session defines:
 
