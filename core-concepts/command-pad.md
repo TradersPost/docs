@@ -29,6 +29,8 @@ The extension supports multi-strategy workflows. You can configure separate stra
 
 ### Quick Start
 
+{% embed url="https://youtu.be/D3MPCArZ_qo" %}
+
 1. Install Command Pad from the [Chrome Web Store](https://chromewebstore.google.com/detail/dmijhecpkfpomhanjgijdnedbgobpffl?utm_source=traderspost-documentation) and open it in your browser's side panel.
 2. On TradersPost, head to [Strategies](https://app.traderspost.io/app/trading/strategies) and click on the Strategy you want to configure with Command Pad.
 3. In Command Pad, click the cog icon at the top right of the LCD screen to open settings.
@@ -45,6 +47,8 @@ The extension supports multi-strategy workflows. You can configure separate stra
 ### LCD Screen
 
 <figure><img src="../.gitbook/assets/image (27).png" alt="" width="354"><figcaption></figcaption></figure>
+
+{% embed url="https://youtu.be/WTW1cgRFQ0U" %}
 
 The top half of the extension is styled as a retro LCD (Liquid Crystal Display) panel that serves as the central control surface. It displays:
 
