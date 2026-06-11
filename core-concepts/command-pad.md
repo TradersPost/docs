@@ -245,6 +245,8 @@ You can create up to 4 sessions, and they are global (shared across all strategi
 
 ### Strategy Management
 
+{% embed url="https://www.youtube.com/watch?v=T2fzS6u6FJA" %}
+
 A strategy represents a complete trading configuration:
 
 * **Name** -- display name shown on the LCD
@@ -288,6 +290,8 @@ Each strategy can operate in one of two sizing modes:
 Switching modes clears delta inputs to prevent stale values from carrying over.
 
 ### Request Log and Analytics
+
+{% embed url="https://youtu.be/v3Qiv9gqXgY" %}
 
 Every webhook signal is logged with full details:
 
