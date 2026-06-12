@@ -1,5 +1,7 @@
 # Brokers (Connections)
 
+{% embed url="https://www.youtube.com/watch?v=SAqFUhcDu4g" %}
+
 TradersPost centers around connections with brokers, exchanges, and prop firms. Each connection represents an individual account with your broker or exchange. For instance, if you link two accounts with TradeStation, both would count under your live plan.
 
 You can connect any of these to TradersPost and authorize our software to read your balances, open positions, open orders, order history, place trades and cancel orders.
