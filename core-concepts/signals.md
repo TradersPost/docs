@@ -1,5 +1,7 @@
 # Signals
 
+{% embed url="https://youtu.be/9uF3O2pewTQ" %}
+
 A signal (or trade signal / webhook) is an event that tells TradersPost to execute a trade. Signals are created outside of TradersPost, typically by a charting platform, indicator, or strategy like TradingView or TrendSpider, and sent to TradersPost via a webhook URL. Each signal includes a JSON message containing all the details needed to place an order: ticker, action (buy/sell/add/exit), quantity, and any optional instructions.
 
 Once TradersPost receives a signal, it processes the message according to your configured strategy and subscriptions, then submits the trade to your connected broker or exchange. This event-driven approach gives you full control over where your signals come from, how they are formatted, and how they are executed across multiple accounts.
